@@ -1,0 +1,15 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Proxy requests from /api/deepseek to our Netlify Function
+[[redirects]]
+  from = "/api/deepseek/*"
+  to = "/.netlify/functions/deepseek/:splat"
+  status = 200
+
+# Fallback for Vue Single Page Application (SPA) routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

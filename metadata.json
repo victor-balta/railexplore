@@ -1,0 +1,5 @@
+{
+  "name": "RailExplore AI",
+  "description": "An AI-powered train destination explorer starting from Berlin. Explore via map, categories, and chat.",
+  "requestFramePermissions": ["geolocation"]
+}
