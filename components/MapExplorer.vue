@@ -615,3 +615,11 @@ const updateFilterProp = (key: keyof FilterState, val: any) => {
   </div>
 </template>
 
+<style scoped>
+@media (max-width: 767px) {
+  :deep(.leaflet-bottom.leaflet-right) {
+    bottom: 95px !important;
+  }
+}
+</style>
+

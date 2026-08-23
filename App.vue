@@ -437,6 +437,28 @@ const addReturnToOrigin = () => {
       </button>
     </header>
 
+    <!-- Mobile Sub-Header: Segmented View Mode Switcher -->
+    <div class="md:hidden flex-none bg-white border-b border-slate-200 px-3 py-1.5 flex items-center justify-between gap-2 z-40">
+      <div class="flex-1 flex bg-slate-100 p-0.5 rounded-xl border border-slate-200 text-xs font-semibold">
+        <button 
+          @click="setMobileViewMode('list')"
+          class="flex-1 py-1.5 rounded-lg flex items-center justify-center gap-1.5 transition-all"
+          :class="mobileViewMode === 'list' ? 'bg-white text-[#01306A] shadow-xs font-bold' : 'text-slate-600 hover:text-slate-900'"
+        >
+          <List :size="13" />
+          <span>Journeys ({{ sortedFilteredDestinations.length }})</span>
+        </button>
+        <button 
+          @click="setMobileViewMode('map')"
+          class="flex-1 py-1.5 rounded-lg flex items-center justify-center gap-1.5 transition-all"
+          :class="mobileViewMode === 'map' ? 'bg-white text-[#01306A] shadow-xs font-bold' : 'text-slate-600 hover:text-slate-900'"
+        >
+          <MapPin :size="13" />
+          <span>Map Explorer</span>
+        </button>
+      </div>
+    </div>
+
     <!-- Main Workspace Split Layout -->
     <div class="flex flex-col md:flex-row flex-1 overflow-hidden relative">
       
@@ -469,7 +491,7 @@ const addReturnToOrigin = () => {
         </div>
         
         <!-- Deals List Stream -->
-        <div class="flex-1 overflow-y-auto p-3 space-y-2 scrollbar-hide bg-slate-50/50 pb-24 md:pb-4">
+        <div class="flex-1 overflow-y-auto p-3 space-y-2 scrollbar-hide bg-slate-50/50 pb-20 md:pb-4">
           <div 
             v-for="dest in sortedFilteredDestinations"
             :key="dest.id"
@@ -547,7 +569,8 @@ const addReturnToOrigin = () => {
         <!-- Floating Multi-City Trip Builder & AI Route Optimizer Bar -->
         <div 
           v-if="itineraryDestinations.length > 0" 
-          class="absolute bottom-20 md:bottom-8 left-1/2 -translate-x-1/2 z-[55] bg-white rounded-2xl shadow-2xl border border-slate-200 p-2.5 flex items-center gap-2 md:gap-3 w-[95%] sm:w-[90%] md:w-auto max-w-2xl"
+          class="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 z-[55] bg-white rounded-2xl shadow-2xl border border-slate-200 p-2.5 flex items-center gap-2 md:gap-3 w-[95%] sm:w-[90%] md:w-auto max-w-2xl"
+          :class="selectedDestination && mobileViewMode === 'map' && !isMobileDetailsOpen ? 'hidden md:flex' : 'flex'"
         >
           <div class="flex items-center gap-2 font-bold text-[#002D67] pl-2 md:pl-3 flex-1 overflow-x-auto scrollbar-hide whitespace-nowrap text-xs sm:text-sm">
             <span class="text-[#01879C] flex-none"><Train :size="16" /></span>
@@ -617,61 +640,57 @@ const addReturnToOrigin = () => {
     <!-- Mobile Selected Destination Bottom Card Preview (Google Explore / Airbnb Style) -->
     <div 
       v-if="selectedDestination && mobileViewMode === 'map' && !isMobileDetailsOpen"
-      class="md:hidden fixed bottom-18 left-3 right-3 z-[60] bg-white rounded-2xl p-3 shadow-2xl border border-slate-200 flex items-center justify-between gap-3 animate-in slide-in-from-bottom-3 duration-200"
+      class="md:hidden fixed bottom-4 left-3 right-3 z-50 bg-white rounded-2xl p-3 shadow-2xl border border-slate-200 animate-in slide-in-from-bottom-3 duration-200"
     >
-      <div class="flex items-center gap-3 min-w-0 cursor-pointer flex-1" @click="isMobileDetailsOpen = true">
+      <div class="flex gap-3 items-center">
         <img 
           :src="selectedDestination.imageUrl" 
           :alt="selectedDestination.destinationName" 
           @error="(e) => (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1519677100203-a0e668c92439?auto=format&fit=crop&w=400&q=80'"
-          class="w-13 h-13 rounded-xl object-cover flex-none shadow-xs"
+          class="rounded-xl object-cover flex-none shadow-xs"
+          style="width: 76px; height: 76px;"
         />
-        <div class="min-w-0 flex-1">
-          <div class="flex items-center justify-between">
-            <h3 class="font-bold text-slate-900 text-sm truncate">{{ selectedDestination.destinationName }}</h3>
-            <span class="text-sm font-bold text-slate-900 ml-1">${{ selectedDestination.price }}</span>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-start justify-between">
+            <div class="min-w-0 pr-2">
+              <h3 class="font-bold text-slate-900 text-base truncate">{{ selectedDestination.destinationName }}</h3>
+              <p class="text-xs text-slate-500 truncate">{{ selectedDestination.destinationCountry }} • {{ selectedDestination.duration }}</p>
+            </div>
+            <div class="text-right flex-none">
+              <div class="text-base font-bold text-slate-900">${{ selectedDestination.price }}</div>
+              <span class="text-[10px] text-emerald-700 font-semibold bg-emerald-50 px-1.5 py-0.5 rounded">
+                {{ selectedDestination.transfers === 0 ? 'Direct' : `${selectedDestination.transfers} stop` }}
+              </span>
+            </div>
           </div>
-          <p class="text-xs text-slate-500 truncate">{{ selectedDestination.destinationCountry }} • {{ selectedDestination.duration }}</p>
-          <div class="text-[11px] text-[#01879C] font-semibold mt-0.5 flex items-center gap-1">
-            <span>View full schedule & guide →</span>
+
+          <div class="flex items-center gap-2 mt-2 pt-2 border-t border-slate-100">
+            <button 
+              @click="isMobileDetailsOpen = true"
+              class="flex-1 py-1.5 px-3 bg-[#01306A] text-white rounded-lg text-xs font-semibold hover:bg-[#002D67] transition-colors flex items-center justify-center gap-1 shadow-xs"
+            >
+              <span>View Schedule</span>
+              <ArrowRight :size="12" />
+            </button>
+            <button 
+              @click.stop="toggleItineraryDestination(selectedDestination)"
+              class="py-1.5 px-3 rounded-lg text-xs font-semibold transition-all flex items-center gap-1 border"
+              :class="itineraryDestinations.some(d => d.id === selectedDestination.id) ? 'bg-slate-100 text-slate-900 border-slate-300' : 'bg-white text-slate-700 hover:bg-slate-50 border-slate-300'"
+            >
+              <Check v-if="itineraryDestinations.some(d => d.id === selectedDestination.id)" :size="12" />
+              <Plus v-else :size="12" />
+              <span>{{ itineraryDestinations.some(d => d.id === selectedDestination.id) ? 'Added' : 'Add' }}</span>
+            </button>
+            <button 
+              @click.stop="selectedDestinationId = null"
+              class="p-1.5 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-lg"
+              title="Close preview"
+            >
+              <X :size="14" />
+            </button>
           </div>
         </div>
       </div>
-
-      <div class="flex items-center gap-1 flex-none">
-        <button 
-          @click.stop="toggleItineraryDestination(selectedDestination)"
-          class="w-8 h-8 rounded-full flex items-center justify-center font-semibold transition-all shadow-xs"
-          :class="itineraryDestinations.some(d => d.id === selectedDestination.id) ? 'bg-[#01306A] text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200'"
-          title="Add to trip"
-        >
-          <Check v-if="itineraryDestinations.some(d => d.id === selectedDestination.id)" :size="14" />
-          <Plus v-else :size="14" />
-        </button>
-        <button 
-          @click.stop="selectedDestinationId = null"
-          class="w-8 h-8 rounded-full flex items-center justify-center text-slate-400 hover:text-slate-600 hover:bg-slate-100"
-        >
-          <X :size="15" />
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile Floating View Mode Switcher FAB (Google Explore / Airbnb Style) -->
-    <div class="md:hidden fixed bottom-5 left-1/2 -translate-x-1/2 z-[65] pointer-events-auto">
-      <button 
-        @click="setMobileViewMode(mobileViewMode === 'map' ? 'list' : 'map')"
-        class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#01306A] hover:bg-[#002D67] text-white font-bold text-xs shadow-2xl border border-white/20 active:scale-95 transition-all"
-      >
-        <template v-if="mobileViewMode === 'map'">
-          <List :size="15" />
-          <span>List ({{ sortedFilteredDestinations.length }})</span>
-        </template>
-        <template v-else>
-          <MapPin :size="15" />
-          <span>Map Explorer</span>
-        </template>
-      </button>
     </div>
 
     <!-- TrainExplore AI Copilot Drawer -->
