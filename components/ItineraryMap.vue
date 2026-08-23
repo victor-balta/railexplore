@@ -24,7 +24,8 @@ onMounted(() => {
     scrollWheelZoom: false,
   });
 
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; OpenStreetMap &copy; CARTO',
     subdomains: 'abcd',
     maxZoom: 19
   }).addTo(map);
@@ -74,12 +75,12 @@ const drawRoute = () => {
   ];
 
   // Draw route line
-  L.polyline(points, { color: '#16a34a', weight: 4, dashArray: '8, 8', opacity: 0.8, lineCap: 'round' }).addTo(markersLayer);
+  L.polyline(points, { color: '#01879C', weight: 4, dashArray: '6, 6', opacity: 0.9, lineCap: 'round' }).addTo(markersLayer);
 
   // Draw origin marker (Berlin)
   const originIcon = L.divIcon({
     className: 'custom-div-icon',
-    html: `<div style="background-color: #1e293b; width: 14px; height: 14px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 6px rgba(0,0,0,0.4);"></div>`,
+    html: `<div style="background-color: #01306A; width: 14px; height: 14px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.35);"></div>`,
     iconSize: [14, 14],
     iconAnchor: [7, 7]
   });
@@ -92,7 +93,7 @@ const drawRoute = () => {
     
     const icon = L.divIcon({
       className: 'custom-div-icon',
-      html: `<div style="background-color: #2563eb; color: white; width: 28px; height: 28px; border-radius: 50%; border: 2px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 900; font-family: sans-serif;">${i + 1}</div>`,
+      html: `<div style="background-color: #01306A; color: white; width: 28px; height: 28px; border-radius: 50%; border: 2.5px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; font-family: sans-serif;">${i + 1}</div>`,
       iconSize: [28, 28],
       iconAnchor: [14, 14]
     });

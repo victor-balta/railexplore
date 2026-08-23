@@ -133,7 +133,7 @@ onMounted(() => {
     attributionControl: false
   });
 
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; OpenStreetMap &copy; CARTO',
     subdomains: 'abcd',
     maxZoom: 19
@@ -141,10 +141,10 @@ onMounted(() => {
 
   L.control.zoom({ position: 'bottomright' }).addTo(mapInstance);
 
-  // Custom Berlin Marker
+  // Custom Berlin Marker (Origin)
   const berlinIcon = L.divIcon({
     className: 'custom-div-icon',
-    html: `<div style="background-color: #1a73e8; width: 14px; height: 14px; border-radius: 50%; border: 3px solid white; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);"></div>`,
+    html: `<div style="background-color: #01306A; width: 14px; height: 14px; border-radius: 50%; border: 3px solid white; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);"></div>`,
     iconSize: [14, 14],
     iconAnchor: [7, 7]
   });
