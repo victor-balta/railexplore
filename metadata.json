@@ -1,5 +1,5 @@
 {
-  "name": "RailExplore AI",
-  "description": "An AI-powered train destination explorer starting from Berlin. Explore via map, categories, and chat.",
+  "name": "TrainExplore",
+  "description": "An AI-powered European train exploration and itinerary planning platform at trainexplore.com.",
   "requestFramePermissions": ["geolocation"]
 }

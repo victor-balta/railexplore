@@ -1,21 +1,29 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# TrainExplore (trainexplore.com)
 
-# Run and deploy your AI Studio app
+TrainExplore is an AI-powered train exploration and itinerary planning platform for European rail travel.
 
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/f85961d9-7244-4ff5-a57e-b6d76cff00b1
+## Key Features
+- **Map & Deals Explorer:** Visual price map with instant budget, duration, and rail operator filters.
+- **AI Travel Copilot:** Natural language assistant that searches routes, optimizes multi-city loops, and adjusts filters on the fly.
+- **Timetable Matrix:** Real-time departures, transfers, seat class options, and onboard amenities.
+- **Eco Insights:** Carbon emission savings calculator vs flying.
+- **One-Pager Itinerary Generator:** Day-by-day travel schedules, activities, stays, and scenic tips.
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
-
+**Prerequisites:** Node.js 18+
 
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
-# railexplore
+   ```bash
+   npm install
+   ```
+
+2. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+3. Build for production:
+   ```bash
+   npm run build
+   ```

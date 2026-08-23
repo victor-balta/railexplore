@@ -514,23 +514,114 @@ export const getConnectedCities = (cityName: string, allDestinations: TrainDeal[
   return others.slice(0, 15).map(d => d.destinationName);
 };
 
-export const INITIAL_DESTINATIONS: TrainDeal[] = [...baseDestinations, ...generateMoreDestinations()];
+export const INITIAL_DESTINATIONS: TrainDeal[] = [...baseDestinations, ...generateMoreDestinations()].map(d => ({
+  ...d,
+  co2Kg: Math.round(d.price * 0.35 + 8),
+  co2SavingsPercent: Math.min(94, Math.max(82, 85 + Math.floor((d.location.lat * 10) % 8))),
+  scenicRating: (d.id.charCodeAt(0) % 3) + 3,
+  scenicHighlight: d.category === CategoryType.Mountains 
+    ? "Alpine panoramic window section with glacier views" 
+    : d.category === CategoryType.Romantic 
+    ? "Historic wine valley route along the riverbank" 
+    : "High-speed modern rail corridor with onboard dining"
+}));
 
 export const INITIAL_CHAT: ChatMessage[] = [
   {
     id: '1',
     role: 'model',
-    text: "Hi! I'm your Travel Notes AI assistant. Looking for a scenic train journey, a weekend city break, or want to generate a multi-city itinerary? Just ask!"
+    text: "👋 I'm **TrainExplore AI**, your personal European train travel copilot! What kind of journey are you dreaming of? I can search routes across Europe, filter by price and duration, optimize multi-city loops, or curate detailed day-by-day itineraries.",
+    quickReplies: [
+      "🍷 Romantic wine weekend under $100",
+      "🏔️ Alpine scenic trains with mountain views",
+      "⚡ Fast direct getaways (<3h)",
+      "🏰 Prague & Vienna 4-day loop"
+    ]
   }
 ];
 
+export const generateMockSchedules = (origin: string, dest: TrainDeal): TrainScheduleOption[] => {
+  let durationHours = 4;
+  let durationMins = 30;
+  const hMatch = dest.duration.match(/(\d+)h/);
+  const mMatch = dest.duration.match(/(\d+)m/);
+  if (hMatch) durationHours = parseInt(hMatch[1], 10);
+  if (mMatch) durationMins = parseInt(mMatch[1], 10);
+
+  const departures = [
+    { hour: 7, min: 15, isFastest: true, isBest: true, transferExtra: 0, class: '2nd Class' as const },
+    { hour: 9, min: 42, isCheapest: true, transferExtra: 0, class: '2nd Class' as const },
+    { hour: 13, min: 20, isFastest: false, transferExtra: dest.transfers > 0 ? 1 : 0, class: '2nd Class' as const },
+    { hour: 17, min: 35, isFastest: false, transferExtra: 0, class: '1st Class' as const },
+    { hour: 21, min: 10, isFastest: false, transferExtra: 0, class: '2nd Class' as const, isNightjet: true }
+  ];
+
+  return departures.map((d, index) => {
+    const startHour = d.hour;
+    const startMin = d.min;
+    
+    let totalDurMins = durationHours * 60 + durationMins + (d.transferExtra ? 25 : 0);
+    let endHour = (startHour + Math.floor((startMin + totalDurMins) / 60)) % 24;
+    let endMin = (startMin + totalDurMins) % 60;
+
+    const formatTime = (h: number, m: number) => `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}`;
+    const durHours = Math.floor(totalDurMins / 60);
+    const durRestMins = totalDurMins % 60;
+
+    let price = dest.price;
+    if (d.isCheapest) price = Math.max(19, dest.price - 10);
+    else if (d.class === '1st Class') price = Math.round(dest.price * 1.5);
+    else if (index === 0) price = dest.price + 5;
+
+    const op = d.isNightjet ? 'ÖBB Nightjet' : dest.trainOperator;
+    const trainNum = d.isNightjet ? `NJ ${400 + index * 10}` : `${op.split(' ')[0]} ${1200 + index * 150}`;
+
+    return {
+      id: `sched-${dest.id}-${index}`,
+      departureTime: formatTime(startHour, startMin),
+      arrivalTime: formatTime(endHour, endMin),
+      duration: `${durHours}h ${durRestMins}m`,
+      originStation: origin.includes('Hbf') || origin.includes('Station') ? origin : `${origin} Hbf`,
+      destinationStation: dest.destinationName.includes('Hbf') || dest.destinationName.includes('Station') ? dest.destinationName : `${dest.destinationName} Hbf`,
+      trainNumber: trainNum,
+      operator: op,
+      transfers: d.transferExtra ? 1 : dest.transfers,
+      transferStation: d.transferExtra ? 'Hannover Hbf' : undefined,
+      price,
+      seatClass: d.class,
+      amenities: d.isNightjet ? ['power', 'dining', 'quiet'] : ['wifi', 'power', 'dining', 'quiet', 'bikes'],
+      co2Kg: dest.co2Kg || 12,
+      isBest: d.isBest,
+      isCheapest: d.isCheapest,
+      isFastest: d.isFastest
+    };
+  });
+};
+
+export const getPriceInsightForDeal = (dest: TrainDeal): PriceInsight => {
+  const typicalMin = Math.round(dest.price * 1.15);
+  const typicalMax = Math.round(dest.price * 1.6);
+  const isLow = dest.price <= typicalMin;
+
+  return {
+    status: isLow ? 'low' : 'typical',
+    currentPrice: dest.price,
+    typicalMin,
+    typicalMax,
+    savingsVsTypical: Math.max(0, typicalMin - dest.price),
+    advice: isLow 
+      ? `Prices are currently $${typicalMin - dest.price} lower than usual for this route. Great time to book!` 
+      : `Prices are normal for ${dest.outboundDate}. Booking 2 weeks ahead locks in lowest rate.`
+  };
+};
+
 export const MOCK_ACCOMMODATION: Record<string, Accommodation[]> = {
   default: [
-    { id: '1', name: 'Grand Central Hotel', rating: 4.5, price: 120, image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=200&q=80' },
-    { id: '2', name: 'City Center Hostel', rating: 4.0, price: 45, image: 'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=200&q=80' },
-    { id: '3', name: 'Boutique Loft', rating: 4.8, price: 180, image: 'https://images.unsplash.com/photo-1522771753035-0a1529140558?auto=format&fit=crop&w=200&q=80' },
-    { id: '4', name: 'The Station Inn', rating: 3.8, price: 85, image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=200&q=80' },
-    { id: '5', name: 'Luxury River View', rating: 4.9, price: 250, image: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=200&q=80' },
+    { id: '1', name: 'Grand Central Hotel', rating: 4.5, price: 120, image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=200&q=80', neighborhood: 'City Center' },
+    { id: '2', name: 'City Center Hostel', rating: 4.0, price: 45, image: 'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=200&q=80', neighborhood: 'Station District' },
+    { id: '3', name: 'Boutique Loft', rating: 4.8, price: 180, image: 'https://images.unsplash.com/photo-1522771753035-0a1529140558?auto=format&fit=crop&w=200&q=80', neighborhood: 'Old Town' },
+    { id: '4', name: 'The Station Inn', rating: 3.8, price: 85, image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=200&q=80', neighborhood: 'Station District' },
+    { id: '5', name: 'Luxury River View', rating: 4.9, price: 250, image: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=200&q=80', neighborhood: 'Riverside' },
   ]
 };
 

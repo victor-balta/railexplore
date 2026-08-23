@@ -70,6 +70,9 @@ const generateMockConnections = (origin: string, dest: TrainDeal, date: string) 
 const loading = ref(true);
 const editingSearchIndex = ref<number | null>(null);
 const passengers = ref(1);
+const refineInput = ref('');
+const isRefining = ref(false);
+const userRefinements = ref<string[]>([]);
 
 // Simulate a quick AI generation/loading state for effect
 watch(() => props.destinations, () => {
@@ -77,36 +80,48 @@ watch(() => props.destinations, () => {
   loading.value = true;
   const timer = setTimeout(() => {
     loading.value = false;
-  }, 1500);
+  }, 1200);
 }, { immediate: true });
+
+const handleRefine = () => {
+  if (!refineInput.value.trim() || isRefining.value) return;
+  const prompt = refineInput.value.trim();
+  refineInput.value = '';
+  isRefining.value = true;
+  
+  setTimeout(() => {
+    userRefinements.value.push(prompt);
+    isRefining.value = false;
+  }, 900);
+};
 
 const handlePrint = () => {
   window.print();
 };
 
-const totalDays = computed(() => props.destinations.length * 2 + 1); // Rough estimate
+const totalDays = computed(() => props.destinations.length * 2 + 1);
 const totalPrice = computed(() => props.destinations.reduce((sum, dest) => sum + dest.price, 0));
+const totalCo2Saved = computed(() => props.destinations.length * 52);
+const estimatedStayTotal = computed(() => props.destinations.length * 115);
 </script>
 
 <template>
   <div v-if="destinations.length > 0" class="fixed inset-0 z-[1000] bg-[#F7F7F5] overflow-y-auto flex flex-col font-sans">
     <!-- Header Bar -->
-    <div class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 px-4 py-3 sm:px-6 sm:py-4 flex items-center justify-between shadow-sm">
-      <div class="flex items-center gap-2">
-        <div class="w-7 h-7 sm:w-8 sm:h-8 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-          <Train class="text-white w-4 h-4 sm:w-[18px] sm:h-[18px]" />
-        </div>
-        <h1 class="text-base sm:text-xl font-bold text-slate-800 tracking-tight truncate">Travel Notes AI</h1>
+    <div class="sticky top-0 z-50 bg-[#FAFBFB]/90 backdrop-blur-md border-b border-slate-200 px-4 py-3 sm:px-6 sm:py-3.5 flex items-center justify-between shadow-xs">
+      <div class="flex items-center gap-2.5">
+        <img src="/logo.png" alt="TrainExplore" class="h-9 sm:h-11 w-auto object-contain" />
+        <span class="text-[#01879C] font-black text-[11px] uppercase tracking-wider bg-slate-100 px-2 py-0.5 rounded-lg border border-slate-200 hidden sm:inline shadow-2xs">AI Itinerary</span>
       </div>
       <div class="flex items-center gap-2 sm:gap-3">
-        <button @click="handlePrint" class="flex items-center gap-1.5 px-3 py-2 sm:px-4 sm:py-2 bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 rounded-full text-xs sm:text-sm font-semibold transition-colors shadow-sm whitespace-nowrap">
-          <Download :size="16" /> <span class="hidden sm:inline">Export PDF</span>
+        <button @click="handlePrint" class="flex items-center gap-1.5 px-3 py-2 sm:px-4 sm:py-2 bg-white border border-slate-200 hover:bg-[#E2F7F8] text-[#002D67] rounded-full text-xs sm:text-sm font-bold transition-colors shadow-xs whitespace-nowrap">
+          <Download :size="16" class="text-[#01879C]" /> <span class="hidden sm:inline">Export PDF</span>
         </button>
-        <button class="flex items-center gap-1.5 px-3 py-2 sm:px-4 sm:py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-xs sm:text-sm font-semibold transition-colors shadow-sm whitespace-nowrap">
+        <button class="flex items-center gap-1.5 px-3 py-2 sm:px-4 sm:py-2 bg-[#01879C] hover:bg-[#01306A] text-white rounded-full text-xs sm:text-sm font-bold transition-colors shadow-xs whitespace-nowrap">
           <Share2 :size="16" /> <span class="hidden sm:inline">Share Link</span>
         </button>
         <div class="w-px h-6 bg-slate-200 mx-0 sm:mx-1 hidden sm:block"></div>
-        <button @click="emit('close')" class="p-2 sm:px-3 sm:py-2 bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 rounded-full transition-colors shadow-sm flex-shrink-0 flex items-center justify-center">
+        <button @click="emit('close')" class="p-2 sm:px-3 sm:py-2 bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 rounded-full transition-colors shadow-xs flex-shrink-0 flex items-center justify-center">
           <X class="w-4 h-4 sm:w-5 sm:h-5" />
         </button>
       </div>
@@ -114,32 +129,73 @@ const totalPrice = computed(() => props.destinations.reduce((sum, dest) => sum +
 
     <div v-if="loading" class="flex-1 flex flex-col items-center justify-center">
       <div class="relative w-24 h-24 mb-8">
-        <div class="absolute inset-0 border-4 border-blue-100 rounded-full"></div>
-        <div class="absolute inset-0 border-4 border-blue-600 rounded-full border-t-transparent animate-spin"></div>
-        <Train class="absolute inset-0 m-auto text-blue-600" :size="32" />
+        <div class="absolute inset-0 border-4 border-[#8DDCDE]/40 rounded-full"></div>
+        <div class="absolute inset-0 border-4 border-[#01879C] rounded-full border-t-transparent animate-spin"></div>
+        <img src="/logo-icon.png" class="absolute inset-0 m-auto w-12 h-12 object-contain" />
       </div>
-      <h2 class="text-3xl font-bold text-slate-800 mb-3 tracking-tight">Crafting your journey...</h2>
+      <h2 class="text-3xl font-black text-[#002D67] mb-3 tracking-tight">Crafting your journey...</h2>
       <p class="text-slate-500 text-lg flex items-center gap-2">
-        <Sparkles :size="20" class="text-amber-500" />
-        AI Agents are fetching the best trains, stays, and experiences.
+        <Sparkles :size="20" class="text-[#01879C]" />
+        TrainExplore AI is sequencing optimal rail connections, stays, and scenic gems.
       </p>
     </div>
 
     <div v-else class="flex-1 max-w-4xl mx-auto w-full p-4 sm:p-6 lg:p-8 pb-32">
       
       <!-- Hero Section -->
-      <div class="mb-8 md:mb-12 text-center">
-        <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider mb-4 md:mb-6">
-          <Sparkles :size="16" />
-          AI-Curated Itinerary
+      <div class="mb-8 md:mb-10 text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-slate-100 text-[#002D67] border border-slate-200 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider mb-4 shadow-2xs">
+          <Sparkles :size="15" class="text-[#01879C]" />
+          TrainExplore AI Curated Rail Journey
         </div>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 mb-4 md:mb-6 tracking-tight leading-tight">
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-[#002D67] mb-4 tracking-tight leading-tight">
           The Great European <br class="hidden sm:block" /> Train Escape
         </h1>
-        <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-slate-600 text-sm sm:text-lg font-medium">
-          <div class="flex items-center gap-2"><MapPin :size="18" class="text-blue-500"/> {{ destinations.length }} Destinations</div>
-          <div class="flex items-center gap-2"><Calendar :size="18" class="text-blue-500"/> ~{{ totalDays }} Days</div>
-          <div class="flex items-center gap-2"><Train :size="18" class="text-blue-500"/> 100% Flight-Free</div>
+        <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-slate-600 text-sm sm:text-base font-medium">
+          <div class="flex items-center gap-1.5"><MapPin :size="16" class="text-[#01879C]"/> {{ destinations.length }} Destinations</div>
+          <div class="flex items-center gap-1.5"><Calendar :size="16" class="text-[#01879C]"/> ~{{ totalDays }} Days</div>
+          <div class="flex items-center gap-1.5 text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-full font-bold border border-emerald-200">
+            🌱 -88% CO₂ (~{{ totalCo2Saved }} kg saved vs flying)
+          </div>
+          <div class="flex items-center gap-1.5 font-black text-[#002D67] bg-[#FAFBFB] px-2.5 py-1 rounded-full border border-slate-200">
+            💰 ~${{ totalPrice + estimatedStayTotal }} Est. Total
+          </div>
+        </div>
+      </div>
+
+      <!-- TrainExplore AI Interactive Refine Bar -->
+      <div class="bg-gradient-to-r from-[#002D67] via-[#01306A] to-[#01879C] rounded-2xl p-4 sm:p-5 shadow-lg text-white mb-8">
+        <div class="flex items-center gap-2 mb-2.5">
+          <Sparkles :size="18" class="text-[#8DDCDE]" />
+          <h3 class="font-bold text-sm sm:text-base">Refine this itinerary with TrainExplore AI</h3>
+        </div>
+        <form @submit.prevent="handleRefine" class="flex items-center gap-2">
+          <input 
+            v-model="refineInput"
+            type="text"
+            placeholder="e.g., 'Add a food tour on Day 2', 'Find budget hostels', 'Make it slower-paced'..."
+            class="flex-1 bg-white/15 backdrop-blur-md border border-white/25 rounded-xl px-3.5 py-2 text-xs sm:text-sm text-white placeholder:text-slate-200 outline-none focus:bg-white focus:text-[#002D67] focus:placeholder:text-slate-400 transition-all shadow-inner"
+            :disabled="isRefining"
+          />
+          <button 
+            type="submit"
+            :disabled="!refineInput.trim() || isRefining"
+            class="px-4 py-2 bg-[#01879C] hover:bg-[#01306A] text-white disabled:opacity-50 font-bold rounded-xl text-xs sm:text-sm transition-colors flex items-center gap-1.5 flex-none shadow-md"
+          >
+            <RefreshCw v-if="isRefining" :size="14" class="animate-spin" />
+            <span v-else>Update</span>
+          </button>
+        </form>
+
+        <!-- Active Applied Refinements -->
+        <div v-if="userRefinements.length > 0" class="mt-3 flex flex-wrap gap-1.5">
+          <span 
+            v-for="(refine, rIdx) in userRefinements" 
+            :key="rIdx"
+            class="bg-white/20 text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1"
+          >
+            ✨ {{ refine }}
+          </span>
         </div>
       </div>
 

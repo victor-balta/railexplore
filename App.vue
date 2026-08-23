@@ -2,28 +2,70 @@
 import { ref, computed, watch, nextTick } from 'vue';
 import MapExplorer from './components/MapExplorer.vue';
 import ItineraryOnePager from './components/ItineraryOnePager.vue';
-import { INITIAL_DESTINATIONS, getConnectedCities } from './constants';
-import { CategoryType, TrainDeal, FilterState } from './types';
-import { Sparkles, X, Train, Calendar, Users, Search, MapPin, ArrowRight, Plus, Check, Loader2, Navigation } from '@lucide/vue';
-import { parseItineraryQuery } from './services/aiService';
 import DetailsPanel from './components/DetailsPanel.vue';
+import AiCopilotDrawer from './components/AiCopilotDrawer.vue';
+import { INITIAL_DESTINATIONS, INITIAL_CHAT, getConnectedCities } from './constants';
+import { CategoryType, TrainDeal, FilterState, ChatMessage, CopilotAction, DateFlexibility } from './types';
+import { 
+  Sparkles, X, Train, Calendar, Users, Search, MapPin, ArrowRight, 
+  Plus, Check, Loader2, Navigation, ArrowLeftRight, SlidersHorizontal, 
+  Bot, Wand2, Leaf, Euro, Zap
+} from '@lucide/vue';
+import { parseItineraryQuery, optimizeTripRoute } from './services/aiService';
 
 const destinations = ref<TrainDeal[]>(INITIAL_DESTINATIONS);
-const selectedDestinationId = ref<string | null>(null);
+const selectedDestinationId = ref<string | null>(INITIAL_DESTINATIONS[0]?.id || '1');
 const selectedCategory = ref<CategoryType | 'All'>('All');
-const aiInput = ref('');
-const isAiLoading = ref(false);
 const searchOrigin = ref("Berlin");
 const isLocating = ref(false);
 const searchDestination = ref("Anywhere");
 const searchQuery = ref("Anywhere");
 const itineraryDestinations = ref<TrainDeal[]>([]);
 const isOnePagerOpen = ref(false);
+const isCopilotOpen = ref(false);
+const isOptimizingRoute = ref(false);
+const chatMessages = ref<ChatMessage[]>(INITIAL_CHAT);
+
+const dateOptions: DateFlexibility[] = [
+  { mode: 'flexible', label: 'Flexible: Next 6 months' },
+  { mode: 'weekend', label: 'Weekend Getaway' },
+  { mode: '1week', label: '1-Week Rail Pass' },
+  { mode: 'exact', label: 'Apr 7 - Apr 11' }
+];
+const selectedDateOption = ref<DateFlexibility>(dateOptions[0]);
+const showDateDropdown = ref(false);
+
+const passengerCount = ref(1);
+const showPassengerDropdown = ref(false);
+
+const sortBy = ref<'best' | 'price' | 'duration' | 'co2'>('best');
+
 const filters = ref<FilterState>({
   maxDuration: 12,
   maxPrice: 500,
-  directOnly: false
+  directOnly: false,
+  operators: [],
+  selectedOperator: '',
+  scenicOnly: false,
+  nightTrainOnly: false,
+  sortBy: 'best'
 });
+
+const clearAllFilters = () => {
+  filters.value = {
+    maxDuration: 12,
+    maxPrice: 500,
+    directOnly: false,
+    operators: [],
+    selectedOperator: '',
+    scenicOnly: false,
+    nightTrainOnly: false,
+    sortBy: 'best'
+  };
+  selectedCategory.value = 'All';
+  searchDestination.value = "Anywhere";
+  searchQuery.value = "Anywhere";
+};
 
 const selectedDestination = computed(() => {
   return destinations.value.find(d => d.id === selectedDestinationId.value) || null;
@@ -35,6 +77,15 @@ const handleSelectDestination = (id: string) => {
 
 const handleMapSelection = (dest: TrainDeal) => {
   selectedDestinationId.value = dest.id;
+};
+
+const handleSwapOriginDest = () => {
+  if (selectedDestination.value) {
+    const temp = searchOrigin.value;
+    searchOrigin.value = selectedDestination.value.destinationName;
+    searchDestination.value = temp;
+    searchQuery.value = temp;
+  }
 };
 
 const handleGeolocation = () => {
@@ -97,59 +148,91 @@ const filteredDestinations = computed(() => {
     
     const matchesDuration = durationHours <= filters.value.maxDuration;
     const matchesDirect = !filters.value.directOnly || d.transfers === 0;
+    const matchesOperator = !filters.value.selectedOperator || filters.value.selectedOperator === '' || 
+                            d.trainOperator.toLowerCase().includes(filters.value.selectedOperator.toLowerCase());
+    const matchesScenic = !filters.value.scenicOnly || (d.scenicRating && d.scenicRating >= 4);
+    const matchesNightTrain = !filters.value.nightTrainOnly || d.trainOperator.toLowerCase().includes('nightjet');
 
-    return matchesCategory && matchesPrice && matchesSearch && matchesDuration && matchesDirect && matchesConnection;
+    return matchesCategory && matchesPrice && matchesSearch && matchesDuration && 
+           matchesDirect && matchesConnection && matchesOperator && matchesScenic && matchesNightTrain;
   });
 });
 
 const sortedFilteredDestinations = computed(() => {
-  return [...filteredDestinations.value].sort((a, b) => {
-    if (a.id === selectedDestinationId.value) return -1;
-    if (b.id === selectedDestinationId.value) return 1;
-    return 0;
-  });
+  const list = [...filteredDestinations.value];
+  
+  if (sortBy.value === 'price') {
+    list.sort((a, b) => a.price - b.price);
+  } else if (sortBy.value === 'duration') {
+    const getMins = (dur: string) => {
+      const h = dur.match(/(\d+)h/);
+      const m = dur.match(/(\d+)m/);
+      return (h ? parseInt(h[1]) * 60 : 0) + (m ? parseInt(m[1]) : 0);
+    };
+    list.sort((a, b) => getMins(a.duration) - getMins(b.duration));
+  } else if (sortBy.value === 'co2') {
+    list.sort((a, b) => (b.co2SavingsPercent || 0) - (a.co2SavingsPercent || 0));
+  } else {
+    // Best Deals (price * duration score)
+    list.sort((a, b) => {
+      if (a.id === selectedDestinationId.value) return -1;
+      if (b.id === selectedDestinationId.value) return 1;
+      return a.price - b.price;
+    });
+  }
+
+  return list;
 });
 
 const handleSearch = () => {
   searchQuery.value = searchDestination.value;
 };
 
-const handleAiSubmit = async () => {
-  if (!aiInput.value.trim()) return;
+const handleOptimizeRoute = async () => {
+  if (itineraryDestinations.value.length <= 1 || isOptimizingRoute.value) return;
   
-  isAiLoading.value = true;
-  
+  isOptimizingRoute.value = true;
   try {
-    const cityNames = await parseItineraryQuery(aiInput.value, destinations.value);
-    
-    if (cityNames && cityNames.length > 0) {
-      // Map city names back to TrainDeal objects
-      const matchedDestinations: TrainDeal[] = [];
-      
-      for (const cityName of cityNames) {
-        const match = destinations.value.find(d => 
-          d.destinationName.toLowerCase() === cityName.toLowerCase()
-        );
-        if (match) {
-          matchedDestinations.push(match);
-        }
-      }
-      
-      if (matchedDestinations.length > 0) {
-        itineraryDestinations.value = matchedDestinations;
-        isOnePagerOpen.value = true;
-        aiInput.value = '';
-      } else {
-        alert("Couldn't find those destinations. Please try different cities.");
-      }
-    } else {
-      alert("Couldn't understand the itinerary. Please try describing it differently.");
-    }
-  } catch (error) {
-    console.error("Error generating trip:", error);
-    alert("Something went wrong while generating your trip.");
+    const optimized = await optimizeTripRoute(searchOrigin.value, itineraryDestinations.value);
+    itineraryDestinations.value = optimized;
+  } catch (err) {
+    console.error("Optimization failed:", err);
   } finally {
-    isAiLoading.value = false;
+    isOptimizingRoute.value = false;
+  }
+};
+
+const handleCopilotAction = (action: CopilotAction) => {
+  if (action.type === 'SET_FILTERS') {
+    if (action.payload?.maxPrice) filters.value.maxPrice = action.payload.maxPrice;
+    if (action.payload?.maxDuration) filters.value.maxDuration = action.payload.maxDuration;
+    if (action.payload?.directOnly !== undefined) filters.value.directOnly = action.payload.directOnly;
+    if (action.payload?.category) selectedCategory.value = action.payload.category as CategoryType;
+  } else if (action.type === 'ADD_TO_TRIP') {
+    const ids: string[] = action.payload?.destinationIds || [];
+    ids.forEach(id => {
+      const found = destinations.value.find(d => d.id === id);
+      if (found && !itineraryDestinations.value.some(d => d.id === id)) {
+        itineraryDestinations.value.push(found);
+      }
+    });
+  } else if (action.type === 'SELECT_DESTINATION') {
+    if (action.payload?.id) {
+      selectedDestinationId.value = action.payload.id;
+    }
+  } else if (action.type === 'OPTIMIZE_ROUTE') {
+    handleOptimizeRoute();
+  } else if (action.type === 'SET_ORIGIN') {
+    if (action.payload?.origin) {
+      searchOrigin.value = action.payload.origin;
+    }
+  } else if (action.type === 'GENERATE_ITINERARY') {
+    if (itineraryDestinations.value.length > 0) {
+      isOnePagerOpen.value = true;
+    }
+  } else if (action.type === 'RESET_FILTERS') {
+    filters.value = { maxDuration: 12, maxPrice: 500, directOnly: false };
+    selectedCategory.value = 'All';
   }
 };
 
@@ -180,7 +263,7 @@ const addReturnToOrigin = () => {
     originName: itineraryDestinations.value[itineraryDestinations.value.length - 1]?.destinationName || searchOrigin.value,
     category: CategoryType.Anywhere,
     description: 'Return trip to origin.',
-    location: { lat: 52.5200, lng: 13.4050 }, // Default fallback
+    location: { lat: 52.5200, lng: 13.4050 },
     duration: 'N/A',
     price: 0,
     imageUrl: 'https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?auto=format&fit=crop&w=400&q=80',
@@ -199,135 +282,211 @@ const addReturnToOrigin = () => {
 <template>
   <div class="flex flex-col w-screen h-screen bg-white font-sans text-slate-900 overflow-hidden">
     
-    <!-- Top Navigation / Search Bar -->
-    <header class="flex-none bg-white border-b border-slate-200 z-50 px-4 py-3 flex items-center justify-between shadow-sm relative">
-      <div class="flex items-center gap-2 text-blue-600 font-medium text-xl tracking-tight">
-        <Train class="fill-current" :size="24" />
-        <span class="text-slate-700 hidden sm:inline-block">Travel Notes</span> 
-        <span class="hidden sm:inline-block">AI</span> 
-        <span class="text-sm bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full ml-2 font-bold hidden md:inline-block">Deals (beta)</span>
+    <!-- TrainExplore Top Navigation & Search Bar (Google Flights Minimalist Style) -->
+    <header class="flex-none bg-white border-b border-slate-200 z-50 px-3 sm:px-6 py-2 sm:py-2.5 flex items-center justify-between relative gap-2 sm:gap-4">
+      
+      <!-- Brand Logo -->
+      <div class="flex items-center gap-2 flex-none cursor-pointer" @click="clearAllFilters">
+        <img src="/logo.png" alt="TrainExplore" class="h-9 sm:h-11 md:h-12 w-auto object-contain hover:opacity-90 transition-opacity" />
       </div>
       
-      <div class="flex-1 max-w-2xl mx-2 sm:mx-4 md:mx-8 relative">
-        <div class="flex items-center gap-2 bg-slate-100 pl-3 pr-1.5 sm:pl-4 sm:pr-1.5 h-10 sm:h-11 rounded-full shadow-inner border border-slate-200/60 focus-within:ring-2 focus-within:ring-blue-500 focus-within:bg-white transition-all">
-          <Sparkles :size="16" class="text-blue-500 flex-none sm:w-[16px] sm:h-[16px]" />
+      <!-- Unified Search Input Cluster -->
+      <div class="flex-1 max-w-4xl mx-1 sm:mx-2 flex items-center bg-slate-100/70 border border-slate-200 rounded-full p-1 gap-1 overflow-x-auto scrollbar-hide text-xs sm:text-sm">
+        
+        <!-- Origin Input -->
+        <div class="flex items-center gap-2 bg-white px-3.5 py-1.5 rounded-full border border-slate-200/80 shadow-2xs flex-none min-w-[130px] sm:min-w-[160px]">
+          <MapPin :size="14" class="text-slate-400 flex-none" />
           <input 
+            v-model="searchOrigin" 
             type="text" 
-            v-model="aiInput"
-            @keydown.enter="handleAiSubmit"
-            :disabled="isAiLoading"
-            class="text-xs sm:text-sm font-medium bg-transparent outline-none w-full text-slate-700 placeholder:text-slate-500 disabled:opacity-50 h-full"
-            placeholder="Describe your dream itinerary..."
+            placeholder="From where?" 
+            class="bg-transparent font-semibold text-slate-900 outline-none w-full truncate"
           />
           <button 
-            v-if="aiInput"
-            @click="handleAiSubmit" 
-            :disabled="isAiLoading"
-            class="bg-blue-600 text-white px-3 py-1.5 sm:px-4 sm:py-1.5 rounded-full hover:bg-blue-700 disabled:bg-blue-400 flex items-center gap-1.5 text-xs sm:text-sm font-semibold transition-colors flex-none"
+            @click="handleGeolocation" 
+            :disabled="isLocating"
+            class="text-slate-400 hover:text-slate-700 transition-colors"
+            title="Use current location"
           >
-            <template v-if="isAiLoading">
-              <Loader2 :size="14" class="animate-spin" /> 
-              <span class="hidden sm:inline">Generating...</span>
-            </template>
-            <template v-else>
-              <span class="hidden sm:inline">Generate my trip</span>
-              <span class="sm:hidden">Go</span> 
-              <ArrowRight :size="14" />
-            </template>
+            <Loader2 v-if="isLocating" :size="12" class="animate-spin" />
+            <Navigation v-else :size="12" />
           </button>
         </div>
-      </div>
 
-      <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 font-bold border border-blue-200 flex-none">
-        AI
-      </div>
-    </header>
+        <!-- Swap Icon Button -->
+        <button 
+          @click="handleSwapOriginDest"
+          class="w-7 h-7 rounded-full bg-white hover:bg-slate-100 border border-slate-200/80 flex items-center justify-center text-slate-500 hover:text-slate-800 transition-colors flex-none shadow-2xs"
+          title="Swap cities"
+        >
+          <ArrowLeftRight :size="12" />
+        </button>
 
-    <div class="flex flex-col md:flex-row flex-1 overflow-hidden relative">
-      
-      <!-- Left Sidebar: Deals List -->
-      <div class="w-full md:w-[400px] lg:w-[450px] flex-none bg-white border-b md:border-b-0 md:border-r border-slate-200 flex flex-col z-40 shadow-[4px_0_24px_rgba(0,0,0,0.02)] h-[50vh] md:h-full">
-        <div class="p-4 border-b border-slate-100 flex-none">
-          <h2 class="text-lg font-medium text-slate-800 mb-4">Explore train journeys</h2>
+        <!-- Destination Input -->
+        <div class="flex items-center gap-2 bg-white px-3.5 py-1.5 rounded-full border border-slate-200/80 shadow-2xs flex-1 min-w-[140px]">
+          <Search :size="14" class="text-slate-400 flex-none" />
+          <input 
+            v-model="searchDestination" 
+            @keydown.enter="handleSearch" 
+            type="text" 
+            placeholder="Where to? (Explore anywhere)" 
+            class="bg-transparent font-semibold text-slate-900 outline-none w-full truncate placeholder:text-slate-400"
+          />
+        </div>
+
+        <!-- Flexible Dates Dropdown -->
+        <div class="relative flex-none hidden lg:block">
+          <button 
+            @click="showDateDropdown = !showDateDropdown"
+            class="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-slate-200/80 shadow-2xs text-slate-700 font-semibold hover:bg-slate-50 transition-colors whitespace-nowrap"
+          >
+            <Calendar :size="14" class="text-slate-400" />
+            <span>{{ selectedDateOption.label }}</span>
+          </button>
           
-          <div class="mb-4">
-            <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Starting Point</label>
-            <div class="relative flex items-center">
-              <div class="absolute left-3 text-slate-400">
-                <MapPin :size="16" />
+          <div 
+            v-if="showDateDropdown" 
+            class="absolute top-full mt-1.5 right-0 bg-white border border-slate-200 rounded-2xl shadow-xl p-2 z-[100] w-52 space-y-1"
+          >
+            <button 
+              v-for="(opt, idx) in dateOptions" 
+              :key="idx"
+              @click="selectedDateOption = opt; showDateDropdown = false"
+              class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:bg-slate-100 hover:text-[#01306A] transition-colors flex items-center justify-between"
+            >
+              <span>{{ opt.label }}</span>
+              <Check v-if="selectedDateOption.label === opt.label" :size="14" class="text-[#01306A]" />
+            </button>
+          </div>
+        </div>
+
+        <!-- Passengers Dropdown -->
+        <div class="relative flex-none hidden md:block">
+          <button 
+            @click="showPassengerDropdown = !showPassengerDropdown"
+            class="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-slate-200/80 shadow-2xs text-slate-700 font-semibold hover:bg-slate-50 transition-colors whitespace-nowrap"
+          >
+            <Users :size="14" class="text-slate-400" />
+            <span>{{ passengerCount }} {{ passengerCount === 1 ? 'Adult' : 'Adults' }}</span>
+          </button>
+
+          <div 
+            v-if="showPassengerDropdown" 
+            class="absolute top-full mt-1.5 right-0 bg-white border border-slate-200 rounded-2xl shadow-xl p-3 z-[100] w-48 space-y-2"
+          >
+            <div class="text-xs font-bold text-slate-800">Passengers</div>
+            <div class="flex items-center justify-between pt-1">
+              <span class="text-xs font-semibold text-slate-600">Adults (18+)</span>
+              <div class="flex items-center gap-2">
+                <button 
+                  @click="passengerCount = Math.max(1, passengerCount - 1)" 
+                  class="w-6 h-6 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold flex items-center justify-center transition-colors"
+                >-</button>
+                <span class="text-xs font-bold text-[#002D67] w-4 text-center">{{ passengerCount }}</span>
+                <button 
+                  @click="passengerCount = Math.min(9, passengerCount + 1)" 
+                  class="w-6 h-6 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold flex items-center justify-center transition-colors"
+                >+</button>
               </div>
-              <input 
-                type="text" 
-                v-model="searchOrigin"
-                class="w-full bg-slate-50 border border-slate-200 rounded-xl py-2.5 pl-9 pr-10 text-sm font-bold text-slate-800 outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all shadow-sm"
-                placeholder="Where are you starting?"
-              />
-              <button 
-                @click="handleGeolocation"
-                :disabled="isLocating"
-                class="absolute right-2 p-1.5 text-slate-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors disabled:opacity-50"
-                title="Use current location"
-              >
-                <Loader2 v-if="isLocating" :size="16" class="animate-spin" />
-                <Navigation v-else :size="16" />
-              </button>
             </div>
           </div>
+        </div>
 
-          <p class="text-sm text-slate-500 mb-3">Train travel • 1 passenger</p>
-          <div class="flex gap-2 overflow-x-auto scrollbar-hide pb-1">
-            <button 
-              @click="filters.maxDuration = filters.maxDuration === 3 ? 12 : 3"
-              class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap transition-colors border"
-              :class="filters.maxDuration === 3 ? 'bg-blue-100 text-blue-700 border-blue-200' : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'"
+      </div>
+
+      <!-- TrainExplore AI Copilot Trigger Button -->
+      <button 
+        @click="isCopilotOpen = !isCopilotOpen"
+        class="flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all shadow-xs flex-none"
+        :class="isCopilotOpen 
+          ? 'bg-[#01306A] text-white' 
+          : 'bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-slate-400'"
+      >
+        <Sparkles :size="14" class="text-[#01879C]" />
+        <span class="hidden sm:inline">AI Copilot</span>
+      </button>
+    </header>
+
+    <!-- Main Workspace Split Layout -->
+    <div class="flex flex-col md:flex-row flex-1 overflow-hidden relative">
+      
+      <!-- Left Sidebar: Train Deals List -->
+      <div class="w-full md:w-[380px] lg:w-[420px] flex-none bg-white border-b md:border-b-0 md:border-r border-slate-200 flex flex-col z-40 h-[48vh] md:h-full">
+        
+        <!-- Header Controls & Sort -->
+        <div class="px-4 py-3 border-b border-slate-200 bg-white flex-none flex items-center justify-between">
+          <h2 class="text-sm font-bold text-slate-900 flex items-center gap-1.5">
+            <span>Train Journeys</span>
+            <span class="text-xs text-slate-500 font-normal">({{ sortedFilteredDestinations.length }})</span>
+          </h2>
+          
+          <!-- Sort Selector -->
+          <div class="flex items-center gap-1.5">
+            <span class="text-[11px] font-medium text-slate-500 hidden sm:inline">Sort by:</span>
+            <select 
+              v-model="sortBy"
+              class="text-xs font-semibold text-slate-700 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-lg px-2.5 py-1 outline-none cursor-pointer transition-colors"
             >
-              ⚡ Quick Escapes (&lt;3h)
-            </button>
-            <button 
-              @click="filters.directOnly = !filters.directOnly"
-              class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap transition-colors border"
-              :class="filters.directOnly ? 'bg-blue-100 text-blue-700 border-blue-200' : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'"
-            >
-              Direct Trains Only
-            </button>
+              <option value="best">Best Price & Route</option>
+              <option value="price">Lowest Price</option>
+              <option value="duration">Fastest Duration</option>
+              <option value="co2">Lowest Emissions</option>
+            </select>
           </div>
         </div>
         
-        <div class="flex-1 overflow-y-auto p-4 space-y-4 scrollbar-hide">
+        <!-- Deals List Stream -->
+        <div class="flex-1 overflow-y-auto p-3 space-y-2 scrollbar-hide bg-slate-50/50">
           <div 
             v-for="dest in sortedFilteredDestinations"
             :key="dest.id"
             :id="`deal-${dest.id}`"
             @click="handleSelectDestination(dest.id)"
-            class="group flex gap-4 p-3 rounded-2xl cursor-pointer transition-all border"
-            :class="selectedDestinationId === dest.id ? 'bg-blue-50 border-blue-200 shadow-sm' : 'bg-white border-transparent hover:bg-slate-50 hover:border-slate-200'"
+            class="group flex gap-3 p-3 rounded-xl cursor-pointer transition-all border"
+            :class="selectedDestinationId === dest.id 
+              ? 'bg-white border-[#01306A] shadow-sm ring-2 ring-[#01306A]/10' 
+              : 'bg-white border-slate-200 hover:border-slate-300 hover:shadow-xs'"
           >
-            <div class="w-24 h-24 rounded-xl overflow-hidden flex-none relative">
-              <img :src="dest.imageUrl" :alt="dest.destinationName" @error="(e) => (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1519677100203-a0e668c92439?auto=format&fit=crop&w=800&q=80'" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div class="absolute top-1 right-1 bg-white/90 backdrop-blur text-[10px] font-bold px-1.5 py-0.5 rounded text-slate-700">
+            <div class="w-20 h-20 rounded-lg overflow-hidden flex-none relative">
+              <img 
+                :src="dest.imageUrl" 
+                :alt="dest.destinationName" 
+                @error="(e) => (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1519677100203-a0e668c92439?auto=format&fit=crop&w=800&q=80'" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+              />
+              <div class="absolute bottom-1 right-1 bg-black/75 backdrop-blur text-[9px] font-semibold px-1.5 py-0.5 rounded text-white">
                 {{ dest.duration }}
               </div>
             </div>
-            <div class="flex-1 py-1 flex flex-col justify-between">
+            <div class="flex-1 py-0.5 flex flex-col justify-between min-w-0">
               <div>
-                <h3 class="font-medium text-slate-900 leading-tight">{{ dest.destinationName }}</h3>
-                <p class="text-xs text-slate-500 mt-0.5">{{ dest.outboundDate }} - {{ dest.returnDate }}</p>
-                <p class="text-xs text-slate-400 mt-1">{{ dest.transfers === 0 ? 'Direct' : `${dest.transfers} transfer(s)` }} • {{ dest.trainOperator }}</p>
-              </div>
-              <div class="flex justify-between items-end mt-2">
-                <div class="text-lg font-medium text-slate-900">
-                  ${{ dest.price }}
+                <div class="flex items-center justify-between">
+                  <h3 class="font-bold text-slate-900 text-sm truncate">{{ dest.destinationName }}</h3>
+                  <div class="text-base font-bold text-slate-900">${{ dest.price }}</div>
                 </div>
+                <p class="text-xs text-slate-500 mt-0.5">{{ dest.destinationCountry }} • {{ dest.category }}</p>
+                <div class="flex items-center gap-1.5 mt-1 text-[11px] text-slate-500">
+                  <span class="font-medium text-slate-700">{{ dest.transfers === 0 ? 'Nonstop' : `${dest.transfers} transfer` }}</span>
+                  <span>•</span>
+                  <span class="truncate">{{ dest.trainOperator }}</span>
+                </div>
+              </div>
+              <div class="flex justify-between items-center mt-2 pt-1.5 border-t border-slate-100">
+                <span v-if="dest.co2SavingsPercent" class="text-[10px] font-medium text-slate-500 flex items-center gap-0.5">
+                  <Leaf :size="10" class="text-emerald-600" /> -{{ dest.co2SavingsPercent }}% CO₂ vs flight
+                </span>
                 <button
                   @click.stop="toggleItineraryDestination(dest)"
-                  class="px-3 py-1.5 rounded-full text-xs font-bold transition-colors flex items-center gap-1"
-                  :class="itineraryDestinations.some(d => d.id === dest.id) ? 'bg-green-500 text-white hover:bg-green-600' : 'bg-blue-50 text-blue-600 hover:bg-blue-100'"
+                  class="px-3 py-1 rounded-full text-xs font-semibold transition-all flex items-center gap-1 ml-auto shadow-2xs"
+                  :class="itineraryDestinations.some(d => d.id === dest.id) 
+                    ? 'bg-[#01306A] text-white hover:bg-[#002D67]' 
+                    : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'"
                 >
                   <template v-if="itineraryDestinations.some(d => d.id === dest.id)">
-                    <Check :size="14" /> Added
+                    <Check :size="12" /> Added
                   </template>
                   <template v-else>
-                    <Plus :size="14" /> Add to Trip
+                    <Plus :size="12" /> Add
                   </template>
                 </button>
               </div>
@@ -336,8 +495,8 @@ const addReturnToOrigin = () => {
         </div>
       </div>
 
-      <!-- Right Area: Map Explorer -->
-      <div class="flex-1 w-full relative bg-slate-100 flex flex-col z-0">
+      <!-- Right Area: TrainExplore Map Explorer -->
+      <div class="flex-1 min-w-0 h-full relative bg-slate-100 flex flex-col z-0">
         <MapExplorer 
           :destinations="filteredDestinations"
           :selectedDestination="selectedDestination"
@@ -348,55 +507,89 @@ const addReturnToOrigin = () => {
           @update-filters="filters = $event"
           :itineraryDestinations="itineraryDestinations"
         />
-      </div>
 
-      <!-- Floating Trip Builder Bar -->
-      <div v-if="itineraryDestinations.length > 0" class="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-[60] bg-white rounded-full shadow-2xl border border-slate-200 p-2 flex items-center gap-2 md:gap-4 animate-in slide-in-from-bottom-10 w-[95%] sm:w-[90%] md:w-auto max-w-2xl">
-        <div class="flex items-center gap-2 font-medium text-slate-700 pl-3 md:pl-4 flex-1 overflow-x-auto scrollbar-hide whitespace-nowrap text-sm">
-          <span class="text-blue-600 flex-none"><Train :size="18" /></span>
-          {{ searchOrigin }}
-          
-          <template v-for="d in itineraryDestinations" :key="d.id">
-            <ArrowRight :size="16" class="text-slate-400 flex-none" />
-            <span>{{ d.destinationName }}</span>
-          </template>
-          
+        <!-- Floating Multi-City Trip Builder & AI Route Optimizer Bar -->
+        <div v-if="itineraryDestinations.length > 0" class="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-[60] bg-white rounded-2xl shadow-2xl border border-slate-200 p-2.5 flex items-center gap-2 md:gap-3 w-[95%] sm:w-[90%] md:w-auto max-w-2xl">
+          <div class="flex items-center gap-2 font-bold text-[#002D67] pl-2 md:pl-3 flex-1 overflow-x-auto scrollbar-hide whitespace-nowrap text-xs sm:text-sm">
+            <span class="text-[#01879C] flex-none"><Train :size="16" /></span>
+            {{ searchOrigin }}
+            
+            <template v-for="d in itineraryDestinations" :key="d.id">
+              <ArrowRight :size="14" class="text-slate-400 flex-none" />
+              <span>{{ d.destinationName }}</span>
+            </template>
+            
+            <button 
+              @click="addReturnToOrigin"
+              class="flex items-center gap-1 text-[11px] font-bold text-slate-700 hover:text-[#01306A] transition-colors bg-slate-100 hover:bg-slate-200 px-2.5 py-0.5 rounded-full flex-none ml-1 border border-slate-200"
+            >
+              <Plus :size="10" /> Return to {{ searchOrigin }}
+            </button>
+          </div>
+
+          <!-- AI Route Optimizer Button (Active when 2+ stops) -->
           <button 
-            @click="addReturnToOrigin"
-            class="flex items-center gap-1 text-xs font-bold text-slate-500 hover:text-blue-600 transition-colors bg-slate-100 hover:bg-blue-50 px-2 py-1 rounded-full flex-none ml-2"
+            v-if="itineraryDestinations.length >= 2"
+            @click="handleOptimizeRoute"
+            :disabled="isOptimizingRoute"
+            class="bg-slate-100 hover:bg-slate-200 text-[#002D67] border border-slate-200 px-3 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1 flex-none shadow-xs disabled:opacity-50"
+            title="AI orders stops to minimize train travel time"
           >
-            <Plus :size="12" /> Return to {{ searchOrigin }}
+            <Loader2 v-if="isOptimizingRoute" :size="13" class="animate-spin text-[#01879C]" />
+            <Wand2 v-else :size="13" class="text-[#01879C]" />
+            <span class="hidden sm:inline">AI Optimize</span>
+          </button>
+
+          <!-- Generate Trip Button -->
+          <button 
+            @click="isOnePagerOpen = true"
+            class="bg-[#01879C] hover:bg-[#01306A] text-white px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-colors flex items-center gap-1.5 flex-none shadow-md"
+          >
+            <Sparkles :size="15" /> 
+            <span>Generate Trip</span>
+          </button>
+
+          <button 
+            @click="itineraryDestinations = []"
+            class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-full transition-colors flex-none"
+            title="Clear Trip"
+          >
+            <X :size="15" />
           </button>
         </div>
-        <button 
-          @click="isOnePagerOpen = true"
-          class="bg-blue-600 hover:bg-blue-700 text-white px-3 sm:px-4 md:px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-colors flex items-center gap-1.5 flex-none shadow-md"
-        >
-          <Sparkles :size="16" /> <span>Generate my trip</span>
-        </button>
-        <button 
-          @click="itineraryDestinations = []"
-          class="p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-full transition-colors mr-1 flex-none"
-          title="Clear Trip"
-        >
-          <X :size="16" />
-        </button>
+      </div>
+
+      <!-- Details Panel (Right Sidebar on Desktop / Modal Drawer on Mobile) -->
+      <div 
+        v-if="selectedDestination" 
+        class="fixed inset-y-0 right-0 top-14 sm:top-16 md:static md:inset-auto w-full md:w-[400px] lg:w-[440px] flex-none bg-white border-l border-slate-200 z-[70] md:z-auto shadow-2xl md:shadow-none flex flex-col overflow-hidden transition-all duration-300"
+      >
+        <DetailsPanel 
+          :destination="selectedDestination"
+          :itineraryDestinations="itineraryDestinations"
+          @update-itinerary="itineraryDestinations = $event"
+          @close="selectedDestinationId = null"
+          @open-one-pager="isOnePagerOpen = true"
+        />
       </div>
 
     </div>
 
-    <!-- Details Overlay Panel (Shows when a deal is selected) -->
-    <div v-if="selectedDestination" class="absolute top-16 right-0 bottom-0 w-full md:w-[450px] lg:w-[500px] bg-white border-l border-slate-200 z-[70] shadow-2xl animate-in slide-in-from-right duration-300">
-      <DetailsPanel 
-        :destination="selectedDestination"
-        :itineraryDestinations="itineraryDestinations"
-        @update-itinerary="itineraryDestinations = $event"
-        @close="selectedDestinationId = null"
-        @open-one-pager="isOnePagerOpen = true"
-      />
-    </div>
+    <!-- TrainExplore AI Copilot Drawer -->
+    <AiCopilotDrawer 
+      :isOpen="isCopilotOpen"
+      :destinations="destinations"
+      :searchOrigin="searchOrigin"
+      :itineraryDestinations="itineraryDestinations"
+      :messages="chatMessages"
+      @close="isCopilotOpen = false"
+      @update-messages="chatMessages = $event"
+      @trigger-action="handleCopilotAction"
+      @select-destination="selectedDestinationId = $event"
+      @toggle-destination="toggleItineraryDestination"
+    />
 
-    <!-- Itinerary OnePager Dashboard -->
+    <!-- Itinerary OnePager Dashboard with TrainExplore AI Assistant -->
     <ItineraryOnePager 
       v-if="isOnePagerOpen"
       :destinations="itineraryDestinations" 
@@ -417,3 +610,4 @@ const addReturnToOrigin = () => {
   scrollbar-width: none;  /* Firefox */
 }
 </style>
+

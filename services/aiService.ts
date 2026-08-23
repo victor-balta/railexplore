@@ -143,13 +143,316 @@ export const generateGeneralChat = async (
   }
 };
 
+// Helper to calculate distance between two coordinates
+const calculateDistance = (lat1: number, lon1: number, lat2: number, lon2: number) => {
+  const R = 6371; // Earth radius in km
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLon = (lon2 - lon1) * Math.PI / 180;
+  const a = 
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * 
+    Math.sin(dLon / 2) * Math.sin(dLon / 2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  return R * c;
+};
+
+export interface CopilotResponse {
+  message: string;
+  actions: { type: string; label: string; payload?: any }[];
+  destinationIds: string[];
+  quickReplies: string[];
+}
+
+export const chatWithCopilot = async (
+  history: { role: string; text: string }[],
+  userMessage: string,
+  availableDestinations: TrainDeal[],
+  currentOrigin: string,
+  currentTrip: TrainDeal[]
+): Promise<CopilotResponse> => {
+  try {
+    const destSummary = availableDestinations.slice(0, 30).map(d => ({
+      id: d.id,
+      name: d.destinationName,
+      country: d.destinationCountry,
+      category: d.category,
+      price: d.price,
+      duration: d.duration,
+      transfers: d.transfers
+    }));
+
+    const systemPrompt = `You are TrainExplore AI (trainexplore.com), an intelligent, enthusiastic, and highly knowledgeable European train travel copilot.
+Your mission is to help travelers discover scenic train journeys, find rail deals, build multi-city train loops, and compare timetables and travel options.
+
+You must respond in JSON format with:
+1. "message": A warm, inspiring, and concise markdown message (use bullet points and bold highlights).
+2. "actions": Array of executable UI actions you want to offer to the user. Valid action types:
+   - "SET_FILTERS": payload { maxPrice?: number, maxDuration?: number, directOnly?: boolean, category?: string }
+   - "ADD_TO_TRIP": payload { destinationIds: string[] }
+   - "SELECT_DESTINATION": payload { id: string }
+   - "OPTIMIZE_ROUTE": payload {}
+   - "SET_ORIGIN": payload { origin: string }
+   - "GENERATE_ITINERARY": payload {}
+   - "RESET_FILTERS": payload {}
+   Each action must have a user-friendly "label" (e.g., "🎯 Filter under $50", "➕ Add Prague to Trip", "✨ Generate Itinerary").
+3. "destinationIds": Array of matching destination IDs to highlight on the map.
+4. "quickReplies": 2-4 short contextual suggestions the user might ask next.
+
+Available Destinations Sample:
+${JSON.stringify(destSummary)}
+
+Current User State:
+Origin: ${currentOrigin}
+Current Trip in Builder: ${currentTrip.map(t => t.destinationName).join(' -> ') || 'None'}
+`;
+
+    const messages = [
+      { role: 'system' as const, content: systemPrompt },
+      ...history.map(h => ({
+        role: (h.role === 'model' || h.role === 'assistant' ? 'assistant' : 'user') as 'assistant' | 'user',
+        content: h.text
+      })),
+      { role: 'user' as const, content: userMessage }
+    ];
+
+    const resultText = await callDeepSeek(messages, true);
+    if (resultText) {
+      const parsed = JSON.parse(resultText);
+      return {
+        message: parsed.message || "Here are some great options for your train adventure!",
+        actions: parsed.actions || [],
+        destinationIds: parsed.destinationIds || [],
+        quickReplies: parsed.quickReplies || ["Tell me more", "Find hotels", "Show cheaper dates"]
+      };
+    }
+  } catch (error) {
+    console.warn("DeepSeek copilot failed, fallback to local intelligent parser:", error);
+  }
+
+  // Robust Local Fallback Intent Parser
+  const lower = userMessage.toLowerCase();
+  const matchedActions: any[] = [];
+  const matchedDestIds: string[] = [];
+  let reply = "";
+  let quickReplies = ["Show scenic routes", "Direct trains only", "Plan a 3-day loop"];
+
+  if (lower.includes("cheap") || lower.includes("budget") || lower.includes("under") || lower.includes("$")) {
+    const priceMatch = lower.match(/\$?(\d+)/);
+    const maxPrice = priceMatch ? parseInt(priceMatch[1], 10) : 50;
+    const cheapDests = availableDestinations.filter(d => d.price <= maxPrice);
+    
+    cheapDests.slice(0, 4).forEach(d => matchedDestIds.push(d.id));
+    matchedActions.push({
+      type: 'SET_FILTERS',
+      label: `⚡ Filter under $${maxPrice}`,
+      payload: { maxPrice }
+    });
+    if (cheapDests.length > 0) {
+      matchedActions.push({
+        type: 'ADD_TO_TRIP',
+        label: `➕ Add ${cheapDests[0].destinationName} to Trip`,
+        payload: { destinationIds: [cheapDests[0].id] }
+      });
+    }
+
+    reply = `I found **${cheapDests.length} great train deals** under **$${maxPrice}** from ${currentOrigin}! Top picks include **${cheapDests.slice(0, 3).map(d => `${d.destinationName} ($${d.price})`).join(', ')}**.`;
+  } else if (lower.includes("mountain") || lower.includes("alps") || lower.includes("ski") || lower.includes("nature")) {
+    const natureDests = availableDestinations.filter(d => 
+      d.category === 'Mountain' || d.category === 'Nature' || d.category === 'Skiing'
+    );
+    natureDests.slice(0, 4).forEach(d => matchedDestIds.push(d.id));
+    matchedActions.push({
+      type: 'SET_FILTERS',
+      label: '🏔️ Show Mountains & Nature',
+      payload: { category: 'Mountain' }
+    });
+    if (natureDests.length > 0) {
+      matchedActions.push({
+        type: 'ADD_TO_TRIP',
+        label: `➕ Add ${natureDests[0].destinationName} to Trip`,
+        payload: { destinationIds: [natureDests[0].id] }
+      });
+    }
+    reply = `Europe has incredible scenic mountain rails! Check out **${natureDests.slice(0, 3).map(d => d.destinationName).join(', ')}** for panoramic window routes, fresh alpine air, and stunning trails.`;
+  } else if (lower.includes("romantic") || lower.includes("wine") || lower.includes("couple")) {
+    const romanticDests = availableDestinations.filter(d => d.category === 'Romantic' || d.category === 'City Break');
+    romanticDests.slice(0, 4).forEach(d => matchedDestIds.push(d.id));
+    matchedActions.push({
+      type: 'SET_FILTERS',
+      label: '🍷 Show Romantic Journeys',
+      payload: { category: 'Romantic' }
+    });
+    reply = `For a romantic journey, I highly recommend historic cities with river views and charming old towns. **${romanticDests.slice(0, 3).map(d => d.destinationName).join(', ')}** are magical by rail!`;
+  } else if (lower.includes("fast") || lower.includes("quick") || lower.includes("weekend") || lower.includes("<3h") || lower.includes("short")) {
+    matchedActions.push({
+      type: 'SET_FILTERS',
+      label: '⚡ Quick Escapes (<3h, Direct)',
+      payload: { maxDuration: 3, directOnly: true }
+    });
+    reply = `Looking for a fast getaway? I've prepared direct high-speed connections under **3 hours** so you can maximize your time exploring!`;
+  } else {
+    // City match search
+    const foundCities = availableDestinations.filter(d => 
+      lower.includes(d.destinationName.toLowerCase())
+    );
+    if (foundCities.length > 0) {
+      foundCities.forEach(c => matchedDestIds.push(c.id));
+      matchedActions.push({
+        type: 'ADD_TO_TRIP',
+        label: `➕ Add ${foundCities.map(c => c.destinationName).join(' & ')} to Trip`,
+        payload: { destinationIds: foundCities.map(c => c.id) }
+      });
+      matchedActions.push({
+        type: 'SELECT_DESTINATION',
+        label: `📍 View ${foundCities[0].destinationName}`,
+        payload: { id: foundCities[0].id }
+      });
+      reply = `**${foundCities.map(c => c.destinationName).join(', ')}** is a fantastic choice! The train journey features scenic stretches, comfortable seating, and drops you right in the city center.`;
+    } else {
+      reply = `I can help you find the best train routes across Europe! Try asking for **"Romantic wine routes"**, **"Direct trains under 4h"**, or **"Trips under $50"**.`;
+    }
+  }
+
+  return {
+    message: reply,
+    actions: matchedActions,
+    destinationIds: matchedDestIds,
+    quickReplies
+  };
+};
+
+export const optimizeTripRoute = async (
+  originName: string,
+  destinations: TrainDeal[]
+): Promise<TrainDeal[]> => {
+  if (destinations.length <= 1) return destinations;
+
+  try {
+    const destList = destinations.map(d => `${d.destinationName} (${d.location.lat}, ${d.location.lng})`).join(', ');
+    const systemPrompt = "You are a European rail network routing optimizer. You order a list of cities into the most efficient rail sequence starting from an origin to avoid backtracking.";
+    const userPrompt = `
+      Origin: ${originName}
+      Selected Cities: ${destList}
+
+      Return a JSON array containing the ordered city names that minimizes total travel distance:
+      {
+        "orderedCities": ["CityA", "CityB", "CityC"]
+      }
+    `;
+
+    const resultText = await callDeepSeek([
+      { role: 'system', content: systemPrompt },
+      { role: 'user', content: userPrompt }
+    ], true);
+
+    if (resultText) {
+      const parsed = JSON.parse(resultText);
+      const orderedNames: string[] = parsed.orderedCities || [];
+      const reordered: TrainDeal[] = [];
+      
+      orderedNames.forEach(name => {
+        const found = destinations.find(d => d.destinationName.toLowerCase() === name.toLowerCase());
+        if (found && !reordered.some(r => r.id === found.id)) {
+          reordered.push(found);
+        }
+      });
+
+      // Add any remaining destinations
+      destinations.forEach(d => {
+        if (!reordered.some(r => r.id === d.id)) reordered.push(d);
+      });
+
+      if (reordered.length === destinations.length) {
+        return reordered;
+      }
+    }
+  } catch (err) {
+    console.warn("AI route optimization fallback to nearest-neighbor TSP:", err);
+  }
+
+  // Fallback: Nearest Neighbor Heuristic
+  const unvisited = [...destinations];
+  const ordered: TrainDeal[] = [];
+  
+  // Start from origin (approximate Berlin or first destination)
+  let currentLat = destinations[0].location.lat;
+  let currentLng = destinations[0].location.lng;
+
+  while (unvisited.length > 0) {
+    let nearestIdx = 0;
+    let minDist = Infinity;
+
+    for (let i = 0; i < unvisited.length; i++) {
+      const dist = calculateDistance(currentLat, currentLng, unvisited[i].location.lat, unvisited[i].location.lng);
+      if (dist < minDist) {
+        minDist = dist;
+        nearestIdx = i;
+      }
+    }
+
+    const nextCity = unvisited.splice(nearestIdx, 1)[0];
+    ordered.push(nextCity);
+    currentLat = nextCity.location.lat;
+    currentLng = nextCity.location.lng;
+  }
+
+  return ordered;
+};
+
+export const refineItineraryDay = async (
+  currentDay: any,
+  userInstruction: string
+): Promise<any> => {
+  try {
+    const systemPrompt = "You are a personalized travel itinerary designer. Modify this specific day's schedule according to the user's preference.";
+    const userPrompt = `
+      Current Day Schedule:
+      ${JSON.stringify(currentDay)}
+
+      User's requested modification: "${userInstruction}"
+
+      Return updated JSON for this day in the exact same schema:
+      {
+        "day": ${currentDay.day},
+        "location": "${currentDay.location}",
+        "theme": "Updated Theme",
+        "trainDetails": "Train details",
+        "hotelSuggestion": "Updated hotel suggestion",
+        "activities": ["Activity 1", "Activity 2", "Activity 3"],
+        "diningHighlight": "Specific restaurant or culinary specialty"
+      }
+    `;
+
+    const resultText = await callDeepSeek([
+      { role: 'system', content: systemPrompt },
+      { role: 'user', content: userPrompt }
+    ], true);
+
+    if (resultText) {
+      return JSON.parse(resultText);
+    }
+  } catch (error) {
+    console.error("Error refining day:", error);
+  }
+  
+  // Fallback update
+  return {
+    ...currentDay,
+    theme: `${currentDay.theme} (Customized)`,
+    activities: [
+      ...currentDay.activities.slice(0, 2),
+      `⭐ Custom AI Pick: ${userInstruction}`
+    ]
+  };
+};
+
 export const getAccommodations = async (destination: TrainDeal): Promise<Accommodation[]> => {
   try {
     const systemPrompt = "You are a travel database assistant. You suggest hotels and lodging in JSON format.";
     const userPrompt = `
       Recommend 5 real, existing accommodation options in ${destination.destinationName}, ${destination.destinationCountry}. 
       Include a mix of hostels, boutique hotels, and one luxury option.
-      Provide realistic prices in USD per night.
+      Provide realistic prices in USD per night and neighborhood.
       
       Return a JSON object containing an "accommodations" array:
       {
@@ -157,7 +460,8 @@ export const getAccommodations = async (destination: TrainDeal): Promise<Accommo
           {
             "name": "Hotel Name",
             "rating": 4.5,
-            "price": 150
+            "price": 150,
+            "neighborhood": "Old Town"
           }
         ]
       }
@@ -176,6 +480,7 @@ export const getAccommodations = async (destination: TrainDeal): Promise<Accommo
       name: item.name,
       rating: item.rating,
       price: item.price,
+      neighborhood: item.neighborhood || 'City Center',
       image: HOTEL_IMAGES[index % HOTEL_IMAGES.length]
     }));
   } catch (error) {
@@ -199,7 +504,8 @@ export const getActivities = async (destination: TrainDeal): Promise<Activity[]>
             "title": "Activity Title",
             "duration": "2h",
             "price": 25,
-            "rating": 4.8
+            "rating": 4.8,
+            "category": "Sightseeing"
           }
         ]
       }
@@ -219,6 +525,7 @@ export const getActivities = async (destination: TrainDeal): Promise<Activity[]>
       duration: item.duration,
       price: item.price,
       rating: item.rating,
+      category: item.category || 'Experience',
       image: ACTIVITY_IMAGES[index % ACTIVITY_IMAGES.length]
     }));
   } catch (error) {
@@ -238,14 +545,19 @@ export const generateStructuredItinerary = async (destinations: TrainDeal[]): Pr
       Create a detailed, day-by-day itinerary. For each day, provide:
       - The location (city).
       - A daily theme or vibe.
-      - Train travel details (if moving between cities that day, mention the train operator and duration. If staying in the same city, just say "Local exploration").
-      - A specific hotel/accommodation suggestion (name a real, highly-rated hotel or neighborhood).
-      - 2-3 specific activities or tours (name real attractions or tours that could be booked on GetYourGuide).
+      - Train travel details (if moving between cities that day, mention the train operator, duration, and departure recommendation).
+      - A specific hotel/accommodation suggestion (real hotel + neighborhood).
+      - 2-3 specific activities or tours.
+      - Dining highlight or local culinary dish to try.
+      - Station transfer tip (e.g., luggage storage, navigation tip).
       
       Return a JSON object in this format:
       {
         "title": "A catchy title for the trip",
         "summary": "A 2-3 sentence overview of the entire journey",
+        "totalEstimatedCost": 450,
+        "totalDurationDays": ${destinations.length * 2},
+        "totalCo2SavingsKg": ${destinations.reduce((s, d) => s + (d.co2Kg || 15), 0) * 3},
         "days": [
           {
             "day": 1,
@@ -253,7 +565,9 @@ export const generateStructuredItinerary = async (destinations: TrainDeal[]): Pr
             "theme": "Theme",
             "trainDetails": "Details",
             "hotelSuggestion": "Hotel Name",
-            "activities": ["Activity 1", "Activity 2"]
+            "activities": ["Activity 1", "Activity 2"],
+            "diningHighlight": "Try local specialty at Old Market",
+            "stationTransferTip": "Luggage lockers located near platform 12"
           }
         ]
       }
