@@ -5,7 +5,7 @@ import { generateTripAdvice, getAccommodations, getActivities } from '../service
 import { MOCK_ACCOMMODATION, MOCK_ACTIVITIES, generateMockSchedules, getPriceInsightForDeal } from '../constants';
 import { 
   X, Plus, Check, Train, Sun, Cloud, CloudRain, 
-  Clock, Star, ArrowRight, RefreshCw, 
+  Clock, Star, ArrowRight, ArrowLeft, RefreshCw, 
   Thermometer, Building2, Camera, Info, Leaf, 
   Sparkles, Wifi, Zap, Coffee, MapPin, Utensils, 
   Compass, Luggage
@@ -166,6 +166,15 @@ const getLocalFoodTip = (cityName: string) => {
       />
       <div class="absolute inset-0 bg-gradient-to-t from-[#002D67]/95 via-[#01306A]/60 to-transparent"></div>
       
+      <!-- Mobile Back Button -->
+      <button 
+        @click="emit('close')"
+        class="md:hidden absolute top-3.5 left-3.5 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full backdrop-blur-md transition-all z-50 shadow-lg border border-white/10"
+        title="Back"
+      >
+        <ArrowLeft :size="16" />
+      </button>
+
       <!-- Close Button -->
       <button 
         @click="emit('close')"
