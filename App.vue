@@ -3,15 +3,15 @@ import { ref, computed, watch, nextTick } from 'vue';
 import MapExplorer from './components/MapExplorer.vue';
 import ItineraryOnePager from './components/ItineraryOnePager.vue';
 import DetailsPanel from './components/DetailsPanel.vue';
-import AiCopilotDrawer from './components/AiCopilotDrawer.vue';
-import { INITIAL_DESTINATIONS, INITIAL_CHAT, getConnectedCities } from './constants';
-import { CategoryType, TrainDeal, FilterState, ChatMessage, CopilotAction, DateFlexibility } from './types';
+import PriceTrackerModal from './components/PriceTrackerModal.vue';
+import { INITIAL_DESTINATIONS, getConnectedCities } from './constants';
+import { CategoryType, TrainDeal, FilterState, DateFlexibility } from './types';
 import { 
   Sparkles, X, Train, Calendar, Users, Search, MapPin, ArrowRight, 
   Plus, Check, Loader2, Navigation, ArrowLeftRight, SlidersHorizontal, 
-  Bot, Wand2, Leaf, Euro, Zap, List
+  Wand2, Leaf, Euro, Zap, List, Bell
 } from '@lucide/vue';
-import { parseItineraryQuery, optimizeTripRoute } from './services/aiService';
+import { optimizeTripRoute } from './services/aiService';
 
 const destinations = ref<TrainDeal[]>(INITIAL_DESTINATIONS);
 const selectedDestinationId = ref<string | null>(INITIAL_DESTINATIONS[0]?.id || '1');
@@ -22,9 +22,8 @@ const searchDestination = ref("Anywhere");
 const searchQuery = ref("Anywhere");
 const itineraryDestinations = ref<TrainDeal[]>([]);
 const isOnePagerOpen = ref(false);
-const isCopilotOpen = ref(false);
+const isGlobalPriceTrackerOpen = ref(false);
 const isOptimizingRoute = ref(false);
-const chatMessages = ref<ChatMessage[]>(INITIAL_CHAT);
 
 // Mobile View Mode & Details Overlay State
 const mobileViewMode = ref<'map' | 'list'>('map');
@@ -232,40 +231,6 @@ const handleOptimizeRoute = async () => {
   }
 };
 
-const handleCopilotAction = (action: CopilotAction) => {
-  if (action.type === 'SET_FILTERS') {
-    if (action.payload?.maxPrice) filters.value.maxPrice = action.payload.maxPrice;
-    if (action.payload?.maxDuration) filters.value.maxDuration = action.payload.maxDuration;
-    if (action.payload?.directOnly !== undefined) filters.value.directOnly = action.payload.directOnly;
-    if (action.payload?.category) selectedCategory.value = action.payload.category as CategoryType;
-  } else if (action.type === 'ADD_TO_TRIP') {
-    const ids: string[] = action.payload?.destinationIds || [];
-    ids.forEach(id => {
-      const found = destinations.value.find(d => d.id === id);
-      if (found && !itineraryDestinations.value.some(d => d.id === id)) {
-        itineraryDestinations.value.push(found);
-      }
-    });
-  } else if (action.type === 'SELECT_DESTINATION') {
-    if (action.payload?.id) {
-      selectedDestinationId.value = action.payload.id;
-    }
-  } else if (action.type === 'OPTIMIZE_ROUTE') {
-    handleOptimizeRoute();
-  } else if (action.type === 'SET_ORIGIN') {
-    if (action.payload?.origin) {
-      searchOrigin.value = action.payload.origin;
-    }
-  } else if (action.type === 'GENERATE_ITINERARY') {
-    if (itineraryDestinations.value.length > 0) {
-      isOnePagerOpen.value = true;
-    }
-  } else if (action.type === 'RESET_FILTERS') {
-    filters.value = { maxDuration: 12, maxPrice: 500, directOnly: false };
-    selectedCategory.value = 'All';
-  }
-};
-
 const toggleItineraryDestination = (dest: TrainDeal) => {
   if (itineraryDestinations.value.find(d => d.id === dest.id)) {
     itineraryDestinations.value = itineraryDestinations.value.filter(d => d.id !== dest.id);
@@ -424,16 +389,13 @@ const addReturnToOrigin = () => {
 
       </div>
 
-      <!-- TrainExplore AI Copilot Trigger Button -->
+      <!-- Track Prices Header Button (Google Flights style) -->
       <button 
-        @click="isCopilotOpen = !isCopilotOpen"
-        class="flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all shadow-xs flex-none"
-        :class="isCopilotOpen 
-          ? 'bg-[#01306A] text-white' 
-          : 'bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-slate-400'"
+        @click="isGlobalPriceTrackerOpen = true"
+        class="flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all shadow-xs flex-none bg-white border border-slate-300 text-[#01306A] hover:bg-slate-50 hover:border-slate-400"
       >
-        <Sparkles :size="14" class="text-[#01879C]" />
-        <span class="hidden sm:inline">AI Copilot</span>
+        <Bell :size="14" class="text-[#01879C]" />
+        <span class="hidden sm:inline">Track Prices</span>
       </button>
     </header>
 
@@ -693,18 +655,12 @@ const addReturnToOrigin = () => {
       </div>
     </div>
 
-    <!-- TrainExplore AI Copilot Drawer -->
-    <AiCopilotDrawer 
-      :isOpen="isCopilotOpen"
-      :destinations="destinations"
-      :searchOrigin="searchOrigin"
-      :itineraryDestinations="itineraryDestinations"
-      :messages="chatMessages"
-      @close="isCopilotOpen = false"
-      @update-messages="chatMessages = $event"
-      @trigger-action="handleCopilotAction"
-      @select-destination="selectedDestinationId = $event"
-      @toggle-destination="toggleItineraryDestination"
+    <!-- Global Price Tracker Modal -->
+    <PriceTrackerModal 
+      v-if="isGlobalPriceTrackerOpen && selectedDestination"
+      :destination="selectedDestination"
+      :originName="searchOrigin"
+      @close="isGlobalPriceTrackerOpen = false"
     />
 
     <!-- Itinerary OnePager Dashboard with TrainExplore AI Assistant -->
