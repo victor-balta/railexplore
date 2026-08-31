@@ -124,7 +124,7 @@ const currentWeather = computed(() => {
               {{ destination.destinationName }}
             </h2>
             <p class="text-xs text-slate-300 font-medium mt-0.5">
-              {{ destination.destinationCountry }} • From ${{ destination.price }} direct • {{ destination.duration }}
+              {{ destination.destinationCountry }} • From ${{ destination.price }} {{ destination.isDirect !== false && destination.transfers === 0 ? 'direct' : (destination.transferStation ? `via ${destination.transferStation}` : 'connecting') }} • {{ destination.duration }}
             </p>
           </div>
         </div>
@@ -158,6 +158,24 @@ const currentWeather = computed(() => {
 
     <!-- 3. Scrollable Train Content Body -->
     <div class="flex-1 overflow-y-auto scrollbar-hide p-4 space-y-3.5 bg-white">
+
+      <!-- Destination Pitch & Station Info Card -->
+      <div class="bg-slate-50 rounded-2xl p-3.5 border border-slate-200 space-y-2">
+        <p class="text-xs text-slate-700 leading-relaxed font-medium">
+          {{ destination.description }}
+        </p>
+        <div class="flex flex-wrap items-center gap-3 text-[11px] text-slate-500 pt-1 border-t border-slate-200/60">
+          <span v-if="destination.stationName" class="flex items-center gap-1 font-semibold text-slate-800">
+            <MapPin :size="12" class="text-[#01879C]" /> {{ destination.stationName }}
+          </span>
+          <span v-if="destination.frequency" class="flex items-center gap-1 text-slate-600">
+            <Train :size="12" class="text-slate-400" /> {{ destination.frequency }}
+          </span>
+          <span v-if="destination.tripType" class="bg-white border border-slate-200 px-2 py-0.5 rounded-full font-bold text-[#01306A]">
+            {{ destination.tripType }}
+          </span>
+        </div>
+      </div>
 
       <!-- Google Flights Style Price Insights Card -->
       <div class="bg-slate-50 rounded-2xl p-3.5 border border-slate-200">
@@ -288,13 +306,13 @@ const currentWeather = computed(() => {
         </template>
       </button>
 
-      <!-- Generate Itinerary Button -->
+      <!-- Journey Summary Button -->
       <button 
         @click="emit('open-one-pager')"
         class="flex-1 py-2.5 px-4 rounded-full text-xs sm:text-sm font-semibold bg-[#01879C] hover:bg-[#01306A] text-white transition-all flex items-center justify-center gap-1.5 shadow-sm"
       >
-        <Sparkles :size="15" />
-        <span>Generate Trip</span>
+        <Train :size="15" />
+        <span>Journey Summary</span>
       </button>
 
     </div>

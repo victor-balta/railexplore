@@ -4,26 +4,63 @@ import MapExplorer from './components/MapExplorer.vue';
 import ItineraryOnePager from './components/ItineraryOnePager.vue';
 import DetailsPanel from './components/DetailsPanel.vue';
 import PriceTrackerModal from './components/PriceTrackerModal.vue';
-import { INITIAL_DESTINATIONS, getConnectedCities } from './constants';
+import { INITIAL_DESTINATIONS, getConnectedCities, EUROPEAN_HUBS, getDestinationsForOrigin, getOriginCoordinates } from './constants';
 import { CategoryType, TrainDeal, FilterState, DateFlexibility } from './types';
 import { 
-  Sparkles, X, Train, Calendar, Users, Search, MapPin, ArrowRight, 
+  X, Train, Calendar, Users, Search, MapPin, ArrowRight, 
   Plus, Check, Loader2, Navigation, ArrowLeftRight, SlidersHorizontal, 
-  Wand2, Leaf, Euro, Zap, List, Bell
+  Leaf, Euro, Zap, List, Bell
 } from '@lucide/vue';
-import { optimizeTripRoute } from './services/aiService';
 
-const destinations = ref<TrainDeal[]>(INITIAL_DESTINATIONS);
-const selectedDestinationId = ref<string | null>(INITIAL_DESTINATIONS[0]?.id || '1');
-const selectedCategory = ref<CategoryType | 'All'>('All');
 const searchOrigin = ref("Berlin");
+const destinations = ref<TrainDeal[]>(INITIAL_DESTINATIONS);
+const selectedDestinationId = ref<string | null>(null);
+const selectedCategory = ref<CategoryType | 'All'>('All');
 const isLocating = ref(false);
 const searchDestination = ref("Anywhere");
 const searchQuery = ref("Anywhere");
 const itineraryDestinations = ref<TrainDeal[]>([]);
 const isOnePagerOpen = ref(false);
 const isGlobalPriceTrackerOpen = ref(false);
-const isOptimizingRoute = ref(false);
+
+// Origin Autocomplete state
+const isOriginDropdownOpen = ref(false);
+
+const originSuggestions = computed(() => {
+  const q = searchOrigin.value.trim().toLowerCase();
+  if (!q) return EUROPEAN_HUBS.slice(0, 10);
+  return EUROPEAN_HUBS.filter(h => 
+    h.name.toLowerCase().includes(q) || 
+    h.country.toLowerCase().includes(q)
+  ).slice(0, 10);
+});
+
+const selectOriginSuggestion = (hub: { name: string }) => {
+  searchOrigin.value = hub.name;
+  isOriginDropdownOpen.value = false;
+  destinations.value = getDestinationsForOrigin(hub.name);
+  itineraryDestinations.value = [];
+  selectedDestinationId.value = null;
+};
+
+const handleBlurOrigin = () => {
+  setTimeout(() => {
+    isOriginDropdownOpen.value = false;
+  }, 200);
+};
+
+const originCoords = computed(() => {
+  return getOriginCoordinates(searchOrigin.value);
+});
+
+// Watch for searchOrigin changes
+watch(searchOrigin, (newOrigin) => {
+  if (newOrigin && newOrigin.trim()) {
+    destinations.value = getDestinationsForOrigin(newOrigin);
+    itineraryDestinations.value = [];
+    selectedDestinationId.value = null;
+  }
+});
 
 // Mobile View Mode & Details Overlay State
 const mobileViewMode = ref<'map' | 'list'>('map');
@@ -33,6 +70,16 @@ const isDesktop = ref(typeof window !== 'undefined' ? window.innerWidth >= 768 :
 if (typeof window !== 'undefined') {
   window.addEventListener('resize', () => {
     isDesktop.value = window.innerWidth >= 768;
+  });
+
+  window.addEventListener('click', (e: MouseEvent) => {
+    const target = e.target as HTMLElement;
+    if (!target.closest('.search-origin-container')) {
+      isOriginDropdownOpen.value = false;
+    }
+    if (!target.closest('.search-dest-container')) {
+      isDestDropdownOpen.value = false;
+    }
   });
 }
 
@@ -44,18 +91,6 @@ const setMobileViewMode = (mode: 'map' | 'list') => {
     });
   }
 };
-
-const dateOptions: DateFlexibility[] = [
-  { mode: 'flexible', label: 'Flexible: Next 6 months' },
-  { mode: 'weekend', label: 'Weekend Getaway' },
-  { mode: '1week', label: '1-Week Rail Pass' },
-  { mode: 'exact', label: 'Apr 7 - Apr 11' }
-];
-const selectedDateOption = ref<DateFlexibility>(dateOptions[0]);
-const showDateDropdown = ref(false);
-
-const passengerCount = ref(1);
-const showPassengerDropdown = ref(false);
 
 const sortBy = ref<'best' | 'price' | 'duration' | 'co2'>('best');
 
@@ -86,7 +121,59 @@ const clearAllFilters = () => {
   searchQuery.value = "Anywhere";
 };
 
+const isDestDropdownOpen = ref(false);
+
+const searchSuggestions = computed(() => {
+  const q = searchDestination.value.trim().toLowerCase();
+  if (!q || q === 'anywhere') {
+    return currentPoolDestinations.value.slice(0, 10);
+  }
+  return currentPoolDestinations.value
+    .filter(d => 
+      d.destinationName.toLowerCase().includes(q) ||
+      (d.stationName && d.stationName.toLowerCase().includes(q)) ||
+      d.destinationCountry.toLowerCase().includes(q)
+    )
+    .slice(0, 10);
+});
+
+const selectSuggestion = (dest: TrainDeal) => {
+  searchDestination.value = dest.destinationName;
+  searchQuery.value = dest.destinationName;
+  selectedDestinationId.value = dest.id;
+  isDestDropdownOpen.value = false;
+  if (!isDesktop.value) {
+    isMobileDetailsOpen.value = true;
+  }
+};
+
+const handleSearch = () => {
+  searchQuery.value = searchDestination.value;
+  isDestDropdownOpen.value = false;
+  const match = destinations.value.find(d => 
+    d.destinationName.toLowerCase() === searchDestination.value.trim().toLowerCase() ||
+    d.stationName?.toLowerCase() === searchDestination.value.trim().toLowerCase()
+  );
+  if (match) {
+    selectedDestinationId.value = match.id;
+  }
+};
+
+const handleBlurSearch = () => {
+  setTimeout(() => {
+    isDestDropdownOpen.value = false;
+  }, 200);
+};
+
 const selectedDestination = computed(() => {
+  if (!selectedDestinationId.value) return null;
+  // 1. Search in active onward leg destinations pool
+  const fromPool = currentPoolDestinations.value.find(d => d.id === selectedDestinationId.value);
+  if (fromPool) return fromPool;
+  // 2. Search in itinerary destinations (waypoints)
+  const fromItinerary = itineraryDestinations.value.find(d => d.id === selectedDestinationId.value);
+  if (fromItinerary) return fromItinerary;
+  // 3. Fallback to main origin destinations
   return destinations.value.find(d => d.id === selectedDestinationId.value) || null;
 });
 
@@ -99,6 +186,9 @@ const handleSelectDestination = (id: string) => {
 
 const handleMapSelection = (dest: TrainDeal) => {
   selectedDestinationId.value = dest.id;
+  if (!isDesktop.value) {
+    isMobileDetailsOpen.value = true;
+  }
 };
 
 const handleCloseDetails = () => {
@@ -142,48 +232,118 @@ const handleGeolocation = () => {
   });
 };
 
-const lastItineraryDest = computed(() => {
+const activeLegOrigin = computed(() => {
   if (itineraryDestinations.value.length > 0) {
     const last = itineraryDestinations.value[itineraryDestinations.value.length - 1];
-    return last.destinationName;
+    if (last && last.destinationName !== 'return-origin') {
+      return last.destinationName;
+    }
   }
   return searchOrigin.value;
 });
 
-const connectedCities = computed(() => {
-  if (lastItineraryDest.value && lastItineraryDest.value !== 'return-origin') {
-    const list = getConnectedCities(lastItineraryDest.value, destinations.value);
-    return list.length === 0 ? null : list;
+const currentPoolDestinations = computed(() => {
+  if (itineraryDestinations.value.length > 0) {
+    const last = itineraryDestinations.value[itineraryDestinations.value.length - 1];
+    if (last && last.destinationName !== 'return-origin') {
+      const onward = getDestinationsForOrigin(last.destinationName);
+      // Exclude destinations already visited in itinerary (except allow returning to main origin)
+      const visited = new Set(
+        itineraryDestinations.value
+          .map(d => d.destinationName.toLowerCase())
+          .filter(name => name !== searchOrigin.value.toLowerCase())
+      );
+      return onward.filter(d => !visited.has(d.destinationName.toLowerCase()));
+    }
   }
-  return null;
+  return destinations.value;
 });
 
+const parseDurationHours = (durationStr: string): number => {
+  if (!durationStr) return 0;
+  let durationHours = 0;
+  const hMatch = durationStr.match(/(\d+)h/);
+  if (hMatch) durationHours += parseInt(hMatch[1], 10);
+  const mMatch = durationStr.match(/(\d+)m/);
+  if (mMatch) durationHours += parseInt(mMatch[1], 10) / 60;
+  return durationHours;
+};
+
+const matchesOperatorFilter = (trainOperator: string, selectedOps?: string[], selectedSingleOp?: string) => {
+  const activeOps = (selectedOps && selectedOps.length > 0) 
+    ? selectedOps 
+    : (selectedSingleOp ? [selectedSingleOp] : []);
+  
+  if (activeOps.length === 0) return true;
+  const opStr = (trainOperator || '').toLowerCase();
+
+  return activeOps.some(selected => {
+    const s = selected.toLowerCase();
+    if (s === 'ice' || s.includes('ice') || s.includes('high speed') || s.includes('tgv') || s.includes('railjet')) {
+      return opStr.includes('ice') || opStr.includes('tgv') || opStr.includes('railjet') || opStr.includes('rj') || opStr.includes('eurostar');
+    }
+    if (s === 'ic_ec' || s.includes('intercity') || s.includes('eurocity') || s === 'ec' || s === 'ic') {
+      return opStr.includes('ic') || opStr.includes('ec') || opStr.includes('eurocity') || opStr.includes('intercity');
+    }
+    if (s === 'regional' || s.includes('re') || s.includes('rb') || s.includes('regional') || s.includes('s-bahn')) {
+      return opStr.includes('re') || opStr.includes('rb') || opStr.includes('regional') || opStr.includes('s-bahn') || opStr.includes('27n') || opStr.includes('drf') || opStr.includes('hbx');
+    }
+    if (s === 'nightjet' || s.includes('night') || s.includes('sleeper')) {
+      return opStr.includes('nightjet') || opStr.includes('nj') || opStr.includes('night') || opStr.includes('sleeper') || opStr.includes('en');
+    }
+    if (s === 'flixtrain' || s.includes('flix')) {
+      return opStr.includes('flixtrain') || opStr.includes('flx');
+    }
+    return opStr.includes(s);
+  });
+};
+
 const filteredDestinations = computed(() => {
-  return destinations.value.filter(d => {
-    const matchesCategory = selectedCategory.value === 'All' || d.category === selectedCategory.value;
-    const matchesPrice = d.price <= filters.value.maxPrice;
-    const matchesSearch = searchQuery.value.toLowerCase() === 'anywhere' || searchQuery.value.trim() === '' || 
-                          d.destinationName.toLowerCase().includes(searchQuery.value.toLowerCase());
-    const matchesConnection = connectedCities.value === null || 
-                               connectedCities.value.includes(d.destinationName) || 
-                               itineraryDestinations.value.some(it => it.id === d.id);
-    
-    // Parse duration string (e.g., "2h 30m") to hours
-    let durationHours = 0;
-    const hMatch = d.duration.match(/(\d+)h/);
-    if (hMatch) durationHours += parseInt(hMatch[1], 10);
-    const mMatch = d.duration.match(/(\d+)m/);
-    if (mMatch) durationHours += parseInt(mMatch[1], 10) / 60;
-    
-    const matchesDuration = durationHours <= filters.value.maxDuration;
-    const matchesDirect = !filters.value.directOnly || d.transfers === 0;
-    const matchesOperator = !filters.value.selectedOperator || filters.value.selectedOperator === '' || 
-                            d.trainOperator.toLowerCase().includes(filters.value.selectedOperator.toLowerCase());
-    const matchesScenic = !filters.value.scenicOnly || (d.scenicRating && d.scenicRating >= 4);
-    const matchesNightTrain = !filters.value.nightTrainOnly || d.trainOperator.toLowerCase().includes('nightjet');
+  return currentPoolDestinations.value.filter(d => {
+    // 1. Category / Vibe Filter
+    const matchesCategory = !selectedCategory.value || 
+                            selectedCategory.value === 'All' || 
+                            selectedCategory.value === CategoryType.Anywhere || 
+                            d.category === selectedCategory.value;
+
+    // 2. Price Filter (if maxPrice < 500, apply limit)
+    const maxP = filters.value.maxPrice ?? 500;
+    const matchesPrice = maxP >= 500 ? true : d.price <= maxP;
+
+    // 3. Search Query Filter (matches city name, country, station name, category)
+    const q = (searchQuery.value || '').trim().toLowerCase();
+    const matchesSearch = !q || q === 'anywhere' 
+      ? true 
+      : (d.destinationName.toLowerCase().includes(q) || 
+         d.destinationCountry.toLowerCase().includes(q) || 
+         (d.stationName && d.stationName.toLowerCase().includes(q)) ||
+         d.category.toLowerCase().includes(q));
+
+    // 4. Duration Filter (if maxDuration < 12, apply limit)
+    const durationHours = parseDurationHours(d.duration);
+    const maxDur = filters.value.maxDuration ?? 12;
+    const matchesDuration = maxDur >= 12 ? true : durationHours <= maxDur;
+
+    // 5. Direct Nonstop Only
+    const matchesDirect = !filters.value.directOnly || (d.isDirect === true || d.transfers === 0);
+
+    // 6. Operator Filter
+    const matchesOperator = matchesOperatorFilter(d.trainOperator, filters.value.operators, filters.value.selectedOperator);
+
+    // 7. Scenic Route Filter
+    const matchesScenic = !filters.value.scenicOnly || 
+                          (d.scenicRating && d.scenicRating >= 4) || 
+                          d.category === CategoryType.Mountains || 
+                          d.category === CategoryType.Nature;
+
+    // 8. Night Train Filter
+    const matchesNightTrain = !filters.value.nightTrainOnly || 
+                              d.trainOperator.toLowerCase().includes('nightjet') || 
+                              d.trainOperator.toLowerCase().includes('night') || 
+                              durationHours >= 7;
 
     return matchesCategory && matchesPrice && matchesSearch && matchesDuration && 
-           matchesDirect && matchesConnection && matchesOperator && matchesScenic && matchesNightTrain;
+           matchesDirect && matchesOperator && matchesScenic && matchesNightTrain;
   });
 });
 
@@ -193,49 +353,48 @@ const sortedFilteredDestinations = computed(() => {
   if (sortBy.value === 'price') {
     list.sort((a, b) => a.price - b.price);
   } else if (sortBy.value === 'duration') {
-    const getMins = (dur: string) => {
-      const h = dur.match(/(\d+)h/);
-      const m = dur.match(/(\d+)m/);
-      return (h ? parseInt(h[1]) * 60 : 0) + (m ? parseInt(m[1]) : 0);
-    };
-    list.sort((a, b) => getMins(a.duration) - getMins(b.duration));
+    list.sort((a, b) => parseDurationHours(a.duration) - parseDurationHours(b.duration));
   } else if (sortBy.value === 'co2') {
     list.sort((a, b) => (b.co2SavingsPercent || 0) - (a.co2SavingsPercent || 0));
   } else {
-    // Best Deals (price * duration score)
+    // Best Deals (price, scenic, direct priority)
     list.sort((a, b) => {
       if (a.id === selectedDestinationId.value) return -1;
       if (b.id === selectedDestinationId.value) return 1;
-      return a.price - b.price;
+      const scoreA = (a.isDirect ? 20 : 0) + (a.scenicRating ? a.scenicRating * 5 : 0) - (a.price * 0.4);
+      const scoreB = (b.isDirect ? 20 : 0) + (b.scenicRating ? b.scenicRating * 5 : 0) - (b.price * 0.4);
+      return scoreB - scoreA;
     });
   }
 
   return list;
 });
 
-const handleSearch = () => {
-  searchQuery.value = searchDestination.value;
-};
-
-const handleOptimizeRoute = async () => {
-  if (itineraryDestinations.value.length <= 1 || isOptimizingRoute.value) return;
-  
-  isOptimizingRoute.value = true;
-  try {
-    const optimized = await optimizeTripRoute(searchOrigin.value, itineraryDestinations.value);
-    itineraryDestinations.value = optimized;
-  } catch (err) {
-    console.error("Optimization failed:", err);
-  } finally {
-    isOptimizingRoute.value = false;
-  }
-};
-
 const toggleItineraryDestination = (dest: TrainDeal) => {
   if (itineraryDestinations.value.find(d => d.id === dest.id)) {
     itineraryDestinations.value = itineraryDestinations.value.filter(d => d.id !== dest.id);
   } else {
     itineraryDestinations.value = [...itineraryDestinations.value, dest];
+    // Reset search query and destination input so onward destinations from the new stop are instantly available!
+    searchDestination.value = 'Anywhere';
+    searchQuery.value = 'Anywhere';
+    isDestDropdownOpen.value = false;
+    selectedDestinationId.value = null;
+    if (!isDesktop.value) {
+      isMobileDetailsOpen.value = false;
+    }
+  }
+};
+
+const handleUpdateItinerary = (newItinerary: TrainDeal[]) => {
+  const isAdding = newItinerary.length > itineraryDestinations.value.length;
+  itineraryDestinations.value = newItinerary;
+  if (isAdding) {
+    searchDestination.value = 'Anywhere';
+    searchQuery.value = 'Anywhere';
+    isDestDropdownOpen.value = false;
+    selectedDestinationId.value = null;
+    isMobileDetailsOpen.value = false;
   }
 };
 
@@ -258,7 +417,7 @@ const addReturnToOrigin = () => {
     originName: itineraryDestinations.value[itineraryDestinations.value.length - 1]?.destinationName || searchOrigin.value,
     category: CategoryType.Anywhere,
     description: 'Return trip to origin.',
-    location: { lat: 52.5200, lng: 13.4050 },
+    location: { lat: originCoords.value.lat, lng: originCoords.value.lng },
     duration: 'N/A',
     price: 0,
     imageUrl: 'https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?auto=format&fit=crop&w=400&q=80',
@@ -286,26 +445,57 @@ const addReturnToOrigin = () => {
       </div>
       
       <!-- Unified Search Input Cluster -->
-      <div class="flex-1 max-w-4xl mx-1 sm:mx-2 flex items-center bg-slate-100/70 border border-slate-200 rounded-full p-1 gap-1 overflow-x-auto scrollbar-hide text-xs sm:text-sm">
+      <div class="flex-1 max-w-4xl mx-1 sm:mx-2 flex items-center bg-slate-100/70 border border-slate-200 rounded-full p-1 gap-1 text-xs sm:text-sm relative z-50">
         
-        <!-- Origin Input -->
-        <div class="flex items-center gap-2 bg-white px-3.5 py-1.5 rounded-full border border-slate-200/80 shadow-2xs flex-none min-w-[130px] sm:min-w-[160px]">
-          <MapPin :size="14" class="text-slate-400 flex-none" />
-          <input 
-            v-model="searchOrigin" 
-            type="text" 
-            placeholder="From where?" 
-            class="bg-transparent font-semibold text-slate-900 outline-none w-full truncate"
-          />
-          <button 
-            @click="handleGeolocation" 
-            :disabled="isLocating"
-            class="text-slate-400 hover:text-slate-700 transition-colors"
-            title="Use current location"
+        <!-- Origin Input with Autocomplete Dropdown -->
+        <div class="search-origin-container relative flex-1 min-w-[140px]">
+          <div class="flex items-center gap-2 bg-white px-3.5 py-1.5 rounded-full border border-slate-200/80 shadow-2xs">
+            <MapPin :size="14" class="text-[#01879C] flex-none" />
+            <input 
+              v-model="searchOrigin" 
+              @focus="isOriginDropdownOpen = true"
+              @input="isOriginDropdownOpen = true"
+              type="text" 
+              placeholder="From where?" 
+              class="bg-transparent font-semibold text-slate-900 outline-none w-full truncate text-xs sm:text-sm"
+            />
+            <button 
+              @click="handleGeolocation" 
+              :disabled="isLocating"
+              class="text-slate-400 hover:text-slate-700 transition-colors flex-none"
+              title="Use current location"
+            >
+              <Loader2 v-if="isLocating" :size="12" class="animate-spin" />
+              <Navigation v-else :size="12" />
+            </button>
+          </div>
+
+          <!-- Floating Origin Dropdown -->
+          <div 
+            v-if="isOriginDropdownOpen && originSuggestions.length > 0"
+            class="absolute top-full left-0 mt-2 w-64 sm:w-72 bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-[999] max-h-80 overflow-y-auto scrollbar-hide py-1.5"
           >
-            <Loader2 v-if="isLocating" :size="12" class="animate-spin" />
-            <Navigation v-else :size="12" />
-          </button>
+            <div class="px-3 py-1 text-[10px] font-bold text-slate-400 uppercase tracking-wider">
+              Departure Hubs
+            </div>
+            <div 
+              v-for="hub in originSuggestions" 
+              :key="hub.name"
+              @mousedown.stop.prevent="selectOriginSuggestion(hub)"
+              class="px-3 py-2 hover:bg-slate-100 cursor-pointer flex items-center justify-between gap-2 border-b border-slate-100 last:border-0 transition-colors"
+            >
+              <div class="flex items-center gap-2">
+                <span class="text-sm">🚆</span>
+                <div>
+                  <div class="text-xs font-bold text-slate-900">{{ hub.name }}</div>
+                  <div class="text-[10px] text-slate-500">{{ hub.country }}</div>
+                </div>
+              </div>
+              <span class="text-[9px] font-semibold text-[#01306A] bg-slate-100 px-2 py-0.5 rounded-full">
+                Select
+              </span>
+            </div>
+          </div>
         </div>
 
         <!-- Swap Icon Button -->
@@ -317,71 +507,60 @@ const addReturnToOrigin = () => {
           <ArrowLeftRight :size="12" />
         </button>
 
-        <!-- Destination Input -->
-        <div class="flex items-center gap-2 bg-white px-3.5 py-1.5 rounded-full border border-slate-200/80 shadow-2xs flex-1 min-w-[140px]">
-          <Search :size="14" class="text-slate-400 flex-none" />
-          <input 
-            v-model="searchDestination" 
-            @keydown.enter="handleSearch" 
-            type="text" 
-            placeholder="Where to? (Explore anywhere)" 
-            class="bg-transparent font-semibold text-slate-900 outline-none w-full truncate placeholder:text-slate-400"
-          />
-        </div>
-
-        <!-- Flexible Dates Dropdown -->
-        <div class="relative flex-none hidden lg:block">
-          <button 
-            @click="showDateDropdown = !showDateDropdown"
-            class="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-slate-200/80 shadow-2xs text-slate-700 font-semibold hover:bg-slate-50 transition-colors whitespace-nowrap"
-          >
-            <Calendar :size="14" class="text-slate-400" />
-            <span>{{ selectedDateOption.label }}</span>
-          </button>
-          
-          <div 
-            v-if="showDateDropdown" 
-            class="absolute top-full mt-1.5 right-0 bg-white border border-slate-200 rounded-2xl shadow-xl p-2 z-[100] w-52 space-y-1"
-          >
+        <!-- Destination Input with Autocomplete Dropdown -->
+        <div class="search-dest-container relative flex-1 min-w-[140px]">
+          <div class="flex items-center gap-2 bg-white px-3.5 py-1.5 rounded-full border border-slate-200/80 shadow-2xs">
+            <Search :size="14" class="text-slate-400 flex-none" />
+            <input 
+              v-model="searchDestination" 
+              @focus="isDestDropdownOpen = true; if (searchDestination === 'Anywhere') searchDestination = ''"
+              @input="isDestDropdownOpen = true; searchQuery = searchDestination"
+              @keydown.enter="handleSearch" 
+              type="text" 
+              :placeholder="itineraryDestinations.length > 0 ? `Next stop from ${activeLegOrigin}?` : 'Where to? (Explore anywhere)'" 
+              class="bg-transparent font-semibold text-slate-900 outline-none w-full truncate placeholder:text-slate-400 text-xs sm:text-sm"
+            />
             <button 
-              v-for="(opt, idx) in dateOptions" 
-              :key="idx"
-              @click="selectedDateOption = opt; showDateDropdown = false"
-              class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:bg-slate-100 hover:text-[#01306A] transition-colors flex items-center justify-between"
+              v-if="searchDestination && searchDestination.toLowerCase() !== 'anywhere'" 
+              @mousedown.stop.prevent="searchDestination = 'Anywhere'; searchQuery = 'Anywhere'; isDestDropdownOpen = false"
+              class="text-slate-400 hover:text-slate-600 text-xs font-bold"
             >
-              <span>{{ opt.label }}</span>
-              <Check v-if="selectedDateOption.label === opt.label" :size="14" class="text-[#01306A]" />
+              <X :size="13" />
             </button>
           </div>
-        </div>
 
-        <!-- Passengers Dropdown -->
-        <div class="relative flex-none hidden md:block">
-          <button 
-            @click="showPassengerDropdown = !showPassengerDropdown"
-            class="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-slate-200/80 shadow-2xs text-slate-700 font-semibold hover:bg-slate-50 transition-colors whitespace-nowrap"
-          >
-            <Users :size="14" class="text-slate-400" />
-            <span>{{ passengerCount }} {{ passengerCount === 1 ? 'Adult' : 'Adults' }}</span>
-          </button>
-
+          <!-- Floating Autocomplete Dropdown -->
           <div 
-            v-if="showPassengerDropdown" 
-            class="absolute top-full mt-1.5 right-0 bg-white border border-slate-200 rounded-2xl shadow-xl p-3 z-[100] w-48 space-y-2"
+            v-if="isDestDropdownOpen && searchSuggestions.length > 0"
+            class="absolute top-full left-0 mt-2 w-72 sm:w-84 bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-[999] max-h-80 overflow-y-auto scrollbar-hide py-1.5"
           >
-            <div class="text-xs font-bold text-slate-800">Passengers</div>
-            <div class="flex items-center justify-between pt-1">
-              <span class="text-xs font-semibold text-slate-600">Adults (18+)</span>
-              <div class="flex items-center gap-2">
-                <button 
-                  @click="passengerCount = Math.max(1, passengerCount - 1)" 
-                  class="w-6 h-6 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold flex items-center justify-center transition-colors"
-                >-</button>
-                <span class="text-xs font-bold text-[#002D67] w-4 text-center">{{ passengerCount }}</span>
-                <button 
-                  @click="passengerCount = Math.min(9, passengerCount + 1)" 
-                  class="w-6 h-6 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold flex items-center justify-center transition-colors"
-                >+</button>
+            <div class="px-3 py-1 text-[10px] font-bold text-slate-400 uppercase tracking-wider">
+              Destinations from {{ activeLegOrigin }}
+            </div>
+            <div 
+              v-for="dest in searchSuggestions" 
+              :key="dest.id"
+              @mousedown.stop.prevent="selectSuggestion(dest)"
+              class="px-3 py-2 hover:bg-slate-100 cursor-pointer flex items-center justify-between gap-2 border-b border-slate-100 last:border-0 transition-colors"
+            >
+              <div class="min-w-0 flex-1">
+                <div class="flex items-center gap-1.5">
+                  <span class="text-xs font-bold text-slate-900 truncate">{{ dest.destinationName }}</span>
+                  <span 
+                    class="text-[9px] font-bold px-1.5 py-0.2 rounded"
+                    :class="dest.isDirect !== false && dest.transfers === 0 ? 'bg-emerald-50 text-emerald-700' : 'bg-amber-50 text-amber-700'"
+                  >
+                    {{ dest.isDirect !== false && dest.transfers === 0 ? 'Nonstop' : '1 stop' }}
+                  </span>
+                </div>
+                <div class="text-[11px] text-slate-500 truncate flex items-center gap-1 mt-0.5">
+                  <span>{{ dest.destinationCountry }}</span>
+                  <span>•</span>
+                  <span>{{ dest.duration }}</span>
+                </div>
+              </div>
+              <div class="text-xs font-bold text-slate-900 bg-slate-100 px-2 py-1 rounded-lg flex-none">
+                ${{ dest.price }}
               </div>
             </div>
           </div>
@@ -389,14 +568,26 @@ const addReturnToOrigin = () => {
 
       </div>
 
-      <!-- Track Prices Header Button (Google Flights style) -->
-      <button 
-        @click="isGlobalPriceTrackerOpen = true"
-        class="flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all shadow-xs flex-none bg-white border border-slate-300 text-[#01306A] hover:bg-slate-50 hover:border-slate-400"
-      >
-        <Bell :size="14" class="text-[#01879C]" />
-        <span class="hidden sm:inline">Track Prices</span>
-      </button>
+      <div class="flex items-center gap-2 flex-none">
+        <!-- Journey Summary Header Button (Always accessible when stops exist) -->
+        <button 
+          v-if="itineraryDestinations.length > 0"
+          @click="isOnePagerOpen = true"
+          class="flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all shadow-md flex-none bg-[#01879C] hover:bg-[#01306A] text-white animate-in fade-in"
+        >
+          <Train :size="14" />
+          <span>Journey Summary ({{ itineraryDestinations.length }})</span>
+        </button>
+
+        <!-- Track Prices Header Button (Google Flights style) -->
+        <button 
+          @click="isGlobalPriceTrackerOpen = true"
+          class="flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all shadow-xs flex-none bg-white border border-slate-300 text-[#01306A] hover:bg-slate-50 hover:border-slate-400"
+        >
+          <Bell :size="14" class="text-[#01879C]" />
+          <span class="hidden sm:inline">Track Prices</span>
+        </button>
+      </div>
     </header>
 
     <!-- Mobile Sub-Header: Segmented View Mode Switcher -->
@@ -481,9 +672,19 @@ const addReturnToOrigin = () => {
                   <h3 class="font-bold text-slate-900 text-sm truncate">{{ dest.destinationName }}</h3>
                   <div class="text-base font-bold text-slate-900">${{ dest.price }}</div>
                 </div>
-                <p class="text-xs text-slate-500 mt-0.5">{{ dest.destinationCountry }} • {{ dest.category }}</p>
+                <div class="flex items-center gap-1.5 mt-0.5">
+                  <span v-if="dest.tripType" class="text-[10px] font-bold px-1.5 py-0.2 rounded bg-slate-100 text-[#01306A] border border-slate-200/80">
+                    {{ dest.tripType }}
+                  </span>
+                  <span class="text-xs text-slate-500 truncate">{{ dest.destinationCountry }} • {{ dest.category }}</span>
+                </div>
                 <div class="flex items-center gap-1.5 mt-1 text-[11px] text-slate-500">
-                  <span class="font-medium text-slate-700">{{ dest.transfers === 0 ? 'Nonstop' : `${dest.transfers} transfer` }}</span>
+                  <span 
+                    class="font-semibold px-1.5 py-0.2 rounded text-[10px]"
+                    :class="dest.isDirect !== false && dest.transfers === 0 ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : 'bg-amber-50 text-amber-700 border border-amber-200'"
+                  >
+                    {{ dest.isDirect !== false && dest.transfers === 0 ? '⚡ Nonstop' : (dest.transferStation ? `1 stop (${dest.transferStation})` : `${dest.transfers} transfer`) }}
+                  </span>
                   <span>•</span>
                   <span class="truncate">{{ dest.trainOperator }}</span>
                 </div>
@@ -526,13 +727,14 @@ const addReturnToOrigin = () => {
           :filters="filters"
           @update-filters="filters = $event"
           :itineraryDestinations="itineraryDestinations"
+          :originCoords="originCoords"
+          :originName="searchOrigin"
         />
 
-        <!-- Floating Multi-City Trip Builder & AI Route Optimizer Bar -->
+        <!-- Floating Multi-City Trip Builder Bar -->
         <div 
           v-if="itineraryDestinations.length > 0" 
-          class="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 z-[55] bg-white rounded-2xl shadow-2xl border border-slate-200 p-2.5 flex items-center gap-2 md:gap-3 w-[95%] sm:w-[90%] md:w-auto max-w-2xl"
-          :class="selectedDestination && mobileViewMode === 'map' && !isMobileDetailsOpen ? 'hidden md:flex' : 'flex'"
+          class="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 z-[1300] bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-slate-200 p-2.5 flex items-center gap-2 md:gap-3 w-[95%] sm:w-[90%] md:w-auto max-w-2xl"
         >
           <div class="flex items-center gap-2 font-bold text-[#002D67] pl-2 md:pl-3 flex-1 overflow-x-auto scrollbar-hide whitespace-nowrap text-xs sm:text-sm">
             <span class="text-[#01879C] flex-none"><Train :size="16" /></span>
@@ -551,26 +753,13 @@ const addReturnToOrigin = () => {
             </button>
           </div>
 
-          <!-- AI Route Optimizer Button (Active when 2+ stops) -->
-          <button 
-            v-if="itineraryDestinations.length >= 2"
-            @click="handleOptimizeRoute"
-            :disabled="isOptimizingRoute"
-            class="bg-slate-100 hover:bg-slate-200 text-[#002D67] border border-slate-200 px-3 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1 flex-none shadow-xs disabled:opacity-50"
-            title="AI orders stops to minimize train travel time"
-          >
-            <Loader2 v-if="isOptimizingRoute" :size="13" class="animate-spin text-[#01879C]" />
-            <Wand2 v-else :size="13" class="text-[#01879C]" />
-            <span class="hidden sm:inline">AI Optimize</span>
-          </button>
-
-          <!-- Generate Trip Button -->
+          <!-- Journey Summary Button -->
           <button 
             @click="isOnePagerOpen = true"
             class="bg-[#01879C] hover:bg-[#01306A] text-white px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-colors flex items-center gap-1.5 flex-none shadow-md"
           >
-            <Sparkles :size="15" /> 
-            <span>Generate Trip</span>
+            <Train :size="15" /> 
+            <span>Journey Summary</span>
           </button>
 
           <button 
@@ -591,7 +780,7 @@ const addReturnToOrigin = () => {
         <DetailsPanel 
           :destination="selectedDestination"
           :itineraryDestinations="itineraryDestinations"
-          @update-itinerary="itineraryDestinations = $event"
+          @update-itinerary="handleUpdateItinerary"
           @close="handleCloseDetails"
           @open-one-pager="isOnePagerOpen = true; isMobileDetailsOpen = false"
         />
@@ -663,7 +852,7 @@ const addReturnToOrigin = () => {
       @close="isGlobalPriceTrackerOpen = false"
     />
 
-    <!-- Itinerary OnePager Dashboard with TrainExplore AI Assistant -->
+    <!-- Itinerary OnePager Dashboard / Journey Summary -->
     <ItineraryOnePager 
       v-if="isOnePagerOpen"
       :destinations="itineraryDestinations" 

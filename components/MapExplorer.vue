@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount, watch, computed } from 'vue';
 import { CategoryType, TrainDeal, FilterState } from '../types';
-import { BERLIN_COORDS } from '../constants';
+import { BERLIN_COORDS, EUROPEAN_HUBS, getOriginCoordinates } from '../constants';
 import { 
   Clock, Euro, Mountain, Heart, Tent, Palmtree, Castle, Snowflake, 
   Building2, Trees, Sparkles, ChevronLeft, ChevronRight, ChevronDown, 
@@ -16,6 +16,8 @@ const props = defineProps<{
   selectedCategory: CategoryType | 'All';
   filters: FilterState;
   itineraryDestinations: TrainDeal[];
+  originCoords?: { lat: number; lng: number };
+  originName?: string;
 }>();
 
 const emit = defineEmits<{
@@ -38,12 +40,11 @@ const categories = [
 ];
 
 const operatorOptions = [
-  'Deutsche Bahn (ICE)',
-  'SNCF (TGV)',
-  'Eurostar',
-  'ÖBB Nightjet',
-  'Trenitalia',
-  'EuroCity (EC)'
+  { id: 'ice', label: 'High Speed (ICE / TGV / RJ)' },
+  { id: 'ic_ec', label: 'InterCity & EuroCity (IC / EC)' },
+  { id: 'regional', label: 'Regional (RE / RB / S-Bahn)' },
+  { id: 'nightjet', label: 'Night Trains (ÖBB Nightjet)' },
+  { id: 'flixtrain', label: 'FlixTrain & Private' }
 ];
 
 const activeFilter = ref<'stops' | 'price' | 'duration' | 'operators' | 'more' | null>(null);
@@ -67,13 +68,13 @@ const activeFilterCount = computed(() => {
   return count;
 });
 
-const toggleOperator = (op: string) => {
+const toggleOperator = (opId: string) => {
   const current = props.filters.operators ? [...props.filters.operators] : [];
-  const idx = current.indexOf(op);
+  const idx = current.indexOf(opId);
   if (idx >= 0) {
     current.splice(idx, 1);
   } else {
-    current.push(op);
+    current.push(opId);
   }
   updateFilterProp('operators', current);
 };
@@ -119,6 +120,10 @@ const handleClickOutside = (e: MouseEvent) => {
   }
 };
 
+const toggleFilter = (name: 'stops' | 'price' | 'duration' | 'operators' | 'more') => {
+  activeFilter.value = activeFilter.value === name ? null : name;
+};
+
 onMounted(() => {
   checkScroll();
   window.addEventListener('resize', checkScroll);
@@ -126,35 +131,38 @@ onMounted(() => {
 
   if (!mapRef.value) return;
 
+  const initialCoords = props.originCoords || BERLIN_COORDS;
+
   mapInstance = L.map(mapRef.value, {
-    center: [BERLIN_COORDS.lat, BERLIN_COORDS.lng],
-    zoom: 4,
+    center: [initialCoords.lat, initialCoords.lng],
+    zoom: 5,
     zoomControl: false,
     attributionControl: false
   });
 
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; OpenStreetMap &copy; CARTO',
-    subdomains: 'abcd',
+  // MapTiler Basic (OpenStreetMap data with clean, modern MapTiler Basic styling)
+  L.tileLayer('https://api.maptiler.com/maps/basic-v2/{z}/{x}/{y}.png?key=get_your_own_OpIi9ZULNHzrESv6T2vL', {
+    attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
     maxZoom: 19
   }).addTo(mapInstance);
 
   L.control.zoom({ position: 'bottomright' }).addTo(mapInstance);
 
-  // Custom Berlin Marker (Origin)
-  const berlinIcon = L.divIcon({
-    className: 'custom-div-icon',
-    html: `<div style="background-color: #01306A; width: 14px; height: 14px; border-radius: 50%; border: 3px solid white; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);"></div>`,
-    iconSize: [14, 14],
-    iconAnchor: [7, 7]
-  });
-
-  L.marker([BERLIN_COORDS.lat, BERLIN_COORDS.lng], { icon: berlinIcon, interactive: false }).addTo(mapInstance);
-
-  mapInstance.on('moveend', () => {
+  const handleMapChange = () => {
+    if (!mapInstance) return;
     mapZoom.value = mapInstance.getZoom();
     mapBounds.value = mapInstance.getBounds();
+    updateMarkers();
+  };
+
+  mapInstance.on('click', () => {
+    activeFilter.value = null;
   });
+
+  mapInstance.on('moveend', handleMapChange);
+  mapInstance.on('zoomend', handleMapChange);
+  mapInstance.on('viewreset', handleMapChange);
+  mapInstance.on('resize', handleMapChange);
 
   // Set initial state
   mapZoom.value = mapInstance.getZoom();
@@ -162,12 +170,17 @@ onMounted(() => {
 
   markersLayer = L.layerGroup().addTo(mapInstance);
 
-  updateMarkers();
+  setTimeout(() => {
+    if (mapInstance) {
+      mapInstance.invalidateSize();
+      handleMapChange();
+    }
+  }, 100);
 
   resizeObserver = new ResizeObserver(() => {
     if (mapInstance) {
       mapInstance.invalidateSize();
-      mapBounds.value = mapInstance.getBounds();
+      handleMapChange();
     }
   });
   resizeObserver.observe(mapRef.value);
@@ -185,72 +198,200 @@ onBeforeUnmount(() => {
   }
 });
 
+interface BoundingBox {
+  minX: number;
+  minY: number;
+  maxX: number;
+  maxY: number;
+}
+
+const intersects = (a: BoundingBox, b: BoundingBox): boolean => {
+  return !(a.maxX < b.minX || a.minX > b.maxX || a.maxY < b.minY || a.minY > b.maxY);
+};
+
 const updateMarkers = () => {
   if (!mapInstance || !markersLayer) return;
 
   markersLayer.clearLayers();
 
-  let visibleDestinations = [...props.destinations];
+  const currentZoom = mapInstance.getZoom();
+  const currentBounds = mapInstance.getBounds();
 
-  // Filter by bounds if available
-  if (mapBounds.value) {
-    visibleDestinations = visibleDestinations.filter(dest => {
-      return mapBounds.value.contains(L.latLng(dest.location.lat, dest.location.lng));
-    });
-  }
+  // ALWAYS use the prop origin coords or name — never fall back to Berlin unless explicitly set
+  const originLocation = props.originCoords && props.originCoords.lat && props.originCoords.lng
+    ? props.originCoords
+    : (props.originName ? getOriginCoordinates(props.originName) : BERLIN_COORDS);
+  const originPoint = mapInstance.latLngToContainerPoint([originLocation.lat, originLocation.lng]);
+  
+  const placedBoxes: BoundingBox[] = [];
 
-  // Determine max markers based on zoom level
-  let maxMarkers = 100;
-  if (mapZoom.value <= 4) maxMarkers = 15;
-  else if (mapZoom.value === 5) maxMarkers = 30;
-  else if (mapZoom.value === 6) maxMarkers = 50;
-  else if (mapZoom.value >= 7) maxMarkers = 100;
-
-  visibleDestinations = visibleDestinations.slice(0, maxMarkers);
-
-  if (props.selectedDestination && !visibleDestinations.find(d => d.id === props.selectedDestination!.id)) {
-    visibleDestinations.push(props.selectedDestination);
-  }
-
-  props.itineraryDestinations.forEach(d => {
-    if (!visibleDestinations.find(vd => vd.id === d.id)) {
-      visibleDestinations.push(d);
-    }
+  // 1. Reserve generous bounding box for Origin Pin
+  const originW = 56;
+  const originH = 56;
+  const originMargin = 18;
+  placedBoxes.push({
+    minX: originPoint.x - (originW / 2) - originMargin,
+    minY: originPoint.y - (originH / 2) - originMargin,
+    maxX: originPoint.x + (originW / 2) + originMargin,
+    maxY: originPoint.y + (originH / 2) + originMargin
   });
 
-  // Draw the itinerary polyline
+  // Draw origin marker — simple pin dot with label, visually distinct from destinations
+  const originHtml = `
+    <div class="flex flex-col items-center gap-0.5">
+      <div class="w-8 h-8 rounded-full bg-[#01306A] border-[3px] border-white shadow-xl flex items-center justify-center ring-2 ring-[#01879C]/50">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"/></svg>
+      </div>
+      <div class="px-2 py-0.5 rounded-md bg-[#01306A] text-white text-[10px] font-bold tracking-wide shadow-md whitespace-nowrap">
+        ${props.originName || 'Origin'}
+      </div>
+    </div>
+  `;
+  const originIcon = L.divIcon({ className: 'custom-div-icon', html: originHtml, iconSize: [80, 54], iconAnchor: [40, 27] });
+  L.marker([originLocation.lat, originLocation.lng], { icon: originIcon, zIndexOffset: 3000 }).addTo(markersLayer);
+
+  // 2. Draw Itinerary polyline and Waypoint Markers
   if (props.itineraryDestinations.length > 0) {
     const routeLatLngs = [
-      [BERLIN_COORDS.lat, BERLIN_COORDS.lng],
+      [originLocation.lat, originLocation.lng],
       ...props.itineraryDestinations.map(d => [d.location.lat, d.location.lng])
     ];
     L.polyline(routeLatLngs, { color: '#01879C', weight: 3.5, dashArray: '6, 6', opacity: 0.9, lineCap: 'round' }).addTo(markersLayer);
+
+    // Render Waypoint Markers for each Itinerary Stop
+    props.itineraryDestinations.forEach((stop, idx) => {
+      const stopPoint = mapInstance.latLngToContainerPoint([stop.location.lat, stop.location.lng]);
+      const stopW = 64;
+      const stopH = 52;
+      placedBoxes.push({
+        minX: stopPoint.x - (stopW / 2) - 10,
+        minY: stopPoint.y - (stopH / 2) - 10,
+        maxX: stopPoint.x + (stopW / 2) + 10,
+        maxY: stopPoint.y + (stopH / 2) + 10
+      });
+
+      const isLastStop = idx === props.itineraryDestinations.length - 1;
+      const isReturn = stop.id === 'return-origin';
+
+      const waypointHtml = `
+        <div class="flex flex-col items-center gap-0.5 cursor-pointer group">
+          <div class="w-7 h-7 rounded-full ${isReturn ? 'bg-[#01306A]' : 'bg-[#01879C]'} border-[2.5px] border-white shadow-xl flex items-center justify-center text-white text-xs font-black ring-2 ${isLastStop ? 'ring-emerald-400' : 'ring-[#01879C]/40'} transition-transform group-hover:scale-110">
+            ${isReturn ? '🏁' : (idx + 1)}
+          </div>
+          <div class="px-2 py-0.5 rounded-md ${isReturn ? 'bg-[#01306A]' : 'bg-[#01879C]'} text-white text-[10px] font-bold tracking-tight shadow-md whitespace-nowrap">
+            ${isReturn ? 'Return' : stop.destinationName}
+          </div>
+        </div>
+      `;
+
+      const waypointIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: waypointHtml,
+        iconSize: [80, 52],
+        iconAnchor: [40, 26]
+      });
+
+      const waypointMarker = L.marker([stop.location.lat, stop.location.lng], {
+        icon: waypointIcon,
+        zIndexOffset: 2500
+      });
+
+      waypointMarker.on('click', () => {
+        emit('select-destination', stop);
+      });
+
+      waypointMarker.addTo(markersLayer);
+    });
   }
 
-  visibleDestinations.forEach(dest => {
+  // 3. Filter destinations within current map bounds
+  let candidates = [...props.destinations];
+  if (currentBounds) {
+    candidates = candidates.filter(dest => {
+      return currentBounds.contains(L.latLng(dest.location.lat, dest.location.lng));
+    });
+  }
+
+  // 4. Calculate Importance Score for hierarchical filtering
+  const getScore = (dest: TrainDeal) => {
+    if (props.selectedDestination?.id === dest.id) return 5000;
+    if (props.itineraryDestinations.some(d => d.id === dest.id)) return 3000;
+    
+    let score = 50;
+
+    const isHub = EUROPEAN_HUBS.some(h => h.name.toLowerCase() === dest.destinationName.toLowerCase());
+    if (isHub) score += 600;
+
+    if (dest.isDirect !== false && dest.transfers === 0) score += 120;
+
+    if (dest.price <= 20) score += 60;
+    else if (dest.price <= 35) score += 30;
+
+    if (dest.scenicRating && dest.scenicRating >= 4) score += 40;
+
+    if (dest.destinationName.includes('Hbf') || dest.destinationName.includes('-')) score -= 30;
+
+    return score;
+  };
+
+  candidates.sort((a, b) => getScore(b) - getScore(a));
+
+  // Collision parameters
+  const pillW = 120;
+  const pillH = 32;
+  const marginX = currentZoom <= 5 ? 20 : (currentZoom <= 6 ? 16 : 12);
+  const marginY = currentZoom <= 5 ? 16 : (currentZoom <= 6 ? 12 : 10);
+  const maxPills = currentZoom <= 4 ? 14 : (currentZoom <= 5 ? 22 : (currentZoom <= 6 ? 32 : (currentZoom <= 7 ? 48 : 70)));
+
+  const pillsToRender: TrainDeal[] = [];
+
+  for (const dest of candidates) {
     const isSelected = props.selectedDestination?.id === dest.id;
     const isInItinerary = props.itineraryDestinations.some(d => d.id === dest.id);
-    const isDeal = dest.price <= 35;
+
+    const pt = mapInstance.latLngToContainerPoint([dest.location.lat, dest.location.lng]);
+    const box: BoundingBox = {
+      minX: pt.x - (pillW / 2) - marginX,
+      minY: pt.y - (pillH / 2) - marginY,
+      maxX: pt.x + (pillW / 2) + marginX,
+      maxY: pt.y + (pillH / 2) + marginY
+    };
+
+    const hasCollision = placedBoxes.some(b => intersects(box, b));
+
+    if (isSelected || isInItinerary || (!hasCollision && pillsToRender.length < maxPills)) {
+      placedBoxes.push(box);
+      pillsToRender.push(dest);
+    }
+  }
+
+  // 5. Render destination pills
+  pillsToRender.forEach(dest => {
+    const isSelected = props.selectedDestination?.id === dest.id;
+    const isInItinerary = props.itineraryDestinations.some(d => d.id === dest.id);
+    const isGreatDeal = dest.price <= 25;
     
-    let markerBg = 'bg-white text-slate-800 border-slate-300 hover:border-slate-400 hover:shadow-md';
-    let priceBg = isDeal ? 'text-slate-900 bg-emerald-100/70 font-bold' : 'text-slate-900 bg-slate-100 font-bold';
+    let markerClasses = 'bg-white text-slate-800 border-slate-200/90 hover:border-slate-400 hover:shadow-lg shadow-sm';
+    let priceClasses = isGreatDeal 
+      ? 'bg-emerald-50 text-emerald-700 font-bold border border-emerald-200/60' 
+      : 'bg-slate-100 text-slate-900 font-bold';
 
     if (isSelected) {
-      markerBg = 'bg-[#01306A] text-white border-transparent shadow-lg ring-2 ring-white scale-110';
-      priceBg = 'text-[#01306A] bg-white font-bold';
+      markerClasses = 'bg-[#01306A] text-white border-transparent shadow-xl ring-2 ring-white scale-110';
+      priceClasses = 'text-[#01306A] bg-white font-bold';
     } else if (isInItinerary) {
-      markerBg = 'bg-[#01879C] text-white border-transparent shadow-lg ring-2 ring-white scale-110';
-      priceBg = 'text-[#01879C] bg-white font-bold';
+      markerClasses = 'bg-[#01879C] text-white border-transparent shadow-xl ring-2 ring-white scale-110';
+      priceClasses = 'text-[#01879C] bg-white font-bold';
     }
 
     const html = `
-      <div class="group relative flex flex-col items-center justify-center transition-all duration-200 ${isSelected || isInItinerary ? 'z-50' : 'z-10 hover:z-40 hover:scale-105'}">
+      <div class="group relative flex flex-col items-center justify-center transition-transform duration-200 ${isSelected || isInItinerary ? 'z-50' : 'z-10 hover:z-40 hover:scale-105'}">
          <div class="
-            flex items-center gap-1.5 px-3 py-1 rounded-full shadow-md border cursor-pointer font-sans transition-all
-            ${markerBg}
+            flex items-center gap-1.5 px-2.5 py-1 rounded-full border cursor-pointer font-sans transition-all
+            ${markerClasses}
          ">
-           <span class="text-xs font-medium whitespace-nowrap truncate max-w-[80px]">${dest.destinationName}</span>
-           <span class="text-xs px-1.5 py-0.5 rounded-full ${priceBg}">$${dest.price}</span>
+           <span class="text-xs font-semibold whitespace-nowrap truncate max-w-[80px] tracking-tight">${dest.destinationName}</span>
+           <span class="text-[11px] px-1.5 py-0.5 rounded-full ${priceClasses}">$${dest.price}</span>
          </div>
       </div>
     `;
@@ -258,11 +399,14 @@ const updateMarkers = () => {
     const customIcon = L.divIcon({
       className: 'custom-div-icon',
       html: html,
-      iconSize: [120, 36],
-      iconAnchor: [60, 18]
+      iconSize: [120, 32],
+      iconAnchor: [60, 16]
     });
 
-    const marker = L.marker([dest.location.lat, dest.location.lng], { icon: customIcon });
+    const marker = L.marker([dest.location.lat, dest.location.lng], { 
+      icon: customIcon,
+      zIndexOffset: isSelected || isInItinerary ? 1000 : 100
+    });
     
     marker.on('click', () => {
       emit('select-destination', dest);
@@ -271,12 +415,13 @@ const updateMarkers = () => {
     
     marker.addTo(markersLayer);
 
+    // Draw dashed line from last itinerary stop (or origin) to the selected destination
     if (isSelected && !isInItinerary) {
       const lastPoint = props.itineraryDestinations.length > 0 
         ? props.itineraryDestinations[props.itineraryDestinations.length - 1].location 
-        : BERLIN_COORDS;
+        : originLocation;
       const latlngs = [[lastPoint.lat, lastPoint.lng], [dest.location.lat, dest.location.lng]];
-      L.polyline(latlngs, { color: '#01306A', weight: 2, dashArray: '4, 6', opacity: 0.6, lineCap: 'round' }).addTo(markersLayer);
+      L.polyline(latlngs, { color: '#01306A', weight: 2.5, dashArray: '4, 6', opacity: 0.8, lineCap: 'round' }).addTo(markersLayer);
     }
   });
 };
@@ -286,6 +431,28 @@ watch(() => props.selectedDestination, (newDest) => {
     mapInstance.flyTo([newDest.location.lat, newDest.location.lng], 6, { duration: 1.2 });
   }
 });
+
+watch(() => props.originCoords, (newCoords) => {
+  if (newCoords && mapInstance) {
+    mapInstance.setView([newCoords.lat, newCoords.lng], 5);
+    mapBounds.value = mapInstance.getBounds();
+    mapZoom.value = mapInstance.getZoom();
+  }
+  nextTick(() => {
+    updateMarkers();
+  });
+}, { deep: true });
+
+watch(() => props.itineraryDestinations, (newItinerary, oldItinerary) => {
+  if (newItinerary && newItinerary.length > 0 && mapInstance) {
+    if (!oldItinerary || newItinerary.length > oldItinerary.length) {
+      const latestStop = newItinerary[newItinerary.length - 1];
+      if (latestStop && latestStop.location && latestStop.id !== 'return-origin') {
+        mapInstance.flyTo([latestStop.location.lat, latestStop.location.lng], 6, { duration: 1.0 });
+      }
+    }
+  }
+}, { deep: true });
 
 watch([
   () => props.destinations,
@@ -306,16 +473,16 @@ const updateFilterProp = (key: keyof FilterState, val: any) => {
   <div class="relative h-full w-full bg-slate-50 group flex-1 flex flex-col">
     
     <!-- Google Flights Style Floating Filter Bar -->
-    <div class="absolute top-3 sm:top-4 left-1/2 -translate-x-1/2 z-[400] w-full max-w-4xl flex flex-col items-center gap-2 px-3 pointer-events-none filter-popover-container">
+    <div class="absolute top-3 sm:top-4 left-1/2 -translate-x-1/2 z-[1200] w-full max-w-4xl flex flex-col items-center gap-2 px-3 pointer-events-none filter-popover-container">
       
       <!-- 1. Multi-Filter Pill Bar (Google Flights Rounded Pills) -->
-      <div class="flex items-center gap-1.5 pointer-events-auto shadow-md rounded-full p-1 bg-white border border-slate-200 max-w-full overflow-x-auto scrollbar-hide">
+      <div class="flex items-center gap-1.5 pointer-events-auto shadow-lg rounded-full p-1 bg-white border border-slate-200 max-w-full overflow-x-auto scrollbar-hide">
         
         <!-- Filter: Stops -->
         <div class="relative flex-none">
           <button 
-            @click.stop="activeFilter = activeFilter === 'stops' ? null : 'stops'"
-            class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all border"
+            @click="toggleFilter('stops')"
+            class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all border filter-button"
             :class="filters.directOnly 
               ? 'bg-[#01306A] text-white border-transparent' 
               : activeFilter === 'stops' ? 'bg-slate-100 text-slate-900 border-slate-300' : 'bg-white hover:bg-slate-50 text-slate-700 border-slate-200'"
@@ -327,8 +494,7 @@ const updateFilterProp = (key: keyof FilterState, val: any) => {
           <!-- Stops Popover -->
           <div 
             v-if="activeFilter === 'stops'"
-            @click.stop
-            class="absolute top-full mt-2 left-0 w-52 bg-white rounded-2xl p-2.5 shadow-xl border border-slate-200 z-50 animate-in fade-in zoom-in-95 duration-150 text-xs font-medium space-y-1"
+            class="absolute top-full mt-2 left-0 w-52 bg-white rounded-2xl p-2.5 shadow-2xl border border-slate-200 z-[2200] pointer-events-auto animate-in fade-in zoom-in-95 duration-150 text-xs font-medium space-y-1"
           >
             <div class="font-bold text-slate-900 pb-1 mb-1 border-b border-slate-100 text-xs px-2">
               Train Stops
@@ -355,8 +521,8 @@ const updateFilterProp = (key: keyof FilterState, val: any) => {
         <!-- Filter: Price -->
         <div class="relative flex-none">
           <button 
-            @click.stop="activeFilter = activeFilter === 'price' ? null : 'price'"
-            class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all border"
+            @click="toggleFilter('price')"
+            class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all border filter-button"
             :class="filters.maxPrice < 500 
               ? 'bg-[#01306A] text-white border-transparent' 
               : activeFilter === 'price' ? 'bg-slate-100 text-slate-900 border-slate-300' : 'bg-white hover:bg-slate-50 text-slate-700 border-slate-200'"
@@ -368,8 +534,7 @@ const updateFilterProp = (key: keyof FilterState, val: any) => {
           <!-- Price Popover -->
           <div 
             v-if="activeFilter === 'price'"
-            @click.stop
-            class="absolute top-full mt-2 left-1/2 -translate-x-1/2 sm:left-0 sm:translate-x-0 w-64 bg-white rounded-2xl p-4 shadow-xl border border-slate-200 z-50 animate-in fade-in zoom-in-95 duration-150"
+            class="absolute top-full mt-2 left-1/2 -translate-x-1/2 sm:left-0 sm:translate-x-0 w-64 bg-white rounded-2xl p-4 shadow-2xl border border-slate-200 z-[2200] pointer-events-auto animate-in fade-in zoom-in-95 duration-150"
           >
             <div class="flex justify-between items-center text-xs font-bold text-slate-900 mb-3">
               <span>Max Ticket Price</span>
@@ -409,8 +574,8 @@ const updateFilterProp = (key: keyof FilterState, val: any) => {
         <!-- Filter: Duration -->
         <div class="relative flex-none">
           <button 
-            @click.stop="activeFilter = activeFilter === 'duration' ? null : 'duration'"
-            class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all border"
+            @click="toggleFilter('duration')"
+            class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all border filter-button"
             :class="(filters.maxDuration ?? 12) < 12 
               ? 'bg-[#01306A] text-white border-transparent' 
               : activeFilter === 'duration' ? 'bg-slate-100 text-slate-900 border-slate-300' : 'bg-white hover:bg-slate-50 text-slate-700 border-slate-200'"
@@ -422,8 +587,7 @@ const updateFilterProp = (key: keyof FilterState, val: any) => {
           <!-- Duration Popover -->
           <div 
             v-if="activeFilter === 'duration'"
-            @click.stop
-            class="absolute top-full mt-2 left-1/2 -translate-x-1/2 sm:left-0 sm:translate-x-0 w-60 bg-white rounded-2xl p-4 shadow-xl border border-slate-200 z-50 animate-in fade-in zoom-in-95 duration-150"
+            class="absolute top-full mt-2 left-1/2 -translate-x-1/2 sm:left-0 sm:translate-x-0 w-60 bg-white rounded-2xl p-4 shadow-2xl border border-slate-200 z-[2200] pointer-events-auto animate-in fade-in zoom-in-95 duration-150"
           >
             <div class="flex justify-between items-center text-xs font-bold text-slate-900 mb-3">
               <span>Max Travel Time</span>
@@ -463,8 +627,8 @@ const updateFilterProp = (key: keyof FilterState, val: any) => {
         <!-- Filter: Operators -->
         <div class="relative flex-none">
           <button 
-            @click.stop="activeFilter = activeFilter === 'operators' ? null : 'operators'"
-            class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all border"
+            @click="toggleFilter('operators')"
+            class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all border filter-button"
             :class="(filters.operators || []).length > 0 
               ? 'bg-[#01306A] text-white border-transparent' 
               : activeFilter === 'operators' ? 'bg-slate-100 text-slate-900 border-slate-300' : 'bg-white hover:bg-slate-50 text-slate-700 border-slate-200'"
@@ -476,8 +640,7 @@ const updateFilterProp = (key: keyof FilterState, val: any) => {
           <!-- Operators Popover -->
           <div 
             v-if="activeFilter === 'operators'"
-            @click.stop
-            class="absolute top-full mt-2 left-1/2 -translate-x-1/2 sm:left-0 sm:translate-x-0 w-56 bg-white rounded-2xl p-3 shadow-xl border border-slate-200 z-50 animate-in fade-in zoom-in-95 duration-150 text-xs space-y-1"
+            class="absolute top-full mt-2 left-1/2 -translate-x-1/2 sm:left-0 sm:translate-x-0 w-56 bg-white rounded-2xl p-3 shadow-2xl border border-slate-200 z-[2200] pointer-events-auto animate-in fade-in zoom-in-95 duration-150 text-xs space-y-1"
           >
             <div class="font-bold text-slate-900 pb-1.5 mb-1 border-b border-slate-100 flex justify-between items-center px-1">
               <span>Train Operator</span>
@@ -491,14 +654,14 @@ const updateFilterProp = (key: keyof FilterState, val: any) => {
             </div>
             <label 
               v-for="op in operatorOptions" 
-              :key="op"
+              :key="op.id"
               class="flex items-center justify-between p-2 rounded-xl hover:bg-slate-100 cursor-pointer transition-colors"
             >
-              <span class="text-slate-800 font-medium">{{ op }}</span>
+              <span class="text-slate-800 font-medium">{{ op.label }}</span>
               <input 
                 type="checkbox" 
-                :checked="(filters.operators || []).includes(op)" 
-                @change="toggleOperator(op)"
+                :checked="(filters.operators || []).includes(op.id)" 
+                @change="toggleOperator(op.id)"
                 class="w-4 h-4 rounded text-[#01306A] focus:ring-[#01306A] accent-[#01306A]"
               />
             </label>
@@ -508,8 +671,8 @@ const updateFilterProp = (key: keyof FilterState, val: any) => {
         <!-- Filter: More (Scenic / Nightjet) -->
         <div class="relative flex-none">
           <button 
-            @click.stop="activeFilter = activeFilter === 'more' ? null : 'more'"
-            class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all border"
+            @click="toggleFilter('more')"
+            class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all border filter-button"
             :class="(filters.scenicOnly || filters.nightTrainOnly) 
               ? 'bg-[#01306A] text-white border-transparent' 
               : activeFilter === 'more' ? 'bg-slate-100 text-slate-900 border-slate-300' : 'bg-white hover:bg-slate-50 text-slate-700 border-slate-200'"
@@ -521,8 +684,7 @@ const updateFilterProp = (key: keyof FilterState, val: any) => {
           <!-- More Popover -->
           <div 
             v-if="activeFilter === 'more'"
-            @click.stop
-            class="absolute top-full mt-2 right-0 w-64 bg-white rounded-2xl p-3 shadow-xl border border-slate-200 z-50 animate-in fade-in zoom-in-95 duration-150 text-xs space-y-2"
+            class="absolute top-full mt-2 right-0 w-64 bg-white rounded-2xl p-3 shadow-2xl border border-slate-200 z-[2200] pointer-events-auto animate-in fade-in zoom-in-95 duration-150 text-xs space-y-2"
           >
             <div class="font-bold text-slate-900 pb-1 border-b border-slate-100 px-1">
               Special Route Types
@@ -563,6 +725,17 @@ const updateFilterProp = (key: keyof FilterState, val: any) => {
             </label>
           </div>
         </div>
+
+        <!-- Reset Filters Button (When active) -->
+        <button 
+          v-if="activeFilterCount > 0"
+          @click="resetAll"
+          class="flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-bold text-rose-700 bg-rose-50 hover:bg-rose-100 border border-rose-200 transition-all flex-none shadow-xs"
+          title="Reset all active filters"
+        >
+          <RotateCcw :size="11" />
+          <span>Reset ({{ activeFilterCount }})</span>
+        </button>
 
       </div>
 

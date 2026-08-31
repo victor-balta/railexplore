@@ -1,0 +1,7962 @@
+[
+  {
+    "destination": "Albrechtshof Bahnhof Berlin",
+    "stationName": "Albrechtshof Bahnhof Berlin",
+    "location": {
+      "lat": 52.549377,
+      "lng": 13.129182
+    },
+    "distanceKm": 19,
+    "minDurationMinutes": 4,
+    "duration": "0h 04m",
+    "estimatedPrice": 10,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE2",
+      "RB14",
+      "RE6",
+      "RE8"
+    ],
+    "dailyDepartures": 31,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Seegefeld Bahnhof Nord Falkensee",
+    "stationName": "Seegefeld Bahnhof Nord Falkensee",
+    "location": {
+      "lat": 52.552513,
+      "lng": 13.116914
+    },
+    "distanceKm": 20,
+    "minDurationMinutes": 6,
+    "duration": "0h 06m",
+    "estimatedPrice": 10,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE2",
+      "RB14",
+      "RE6",
+      "RE8"
+    ],
+    "dailyDepartures": 31,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Falkensee",
+    "stationName": "Falkensee",
+    "location": {
+      "lat": 52.559788,
+      "lng": 13.089593
+    },
+    "distanceKm": 22,
+    "minDurationMinutes": 6,
+    "duration": "0h 06m",
+    "estimatedPrice": 10,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE2",
+      "RB14",
+      "RE6",
+      "RE8"
+    ],
+    "dailyDepartures": 35,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Bahnhof Dallgow-Döberitz",
+    "stationName": "Bahnhof Dallgow-Döberitz",
+    "location": {
+      "lat": 52.543655,
+      "lng": 13.058846
+    },
+    "distanceKm": 24,
+    "minDurationMinutes": 7,
+    "duration": "0h 07m",
+    "estimatedPrice": 10,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB21",
+      "RE4"
+    ],
+    "dailyDepartures": 53,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Wannsee Bahnhof Berlin",
+    "stationName": "Wannsee Bahnhof Berlin",
+    "location": {
+      "lat": 52.421402,
+      "lng": 13.180358
+    },
+    "distanceKm": 19,
+    "minDurationMinutes": 10,
+    "duration": "0h 10m",
+    "estimatedPrice": 10,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin Zoologischer Garten"
+  },
+  {
+    "destination": "Blankenfelde(Teltow-Fläming)",
+    "stationName": "Blankenfelde(Teltow-Fläming)",
+    "location": {
+      "lat": 52.3369,
+      "lng": 13.416238
+    },
+    "distanceKm": 20,
+    "minDurationMinutes": 10,
+    "duration": "0h 10m",
+    "estimatedPrice": 10,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 38,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Elstal Bahnhof Wustermark",
+    "stationName": "Elstal Bahnhof Wustermark",
+    "location": {
+      "lat": 52.547573,
+      "lng": 13.00079
+    },
+    "distanceKm": 28,
+    "minDurationMinutes": 11,
+    "duration": "0h 11m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB21",
+      "RE4"
+    ],
+    "dailyDepartures": 53,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Bahnhof Ludwigsfelde",
+    "stationName": "Bahnhof Ludwigsfelde",
+    "location": {
+      "lat": 52.298466,
+      "lng": 13.267343
+    },
+    "distanceKm": 26,
+    "minDurationMinutes": 11,
+    "duration": "0h 11m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE4",
+      "RE3"
+    ],
+    "dailyDepartures": 28,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Flughafen BER",
+    "stationName": "Flughafen BER",
+    "location": {
+      "lat": 52.364063,
+      "lng": 13.509307
+    },
+    "distanceKm": 19,
+    "minDurationMinutes": 12,
+    "duration": "0h 12m",
+    "estimatedPrice": 10,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE20",
+      "FEX",
+      "27"
+    ],
+    "dailyDepartures": 100,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Finkenkrug Bahnhof Falkensee",
+    "stationName": "Finkenkrug Bahnhof Falkensee",
+    "location": {
+      "lat": 52.569805,
+      "lng": 13.050836
+    },
+    "distanceKm": 25,
+    "minDurationMinutes": 12,
+    "duration": "0h 12m",
+    "estimatedPrice": 10,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE2",
+      "RB14",
+      "RE6",
+      "RE8"
+    ],
+    "dailyDepartures": 24,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Bernau(b Berlin)",
+    "stationName": "Bernau(b Berlin)",
+    "location": {
+      "lat": 52.67533,
+      "lng": 13.592016
+    },
+    "distanceKm": 21,
+    "minDurationMinutes": 12,
+    "duration": "0h 12m",
+    "estimatedPrice": 10,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE3",
+      "RB63"
+    ],
+    "dailyDepartures": 59,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Dahlewitz Bahnhof Blankenfelde-Mahlow",
+    "stationName": "Dahlewitz Bahnhof Blankenfelde-Mahlow",
+    "location": {
+      "lat": 52.32629,
+      "lng": 13.419799
+    },
+    "distanceKm": 22,
+    "minDurationMinutes": 13,
+    "duration": "0h 13m",
+    "estimatedPrice": 10,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 38,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Ludwigsfelde",
+    "stationName": "Ludwigsfelde",
+    "location": {
+      "lat": 52.299816,
+      "lng": 13.267635
+    },
+    "distanceKm": 26,
+    "minDurationMinutes": 13,
+    "duration": "0h 13m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE4",
+      "RE3"
+    ],
+    "dailyDepartures": 34,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Großbeeren",
+    "stationName": "Großbeeren",
+    "location": {
+      "lat": 52.350845,
+      "lng": 13.28462
+    },
+    "distanceKm": 21,
+    "minDurationMinutes": 13,
+    "duration": "0h 13m",
+    "estimatedPrice": 10,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 39,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Bahnhof/A.-Bebel-Str. Brieselang",
+    "stationName": "Bahnhof/A.-Bebel-Str. Brieselang",
+    "location": {
+      "lat": 52.5828,
+      "lng": 13.000861
+    },
+    "distanceKm": 28,
+    "minDurationMinutes": 14,
+    "duration": "0h 14m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE2",
+      "RB14",
+      "RE8"
+    ],
+    "dailyDepartures": 23,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Erkner",
+    "stationName": "Erkner",
+    "location": {
+      "lat": 52.427628,
+      "lng": 13.752022
+    },
+    "distanceKm": 26,
+    "minDurationMinutes": 14,
+    "duration": "0h 14m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE1"
+    ],
+    "dailyDepartures": 128,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Wustermark",
+    "stationName": "Wustermark",
+    "location": {
+      "lat": 52.551952,
+      "lng": 12.938612
+    },
+    "distanceKm": 32,
+    "minDurationMinutes": 15,
+    "duration": "0h 15m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB21",
+      "RE4"
+    ],
+    "dailyDepartures": 53,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Thyrow",
+    "stationName": "Thyrow",
+    "location": {
+      "lat": 52.24714,
+      "lng": 13.259913
+    },
+    "distanceKm": 32,
+    "minDurationMinutes": 16,
+    "duration": "0h 16m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE4",
+      "RE3"
+    ],
+    "dailyDepartures": 31,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Rüdnitz",
+    "stationName": "Rüdnitz",
+    "location": {
+      "lat": 52.71695,
+      "lng": 13.635748
+    },
+    "distanceKm": 27,
+    "minDurationMinutes": 16,
+    "duration": "0h 16m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 22,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Strausberg",
+    "stationName": "Strausberg",
+    "location": {
+      "lat": 52.532146,
+      "lng": 13.832481
+    },
+    "distanceKm": 29,
+    "minDurationMinutes": 17,
+    "duration": "0h 17m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB26"
+    ],
+    "dailyDepartures": 37,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Rangsdorf",
+    "stationName": "Rangsdorf",
+    "location": {
+      "lat": 52.29434,
+      "lng": 13.430585
+    },
+    "distanceKm": 25,
+    "minDurationMinutes": 17,
+    "duration": "0h 17m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 38,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Birkengrund",
+    "stationName": "Birkengrund",
+    "location": {
+      "lat": 52.31591,
+      "lng": 13.271822
+    },
+    "distanceKm": 24,
+    "minDurationMinutes": 17,
+    "duration": "0h 17m",
+    "estimatedPrice": 10,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 39,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Potsdam Hbf",
+    "stationName": "Potsdam Hbf",
+    "location": {
+      "lat": 52.391582,
+      "lng": 13.06674
+    },
+    "distanceKm": 27,
+    "minDurationMinutes": 18,
+    "duration": "0h 18m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin Zoologischer Garten"
+  },
+  {
+    "destination": "Bahnhof Königs Wusterhausen",
+    "stationName": "Bahnhof Königs Wusterhausen",
+    "location": {
+      "lat": 52.29666,
+      "lng": 13.63135
+    },
+    "distanceKm": 29,
+    "minDurationMinutes": 18,
+    "duration": "0h 18m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE2",
+      "RE7"
+    ],
+    "dailyDepartures": 96,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Oranienburg",
+    "stationName": "Oranienburg",
+    "location": {
+      "lat": 52.754093,
+      "lng": 13.249336
+    },
+    "distanceKm": 28,
+    "minDurationMinutes": 19,
+    "duration": "0h 19m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "IC 17",
+      "ICE 17",
+      "RE5"
+    ],
+    "dailyDepartures": 30,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Fangschleuse",
+    "stationName": "Fangschleuse",
+    "location": {
+      "lat": 52.407963,
+      "lng": 13.794153
+    },
+    "distanceKm": 29,
+    "minDurationMinutes": 19,
+    "duration": "0h 19m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE1"
+    ],
+    "dailyDepartures": 89,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Nauen",
+    "stationName": "Nauen",
+    "location": {
+      "lat": 52.61252,
+      "lng": 12.88593
+    },
+    "distanceKm": 37,
+    "minDurationMinutes": 20,
+    "duration": "0h 20m",
+    "estimatedPrice": 12,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE2",
+      "RB14",
+      "RE8"
+    ],
+    "dailyDepartures": 25,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Basdorf",
+    "stationName": "Basdorf",
+    "location": {
+      "lat": 52.71556,
+      "lng": 13.433993
+    },
+    "distanceKm": 22,
+    "minDurationMinutes": 20,
+    "duration": "0h 20m",
+    "estimatedPrice": 10,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB27"
+    ],
+    "dailyDepartures": 5,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Trebbin",
+    "stationName": "Trebbin",
+    "location": {
+      "lat": 52.21658,
+      "lng": 13.229556
+    },
+    "distanceKm": 36,
+    "minDurationMinutes": 20,
+    "duration": "0h 20m",
+    "estimatedPrice": 12,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE4",
+      "RE3"
+    ],
+    "dailyDepartures": 31,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Biesenthal",
+    "stationName": "Biesenthal",
+    "location": {
+      "lat": 52.755936,
+      "lng": 13.675252
+    },
+    "distanceKm": 32,
+    "minDurationMinutes": 21,
+    "duration": "0h 21m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 24,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Herrensee",
+    "stationName": "Herrensee",
+    "location": {
+      "lat": 52.529934,
+      "lng": 13.885463
+    },
+    "distanceKm": 33,
+    "minDurationMinutes": 22,
+    "duration": "0h 22m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB26"
+    ],
+    "dailyDepartures": 37,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Seefeld(Mark)",
+    "stationName": "Seefeld(Mark)",
+    "location": {
+      "lat": 52.618256,
+      "lng": 13.675728
+    },
+    "distanceKm": 21,
+    "minDurationMinutes": 22,
+    "duration": "0h 22m",
+    "estimatedPrice": 10,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB25"
+    ],
+    "dailyDepartures": 45,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Zeesen",
+    "stationName": "Zeesen",
+    "location": {
+      "lat": 52.264862,
+      "lng": 13.635143
+    },
+    "distanceKm": 32,
+    "minDurationMinutes": 23,
+    "duration": "0h 23m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE2",
+      "RE7"
+    ],
+    "dailyDepartures": 61,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Sachsenhausen(Nordb)",
+    "stationName": "Sachsenhausen(Nordb)",
+    "location": {
+      "lat": 52.77227,
+      "lng": 13.251867
+    },
+    "distanceKm": 30,
+    "minDurationMinutes": 23,
+    "duration": "0h 23m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE5"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Dabendorf",
+    "stationName": "Dabendorf",
+    "location": {
+      "lat": 52.236935,
+      "lng": 13.437361
+    },
+    "distanceKm": 32,
+    "minDurationMinutes": 23,
+    "duration": "0h 23m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 38,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Melchow",
+    "stationName": "Melchow",
+    "location": {
+      "lat": 52.77487,
+      "lng": 13.694375
+    },
+    "distanceKm": 34,
+    "minDurationMinutes": 23,
+    "duration": "0h 23m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 22,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Wandlitz",
+    "stationName": "Wandlitz",
+    "location": {
+      "lat": 52.744823,
+      "lng": 13.46615
+    },
+    "distanceKm": 25,
+    "minDurationMinutes": 24,
+    "duration": "0h 24m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB27"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Bahnhof Medienstadt Babelsberg Vorpl. Potsdam",
+    "stationName": "Bahnhof Medienstadt Babelsberg Vorpl. Potsdam",
+    "location": {
+      "lat": 52.38251,
+      "lng": 13.12199
+    },
+    "distanceKm": 25,
+    "minDurationMinutes": 24,
+    "duration": "0h 24m",
+    "estimatedPrice": 10,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE7"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Rehfelde",
+    "stationName": "Rehfelde",
+    "location": {
+      "lat": 52.52842,
+      "lng": 13.922803
+    },
+    "distanceKm": 35,
+    "minDurationMinutes": 25,
+    "duration": "0h 25m",
+    "estimatedPrice": 12,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB26"
+    ],
+    "dailyDepartures": 37,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Bahnhof Franz-Mehring-Str. Bestensee",
+    "stationName": "Bahnhof Franz-Mehring-Str. Bestensee",
+    "location": {
+      "lat": 52.24158,
+      "lng": 13.63497
+    },
+    "distanceKm": 35,
+    "minDurationMinutes": 25,
+    "duration": "0h 25m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE2",
+      "RE7"
+    ],
+    "dailyDepartures": 61,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Eberswalde Hbf",
+    "stationName": "Eberswalde Hbf",
+    "location": {
+      "lat": 52.83376,
+      "lng": 13.796866
+    },
+    "distanceKm": 44,
+    "minDurationMinutes": 26,
+    "duration": "0h 26m",
+    "estimatedPrice": 12,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "ICE 15",
+      "ICE 13",
+      "RE3",
+      "RB63"
+    ],
+    "dailyDepartures": 73,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Wandlitzsee",
+    "stationName": "Wandlitzsee",
+    "location": {
+      "lat": 52.755966,
+      "lng": 13.474025
+    },
+    "distanceKm": 27,
+    "minDurationMinutes": 26,
+    "duration": "0h 26m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB27"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Zossen",
+    "stationName": "Zossen",
+    "location": {
+      "lat": 52.21882,
+      "lng": 13.438575
+    },
+    "distanceKm": 34,
+    "minDurationMinutes": 26,
+    "duration": "0h 26m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 37,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Bahnhof Zossen",
+    "stationName": "Bahnhof Zossen",
+    "location": {
+      "lat": 52.21911,
+      "lng": 13.438754
+    },
+    "distanceKm": 34,
+    "minDurationMinutes": 26,
+    "duration": "0h 26m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Hangelsberg",
+    "stationName": "Hangelsberg",
+    "location": {
+      "lat": 52.40041,
+      "lng": 13.920247
+    },
+    "distanceKm": 37,
+    "minDurationMinutes": 26,
+    "duration": "0h 26m",
+    "estimatedPrice": 12,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE1"
+    ],
+    "dailyDepartures": 68,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Priort Bahnhof Wustermark",
+    "stationName": "Priort Bahnhof Wustermark",
+    "location": {
+      "lat": 52.516483,
+      "lng": 12.971314
+    },
+    "distanceKm": 29,
+    "minDurationMinutes": 27,
+    "duration": "0h 27m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB21"
+    ],
+    "dailyDepartures": 21,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Potsdam-Rehbrücke",
+    "stationName": "Potsdam-Rehbrücke",
+    "location": {
+      "lat": 52.358154,
+      "lng": 13.097973
+    },
+    "distanceKm": 28,
+    "minDurationMinutes": 27,
+    "duration": "0h 27m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE7"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Werneuchen",
+    "stationName": "Werneuchen",
+    "location": {
+      "lat": 52.637302,
+      "lng": 13.737549
+    },
+    "distanceKm": 26,
+    "minDurationMinutes": 27,
+    "duration": "0h 27m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB25"
+    ],
+    "dailyDepartures": 45,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Hauptbahnhof ZOB Eberswalde",
+    "stationName": "Hauptbahnhof ZOB Eberswalde",
+    "location": {
+      "lat": 52.833755,
+      "lng": 13.797157
+    },
+    "distanceKm": 44,
+    "minDurationMinutes": 28,
+    "duration": "0h 28m",
+    "estimatedPrice": 12,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "ICE 15",
+      "RE3"
+    ],
+    "dailyDepartures": 4,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Buschow Bahnhof Märkisch Luch",
+    "stationName": "Buschow Bahnhof Märkisch Luch",
+    "location": {
+      "lat": 52.592278,
+      "lng": 12.629501
+    },
+    "distanceKm": 53,
+    "minDurationMinutes": 28,
+    "duration": "0h 28m",
+    "estimatedPrice": 13,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE4"
+    ],
+    "dailyDepartures": 10,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Luckenwalde",
+    "stationName": "Luckenwalde",
+    "location": {
+      "lat": 52.090496,
+      "lng": 13.159456
+    },
+    "distanceKm": 51,
+    "minDurationMinutes": 28,
+    "duration": "0h 28m",
+    "estimatedPrice": 13,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE4",
+      "RE3"
+    ],
+    "dailyDepartures": 60,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Nassenheide",
+    "stationName": "Nassenheide",
+    "location": {
+      "lat": 52.816525,
+      "lng": 13.239579
+    },
+    "distanceKm": 35,
+    "minDurationMinutes": 29,
+    "duration": "0h 29m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE5"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Löwenberg(Mark)",
+    "stationName": "Löwenberg(Mark)",
+    "location": {
+      "lat": 52.89646,
+      "lng": 13.190169
+    },
+    "distanceKm": 44,
+    "minDurationMinutes": 30,
+    "duration": "0h 30m",
+    "estimatedPrice": 12,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE5"
+    ],
+    "dailyDepartures": 11,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Poststr. Bahnhof Hennigsdorf",
+    "stationName": "Poststr. Bahnhof Hennigsdorf",
+    "location": {
+      "lat": 52.638535,
+      "lng": 13.205695
+    },
+    "distanceKm": 19,
+    "minDurationMinutes": 30,
+    "duration": "0h 30m",
+    "estimatedPrice": 10,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE6"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Bahnhof Groß Köris",
+    "stationName": "Bahnhof Groß Köris",
+    "location": {
+      "lat": 52.159817,
+      "lng": 13.650531
+    },
+    "distanceKm": 43,
+    "minDurationMinutes": 31,
+    "duration": "0h 31m",
+    "estimatedPrice": 12,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE2",
+      "RE7"
+    ],
+    "dailyDepartures": 61,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Paulinenaue",
+    "stationName": "Paulinenaue",
+    "location": {
+      "lat": 52.67589,
+      "lng": 12.71327
+    },
+    "distanceKm": 50,
+    "minDurationMinutes": 31,
+    "duration": "0h 31m",
+    "estimatedPrice": 13,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Bahnhof Westseite Berliner Pl. Luckenwalde",
+    "stationName": "Bahnhof Westseite Berliner Pl. Luckenwalde",
+    "location": {
+      "lat": 52.09131,
+      "lng": 13.16096
+    },
+    "distanceKm": 50,
+    "minDurationMinutes": 31,
+    "duration": "0h 31m",
+    "estimatedPrice": 13,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE4"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Stendal Hbf",
+    "stationName": "Stendal Hbf",
+    "location": {
+      "lat": 52.59494,
+      "lng": 11.85532
+    },
+    "distanceKm": 105,
+    "minDurationMinutes": 32,
+    "duration": "0h 32m",
+    "estimatedPrice": 19,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "ICE 12",
+      "ICE 13",
+      "ICE 10",
+      "RE4"
+    ],
+    "dailyDepartures": 59,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Marquardt Bahnhof Potsdam",
+    "stationName": "Marquardt Bahnhof Potsdam",
+    "location": {
+      "lat": 52.45842,
+      "lng": 12.971836
+    },
+    "distanceKm": 30,
+    "minDurationMinutes": 32,
+    "duration": "0h 32m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB21"
+    ],
+    "dailyDepartures": 21,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Bahnhof Nennhausen",
+    "stationName": "Bahnhof Nennhausen",
+    "location": {
+      "lat": 52.60004,
+      "lng": 12.502007
+    },
+    "distanceKm": 62,
+    "minDurationMinutes": 32,
+    "duration": "0h 32m",
+    "estimatedPrice": 14,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE4"
+    ],
+    "dailyDepartures": 17,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Wilhelmshorst",
+    "stationName": "Wilhelmshorst",
+    "location": {
+      "lat": 52.331833,
+      "lng": 13.068156
+    },
+    "distanceKm": 31,
+    "minDurationMinutes": 32,
+    "duration": "0h 32m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE7"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Fürstenwalde(Spree)",
+    "stationName": "Fürstenwalde(Spree)",
+    "location": {
+      "lat": 52.366898,
+      "lng": 14.059075
+    },
+    "distanceKm": 47,
+    "minDurationMinutes": 32,
+    "duration": "0h 32m",
+    "estimatedPrice": 13,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE1"
+    ],
+    "dailyDepartures": 128,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Lutherstadt Wittenberg Hbf",
+    "stationName": "Lutherstadt Wittenberg Hbf",
+    "location": {
+      "lat": 51.86781,
+      "lng": 12.662285
+    },
+    "distanceKm": 88,
+    "minDurationMinutes": 33,
+    "duration": "0h 33m",
+    "estimatedPrice": 17,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 28",
+      "ICE 91",
+      "ICE 11",
+      "12N",
+      "RE3"
+    ],
+    "dailyDepartures": 156,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Woltersdorf/Nuthe-Urstromtal",
+    "stationName": "Woltersdorf/Nuthe-Urstromtal",
+    "location": {
+      "lat": 52.11741,
+      "lng": 13.195387
+    },
+    "distanceKm": 47,
+    "minDurationMinutes": 33,
+    "duration": "0h 33m",
+    "estimatedPrice": 13,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 30,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Müncheberg(Mark)",
+    "stationName": "Müncheberg(Mark)",
+    "location": {
+      "lat": 52.524513,
+      "lng": 14.099687
+    },
+    "distanceKm": 47,
+    "minDurationMinutes": 34,
+    "duration": "0h 34m",
+    "estimatedPrice": 13,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB26"
+    ],
+    "dailyDepartures": 37,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Werder(Havel)",
+    "stationName": "Werder(Havel)",
+    "location": {
+      "lat": 52.39294,
+      "lng": 12.926189
+    },
+    "distanceKm": 35,
+    "minDurationMinutes": 34,
+    "duration": "0h 34m",
+    "estimatedPrice": 12,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Zoologischer Garten"
+  },
+  {
+    "destination": "Grüneberg",
+    "stationName": "Grüneberg",
+    "location": {
+      "lat": 52.868244,
+      "lng": 13.212719
+    },
+    "distanceKm": 41,
+    "minDurationMinutes": 34,
+    "duration": "0h 34m",
+    "estimatedPrice": 12,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE5"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Wünsdorf-Waldstadt",
+    "stationName": "Wünsdorf-Waldstadt",
+    "location": {
+      "lat": 52.165806,
+      "lng": 13.467828
+    },
+    "distanceKm": 40,
+    "minDurationMinutes": 34,
+    "duration": "0h 34m",
+    "estimatedPrice": 12,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 37,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Wünsdorf-Waldstadt Bahnhof Zossen",
+    "stationName": "Wünsdorf-Waldstadt Bahnhof Zossen",
+    "location": {
+      "lat": 52.165623,
+      "lng": 13.468133
+    },
+    "distanceKm": 40,
+    "minDurationMinutes": 34,
+    "duration": "0h 34m",
+    "estimatedPrice": 12,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Britz",
+    "stationName": "Britz",
+    "location": {
+      "lat": 52.87269,
+      "lng": 13.820199
+    },
+    "distanceKm": 48,
+    "minDurationMinutes": 34,
+    "duration": "0h 34m",
+    "estimatedPrice": 13,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE3",
+      "RB63"
+    ],
+    "dailyDepartures": 41,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Michendorf",
+    "stationName": "Michendorf",
+    "location": {
+      "lat": 52.316345,
+      "lng": 13.030688
+    },
+    "distanceKm": 34,
+    "minDurationMinutes": 35,
+    "duration": "0h 35m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE7"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Halbe",
+    "stationName": "Halbe",
+    "location": {
+      "lat": 52.108006,
+      "lng": 13.702074
+    },
+    "distanceKm": 50,
+    "minDurationMinutes": 36,
+    "duration": "0h 36m",
+    "estimatedPrice": 13,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE2",
+      "RE7"
+    ],
+    "dailyDepartures": 61,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Jüterbog",
+    "stationName": "Jüterbog",
+    "location": {
+      "lat": 51.99719,
+      "lng": 13.053465
+    },
+    "distanceKm": 63,
+    "minDurationMinutes": 36,
+    "duration": "0h 36m",
+    "estimatedPrice": 14,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE4",
+      "RE3"
+    ],
+    "dailyDepartures": 52,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Brand Tropical Islands Bahnhof Halbe",
+    "stationName": "Brand Tropical Islands Bahnhof Halbe",
+    "location": {
+      "lat": 52.029785,
+      "lng": 13.721552
+    },
+    "distanceKm": 59,
+    "minDurationMinutes": 37,
+    "duration": "0h 37m",
+    "estimatedPrice": 14,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE2",
+      "RE7"
+    ],
+    "dailyDepartures": 96,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Gransee",
+    "stationName": "Gransee",
+    "location": {
+      "lat": 53.003235,
+      "lng": 13.169596
+    },
+    "distanceKm": 56,
+    "minDurationMinutes": 37,
+    "duration": "0h 37m",
+    "estimatedPrice": 14,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE5"
+    ],
+    "dailyDepartures": 26,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Golm",
+    "stationName": "Golm",
+    "location": {
+      "lat": 52.409843,
+      "lng": 12.971764
+    },
+    "distanceKm": 32,
+    "minDurationMinutes": 38,
+    "duration": "0h 38m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB21"
+    ],
+    "dailyDepartures": 21,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Klosterfelde",
+    "stationName": "Klosterfelde",
+    "location": {
+      "lat": 52.791374,
+      "lng": 13.488131
+    },
+    "distanceKm": 31,
+    "minDurationMinutes": 38,
+    "duration": "0h 38m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB27"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Neuhof(b Zossen)",
+    "stationName": "Neuhof(b Zossen)",
+    "location": {
+      "lat": 52.139675,
+      "lng": 13.479582
+    },
+    "distanceKm": 43,
+    "minDurationMinutes": 38,
+    "duration": "0h 38m",
+    "estimatedPrice": 12,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 38,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Berkenbrück",
+    "stationName": "Berkenbrück",
+    "location": {
+      "lat": 52.357075,
+      "lng": 14.166475
+    },
+    "distanceKm": 55,
+    "minDurationMinutes": 38,
+    "duration": "0h 38m",
+    "estimatedPrice": 13,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE1"
+    ],
+    "dailyDepartures": 49,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Friesack(Mark)",
+    "stationName": "Friesack(Mark)",
+    "location": {
+      "lat": 52.76063,
+      "lng": 12.587826
+    },
+    "distanceKm": 61,
+    "minDurationMinutes": 39,
+    "duration": "0h 39m",
+    "estimatedPrice": 14,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Bahnhof Rathenow",
+    "stationName": "Bahnhof Rathenow",
+    "location": {
+      "lat": 52.59958,
+      "lng": 12.354209
+    },
+    "distanceKm": 72,
+    "minDurationMinutes": 39,
+    "duration": "0h 39m",
+    "estimatedPrice": 15,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE4"
+    ],
+    "dailyDepartures": 14,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Bahnhof Ostseite Jüterbog",
+    "stationName": "Bahnhof Ostseite Jüterbog",
+    "location": {
+      "lat": 51.997135,
+      "lng": 13.053549
+    },
+    "distanceKm": 63,
+    "minDurationMinutes": 39,
+    "duration": "0h 39m",
+    "estimatedPrice": 14,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE4"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Seddin",
+    "stationName": "Seddin",
+    "location": {
+      "lat": 52.29158,
+      "lng": 12.984404
+    },
+    "distanceKm": 38,
+    "minDurationMinutes": 39,
+    "duration": "0h 39m",
+    "estimatedPrice": 12,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE7"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Chorin",
+    "stationName": "Chorin",
+    "location": {
+      "lat": 52.903515,
+      "lng": 13.869672
+    },
+    "distanceKm": 53,
+    "minDurationMinutes": 39,
+    "duration": "0h 39m",
+    "estimatedPrice": 13,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 40,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Obersdorf",
+    "stationName": "Obersdorf",
+    "location": {
+      "lat": 52.536964,
+      "lng": 14.167862
+    },
+    "distanceKm": 52,
+    "minDurationMinutes": 40,
+    "duration": "0h 40m",
+    "estimatedPrice": 13,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB26"
+    ],
+    "dailyDepartures": 19,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Oderin Hauptstr. Halbe",
+    "stationName": "Oderin Hauptstr. Halbe",
+    "location": {
+      "lat": 52.074574,
+      "lng": 13.726927
+    },
+    "distanceKm": 54,
+    "minDurationMinutes": 40,
+    "duration": "0h 40m",
+    "estimatedPrice": 13,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE2",
+      "RE7"
+    ],
+    "dailyDepartures": 61,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Rathenow",
+    "stationName": "Rathenow",
+    "location": {
+      "lat": 52.59951,
+      "lng": 12.354245
+    },
+    "distanceKm": 72,
+    "minDurationMinutes": 40,
+    "duration": "0h 40m",
+    "estimatedPrice": 15,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE4"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Brandenburg Hbf",
+    "stationName": "Brandenburg Hbf",
+    "location": {
+      "lat": 52.400276,
+      "lng": 12.565075
+    },
+    "distanceKm": 58,
+    "minDurationMinutes": 41,
+    "duration": "0h 41m",
+    "estimatedPrice": 14,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "ICE 10",
+      "IC 57",
+      "HBX"
+    ],
+    "dailyDepartures": 10,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Velten(Mark)",
+    "stationName": "Velten(Mark)",
+    "location": {
+      "lat": 52.68489,
+      "lng": 13.172034
+    },
+    "distanceKm": 24,
+    "minDurationMinutes": 42,
+    "duration": "0h 42m",
+    "estimatedPrice": 10,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE6"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Trebnitz(Mark)",
+    "stationName": "Trebnitz(Mark)",
+    "location": {
+      "lat": 52.53826,
+      "lng": 14.216504
+    },
+    "distanceKm": 55,
+    "minDurationMinutes": 43,
+    "duration": "0h 43m",
+    "estimatedPrice": 13,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB26"
+    ],
+    "dailyDepartures": 19,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Beelitz-Heilstätten",
+    "stationName": "Beelitz-Heilstätten",
+    "location": {
+      "lat": 52.26231,
+      "lng": 12.925821
+    },
+    "distanceKm": 43,
+    "minDurationMinutes": 43,
+    "duration": "0h 43m",
+    "estimatedPrice": 12,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE7"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Dannenwalde(Gransee)",
+    "stationName": "Dannenwalde(Gransee)",
+    "location": {
+      "lat": 53.08077,
+      "lng": 13.180868
+    },
+    "distanceKm": 64,
+    "minDurationMinutes": 43,
+    "duration": "0h 43m",
+    "estimatedPrice": 14,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE5"
+    ],
+    "dailyDepartures": 17,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Baruth(Mark)",
+    "stationName": "Baruth(Mark)",
+    "location": {
+      "lat": 52.058723,
+      "lng": 13.511465
+    },
+    "distanceKm": 52,
+    "minDurationMinutes": 44,
+    "duration": "0h 44m",
+    "estimatedPrice": 13,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 38,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Briesen(Mark)",
+    "stationName": "Briesen(Mark)",
+    "location": {
+      "lat": 52.346424,
+      "lng": 14.281397
+    },
+    "distanceKm": 62,
+    "minDurationMinutes": 44,
+    "duration": "0h 44m",
+    "estimatedPrice": 14,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE1"
+    ],
+    "dailyDepartures": 70,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Golzow(Eberswalde)",
+    "stationName": "Golzow(Eberswalde)",
+    "location": {
+      "lat": 52.914013,
+      "lng": 13.826975
+    },
+    "distanceKm": 52,
+    "minDurationMinutes": 44,
+    "duration": "0h 44m",
+    "estimatedPrice": 13,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB63"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Lübben(Spreewald)",
+    "stationName": "Lübben(Spreewald)",
+    "location": {
+      "lat": 51.93978,
+      "lng": 13.877006
+    },
+    "distanceKm": 72,
+    "minDurationMinutes": 45,
+    "duration": "0h 45m",
+    "estimatedPrice": 15,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE2",
+      "RE7"
+    ],
+    "dailyDepartures": 96,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Potsdam Park Sanssouci",
+    "stationName": "Potsdam Park Sanssouci",
+    "location": {
+      "lat": 52.394535,
+      "lng": 13.013671
+    },
+    "distanceKm": 30,
+    "minDurationMinutes": 45,
+    "duration": "0h 45m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB21"
+    ],
+    "dailyDepartures": 21,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Oehna",
+    "stationName": "Oehna",
+    "location": {
+      "lat": 51.93305,
+      "lng": 13.048201
+    },
+    "distanceKm": 70,
+    "minDurationMinutes": 45,
+    "duration": "0h 45m",
+    "estimatedPrice": 15,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE4"
+    ],
+    "dailyDepartures": 11,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Bärenklau Bahnhof Oberkrämer",
+    "stationName": "Bärenklau Bahnhof Oberkrämer",
+    "location": {
+      "lat": 52.704163,
+      "lng": 13.143378
+    },
+    "distanceKm": 27,
+    "minDurationMinutes": 46,
+    "duration": "0h 46m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE6"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Bahnhof Wittenberge",
+    "stationName": "Bahnhof Wittenberge",
+    "location": {
+      "lat": 53.004498,
+      "lng": 11.762504
+    },
+    "distanceKm": 123,
+    "minDurationMinutes": 47,
+    "duration": "0h 47m",
+    "estimatedPrice": 20,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 28",
+      "ICE 91",
+      "ICE 11",
+      "RE8"
+    ],
+    "dailyDepartures": 62,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Angermünde",
+    "stationName": "Angermünde",
+    "location": {
+      "lat": 53.015793,
+      "lng": 13.995908
+    },
+    "distanceKm": 68,
+    "minDurationMinutes": 47,
+    "duration": "0h 47m",
+    "estimatedPrice": 15,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 28,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Schönwalde(Spreewald)",
+    "stationName": "Schönwalde(Spreewald)",
+    "location": {
+      "lat": 51.990795,
+      "lng": 13.777723
+    },
+    "distanceKm": 64,
+    "minDurationMinutes": 47,
+    "duration": "0h 47m",
+    "estimatedPrice": 14,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE2",
+      "RE7"
+    ],
+    "dailyDepartures": 61,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Neustadt(Dosse)",
+    "stationName": "Neustadt(Dosse)",
+    "location": {
+      "lat": 52.853195,
+      "lng": 12.450128
+    },
+    "distanceKm": 74,
+    "minDurationMinutes": 47,
+    "duration": "0h 47m",
+    "estimatedPrice": 15,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Frankfurt(Oder)",
+    "stationName": "Frankfurt(Oder)",
+    "location": {
+      "lat": 52.336517,
+      "lng": 14.545882
+    },
+    "distanceKm": 80,
+    "minDurationMinutes": 48,
+    "duration": "0h 48m",
+    "estimatedPrice": 16,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "EC 95",
+      "EC 96"
+    ],
+    "dailyDepartures": 122,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Alt Rosenthal",
+    "stationName": "Alt Rosenthal",
+    "location": {
+      "lat": 52.550404,
+      "lng": 14.278627
+    },
+    "distanceKm": 59,
+    "minDurationMinutes": 48,
+    "duration": "0h 48m",
+    "estimatedPrice": 14,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB26"
+    ],
+    "dailyDepartures": 19,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Seelow-Gusow",
+    "stationName": "Seelow-Gusow",
+    "location": {
+      "lat": 52.559544,
+      "lng": 14.35283
+    },
+    "distanceKm": 64,
+    "minDurationMinutes": 48,
+    "duration": "0h 48m",
+    "estimatedPrice": 14,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB26"
+    ],
+    "dailyDepartures": 20,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Groß Kreutz",
+    "stationName": "Groß Kreutz",
+    "location": {
+      "lat": 52.410934,
+      "lng": 12.777052
+    },
+    "distanceKm": 44,
+    "minDurationMinutes": 48,
+    "duration": "0h 48m",
+    "estimatedPrice": 12,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Borkheide",
+    "stationName": "Borkheide",
+    "location": {
+      "lat": 52.23069,
+      "lng": 12.854165
+    },
+    "distanceKm": 49,
+    "minDurationMinutes": 48,
+    "duration": "0h 48m",
+    "estimatedPrice": 13,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE7"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Jacobsdorf(Mark)",
+    "stationName": "Jacobsdorf(Mark)",
+    "location": {
+      "lat": 52.3327,
+      "lng": 14.356151
+    },
+    "distanceKm": 68,
+    "minDurationMinutes": 48,
+    "duration": "0h 48m",
+    "estimatedPrice": 15,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE1"
+    ],
+    "dailyDepartures": 70,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Neustrelitz Hbf",
+    "stationName": "Neustrelitz Hbf",
+    "location": {
+      "lat": 53.359257,
+      "lng": 13.074603
+    },
+    "distanceKm": 96,
+    "minDurationMinutes": 49,
+    "duration": "0h 49m",
+    "estimatedPrice": 18,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "ICE 15",
+      "IC 57",
+      "IC 17",
+      "ICE 17",
+      "RE5"
+    ],
+    "dailyDepartures": 42,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Potsdam Charlottenhof",
+    "stationName": "Potsdam Charlottenhof",
+    "location": {
+      "lat": 52.392803,
+      "lng": 13.037517
+    },
+    "distanceKm": 29,
+    "minDurationMinutes": 49,
+    "duration": "0h 49m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB21"
+    ],
+    "dailyDepartures": 21,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Vehlefanz Bahnhof Oberkrämer",
+    "stationName": "Vehlefanz Bahnhof Oberkrämer",
+    "location": {
+      "lat": 52.72241,
+      "lng": 13.114686
+    },
+    "distanceKm": 30,
+    "minDurationMinutes": 49,
+    "duration": "0h 49m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE6"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Klasdorf Glashütte",
+    "stationName": "Klasdorf Glashütte",
+    "location": {
+      "lat": 52.022186,
+      "lng": 13.542614
+    },
+    "distanceKm": 56,
+    "minDurationMinutes": 49,
+    "duration": "0h 49m",
+    "estimatedPrice": 14,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 12,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Zellendorf",
+    "stationName": "Zellendorf",
+    "location": {
+      "lat": 51.89419,
+      "lng": 13.066878
+    },
+    "distanceKm": 73,
+    "minDurationMinutes": 49,
+    "duration": "0h 49m",
+    "estimatedPrice": 15,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE4"
+    ],
+    "dailyDepartures": 11,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Bahnhof Angermünde",
+    "stationName": "Bahnhof Angermünde",
+    "location": {
+      "lat": 53.015854,
+      "lng": 13.996267
+    },
+    "distanceKm": 68,
+    "minDurationMinutes": 49,
+    "duration": "0h 49m",
+    "estimatedPrice": 15,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 18,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Bitterfeld",
+    "stationName": "Bitterfeld",
+    "location": {
+      "lat": 51.62286,
+      "lng": 12.31685
+    },
+    "distanceKm": 124,
+    "minDurationMinutes": 50,
+    "duration": "0h 50m",
+    "estimatedPrice": 20,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 28",
+      "ICE 11",
+      "12N",
+      "RE3"
+    ],
+    "dailyDepartures": 63,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Wolfsburg Hbf",
+    "stationName": "Wolfsburg Hbf",
+    "location": {
+      "lat": 52.429497,
+      "lng": 10.787784
+    },
+    "distanceKm": 178,
+    "minDurationMinutes": 50,
+    "duration": "0h 50m",
+    "estimatedPrice": 26,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "ICE 12",
+      "ICE 13",
+      "ICE 10"
+    ],
+    "dailyDepartures": 198,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Alt Hüttendorf",
+    "stationName": "Alt Hüttendorf",
+    "location": {
+      "lat": 52.957436,
+      "lng": 13.783584
+    },
+    "distanceKm": 55,
+    "minDurationMinutes": 50,
+    "duration": "0h 50m",
+    "estimatedPrice": 13,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB63"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Lubolz",
+    "stationName": "Lubolz",
+    "location": {
+      "lat": 51.961735,
+      "lng": 13.822422
+    },
+    "distanceKm": 68,
+    "minDurationMinutes": 51,
+    "duration": "0h 51m",
+    "estimatedPrice": 15,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE2",
+      "RE7"
+    ],
+    "dailyDepartures": 61,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Schwante",
+    "stationName": "Schwante",
+    "location": {
+      "lat": 52.73482,
+      "lng": 13.091481
+    },
+    "distanceKm": 32,
+    "minDurationMinutes": 51,
+    "duration": "0h 51m",
+    "estimatedPrice": 11,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE6"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Golßen(Niederlausitz)",
+    "stationName": "Golßen(Niederlausitz)",
+    "location": {
+      "lat": 51.97303,
+      "lng": 13.575414
+    },
+    "distanceKm": 62,
+    "minDurationMinutes": 51,
+    "duration": "0h 51m",
+    "estimatedPrice": 14,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 17,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Pillgram",
+    "stationName": "Pillgram",
+    "location": {
+      "lat": 52.336838,
+      "lng": 14.397825
+    },
+    "distanceKm": 70,
+    "minDurationMinutes": 51,
+    "duration": "0h 51m",
+    "estimatedPrice": 15,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE1"
+    ],
+    "dailyDepartures": 70,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Lübbenau(Spreewald)",
+    "stationName": "Lübbenau(Spreewald)",
+    "location": {
+      "lat": 51.862026,
+      "lng": 13.961095
+    },
+    "distanceKm": 82,
+    "minDurationMinutes": 52,
+    "duration": "0h 52m",
+    "estimatedPrice": 16,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE2",
+      "RE7"
+    ],
+    "dailyDepartures": 61,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Fürstenberg(Havel)",
+    "stationName": "Fürstenberg(Havel)",
+    "location": {
+      "lat": 53.186882,
+      "lng": 13.139519
+    },
+    "distanceKm": 76,
+    "minDurationMinutes": 52,
+    "duration": "0h 52m",
+    "estimatedPrice": 16,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE5"
+    ],
+    "dailyDepartures": 26,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Linda(Elster)",
+    "stationName": "Linda(Elster)",
+    "location": {
+      "lat": 51.853058,
+      "lng": 13.085176
+    },
+    "distanceKm": 77,
+    "minDurationMinutes": 53,
+    "duration": "0h 53m",
+    "estimatedPrice": 16,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE4"
+    ],
+    "dailyDepartures": 11,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Bahnhof Brück",
+    "stationName": "Bahnhof Brück",
+    "location": {
+      "lat": 52.186836,
+      "lng": 12.758456
+    },
+    "distanceKm": 57,
+    "minDurationMinutes": 53,
+    "duration": "0h 53m",
+    "estimatedPrice": 14,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE7"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Joachimsthal Kaiserbahnhof",
+    "stationName": "Joachimsthal Kaiserbahnhof",
+    "location": {
+      "lat": 52.96395,
+      "lng": 13.755016
+    },
+    "distanceKm": 55,
+    "minDurationMinutes": 53,
+    "duration": "0h 53m",
+    "estimatedPrice": 13,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB63"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Bergsdorf",
+    "stationName": "Bergsdorf",
+    "location": {
+      "lat": 52.93652,
+      "lng": 13.260729
+    },
+    "distanceKm": 47,
+    "minDurationMinutes": 54,
+    "duration": "0h 54m",
+    "estimatedPrice": 13,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB12"
+    ],
+    "dailyDepartures": 26,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Breddin",
+    "stationName": "Breddin",
+    "location": {
+      "lat": 52.886097,
+      "lng": 12.224649
+    },
+    "distanceKm": 89,
+    "minDurationMinutes": 55,
+    "duration": "0h 55m",
+    "estimatedPrice": 17,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Bahnhof Niedergörsdorf",
+    "stationName": "Bahnhof Niedergörsdorf",
+    "location": {
+      "lat": 51.967907,
+      "lng": 12.978512
+    },
+    "distanceKm": 68,
+    "minDurationMinutes": 55,
+    "duration": "0h 55m",
+    "estimatedPrice": 15,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 21,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Frankfurt(Oder)-Rosengarten",
+    "stationName": "Frankfurt(Oder)-Rosengarten",
+    "location": {
+      "lat": 52.337944,
+      "lng": 14.473098
+    },
+    "distanceKm": 75,
+    "minDurationMinutes": 55,
+    "duration": "0h 55m",
+    "estimatedPrice": 16,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE1"
+    ],
+    "dailyDepartures": 70,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Werbig",
+    "stationName": "Werbig",
+    "location": {
+      "lat": 52.564884,
+      "lng": 14.405238
+    },
+    "distanceKm": 68,
+    "minDurationMinutes": 56,
+    "duration": "0h 56m",
+    "estimatedPrice": 15,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB26"
+    ],
+    "dailyDepartures": 19,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Bahnhof Kremmen",
+    "stationName": "Bahnhof Kremmen",
+    "location": {
+      "lat": 52.75333,
+      "lng": 13.04007
+    },
+    "distanceKm": 36,
+    "minDurationMinutes": 56,
+    "duration": "0h 56m",
+    "estimatedPrice": 12,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE6"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Baitz Bahnhof Brück",
+    "stationName": "Baitz Bahnhof Brück",
+    "location": {
+      "lat": 52.164185,
+      "lng": 12.685215
+    },
+    "distanceKm": 63,
+    "minDurationMinutes": 57,
+    "duration": "0h 57m",
+    "estimatedPrice": 14,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE7"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Joachimsthal",
+    "stationName": "Joachimsthal",
+    "location": {
+      "lat": 52.980324,
+      "lng": 13.749525
+    },
+    "distanceKm": 56,
+    "minDurationMinutes": 57,
+    "duration": "0h 57m",
+    "estimatedPrice": 14,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB63"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Raddusch",
+    "stationName": "Raddusch",
+    "location": {
+      "lat": 51.815403,
+      "lng": 14.032956
+    },
+    "distanceKm": 89,
+    "minDurationMinutes": 58,
+    "duration": "0h 58m",
+    "estimatedPrice": 17,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE2"
+    ],
+    "dailyDepartures": 42,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Bahnhof Lübbenau (Spreewald)",
+    "stationName": "Bahnhof Lübbenau (Spreewald)",
+    "location": {
+      "lat": 51.862095,
+      "lng": 13.961176
+    },
+    "distanceKm": 82,
+    "minDurationMinutes": 58,
+    "duration": "0h 58m",
+    "estimatedPrice": 16,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE20"
+    ],
+    "dailyDepartures": 8,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Genthin",
+    "stationName": "Genthin",
+    "location": {
+      "lat": 52.40322,
+      "lng": 12.157103
+    },
+    "distanceKm": 86,
+    "minDurationMinutes": 58,
+    "duration": "0h 58m",
+    "estimatedPrice": 17,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin Zoologischer Garten"
+  },
+  {
+    "destination": "Drahnsdorf",
+    "stationName": "Drahnsdorf",
+    "location": {
+      "lat": 51.91587,
+      "lng": 13.58149
+    },
+    "distanceKm": 68,
+    "minDurationMinutes": 58,
+    "duration": "0h 58m",
+    "estimatedPrice": 15,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 12,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Halle(Saale)Hbf",
+    "stationName": "Halle(Saale)Hbf",
+    "location": {
+      "lat": 51.476925,
+      "lng": 11.9872
+    },
+    "distanceKm": 151,
+    "minDurationMinutes": 59,
+    "duration": "0h 59m",
+    "estimatedPrice": 23,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "ICE 15",
+      "ICE 18",
+      "ICE 28",
+      "ICE 29",
+      "ICE 82",
+      "ICE 11",
+      "12N",
+      "RE3"
+    ],
+    "dailyDepartures": 81,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Luckau-Uckro",
+    "stationName": "Luckau-Uckro",
+    "location": {
+      "lat": 51.851368,
+      "lng": 13.608051
+    },
+    "distanceKm": 76,
+    "minDurationMinutes": 60,
+    "duration": "1h 00m",
+    "estimatedPrice": 16,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 17,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Holzdorf(Elster)",
+    "stationName": "Holzdorf(Elster)",
+    "location": {
+      "lat": 51.780293,
+      "lng": 13.114137
+    },
+    "distanceKm": 85,
+    "minDurationMinutes": 60,
+    "duration": "1h 00m",
+    "estimatedPrice": 16,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE4"
+    ],
+    "dailyDepartures": 11,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Blönsdorf",
+    "stationName": "Blönsdorf",
+    "location": {
+      "lat": 51.955544,
+      "lng": 12.89583
+    },
+    "distanceKm": 72,
+    "minDurationMinutes": 60,
+    "duration": "1h 00m",
+    "estimatedPrice": 15,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 22,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Küstrin-Kietz",
+    "stationName": "Küstrin-Kietz",
+    "location": {
+      "lat": 52.568462,
+      "lng": 14.607911
+    },
+    "distanceKm": 82,
+    "minDurationMinutes": 61,
+    "duration": "1h 01m",
+    "estimatedPrice": 16,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB26"
+    ],
+    "dailyDepartures": 20,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Zehdenick(Mark)",
+    "stationName": "Zehdenick(Mark)",
+    "location": {
+      "lat": 52.979187,
+      "lng": 13.317463
+    },
+    "distanceKm": 51,
+    "minDurationMinutes": 61,
+    "duration": "1h 01m",
+    "estimatedPrice": 13,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB12"
+    ],
+    "dailyDepartures": 26,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Beetz-Sommerfeld",
+    "stationName": "Beetz-Sommerfeld",
+    "location": {
+      "lat": 52.804363,
+      "lng": 13.021806
+    },
+    "distanceKm": 41,
+    "minDurationMinutes": 61,
+    "duration": "1h 01m",
+    "estimatedPrice": 12,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE6"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Bahnhof Vetschau (Spreewald)",
+    "stationName": "Bahnhof Vetschau (Spreewald)",
+    "location": {
+      "lat": 51.789303,
+      "lng": 14.082303
+    },
+    "distanceKm": 93,
+    "minDurationMinutes": 62,
+    "duration": "1h 02m",
+    "estimatedPrice": 17,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE2"
+    ],
+    "dailyDepartures": 31,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Vetschau",
+    "stationName": "Vetschau",
+    "location": {
+      "lat": 51.790302,
+      "lng": 14.079425
+    },
+    "distanceKm": 93,
+    "minDurationMinutes": 62,
+    "duration": "1h 02m",
+    "estimatedPrice": 17,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE2"
+    ],
+    "dailyDepartures": 11,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Glöwen",
+    "stationName": "Glöwen",
+    "location": {
+      "lat": 52.90368,
+      "lng": 12.083599
+    },
+    "distanceKm": 99,
+    "minDurationMinutes": 62,
+    "duration": "1h 02m",
+    "estimatedPrice": 18,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Karl-Marx-Str. Bad Belzig",
+    "stationName": "Karl-Marx-Str. Bad Belzig",
+    "location": {
+      "lat": 52.136063,
+      "lng": 12.59495
+    },
+    "distanceKm": 70,
+    "minDurationMinutes": 62,
+    "duration": "1h 02m",
+    "estimatedPrice": 15,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE7"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Prenzlau",
+    "stationName": "Prenzlau",
+    "location": {
+      "lat": 53.32162,
+      "lng": 13.86654
+    },
+    "distanceKm": 94,
+    "minDurationMinutes": 63,
+    "duration": "1h 03m",
+    "estimatedPrice": 17,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "ICE 15",
+      "ICE 13",
+      "RE3"
+    ],
+    "dailyDepartures": 34,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Golzow(Oderbruch)",
+    "stationName": "Golzow(Oderbruch)",
+    "location": {
+      "lat": 52.56253,
+      "lng": 14.51181
+    },
+    "distanceKm": 75,
+    "minDurationMinutes": 63,
+    "duration": "1h 03m",
+    "estimatedPrice": 15,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB26"
+    ],
+    "dailyDepartures": 9,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Ludwigslust",
+    "stationName": "Ludwigslust",
+    "location": {
+      "lat": 53.33467,
+      "lng": 11.494491
+    },
+    "distanceKm": 157,
+    "minDurationMinutes": 64,
+    "duration": "1h 04m",
+    "estimatedPrice": 24,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 28",
+      "ICE 91",
+      "ICE 11",
+      "RE8"
+    ],
+    "dailyDepartures": 45,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Kostrzyn",
+    "stationName": "Kostrzyn",
+    "location": {
+      "lat": 52.57974,
+      "lng": 14.627094
+    },
+    "distanceKm": 83,
+    "minDurationMinutes": 64,
+    "duration": "1h 04m",
+    "estimatedPrice": 16,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB26"
+    ],
+    "dailyDepartures": 40,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Wilmersdorf(Angerm)",
+    "stationName": "Wilmersdorf(Angerm)",
+    "location": {
+      "lat": 53.11163,
+      "lng": 13.892457
+    },
+    "distanceKm": 73,
+    "minDurationMinutes": 65,
+    "duration": "1h 05m",
+    "estimatedPrice": 15,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 22,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Gorgast",
+    "stationName": "Gorgast",
+    "location": {
+      "lat": 52.563232,
+      "lng": 14.55131
+    },
+    "distanceKm": 78,
+    "minDurationMinutes": 66,
+    "duration": "1h 06m",
+    "estimatedPrice": 16,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB26"
+    ],
+    "dailyDepartures": 9,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Pinnow(Uckermark)",
+    "stationName": "Pinnow(Uckermark)",
+    "location": {
+      "lat": 53.06538,
+      "lng": 14.089064
+    },
+    "distanceKm": 76,
+    "minDurationMinutes": 66,
+    "duration": "1h 06m",
+    "estimatedPrice": 16,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 16,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Zahna",
+    "stationName": "Zahna",
+    "location": {
+      "lat": 51.919968,
+      "lng": 12.781211
+    },
+    "distanceKm": 79,
+    "minDurationMinutes": 66,
+    "duration": "1h 06m",
+    "estimatedPrice": 16,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 22,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Leipzig Hbf",
+    "stationName": "Leipzig Hbf",
+    "location": {
+      "lat": 51.34547,
+      "lng": 12.382064
+    },
+    "distanceKm": 148,
+    "minDurationMinutes": 67,
+    "duration": "1h 07m",
+    "estimatedPrice": 23,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 28",
+      "ICE 91",
+      "ICE 11",
+      "12N"
+    ],
+    "dailyDepartures": 124,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Kunersdorf (SPN) Bahnhof Kolkwitz",
+    "stationName": "Kunersdorf (SPN) Bahnhof Kolkwitz",
+    "location": {
+      "lat": 51.768574,
+      "lng": 14.188666
+    },
+    "distanceKm": 99,
+    "minDurationMinutes": 67,
+    "duration": "1h 07m",
+    "estimatedPrice": 18,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE2"
+    ],
+    "dailyDepartures": 22,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Zehdenick-Neuhof",
+    "stationName": "Zehdenick-Neuhof",
+    "location": {
+      "lat": 53.005707,
+      "lng": 13.34587
+    },
+    "distanceKm": 54,
+    "minDurationMinutes": 67,
+    "duration": "1h 07m",
+    "estimatedPrice": 13,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB12"
+    ],
+    "dailyDepartures": 26,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Braunschweig Hbf",
+    "stationName": "Braunschweig Hbf",
+    "location": {
+      "lat": 52.252216,
+      "lng": 10.540295
+    },
+    "distanceKm": 197,
+    "minDurationMinutes": 68,
+    "duration": "1h 08m",
+    "estimatedPrice": 28,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "ICE 12",
+      "ICE 13"
+    ],
+    "dailyDepartures": 77,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Kirchmöser",
+    "stationName": "Kirchmöser",
+    "location": {
+      "lat": 52.375645,
+      "lng": 12.421786
+    },
+    "distanceKm": 69,
+    "minDurationMinutes": 68,
+    "duration": "1h 08m",
+    "estimatedPrice": 15,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Wustrau-Radensleben",
+    "stationName": "Wustrau-Radensleben",
+    "location": {
+      "lat": 52.857418,
+      "lng": 12.896831
+    },
+    "distanceKm": 51,
+    "minDurationMinutes": 68,
+    "duration": "1h 08m",
+    "estimatedPrice": 13,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE6"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Rzepin",
+    "stationName": "Rzepin",
+    "location": {
+      "lat": 52.350224,
+      "lng": 14.815073
+    },
+    "distanceKm": 97,
+    "minDurationMinutes": 69,
+    "duration": "1h 09m",
+    "estimatedPrice": 18,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "EC 95",
+      "EC 96"
+    ],
+    "dailyDepartures": 61,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Herzberg(Elster)",
+    "stationName": "Herzberg(Elster)",
+    "location": {
+      "lat": 51.679462,
+      "lng": 13.202879
+    },
+    "distanceKm": 94,
+    "minDurationMinutes": 69,
+    "duration": "1h 09m",
+    "estimatedPrice": 17,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE4"
+    ],
+    "dailyDepartures": 11,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Bahnhof Kolkwitz",
+    "stationName": "Bahnhof Kolkwitz",
+    "location": {
+      "lat": 51.757797,
+      "lng": 14.249733
+    },
+    "distanceKm": 102,
+    "minDurationMinutes": 70,
+    "duration": "1h 10m",
+    "estimatedPrice": 18,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE2"
+    ],
+    "dailyDepartures": 20,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Bad Wilsnack",
+    "stationName": "Bad Wilsnack",
+    "location": {
+      "lat": 52.96022,
+      "lng": 11.949528
+    },
+    "distanceKm": 110,
+    "minDurationMinutes": 70,
+    "duration": "1h 10m",
+    "estimatedPrice": 19,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Bülzig",
+    "stationName": "Bülzig",
+    "location": {
+      "lat": 51.894894,
+      "lng": 12.752715
+    },
+    "distanceKm": 83,
+    "minDurationMinutes": 70,
+    "duration": "1h 10m",
+    "estimatedPrice": 16,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 20,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Walddrehna",
+    "stationName": "Walddrehna",
+    "location": {
+      "lat": 51.772648,
+      "lng": 13.617211
+    },
+    "distanceKm": 84,
+    "minDurationMinutes": 71,
+    "duration": "1h 11m",
+    "estimatedPrice": 16,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 11,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Bahnhof Wiesenburg (Mark)",
+    "stationName": "Bahnhof Wiesenburg (Mark)",
+    "location": {
+      "lat": 52.098827,
+      "lng": 12.431628
+    },
+    "distanceKm": 81,
+    "minDurationMinutes": 71,
+    "duration": "1h 11m",
+    "estimatedPrice": 16,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE7"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Warnitz(Uckermark)",
+    "stationName": "Warnitz(Uckermark)",
+    "location": {
+      "lat": 53.183437,
+      "lng": 13.877225
+    },
+    "distanceKm": 80,
+    "minDurationMinutes": 71,
+    "duration": "1h 11m",
+    "estimatedPrice": 16,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 22,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Hagenow Land",
+    "stationName": "Hagenow Land",
+    "location": {
+      "lat": 53.41358,
+      "lng": 11.215695
+    },
+    "distanceKm": 177,
+    "minDurationMinutes": 72,
+    "duration": "1h 12m",
+    "estimatedPrice": 26,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "ICE 28",
+      "27"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Vogelsang(Kr Oberhavel)",
+    "stationName": "Vogelsang(Kr Oberhavel)",
+    "location": {
+      "lat": 53.037712,
+      "lng": 13.385778
+    },
+    "distanceKm": 58,
+    "minDurationMinutes": 72,
+    "duration": "1h 12m",
+    "estimatedPrice": 14,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB12"
+    ],
+    "dailyDepartures": 26,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Burg(Magdeburg)",
+    "stationName": "Burg(Magdeburg)",
+    "location": {
+      "lat": 52.274406,
+      "lng": 11.840356
+    },
+    "distanceKm": 110,
+    "minDurationMinutes": 72,
+    "duration": "1h 12m",
+    "estimatedPrice": 19,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin Zoologischer Garten"
+  },
+  {
+    "destination": "Kraftwerk Finkenheerd",
+    "stationName": "Kraftwerk Finkenheerd",
+    "location": {
+      "lat": 52.262543,
+      "lng": 14.575121
+    },
+    "distanceKm": 84,
+    "minDurationMinutes": 72,
+    "duration": "1h 12m",
+    "estimatedPrice": 16,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE1"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Waren(Müritz)",
+    "stationName": "Waren(Müritz)",
+    "location": {
+      "lat": 53.52151,
+      "lng": 12.680678
+    },
+    "distanceKm": 121,
+    "minDurationMinutes": 73,
+    "duration": "1h 13m",
+    "estimatedPrice": 20,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "IC 17",
+      "ICE 17",
+      "RE5"
+    ],
+    "dailyDepartures": 20,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Bahnhof Doberlug-Kirchhain",
+    "stationName": "Bahnhof Doberlug-Kirchhain",
+    "location": {
+      "lat": 51.62053,
+      "lng": 13.564161
+    },
+    "distanceKm": 101,
+    "minDurationMinutes": 73,
+    "duration": "1h 13m",
+    "estimatedPrice": 18,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 17,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Calau(Nl)",
+    "stationName": "Calau(Nl)",
+    "location": {
+      "lat": 51.738064,
+      "lng": 13.979728
+    },
+    "distanceKm": 95,
+    "minDurationMinutes": 73,
+    "duration": "1h 13m",
+    "estimatedPrice": 18,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE7"
+    ],
+    "dailyDepartures": 17,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Zörnigall",
+    "stationName": "Zörnigall",
+    "location": {
+      "lat": 51.882935,
+      "lng": 12.731558
+    },
+    "distanceKm": 84,
+    "minDurationMinutes": 73,
+    "duration": "1h 13m",
+    "estimatedPrice": 16,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 20,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Elsterwerda",
+    "stationName": "Elsterwerda",
+    "location": {
+      "lat": 51.459404,
+      "lng": 13.516305
+    },
+    "distanceKm": 118,
+    "minDurationMinutes": 74,
+    "duration": "1h 14m",
+    "estimatedPrice": 20,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "IC 17"
+    ],
+    "dailyDepartures": 27,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Finkenheerd",
+    "stationName": "Finkenheerd",
+    "location": {
+      "lat": 52.24944,
+      "lng": 14.569558
+    },
+    "distanceKm": 85,
+    "minDurationMinutes": 74,
+    "duration": "1h 14m",
+    "estimatedPrice": 16,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE1"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Cottbus Hbf",
+    "stationName": "Cottbus Hbf",
+    "location": {
+      "lat": 51.750957,
+      "lng": 14.324162
+    },
+    "distanceKm": 106,
+    "minDurationMinutes": 75,
+    "duration": "1h 15m",
+    "estimatedPrice": 19,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE2"
+    ],
+    "dailyDepartures": 31,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Medewitz (Mark) Bahnhof Wiesenburg (Mark)",
+    "stationName": "Medewitz (Mark) Bahnhof Wiesenburg (Mark)",
+    "location": {
+      "lat": 52.061153,
+      "lng": 12.392049
+    },
+    "distanceKm": 86,
+    "minDurationMinutes": 75,
+    "duration": "1h 15m",
+    "estimatedPrice": 17,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE7"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Neuruppin Rheinsberger Tor",
+    "stationName": "Neuruppin Rheinsberger Tor",
+    "location": {
+      "lat": 52.929848,
+      "lng": 12.810431
+    },
+    "distanceKm": 61,
+    "minDurationMinutes": 76,
+    "duration": "1h 16m",
+    "estimatedPrice": 14,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE6"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Seehausen(Uckermark)",
+    "stationName": "Seehausen(Uckermark)",
+    "location": {
+      "lat": 53.220795,
+      "lng": 13.884809
+    },
+    "distanceKm": 84,
+    "minDurationMinutes": 76,
+    "duration": "1h 16m",
+    "estimatedPrice": 16,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 22,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Eisenhüttenstadt",
+    "stationName": "Eisenhüttenstadt",
+    "location": {
+      "lat": 52.148556,
+      "lng": 14.658512
+    },
+    "distanceKm": 95,
+    "minDurationMinutes": 76,
+    "duration": "1h 16m",
+    "estimatedPrice": 17,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE1"
+    ],
+    "dailyDepartures": 6,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Hammelspring",
+    "stationName": "Hammelspring",
+    "location": {
+      "lat": 53.070377,
+      "lng": 13.435954
+    },
+    "distanceKm": 61,
+    "minDurationMinutes": 77,
+    "duration": "1h 17m",
+    "estimatedPrice": 14,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB12"
+    ],
+    "dailyDepartures": 26,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Blankensee(Meckl)",
+    "stationName": "Blankensee(Meckl)",
+    "location": {
+      "lat": 53.408173,
+      "lng": 13.262907
+    },
+    "distanceKm": 99,
+    "minDurationMinutes": 77,
+    "duration": "1h 17m",
+    "estimatedPrice": 18,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE5"
+    ],
+    "dailyDepartures": 10,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Wiesenau",
+    "stationName": "Wiesenau",
+    "location": {
+      "lat": 52.231487,
+      "lng": 14.583702
+    },
+    "distanceKm": 86,
+    "minDurationMinutes": 77,
+    "duration": "1h 17m",
+    "estimatedPrice": 17,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE1"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Pasewalk",
+    "stationName": "Pasewalk",
+    "location": {
+      "lat": 53.515354,
+      "lng": 13.988875
+    },
+    "distanceKm": 117,
+    "minDurationMinutes": 78,
+    "duration": "1h 18m",
+    "estimatedPrice": 20,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "ICE 15",
+      "ICE 13",
+      "RE3"
+    ],
+    "dailyDepartures": 38,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Schwedt(Oder)Mitte",
+    "stationName": "Schwedt(Oder)Mitte",
+    "location": {
+      "lat": 53.06829,
+      "lng": 14.271603
+    },
+    "distanceKm": 84,
+    "minDurationMinutes": 78,
+    "duration": "1h 18m",
+    "estimatedPrice": 16,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 16,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Luckaitztal",
+    "stationName": "Luckaitztal",
+    "location": {
+      "lat": 51.684837,
+      "lng": 14.001785
+    },
+    "distanceKm": 101,
+    "minDurationMinutes": 79,
+    "duration": "1h 19m",
+    "estimatedPrice": 18,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE7"
+    ],
+    "dailyDepartures": 17,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Kratzeburg",
+    "stationName": "Kratzeburg",
+    "location": {
+      "lat": 53.427803,
+      "lng": 12.941627
+    },
+    "distanceKm": 106,
+    "minDurationMinutes": 79,
+    "duration": "1h 19m",
+    "estimatedPrice": 19,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE5"
+    ],
+    "dailyDepartures": 15,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Dresden-Neustadt",
+    "stationName": "Dresden-Neustadt",
+    "location": {
+      "lat": 51.0659,
+      "lng": 13.740701
+    },
+    "distanceKm": 163,
+    "minDurationMinutes": 80,
+    "duration": "1h 20m",
+    "estimatedPrice": 24,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "27N",
+      "27"
+    ],
+    "dailyDepartures": 26,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Magdeburg Hbf",
+    "stationName": "Magdeburg Hbf",
+    "location": {
+      "lat": 52.130512,
+      "lng": 11.626963
+    },
+    "distanceKm": 128,
+    "minDurationMinutes": 81,
+    "duration": "1h 21m",
+    "estimatedPrice": 21,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "ICE 10",
+      "IC 57",
+      "HBX"
+    ],
+    "dailyDepartures": 12,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Neuruppin West",
+    "stationName": "Neuruppin West",
+    "location": {
+      "lat": 52.926327,
+      "lng": 12.794005
+    },
+    "distanceKm": 61,
+    "minDurationMinutes": 81,
+    "duration": "1h 21m",
+    "estimatedPrice": 14,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE6"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Schwedt(Oder)",
+    "stationName": "Schwedt(Oder)",
+    "location": {
+      "lat": 53.0629,
+      "lng": 14.290721
+    },
+    "distanceKm": 85,
+    "minDurationMinutes": 81,
+    "duration": "1h 21m",
+    "estimatedPrice": 16,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 16,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Cammin(Meckl)",
+    "stationName": "Cammin(Meckl)",
+    "location": {
+      "lat": 53.440365,
+      "lng": 13.30198
+    },
+    "distanceKm": 103,
+    "minDurationMinutes": 81,
+    "duration": "1h 21m",
+    "estimatedPrice": 18,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE5"
+    ],
+    "dailyDepartures": 10,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Ziltendorf",
+    "stationName": "Ziltendorf",
+    "location": {
+      "lat": 52.199337,
+      "lng": 14.616174
+    },
+    "distanceKm": 90,
+    "minDurationMinutes": 81,
+    "duration": "1h 21m",
+    "estimatedPrice": 17,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE1"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Falkenberg(Elster)",
+    "stationName": "Falkenberg(Elster)",
+    "location": {
+      "lat": 51.584034,
+      "lng": 13.246983
+    },
+    "distanceKm": 105,
+    "minDurationMinutes": 82,
+    "duration": "1h 22m",
+    "estimatedPrice": 18,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE4"
+    ],
+    "dailyDepartures": 11,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Jeber-Bergfrieden",
+    "stationName": "Jeber-Bergfrieden",
+    "location": {
+      "lat": 51.98464,
+      "lng": 12.349699
+    },
+    "distanceKm": 93,
+    "minDurationMinutes": 82,
+    "duration": "1h 22m",
+    "estimatedPrice": 17,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE7"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Hannover Hbf",
+    "stationName": "Hannover Hbf",
+    "location": {
+      "lat": 52.376762,
+      "lng": 9.741021
+    },
+    "distanceKm": 249,
+    "minDurationMinutes": 83,
+    "duration": "1h 23m",
+    "estimatedPrice": 33,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "ICE 19",
+      "ICE 12",
+      "ICE 77",
+      "ICE 10"
+    ],
+    "dailyDepartures": 154,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Templin",
+    "stationName": "Templin",
+    "location": {
+      "lat": 53.112408,
+      "lng": 13.49156
+    },
+    "distanceKm": 66,
+    "minDurationMinutes": 83,
+    "duration": "1h 23m",
+    "estimatedPrice": 15,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB12"
+    ],
+    "dailyDepartures": 26,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Altdöbern",
+    "stationName": "Altdöbern",
+    "location": {
+      "lat": 51.65251,
+      "lng": 14.009376
+    },
+    "distanceKm": 105,
+    "minDurationMinutes": 83,
+    "duration": "1h 23m",
+    "estimatedPrice": 18,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE7"
+    ],
+    "dailyDepartures": 17,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Templin Stadt",
+    "stationName": "Templin Stadt",
+    "location": {
+      "lat": 53.11709,
+      "lng": 13.508639
+    },
+    "distanceKm": 67,
+    "minDurationMinutes": 85,
+    "duration": "1h 25m",
+    "estimatedPrice": 15,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RB12"
+    ],
+    "dailyDepartures": 24,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Rückersdorf",
+    "stationName": "Rückersdorf",
+    "location": {
+      "lat": 51.566692,
+      "lng": 13.574295
+    },
+    "distanceKm": 107,
+    "minDurationMinutes": 85,
+    "duration": "1h 25m",
+    "estimatedPrice": 19,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 12,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Dresden Hbf",
+    "stationName": "Dresden Hbf",
+    "location": {
+      "lat": 51.04056,
+      "lng": 13.732035
+    },
+    "distanceKm": 166,
+    "minDurationMinutes": 87,
+    "duration": "1h 27m",
+    "estimatedPrice": 25,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "27N",
+      "27"
+    ],
+    "dailyDepartures": 26,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Bahnhof Großräschen",
+    "stationName": "Bahnhof Großräschen",
+    "location": {
+      "lat": 51.59148,
+      "lng": 14.014854
+    },
+    "distanceKm": 111,
+    "minDurationMinutes": 88,
+    "duration": "1h 28m",
+    "estimatedPrice": 19,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE7"
+    ],
+    "dailyDepartures": 17,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Burg Stargard(Meckl)",
+    "stationName": "Burg Stargard(Meckl)",
+    "location": {
+      "lat": 53.49959,
+      "lng": 13.303225
+    },
+    "distanceKm": 109,
+    "minDurationMinutes": 88,
+    "duration": "1h 28m",
+    "estimatedPrice": 19,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE5"
+    ],
+    "dailyDepartures": 10,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Hauptbahnhof",
+    "stationName": "Hauptbahnhof",
+    "location": {
+      "lat": 50.971928,
+      "lng": 11.037424
+    },
+    "distanceKm": 237,
+    "minDurationMinutes": 89,
+    "duration": "1h 29m",
+    "estimatedPrice": 32,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "ICE 15",
+      "ICE 18",
+      "ICE 28",
+      "ICE 29",
+      "ICE 82",
+      "ICE 91",
+      "ICE 11",
+      "12N"
+    ],
+    "dailyDepartures": 186,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Hildesheim Hbf",
+    "stationName": "Hildesheim Hbf",
+    "location": {
+      "lat": 52.160625,
+      "lng": 9.953497
+    },
+    "distanceKm": 238,
+    "minDurationMinutes": 91,
+    "duration": "1h 31m",
+    "estimatedPrice": 32,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "ICE 12",
+      "ICE 13"
+    ],
+    "dailyDepartures": 77,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Hohenleipisch",
+    "stationName": "Hohenleipisch",
+    "location": {
+      "lat": 51.492832,
+      "lng": 13.564958
+    },
+    "distanceKm": 115,
+    "minDurationMinutes": 91,
+    "duration": "1h 31m",
+    "estimatedPrice": 19,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 12,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Roßlau(Elbe)",
+    "stationName": "Roßlau(Elbe)",
+    "location": {
+      "lat": 51.884613,
+      "lng": 12.237262
+    },
+    "distanceKm": 106,
+    "minDurationMinutes": 91,
+    "duration": "1h 31m",
+    "estimatedPrice": 19,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Nechlin",
+    "stationName": "Nechlin",
+    "location": {
+      "lat": 53.44176,
+      "lng": 13.903456
+    },
+    "distanceKm": 108,
+    "minDurationMinutes": 93,
+    "duration": "1h 33m",
+    "estimatedPrice": 19,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 22,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Büchen",
+    "stationName": "Büchen",
+    "location": {
+      "lat": 53.47497,
+      "lng": 10.623298
+    },
+    "distanceKm": 214,
+    "minDurationMinutes": 94,
+    "duration": "1h 34m",
+    "estimatedPrice": 29,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 91",
+      "ICE 11"
+    ],
+    "dailyDepartures": 17,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Sedlitz Ost",
+    "stationName": "Sedlitz Ost",
+    "location": {
+      "lat": 51.55416,
+      "lng": 14.05599
+    },
+    "distanceKm": 116,
+    "minDurationMinutes": 94,
+    "duration": "1h 34m",
+    "estimatedPrice": 20,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE7"
+    ],
+    "dailyDepartures": 17,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Neubrandenburg",
+    "stationName": "Neubrandenburg",
+    "location": {
+      "lat": 53.561832,
+      "lng": 13.261465
+    },
+    "distanceKm": 116,
+    "minDurationMinutes": 95,
+    "duration": "1h 35m",
+    "estimatedPrice": 20,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE5"
+    ],
+    "dailyDepartures": 10,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Dessau Hbf",
+    "stationName": "Dessau Hbf",
+    "location": {
+      "lat": 51.839867,
+      "lng": 12.234945
+    },
+    "distanceKm": 110,
+    "minDurationMinutes": 96,
+    "duration": "1h 36m",
+    "estimatedPrice": 19,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Senftenberg",
+    "stationName": "Senftenberg",
+    "location": {
+      "lat": 51.527348,
+      "lng": 14.004216
+    },
+    "distanceKm": 118,
+    "minDurationMinutes": 99,
+    "duration": "1h 39m",
+    "estimatedPrice": 20,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE7"
+    ],
+    "dailyDepartures": 17,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Magdeburg-Buckau",
+    "stationName": "Magdeburg-Buckau",
+    "location": {
+      "lat": 52.109203,
+      "lng": 11.63004
+    },
+    "distanceKm": 129,
+    "minDurationMinutes": 105,
+    "duration": "1h 45m",
+    "estimatedPrice": 21,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin Zoologischer Garten"
+  },
+  {
+    "destination": "Biederitz",
+    "stationName": "Biederitz",
+    "location": {
+      "lat": 52.15271,
+      "lng": 11.716466
+    },
+    "distanceKm": 122,
+    "minDurationMinutes": 105,
+    "duration": "1h 45m",
+    "estimatedPrice": 20,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Anklam",
+    "stationName": "Anklam",
+    "location": {
+      "lat": 53.856102,
+      "lng": 13.701827
+    },
+    "distanceKm": 150,
+    "minDurationMinutes": 107,
+    "duration": "1h 47m",
+    "estimatedPrice": 23,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "ICE 15",
+      "ICE 13",
+      "RE3"
+    ],
+    "dailyDepartures": 34,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Hamburg Hbf",
+    "stationName": "Hamburg Hbf",
+    "location": {
+      "lat": 53.552734,
+      "lng": 10.006909
+    },
+    "distanceKm": 255,
+    "minDurationMinutes": 107,
+    "duration": "1h 47m",
+    "estimatedPrice": 33,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 28",
+      "ICE 91",
+      "ICE 27",
+      "ICE 11",
+      "27"
+    ],
+    "dailyDepartures": 66,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Langhagen",
+    "stationName": "Langhagen",
+    "location": {
+      "lat": 53.680935,
+      "lng": 12.425217
+    },
+    "distanceKm": 145,
+    "minDurationMinutes": 107,
+    "duration": "1h 47m",
+    "estimatedPrice": 22,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE5"
+    ],
+    "dailyDepartures": 15,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Magdeburg SKET Industriepark",
+    "stationName": "Magdeburg SKET Industriepark",
+    "location": {
+      "lat": 52.097546,
+      "lng": 11.638277
+    },
+    "distanceKm": 129,
+    "minDurationMinutes": 108,
+    "duration": "1h 48m",
+    "estimatedPrice": 21,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Zoologischer Garten"
+  },
+  {
+    "destination": "Karstädt",
+    "stationName": "Karstädt",
+    "location": {
+      "lat": 53.16084,
+      "lng": 11.738492
+    },
+    "distanceKm": 133,
+    "minDurationMinutes": 109,
+    "duration": "1h 49m",
+    "estimatedPrice": 21,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 19,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Altentreptow",
+    "stationName": "Altentreptow",
+    "location": {
+      "lat": 53.692234,
+      "lng": 13.242713
+    },
+    "distanceKm": 131,
+    "minDurationMinutes": 110,
+    "duration": "1h 50m",
+    "estimatedPrice": 21,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE5"
+    ],
+    "dailyDepartures": 8,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Beyendorf",
+    "stationName": "Beyendorf",
+    "location": {
+      "lat": 52.061146,
+      "lng": 11.63105
+    },
+    "distanceKm": 131,
+    "minDurationMinutes": 112,
+    "duration": "1h 52m",
+    "estimatedPrice": 21,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Zoologischer Garten"
+  },
+  {
+    "destination": "Jatznick",
+    "stationName": "Jatznick",
+    "location": {
+      "lat": 53.60306,
+      "lng": 13.937671
+    },
+    "distanceKm": 126,
+    "minDurationMinutes": 112,
+    "duration": "1h 52m",
+    "estimatedPrice": 21,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 19,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Rostock Hbf",
+    "stationName": "Rostock Hbf",
+    "location": {
+      "lat": 54.078247,
+      "lng": 12.131079
+    },
+    "distanceKm": 193,
+    "minDurationMinutes": 113,
+    "duration": "1h 53m",
+    "estimatedPrice": 27,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "IC 57",
+      "IC 17",
+      "ICE 17",
+      "RE5"
+    ],
+    "dailyDepartures": 24,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Hamburg Dammtor",
+    "stationName": "Hamburg Dammtor",
+    "location": {
+      "lat": 53.560753,
+      "lng": 9.989566
+    },
+    "distanceKm": 256,
+    "minDurationMinutes": 114,
+    "duration": "1h 54m",
+    "estimatedPrice": 34,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "ICE 28",
+      "ICE 27",
+      "27"
+    ],
+    "dailyDepartures": 27,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Bad Schandau",
+    "stationName": "Bad Schandau",
+    "location": {
+      "lat": 50.91929,
+      "lng": 14.137537
+    },
+    "distanceKm": 185,
+    "minDurationMinutes": 115,
+    "duration": "1h 55m",
+    "estimatedPrice": 27,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "27N",
+      "27"
+    ],
+    "dailyDepartures": 19,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Dodendorf",
+    "stationName": "Dodendorf",
+    "location": {
+      "lat": 52.04895,
+      "lng": 11.613086
+    },
+    "distanceKm": 133,
+    "minDurationMinutes": 115,
+    "duration": "1h 55m",
+    "estimatedPrice": 21,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Zoologischer Garten"
+  },
+  {
+    "destination": "Minden(Westf)",
+    "stationName": "Minden(Westf)",
+    "location": {
+      "lat": 52.29014,
+      "lng": 8.934728
+    },
+    "distanceKm": 304,
+    "minDurationMinutes": 116,
+    "duration": "1h 56m",
+    "estimatedPrice": 38,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "ICE 19",
+      "ICE 10"
+    ],
+    "dailyDepartures": 9,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Köthen",
+    "stationName": "Köthen",
+    "location": {
+      "lat": 51.75193,
+      "lng": 11.989358
+    },
+    "distanceKm": 129,
+    "minDurationMinutes": 116,
+    "duration": "1h 56m",
+    "estimatedPrice": 21,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "IC 57"
+    ],
+    "dailyDepartures": 4,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Plaaz Bahnhof",
+    "stationName": "Plaaz Bahnhof",
+    "location": {
+      "lat": 53.840458,
+      "lng": 12.337716
+    },
+    "distanceKm": 163,
+    "minDurationMinutes": 117,
+    "duration": "1h 57m",
+    "estimatedPrice": 24,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE5"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Osterweddingen",
+    "stationName": "Osterweddingen",
+    "location": {
+      "lat": 52.049133,
+      "lng": 11.575921
+    },
+    "distanceKm": 135,
+    "minDurationMinutes": 118,
+    "duration": "1h 58m",
+    "estimatedPrice": 21,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin Zoologischer Garten"
+  },
+  {
+    "destination": "Ferdinandshof",
+    "stationName": "Ferdinandshof",
+    "location": {
+      "lat": 53.660088,
+      "lng": 13.881913
+    },
+    "distanceKm": 131,
+    "minDurationMinutes": 118,
+    "duration": "1h 58m",
+    "estimatedPrice": 21,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 19,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Züssow",
+    "stationName": "Züssow",
+    "location": {
+      "lat": 53.97388,
+      "lng": 13.548191
+    },
+    "distanceKm": 162,
+    "minDurationMinutes": 119,
+    "duration": "1h 59m",
+    "estimatedPrice": 24,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "ICE 15",
+      "ICE 13",
+      "RE3"
+    ],
+    "dailyDepartures": 38,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Grabow(Meckl)",
+    "stationName": "Grabow(Meckl)",
+    "location": {
+      "lat": 53.2829,
+      "lng": 11.564201
+    },
+    "distanceKm": 150,
+    "minDurationMinutes": 119,
+    "duration": "1h 59m",
+    "estimatedPrice": 23,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 19,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Gnevkow",
+    "stationName": "Gnevkow",
+    "location": {
+      "lat": 53.792896,
+      "lng": 13.17467
+    },
+    "distanceKm": 142,
+    "minDurationMinutes": 120,
+    "duration": "2h 00m",
+    "estimatedPrice": 22,
+    "tripType": "Day Trip",
+    "travelRing": "day_trip",
+    "trainTypes": [
+      "RE5"
+    ],
+    "dailyDepartures": 8,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Langenweddingen",
+    "stationName": "Langenweddingen",
+    "location": {
+      "lat": 52.045555,
+      "lng": 11.532404
+    },
+    "distanceKm": 138,
+    "minDurationMinutes": 121,
+    "duration": "2h 01m",
+    "estimatedPrice": 22,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Zoologischer Garten"
+  },
+  {
+    "destination": "Hamburg-Altona",
+    "stationName": "Hamburg-Altona",
+    "location": {
+      "lat": 53.551853,
+      "lng": 9.934554
+    },
+    "distanceKm": 259,
+    "minDurationMinutes": 123,
+    "duration": "2h 03m",
+    "estimatedPrice": 34,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 28",
+      "ICE 91",
+      "ICE 27",
+      "27"
+    ],
+    "dailyDepartures": 45,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Göttingen",
+    "stationName": "Göttingen",
+    "location": {
+      "lat": 51.536865,
+      "lng": 9.92561
+    },
+    "distanceKm": 262,
+    "minDurationMinutes": 123,
+    "duration": "2h 03m",
+    "estimatedPrice": 34,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 12",
+      "ICE 13"
+    ],
+    "dailyDepartures": 96,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Güstrow",
+    "stationName": "Güstrow",
+    "location": {
+      "lat": 53.8006,
+      "lng": 12.172836
+    },
+    "distanceKm": 164,
+    "minDurationMinutes": 124,
+    "duration": "2h 04m",
+    "estimatedPrice": 24,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "RE5"
+    ],
+    "dailyDepartures": 13,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Schöna",
+    "stationName": "Schöna",
+    "location": {
+      "lat": 50.860054,
+      "lng": 14.222133
+    },
+    "distanceKm": 193,
+    "minDurationMinutes": 125,
+    "duration": "2h 05m",
+    "estimatedPrice": 27,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "27N",
+      "27"
+    ],
+    "dailyDepartures": 19,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Sternfeld",
+    "stationName": "Sternfeld",
+    "location": {
+      "lat": 53.824776,
+      "lng": 13.15042
+    },
+    "distanceKm": 146,
+    "minDurationMinutes": 125,
+    "duration": "2h 05m",
+    "estimatedPrice": 23,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "RE5"
+    ],
+    "dailyDepartures": 8,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Bad Oeynhausen",
+    "stationName": "Bad Oeynhausen",
+    "location": {
+      "lat": 52.2054,
+      "lng": 8.796523
+    },
+    "distanceKm": 315,
+    "minDurationMinutes": 126,
+    "duration": "2h 06m",
+    "estimatedPrice": 39,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 19"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Ducherow",
+    "stationName": "Ducherow",
+    "location": {
+      "lat": 53.766136,
+      "lng": 13.796021
+    },
+    "distanceKm": 141,
+    "minDurationMinutes": 126,
+    "duration": "2h 06m",
+    "estimatedPrice": 22,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 19,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Naumburg(Saale)Hbf",
+    "stationName": "Naumburg(Saale)Hbf",
+    "location": {
+      "lat": 51.16307,
+      "lng": 11.796984
+    },
+    "distanceKm": 187,
+    "minDurationMinutes": 127,
+    "duration": "2h 07m",
+    "estimatedPrice": 27,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 18"
+    ],
+    "dailyDepartures": 13,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Utzedel",
+    "stationName": "Utzedel",
+    "location": {
+      "lat": 53.860725,
+      "lng": 13.116222
+    },
+    "distanceKm": 150,
+    "minDurationMinutes": 129,
+    "duration": "2h 09m",
+    "estimatedPrice": 23,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "RE5"
+    ],
+    "dailyDepartures": 8,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Blumenberg",
+    "stationName": "Blumenberg",
+    "location": {
+      "lat": 52.033806,
+      "lng": 11.457093
+    },
+    "distanceKm": 143,
+    "minDurationMinutes": 130,
+    "duration": "2h 10m",
+    "estimatedPrice": 22,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Zoologischer Garten"
+  },
+  {
+    "destination": "Greifswald",
+    "stationName": "Greifswald",
+    "location": {
+      "lat": 54.092922,
+      "lng": 13.370262
+    },
+    "distanceKm": 175,
+    "minDurationMinutes": 132,
+    "duration": "2h 12m",
+    "estimatedPrice": 25,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 15",
+      "ICE 13",
+      "RE3"
+    ],
+    "dailyDepartures": 38,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Decin hl.n.",
+    "stationName": "Decin hl.n.",
+    "location": {
+      "lat": 50.773415,
+      "lng": 14.201247
+    },
+    "distanceKm": 202,
+    "minDurationMinutes": 133,
+    "duration": "2h 13m",
+    "estimatedPrice": 28,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "27N",
+      "27"
+    ],
+    "dailyDepartures": 18,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Hadmersleben",
+    "stationName": "Hadmersleben",
+    "location": {
+      "lat": 52.00736,
+      "lng": 11.324446
+    },
+    "distanceKm": 153,
+    "minDurationMinutes": 133,
+    "duration": "2h 13m",
+    "estimatedPrice": 23,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Zoologischer Garten"
+  },
+  {
+    "destination": "Lüblow(Meckl)",
+    "stationName": "Lüblow(Meckl)",
+    "location": {
+      "lat": 53.418636,
+      "lng": 11.460084
+    },
+    "distanceKm": 164,
+    "minDurationMinutes": 133,
+    "duration": "2h 13m",
+    "estimatedPrice": 24,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 19,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Demmin",
+    "stationName": "Demmin",
+    "location": {
+      "lat": 53.90114,
+      "lng": 13.053954
+    },
+    "distanceKm": 155,
+    "minDurationMinutes": 135,
+    "duration": "2h 15m",
+    "estimatedPrice": 24,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "RE5"
+    ],
+    "dailyDepartures": 8,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Warnemünde",
+    "stationName": "Warnemünde",
+    "location": {
+      "lat": 54.176853,
+      "lng": 12.091271
+    },
+    "distanceKm": 204,
+    "minDurationMinutes": 136,
+    "duration": "2h 16m",
+    "estimatedPrice": 28,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "IC 57",
+      "ICE 17"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Herford",
+    "stationName": "Herford",
+    "location": {
+      "lat": 52.11961,
+      "lng": 8.663643
+    },
+    "distanceKm": 325,
+    "minDurationMinutes": 137,
+    "duration": "2h 17m",
+    "estimatedPrice": 41,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 19",
+      "ICE 10"
+    ],
+    "dailyDepartures": 9,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Bielefeld Hbf",
+    "stationName": "Bielefeld Hbf",
+    "location": {
+      "lat": 52.029263,
+      "lng": 8.532722
+    },
+    "distanceKm": 336,
+    "minDurationMinutes": 137,
+    "duration": "2h 17m",
+    "estimatedPrice": 42,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 19",
+      "ICE 10"
+    ],
+    "dailyDepartures": 97,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Rastow",
+    "stationName": "Rastow",
+    "location": {
+      "lat": 53.458157,
+      "lng": 11.430859
+    },
+    "distanceKm": 168,
+    "minDurationMinutes": 137,
+    "duration": "2h 17m",
+    "estimatedPrice": 25,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 19,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Oschersleben(Bode)",
+    "stationName": "Oschersleben(Bode)",
+    "location": {
+      "lat": 52.030727,
+      "lng": 11.22684
+    },
+    "distanceKm": 158,
+    "minDurationMinutes": 138,
+    "duration": "2h 18m",
+    "estimatedPrice": 24,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin Zoologischer Garten"
+  },
+  {
+    "destination": "Eisenach Hbf",
+    "stationName": "Eisenach Hbf",
+    "location": {
+      "lat": 50.97692,
+      "lng": 10.331986
+    },
+    "distanceKm": 272,
+    "minDurationMinutes": 139,
+    "duration": "2h 19m",
+    "estimatedPrice": 35,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 11"
+    ],
+    "dailyDepartures": 69,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Klein Bünzow",
+    "stationName": "Klein Bünzow",
+    "location": {
+      "lat": 53.925068,
+      "lng": 13.620311
+    },
+    "distanceKm": 157,
+    "minDurationMinutes": 141,
+    "duration": "2h 21m",
+    "estimatedPrice": 24,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 19,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Sülstorf",
+    "stationName": "Sülstorf",
+    "location": {
+      "lat": 53.513996,
+      "lng": 11.388039
+    },
+    "distanceKm": 174,
+    "minDurationMinutes": 142,
+    "duration": "2h 22m",
+    "estimatedPrice": 25,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 19,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Bünde(Westf)",
+    "stationName": "Bünde(Westf)",
+    "location": {
+      "lat": 52.202076,
+      "lng": 8.573876
+    },
+    "distanceKm": 330,
+    "minDurationMinutes": 143,
+    "duration": "2h 23m",
+    "estimatedPrice": 41,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 77"
+    ],
+    "dailyDepartures": 31,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Kassel-Wilhelmshöhe",
+    "stationName": "Kassel-Wilhelmshöhe",
+    "location": {
+      "lat": 51.312557,
+      "lng": 9.447116
+    },
+    "distanceKm": 303,
+    "minDurationMinutes": 144,
+    "duration": "2h 24m",
+    "estimatedPrice": 38,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 12",
+      "ICE 13"
+    ],
+    "dailyDepartures": 81,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Stralsund Hbf",
+    "stationName": "Stralsund Hbf",
+    "location": {
+      "lat": 54.30829,
+      "lng": 13.078022
+    },
+    "distanceKm": 200,
+    "minDurationMinutes": 146,
+    "duration": "2h 26m",
+    "estimatedPrice": 28,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 15",
+      "ICE 13",
+      "IC 17",
+      "ICE 17",
+      "RE3",
+      "RE5"
+    ],
+    "dailyDepartures": 59,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Nienhagen(Halberst)",
+    "stationName": "Nienhagen(Halberst)",
+    "location": {
+      "lat": 51.951202,
+      "lng": 11.170056
+    },
+    "distanceKm": 165,
+    "minDurationMinutes": 146,
+    "duration": "2h 26m",
+    "estimatedPrice": 24,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin Zoologischer Garten"
+  },
+  {
+    "destination": "Holthusen",
+    "stationName": "Holthusen",
+    "location": {
+      "lat": 53.555607,
+      "lng": 11.36526
+    },
+    "distanceKm": 178,
+    "minDurationMinutes": 147,
+    "duration": "2h 27m",
+    "estimatedPrice": 26,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 19,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Coburg",
+    "stationName": "Coburg",
+    "location": {
+      "lat": 50.262928,
+      "lng": 10.957328
+    },
+    "distanceKm": 303,
+    "minDurationMinutes": 148,
+    "duration": "2h 28m",
+    "estimatedPrice": 38,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 91"
+    ],
+    "dailyDepartures": 6,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Rakow",
+    "stationName": "Rakow",
+    "location": {
+      "lat": 54.048157,
+      "lng": 13.045942
+    },
+    "distanceKm": 172,
+    "minDurationMinutes": 148,
+    "duration": "2h 28m",
+    "estimatedPrice": 25,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "RE5"
+    ],
+    "dailyDepartures": 8,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Schwerin Süd",
+    "stationName": "Schwerin Süd",
+    "location": {
+      "lat": 53.574787,
+      "lng": 11.377005
+    },
+    "distanceKm": 179,
+    "minDurationMinutes": 149,
+    "duration": "2h 29m",
+    "estimatedPrice": 26,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 19,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Freiberg(Sachs)",
+    "stationName": "Freiberg(Sachs)",
+    "location": {
+      "lat": 50.908726,
+      "lng": 13.344141
+    },
+    "distanceKm": 179,
+    "minDurationMinutes": 150,
+    "duration": "2h 30m",
+    "estimatedPrice": 26,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "IC 17"
+    ],
+    "dailyDepartures": 6,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Hamburg-Harburg",
+    "stationName": "Hamburg-Harburg",
+    "location": {
+      "lat": 53.45696,
+      "lng": 9.991454
+    },
+    "distanceKm": 251,
+    "minDurationMinutes": 152,
+    "duration": "2h 32m",
+    "estimatedPrice": 33,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "27"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Ribnitz-Damgarten West",
+    "stationName": "Ribnitz-Damgarten West",
+    "location": {
+      "lat": 54.239178,
+      "lng": 12.436965
+    },
+    "distanceKm": 202,
+    "minDurationMinutes": 153,
+    "duration": "2h 33m",
+    "estimatedPrice": 28,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "IC 17",
+      "ICE 17"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Halberstadt Hbf",
+    "stationName": "Halberstadt Hbf",
+    "location": {
+      "lat": 51.899307,
+      "lng": 11.073452
+    },
+    "distanceKm": 173,
+    "minDurationMinutes": 153,
+    "duration": "2h 33m",
+    "estimatedPrice": 25,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin Zoologischer Garten"
+  },
+  {
+    "destination": "Schwerin Mitte",
+    "stationName": "Schwerin Mitte",
+    "location": {
+      "lat": 53.62691,
+      "lng": 11.405334
+    },
+    "distanceKm": 182,
+    "minDurationMinutes": 154,
+    "duration": "2h 34m",
+    "estimatedPrice": 26,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 19,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Nürnberg Hbf",
+    "stationName": "Nürnberg Hbf",
+    "location": {
+      "lat": 49.445618,
+      "lng": 11.082989
+    },
+    "distanceKm": 378,
+    "minDurationMinutes": 155,
+    "duration": "2h 35m",
+    "estimatedPrice": 46,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 6",
+      "ICE 28",
+      "ICE 29",
+      "ICE 91"
+    ],
+    "dailyDepartures": 86,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Groß Kiesow",
+    "stationName": "Groß Kiesow",
+    "location": {
+      "lat": 54.01372,
+      "lng": 13.480617
+    },
+    "distanceKm": 166,
+    "minDurationMinutes": 155,
+    "duration": "2h 35m",
+    "estimatedPrice": 25,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 19,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Grimmen",
+    "stationName": "Grimmen",
+    "location": {
+      "lat": 54.109737,
+      "lng": 13.034025
+    },
+    "distanceKm": 178,
+    "minDurationMinutes": 155,
+    "duration": "2h 35m",
+    "estimatedPrice": 26,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "RE5"
+    ],
+    "dailyDepartures": 8,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Gütersloh Hbf",
+    "stationName": "Gütersloh Hbf",
+    "location": {
+      "lat": 51.90694,
+      "lng": 8.385071
+    },
+    "distanceKm": 349,
+    "minDurationMinutes": 156,
+    "duration": "2h 36m",
+    "estimatedPrice": 43,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 19"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Jena Paradies",
+    "stationName": "Jena Paradies",
+    "location": {
+      "lat": 50.924854,
+      "lng": 11.587461
+    },
+    "distanceKm": 217,
+    "minDurationMinutes": 156,
+    "duration": "2h 36m",
+    "estimatedPrice": 30,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 18"
+    ],
+    "dailyDepartures": 10,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Schwerin-Görries",
+    "stationName": "Schwerin-Görries",
+    "location": {
+      "lat": 53.60937,
+      "lng": 11.384935
+    },
+    "distanceKm": 181,
+    "minDurationMinutes": 156,
+    "duration": "2h 36m",
+    "estimatedPrice": 26,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 15,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Schwerin Hbf",
+    "stationName": "Schwerin Hbf",
+    "location": {
+      "lat": 53.63474,
+      "lng": 11.407455
+    },
+    "distanceKm": 182,
+    "minDurationMinutes": 157,
+    "duration": "2h 37m",
+    "estimatedPrice": 26,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 19,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Bamberg",
+    "stationName": "Bamberg",
+    "location": {
+      "lat": 49.90076,
+      "lng": 10.899489
+    },
+    "distanceKm": 339,
+    "minDurationMinutes": 160,
+    "duration": "2h 40m",
+    "estimatedPrice": 42,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 28"
+    ],
+    "dailyDepartures": 35,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Jena-Göschwitz",
+    "stationName": "Jena-Göschwitz",
+    "location": {
+      "lat": 50.88394,
+      "lng": 11.593537
+    },
+    "distanceKm": 221,
+    "minDurationMinutes": 162,
+    "duration": "2h 42m",
+    "estimatedPrice": 30,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 18"
+    ],
+    "dailyDepartures": 10,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Greifswald Süd",
+    "stationName": "Greifswald Süd",
+    "location": {
+      "lat": 54.076443,
+      "lng": 13.396656
+    },
+    "distanceKm": 173,
+    "minDurationMinutes": 162,
+    "duration": "2h 42m",
+    "estimatedPrice": 25,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 19,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Wittenhagen",
+    "stationName": "Wittenhagen",
+    "location": {
+      "lat": 54.184006,
+      "lng": 13.05605
+    },
+    "distanceKm": 186,
+    "minDurationMinutes": 162,
+    "duration": "2h 42m",
+    "estimatedPrice": 27,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "RE5"
+    ],
+    "dailyDepartures": 8,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Neumünster",
+    "stationName": "Neumünster",
+    "location": {
+      "lat": 54.075752,
+      "lng": 9.979816
+    },
+    "distanceKm": 286,
+    "minDurationMinutes": 163,
+    "duration": "2h 43m",
+    "estimatedPrice": 37,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 28",
+      "27"
+    ],
+    "dailyDepartures": 4,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Lübstorf",
+    "stationName": "Lübstorf",
+    "location": {
+      "lat": 53.72888,
+      "lng": 11.411316
+    },
+    "distanceKm": 189,
+    "minDurationMinutes": 165,
+    "duration": "2h 45m",
+    "estimatedPrice": 27,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 17,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Hamm(Westf)Hbf",
+    "stationName": "Hamm(Westf)Hbf",
+    "location": {
+      "lat": 51.678078,
+      "lng": 7.807821
+    },
+    "distanceKm": 394,
+    "minDurationMinutes": 166,
+    "duration": "2h 46m",
+    "estimatedPrice": 47,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 19",
+      "ICE 10"
+    ],
+    "dailyDepartures": 101,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Elmenhorst",
+    "stationName": "Elmenhorst",
+    "location": {
+      "lat": 54.2102,
+      "lng": 13.074014
+    },
+    "distanceKm": 189,
+    "minDurationMinutes": 166,
+    "duration": "2h 46m",
+    "estimatedPrice": 27,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "RE5"
+    ],
+    "dailyDepartures": 8,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Osnabrück Hbf",
+    "stationName": "Osnabrück Hbf",
+    "location": {
+      "lat": 52.272697,
+      "lng": 8.061522
+    },
+    "distanceKm": 364,
+    "minDurationMinutes": 167,
+    "duration": "2h 47m",
+    "estimatedPrice": 44,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 77"
+    ],
+    "dailyDepartures": 31,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Velgast",
+    "stationName": "Velgast",
+    "location": {
+      "lat": 54.277317,
+      "lng": 12.803137
+    },
+    "distanceKm": 199,
+    "minDurationMinutes": 167,
+    "duration": "2h 47m",
+    "estimatedPrice": 28,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "IC 17",
+      "ICE 17"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Bad Kleinen",
+    "stationName": "Bad Kleinen",
+    "location": {
+      "lat": 53.766975,
+      "lng": 11.466925
+    },
+    "distanceKm": 190,
+    "minDurationMinutes": 169,
+    "duration": "2h 49m",
+    "estimatedPrice": 27,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 17,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Zarrendorf",
+    "stationName": "Zarrendorf",
+    "location": {
+      "lat": 54.240746,
+      "lng": 13.08003
+    },
+    "distanceKm": 193,
+    "minDurationMinutes": 169,
+    "duration": "2h 49m",
+    "estimatedPrice": 27,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "RE5"
+    ],
+    "dailyDepartures": 8,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Itzehoe",
+    "stationName": "Itzehoe",
+    "location": {
+      "lat": 53.923874,
+      "lng": 9.510287
+    },
+    "distanceKm": 303,
+    "minDurationMinutes": 171,
+    "duration": "2h 51m",
+    "estimatedPrice": 38,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 18"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Jeeser",
+    "stationName": "Jeeser",
+    "location": {
+      "lat": 54.164547,
+      "lng": 13.258802
+    },
+    "distanceKm": 183,
+    "minDurationMinutes": 173,
+    "duration": "2h 53m",
+    "estimatedPrice": 26,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 19,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Moidentin",
+    "stationName": "Moidentin",
+    "location": {
+      "lat": 53.806072,
+      "lng": 11.481918
+    },
+    "distanceKm": 192,
+    "minDurationMinutes": 175,
+    "duration": "2h 55m",
+    "estimatedPrice": 27,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 16,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Fulda",
+    "stationName": "Fulda",
+    "location": {
+      "lat": 50.554905,
+      "lng": 9.684169
+    },
+    "distanceKm": 338,
+    "minDurationMinutes": 177,
+    "duration": "2h 57m",
+    "estimatedPrice": 42,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 12",
+      "ICE 13"
+    ],
+    "dailyDepartures": 91,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Wegeleben",
+    "stationName": "Wegeleben",
+    "location": {
+      "lat": 51.871582,
+      "lng": 11.168551
+    },
+    "distanceKm": 169,
+    "minDurationMinutes": 177,
+    "duration": "2h 57m",
+    "estimatedPrice": 25,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin Zoologischer Garten"
+  },
+  {
+    "destination": "Miltzow",
+    "stationName": "Miltzow",
+    "location": {
+      "lat": 54.20095,
+      "lng": 13.197458
+    },
+    "distanceKm": 187,
+    "minDurationMinutes": 177,
+    "duration": "2h 57m",
+    "estimatedPrice": 27,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 19,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Chemnitz Hbf",
+    "stationName": "Chemnitz Hbf",
+    "location": {
+      "lat": 50.839695,
+      "lng": 12.930877
+    },
+    "distanceKm": 190,
+    "minDurationMinutes": 179,
+    "duration": "2h 59m",
+    "estimatedPrice": 27,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "IC 17"
+    ],
+    "dailyDepartures": 6,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Dorf Mecklenburg",
+    "stationName": "Dorf Mecklenburg",
+    "location": {
+      "lat": 53.842934,
+      "lng": 11.471343
+    },
+    "distanceKm": 196,
+    "minDurationMinutes": 179,
+    "duration": "2h 59m",
+    "estimatedPrice": 28,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 17,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Bergen auf Rügen",
+    "stationName": "Bergen auf Rügen",
+    "location": {
+      "lat": 54.4205,
+      "lng": 13.417821
+    },
+    "distanceKm": 211,
+    "minDurationMinutes": 180,
+    "duration": "3h 00m",
+    "estimatedPrice": 29,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 15",
+      "IC 17"
+    ],
+    "dailyDepartures": 25,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Erlangen",
+    "stationName": "Erlangen",
+    "location": {
+      "lat": 49.59583,
+      "lng": 11.001638
+    },
+    "distanceKm": 366,
+    "minDurationMinutes": 181,
+    "duration": "3h 01m",
+    "estimatedPrice": 45,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 28"
+    ],
+    "dailyDepartures": 35,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Ditfurt",
+    "stationName": "Ditfurt",
+    "location": {
+      "lat": 51.83348,
+      "lng": 11.186728
+    },
+    "distanceKm": 169,
+    "minDurationMinutes": 181,
+    "duration": "3h 01m",
+    "estimatedPrice": 25,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin Zoologischer Garten"
+  },
+  {
+    "destination": "Wüstenfelde",
+    "stationName": "Wüstenfelde",
+    "location": {
+      "lat": 54.23027,
+      "lng": 13.13961
+    },
+    "distanceKm": 191,
+    "minDurationMinutes": 182,
+    "duration": "3h 02m",
+    "estimatedPrice": 27,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "RE3"
+    ],
+    "dailyDepartures": 19,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Hauptbahnhof A1",
+    "stationName": "Hauptbahnhof A1",
+    "location": {
+      "lat": 54.315235,
+      "lng": 10.131234
+    },
+    "distanceKm": 295,
+    "minDurationMinutes": 183,
+    "duration": "3h 03m",
+    "estimatedPrice": 37,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 28",
+      "27"
+    ],
+    "dailyDepartures": 4,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Münster(Westf)Hbf",
+    "stationName": "Münster(Westf)Hbf",
+    "location": {
+      "lat": 51.956566,
+      "lng": 7.635715
+    },
+    "distanceKm": 398,
+    "minDurationMinutes": 184,
+    "duration": "3h 04m",
+    "estimatedPrice": 48,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 10"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Wismar",
+    "stationName": "Wismar",
+    "location": {
+      "lat": 53.896835,
+      "lng": 11.469433
+    },
+    "distanceKm": 200,
+    "minDurationMinutes": 185,
+    "duration": "3h 05m",
+    "estimatedPrice": 28,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "RE8"
+    ],
+    "dailyDepartures": 17,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Quedlinburg",
+    "stationName": "Quedlinburg",
+    "location": {
+      "lat": 51.785267,
+      "lng": 11.153001
+    },
+    "distanceKm": 174,
+    "minDurationMinutes": 186,
+    "duration": "3h 06m",
+    "estimatedPrice": 25,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin Zoologischer Garten"
+  },
+  {
+    "destination": "Dortmund Hbf",
+    "stationName": "Dortmund Hbf",
+    "location": {
+      "lat": 51.517895,
+      "lng": 7.45929
+    },
+    "distanceKm": 422,
+    "minDurationMinutes": 190,
+    "duration": "3h 10m",
+    "estimatedPrice": 50,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 19",
+      "ICE 10"
+    ],
+    "dailyDepartures": 59,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Saalfeld(Saale)",
+    "stationName": "Saalfeld(Saale)",
+    "location": {
+      "lat": 50.650272,
+      "lng": 11.374583
+    },
+    "distanceKm": 251,
+    "minDurationMinutes": 190,
+    "duration": "3h 10m",
+    "estimatedPrice": 33,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 18"
+    ],
+    "dailyDepartures": 10,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Hagen Hbf",
+    "stationName": "Hagen Hbf",
+    "location": {
+      "lat": 51.362747,
+      "lng": 7.460249
+    },
+    "distanceKm": 427,
+    "minDurationMinutes": 191,
+    "duration": "3h 11m",
+    "estimatedPrice": 51,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 19",
+      "ICE 10"
+    ],
+    "dailyDepartures": 68,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Neinstedt",
+    "stationName": "Neinstedt",
+    "location": {
+      "lat": 51.75237,
+      "lng": 11.084893
+    },
+    "distanceKm": 180,
+    "minDurationMinutes": 192,
+    "duration": "3h 12m",
+    "estimatedPrice": 26,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin Zoologischer Garten"
+  },
+  {
+    "destination": "Ingolstadt Hbf",
+    "stationName": "Ingolstadt Hbf",
+    "location": {
+      "lat": 48.74454,
+      "lng": 11.437337
+    },
+    "distanceKm": 442,
+    "minDurationMinutes": 193,
+    "duration": "3h 13m",
+    "estimatedPrice": 52,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 29"
+    ],
+    "dailyDepartures": 21,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Thale Musestieg",
+    "stationName": "Thale Musestieg",
+    "location": {
+      "lat": 51.751434,
+      "lng": 11.04688
+    },
+    "distanceKm": 182,
+    "minDurationMinutes": 195,
+    "duration": "3h 15m",
+    "estimatedPrice": 26,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin Zoologischer Garten"
+  },
+  {
+    "destination": "Wernigerode Hbf",
+    "stationName": "Wernigerode Hbf",
+    "location": {
+      "lat": 51.840195,
+      "lng": 10.788848
+    },
+    "distanceKm": 194,
+    "minDurationMinutes": 195,
+    "duration": "3h 15m",
+    "estimatedPrice": 27,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Rheine",
+    "stationName": "Rheine",
+    "location": {
+      "lat": 52.2763,
+      "lng": 7.434255
+    },
+    "distanceKm": 406,
+    "minDurationMinutes": 197,
+    "duration": "3h 17m",
+    "estimatedPrice": 49,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 77"
+    ],
+    "dailyDepartures": 35,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Thale Hbf",
+    "stationName": "Thale Hbf",
+    "location": {
+      "lat": 51.746048,
+      "lng": 11.031048
+    },
+    "distanceKm": 183,
+    "minDurationMinutes": 198,
+    "duration": "3h 18m",
+    "estimatedPrice": 26,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin Zoologischer Garten"
+  },
+  {
+    "destination": "Wernigerode Elmowerk",
+    "stationName": "Wernigerode Elmowerk",
+    "location": {
+      "lat": 51.83879,
+      "lng": 10.769264
+    },
+    "distanceKm": 195,
+    "minDurationMinutes": 198,
+    "duration": "3h 18m",
+    "estimatedPrice": 28,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Hannover Messe/Laatzen",
+    "stationName": "Hannover Messe/Laatzen",
+    "location": {
+      "lat": 52.3169,
+      "lng": 9.792863
+    },
+    "distanceKm": 246,
+    "minDurationMinutes": 199,
+    "duration": "3h 19m",
+    "estimatedPrice": 33,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 12"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Darlingerode",
+    "stationName": "Darlingerode",
+    "location": {
+      "lat": 51.84908,
+      "lng": 10.733037
+    },
+    "distanceKm": 197,
+    "minDurationMinutes": 202,
+    "duration": "3h 22m",
+    "estimatedPrice": 28,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Ostseebad Binz",
+    "stationName": "Ostseebad Binz",
+    "location": {
+      "lat": 54.40482,
+      "lng": 13.600507
+    },
+    "distanceKm": 210,
+    "minDurationMinutes": 204,
+    "duration": "3h 24m",
+    "estimatedPrice": 29,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 15",
+      "IC 17"
+    ],
+    "dailyDepartures": 25,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Bochum Hbf",
+    "stationName": "Bochum Hbf",
+    "location": {
+      "lat": 51.478607,
+      "lng": 7.223275
+    },
+    "distanceKm": 439,
+    "minDurationMinutes": 204,
+    "duration": "3h 24m",
+    "estimatedPrice": 52,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 10"
+    ],
+    "dailyDepartures": 26,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Wuppertal Hbf",
+    "stationName": "Wuppertal Hbf",
+    "location": {
+      "lat": 51.254364,
+      "lng": 7.149543
+    },
+    "distanceKm": 452,
+    "minDurationMinutes": 205,
+    "duration": "3h 25m",
+    "estimatedPrice": 53,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 19",
+      "ICE 10"
+    ],
+    "dailyDepartures": 69,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Ilsenburg",
+    "stationName": "Ilsenburg",
+    "location": {
+      "lat": 51.869003,
+      "lng": 10.683103
+    },
+    "distanceKm": 199,
+    "minDurationMinutes": 207,
+    "duration": "3h 27m",
+    "estimatedPrice": 28,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Stapelburg",
+    "stationName": "Stapelburg",
+    "location": {
+      "lat": 51.90028,
+      "lng": 10.671721
+    },
+    "distanceKm": 199,
+    "minDurationMinutes": 211,
+    "duration": "3h 31m",
+    "estimatedPrice": 28,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Bad Bentheim",
+    "stationName": "Bad Bentheim",
+    "location": {
+      "lat": 52.30985,
+      "lng": 7.158539
+    },
+    "distanceKm": 424,
+    "minDurationMinutes": 212,
+    "duration": "3h 32m",
+    "estimatedPrice": 50,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 77"
+    ],
+    "dailyDepartures": 70,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Essen Hbf",
+    "stationName": "Essen Hbf",
+    "location": {
+      "lat": 51.451355,
+      "lng": 7.014793
+    },
+    "distanceKm": 453,
+    "minDurationMinutes": 215,
+    "duration": "3h 35m",
+    "estimatedPrice": 53,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 10"
+    ],
+    "dailyDepartures": 27,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Frankfurt(Main)Süd",
+    "stationName": "Frankfurt(Main)Süd",
+    "location": {
+      "lat": 50.099365,
+      "lng": 8.686457
+    },
+    "distanceKm": 424,
+    "minDurationMinutes": 219,
+    "duration": "3h 39m",
+    "estimatedPrice": 50,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 15",
+      "ICE 12",
+      "ICE 11",
+      "12N"
+    ],
+    "dailyDepartures": 46,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Heide(Holst)",
+    "stationName": "Heide(Holst)",
+    "location": {
+      "lat": 54.19306,
+      "lng": 9.101122
+    },
+    "distanceKm": 341,
+    "minDurationMinutes": 220,
+    "duration": "3h 40m",
+    "estimatedPrice": 42,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 18"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Hanau Hbf",
+    "stationName": "Hanau Hbf",
+    "location": {
+      "lat": 50.120953,
+      "lng": 8.929
+    },
+    "distanceKm": 410,
+    "minDurationMinutes": 220,
+    "duration": "3h 40m",
+    "estimatedPrice": 49,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 12",
+      "ICE 13"
+    ],
+    "dailyDepartures": 73,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Vienenburg",
+    "stationName": "Vienenburg",
+    "location": {
+      "lat": 51.955032,
+      "lng": 10.562174
+    },
+    "distanceKm": 204,
+    "minDurationMinutes": 220,
+    "duration": "3h 40m",
+    "estimatedPrice": 28,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Frankfurt(Main)Hbf",
+    "stationName": "Frankfurt(Main)Hbf",
+    "location": {
+      "lat": 50.10668,
+      "lng": 8.662828
+    },
+    "distanceKm": 425,
+    "minDurationMinutes": 223,
+    "duration": "3h 43m",
+    "estimatedPrice": 50,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 15",
+      "ICE 12",
+      "ICE 82",
+      "ICE 3",
+      "ICE 11"
+    ],
+    "dailyDepartures": 87,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Herne-Wanne-Eickel Hbf",
+    "stationName": "Herne-Wanne-Eickel Hbf",
+    "location": {
+      "lat": 51.531258,
+      "lng": 7.165783
+    },
+    "distanceKm": 441,
+    "minDurationMinutes": 225,
+    "duration": "3h 45m",
+    "estimatedPrice": 52,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 19"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Gelsenkirchen Hbf",
+    "stationName": "Gelsenkirchen Hbf",
+    "location": {
+      "lat": 51.5049,
+      "lng": 7.102455
+    },
+    "distanceKm": 446,
+    "minDurationMinutes": 225,
+    "duration": "3h 45m",
+    "estimatedPrice": 53,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 19",
+      "ICE 10"
+    ],
+    "dailyDepartures": 30,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Duisburg Hbf",
+    "stationName": "Duisburg Hbf",
+    "location": {
+      "lat": 51.429787,
+      "lng": 6.775903
+    },
+    "distanceKm": 470,
+    "minDurationMinutes": 228,
+    "duration": "3h 48m",
+    "estimatedPrice": 55,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 19",
+      "ICE 10"
+    ],
+    "dailyDepartures": 50,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Recklinghausen Hbf",
+    "stationName": "Recklinghausen Hbf",
+    "location": {
+      "lat": 51.61636,
+      "lng": 7.20349
+    },
+    "distanceKm": 435,
+    "minDurationMinutes": 230,
+    "duration": "3h 50m",
+    "estimatedPrice": 52,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 14"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Hengelo",
+    "stationName": "Hengelo",
+    "location": {
+      "lat": 52.261852,
+      "lng": 6.793726
+    },
+    "distanceKm": 449,
+    "minDurationMinutes": 231,
+    "duration": "3h 51m",
+    "estimatedPrice": 53,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 77"
+    ],
+    "dailyDepartures": 35,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Goslar",
+    "stationName": "Goslar",
+    "location": {
+      "lat": 51.91157,
+      "lng": 10.421436
+    },
+    "distanceKm": 214,
+    "minDurationMinutes": 231,
+    "duration": "3h 51m",
+    "estimatedPrice": 29,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "HBX"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Schleswig",
+    "stationName": "Schleswig",
+    "location": {
+      "lat": 54.49946,
+      "lng": 9.53814
+    },
+    "distanceKm": 337,
+    "minDurationMinutes": 231,
+    "duration": "3h 51m",
+    "estimatedPrice": 42,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "27"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Augsburg Hbf",
+    "stationName": "Augsburg Hbf",
+    "location": {
+      "lat": 48.36544,
+      "lng": 10.88557
+    },
+    "distanceKm": 495,
+    "minDurationMinutes": 232,
+    "duration": "3h 52m",
+    "estimatedPrice": 58,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 28",
+      "ICE 29",
+      "ICE 91",
+      "ICE 11"
+    ],
+    "dailyDepartures": 81,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Prora",
+    "stationName": "Prora",
+    "location": {
+      "lat": 54.444984,
+      "lng": 13.564057
+    },
+    "distanceKm": 214,
+    "minDurationMinutes": 233,
+    "duration": "3h 53m",
+    "estimatedPrice": 29,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "IC 17"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Ostkreuz"
+  },
+  {
+    "destination": "Köln Hbf",
+    "stationName": "Köln Hbf",
+    "location": {
+      "lat": 50.94303,
+      "lng": 6.958729
+    },
+    "distanceKm": 477,
+    "minDurationMinutes": 236,
+    "duration": "3h 56m",
+    "estimatedPrice": 56,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 19",
+      "ICE 10"
+    ],
+    "dailyDepartures": 89,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "München Hbf",
+    "stationName": "München Hbf",
+    "location": {
+      "lat": 48.140232,
+      "lng": 11.558335
+    },
+    "distanceKm": 504,
+    "minDurationMinutes": 239,
+    "duration": "3h 59m",
+    "estimatedPrice": 58,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 28",
+      "ICE 29",
+      "ICE 91",
+      "ICE 11"
+    ],
+    "dailyDepartures": 130,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Düsseldorf Flughafen",
+    "stationName": "Düsseldorf Flughafen",
+    "location": {
+      "lat": 51.292007,
+      "lng": 6.786836
+    },
+    "distanceKm": 474,
+    "minDurationMinutes": 239,
+    "duration": "3h 59m",
+    "estimatedPrice": 55,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 10"
+    ],
+    "dailyDepartures": 32,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Darmstadt Hbf",
+    "stationName": "Darmstadt Hbf",
+    "location": {
+      "lat": 49.8725,
+      "lng": 8.629636
+    },
+    "distanceKm": 444,
+    "minDurationMinutes": 245,
+    "duration": "4h 05m",
+    "estimatedPrice": 52,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 15"
+    ],
+    "dailyDepartures": 7,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Husum",
+    "stationName": "Husum",
+    "location": {
+      "lat": 54.472084,
+      "lng": 9.055953
+    },
+    "distanceKm": 360,
+    "minDurationMinutes": 246,
+    "duration": "4h 06m",
+    "estimatedPrice": 44,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 18"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Frankfurt(M) Flughafen Regionalbf",
+    "stationName": "Frankfurt(M) Flughafen Regionalbf",
+    "location": {
+      "lat": 50.05122,
+      "lng": 8.571251
+    },
+    "distanceKm": 434,
+    "minDurationMinutes": 246,
+    "duration": "4h 06m",
+    "estimatedPrice": 51,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 3"
+    ],
+    "dailyDepartures": 4,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Düsseldorf Hbf",
+    "stationName": "Düsseldorf Hbf",
+    "location": {
+      "lat": 51.219963,
+      "lng": 6.794319
+    },
+    "distanceKm": 476,
+    "minDurationMinutes": 248,
+    "duration": "4h 08m",
+    "estimatedPrice": 56,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 19",
+      "ICE 10"
+    ],
+    "dailyDepartures": 44,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Oberhausen Hbf",
+    "stationName": "Oberhausen Hbf",
+    "location": {
+      "lat": 51.474876,
+      "lng": 6.851588
+    },
+    "distanceKm": 463,
+    "minDurationMinutes": 251,
+    "duration": "4h 11m",
+    "estimatedPrice": 54,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 19"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Lichtenfels",
+    "stationName": "Lichtenfels",
+    "location": {
+      "lat": 50.146454,
+      "lng": 11.059472
+    },
+    "distanceKm": 310,
+    "minDurationMinutes": 252,
+    "duration": "4h 12m",
+    "estimatedPrice": 39,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 18"
+    ],
+    "dailyDepartures": 10,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Frankfurt(M) Flughafen Fernbf",
+    "stationName": "Frankfurt(M) Flughafen Fernbf",
+    "location": {
+      "lat": 50.053165,
+      "lng": 8.570185
+    },
+    "distanceKm": 434,
+    "minDurationMinutes": 253,
+    "duration": "4h 13m",
+    "estimatedPrice": 51,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 13"
+    ],
+    "dailyDepartures": 8,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Bensheim",
+    "stationName": "Bensheim",
+    "location": {
+      "lat": 49.681328,
+      "lng": 8.616717
+    },
+    "distanceKm": 460,
+    "minDurationMinutes": 257,
+    "duration": "4h 17m",
+    "estimatedPrice": 54,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 15"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Donauwörth",
+    "stationName": "Donauwörth",
+    "location": {
+      "lat": 48.714027,
+      "lng": 10.771443
+    },
+    "distanceKm": 462,
+    "minDurationMinutes": 257,
+    "duration": "4h 17m",
+    "estimatedPrice": 54,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 91"
+    ],
+    "dailyDepartures": 17,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Flensburg",
+    "stationName": "Flensburg",
+    "location": {
+      "lat": 54.814842,
+      "lng": 9.36324
+    },
+    "distanceKm": 369,
+    "minDurationMinutes": 258,
+    "duration": "4h 18m",
+    "estimatedPrice": 45,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "27"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Padborg st",
+    "stationName": "Padborg st",
+    "location": {
+      "lat": 54.82425,
+      "lng": 9.358803
+    },
+    "distanceKm": 370,
+    "minDurationMinutes": 259,
+    "duration": "4h 19m",
+    "estimatedPrice": 45,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "27"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Deventer",
+    "stationName": "Deventer",
+    "location": {
+      "lat": 52.257435,
+      "lng": 6.160506
+    },
+    "distanceKm": 492,
+    "minDurationMinutes": 265,
+    "duration": "4h 25m",
+    "estimatedPrice": 57,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 77"
+    ],
+    "dailyDepartures": 6,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Solingen Hbf",
+    "stationName": "Solingen Hbf",
+    "location": {
+      "lat": 51.160767,
+      "lng": 7.004187
+    },
+    "distanceKm": 465,
+    "minDurationMinutes": 267,
+    "duration": "4h 27m",
+    "estimatedPrice": 54,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 10"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Neuss Hbf",
+    "stationName": "Neuss Hbf",
+    "location": {
+      "lat": 51.20435,
+      "lng": 6.684527
+    },
+    "distanceKm": 484,
+    "minDurationMinutes": 269,
+    "duration": "4h 29m",
+    "estimatedPrice": 56,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 10"
+    ],
+    "dailyDepartures": 5,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Mannheim Hbf",
+    "stationName": "Mannheim Hbf",
+    "location": {
+      "lat": 49.479355,
+      "lng": 8.468921
+    },
+    "distanceKm": 483,
+    "minDurationMinutes": 274,
+    "duration": "4h 34m",
+    "estimatedPrice": 56,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 12",
+      "ICE 3"
+    ],
+    "dailyDepartures": 63,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Niebüll",
+    "stationName": "Niebüll",
+    "location": {
+      "lat": 54.78953,
+      "lng": 8.834595
+    },
+    "distanceKm": 393,
+    "minDurationMinutes": 275,
+    "duration": "4h 35m",
+    "estimatedPrice": 47,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 18"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Stuttgart Hbf",
+    "stationName": "Stuttgart Hbf",
+    "location": {
+      "lat": 48.78478,
+      "lng": 9.182757
+    },
+    "distanceKm": 511,
+    "minDurationMinutes": 277,
+    "duration": "4h 37m",
+    "estimatedPrice": 59,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 6",
+      "ICE 11"
+    ],
+    "dailyDepartures": 68,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Heidelberg Hbf",
+    "stationName": "Heidelberg Hbf",
+    "location": {
+      "lat": 49.40357,
+      "lng": 8.675442
+    },
+    "distanceKm": 479,
+    "minDurationMinutes": 279,
+    "duration": "4h 39m",
+    "estimatedPrice": 56,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 12",
+      "ICE 13"
+    ],
+    "dailyDepartures": 16,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Apeldoorn",
+    "stationName": "Apeldoorn",
+    "location": {
+      "lat": 52.20943,
+      "lng": 5.968491
+    },
+    "distanceKm": 506,
+    "minDurationMinutes": 282,
+    "duration": "4h 42m",
+    "estimatedPrice": 59,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 77"
+    ],
+    "dailyDepartures": 6,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Mönchengladbach Hbf",
+    "stationName": "Mönchengladbach Hbf",
+    "location": {
+      "lat": 51.196583,
+      "lng": 6.446111
+    },
+    "distanceKm": 500,
+    "minDurationMinutes": 283,
+    "duration": "4h 43m",
+    "estimatedPrice": 58,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 10"
+    ],
+    "dailyDepartures": 5,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Weinheim(Bergstr)Hbf",
+    "stationName": "Weinheim(Bergstr)Hbf",
+    "location": {
+      "lat": 49.553303,
+      "lng": 8.665351
+    },
+    "distanceKm": 467,
+    "minDurationMinutes": 286,
+    "duration": "4h 46m",
+    "estimatedPrice": 55,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 13"
+    ],
+    "dailyDepartures": 19,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Rheydt Hbf",
+    "stationName": "Rheydt Hbf",
+    "location": {
+      "lat": 51.16303,
+      "lng": 6.439564
+    },
+    "distanceKm": 502,
+    "minDurationMinutes": 289,
+    "duration": "4h 49m",
+    "estimatedPrice": 58,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 10"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Neustadt(Weinstr)Hbf",
+    "stationName": "Neustadt(Weinstr)Hbf",
+    "location": {
+      "lat": 49.349552,
+      "lng": 8.140757
+    },
+    "distanceKm": 510,
+    "minDurationMinutes": 295,
+    "duration": "4h 55m",
+    "estimatedPrice": 59,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 3"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Neu-Edingen/Friedrichsfeld",
+    "stationName": "Neu-Edingen/Friedrichsfeld",
+    "location": {
+      "lat": 49.44867,
+      "lng": 8.580125
+    },
+    "distanceKm": 480,
+    "minDurationMinutes": 297,
+    "duration": "4h 57m",
+    "estimatedPrice": 56,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 13"
+    ],
+    "dailyDepartures": 5,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Erkelenz",
+    "stationName": "Erkelenz",
+    "location": {
+      "lat": 51.076595,
+      "lng": 6.321634
+    },
+    "distanceKm": 513,
+    "minDurationMinutes": 298,
+    "duration": "4h 58m",
+    "estimatedPrice": 59,
+    "tripType": "Weekend Break",
+    "travelRing": "weekend",
+    "trainTypes": [
+      "ICE 10"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Amersfoort Centraal",
+    "stationName": "Amersfoort Centraal",
+    "location": {
+      "lat": 52.153465,
+      "lng": 5.373909
+    },
+    "distanceKm": 547,
+    "minDurationMinutes": 308,
+    "duration": "5h 08m",
+    "estimatedPrice": 63,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "ICE 77"
+    ],
+    "dailyDepartures": 6,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Karlsruhe Hbf",
+    "stationName": "Karlsruhe Hbf",
+    "location": {
+      "lat": 48.993515,
+      "lng": 8.402181
+    },
+    "distanceKm": 527,
+    "minDurationMinutes": 309,
+    "duration": "5h 09m",
+    "estimatedPrice": 61,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "ICE 12",
+      "ICE 13"
+    ],
+    "dailyDepartures": 76,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Geilenkirchen",
+    "stationName": "Geilenkirchen",
+    "location": {
+      "lat": 50.96104,
+      "lng": 6.124518
+    },
+    "distanceKm": 530,
+    "minDurationMinutes": 311,
+    "duration": "5h 11m",
+    "estimatedPrice": 61,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "ICE 10"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Wiesloch-Walldorf",
+    "stationName": "Wiesloch-Walldorf",
+    "location": {
+      "lat": 49.29135,
+      "lng": 8.664146
+    },
+    "distanceKm": 489,
+    "minDurationMinutes": 313,
+    "duration": "5h 13m",
+    "estimatedPrice": 57,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "ICE 13"
+    ],
+    "dailyDepartures": 13,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Kaiserslautern Hbf",
+    "stationName": "Kaiserslautern Hbf",
+    "location": {
+      "lat": 49.43586,
+      "lng": 7.768627
+    },
+    "distanceKm": 523,
+    "minDurationMinutes": 321,
+    "duration": "5h 21m",
+    "estimatedPrice": 60,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "ICE 3"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Westerland(Sylt)",
+    "stationName": "Westerland(Sylt)",
+    "location": {
+      "lat": 54.906837,
+      "lng": 8.310925
+    },
+    "distanceKm": 427,
+    "minDurationMinutes": 322,
+    "duration": "5h 22m",
+    "estimatedPrice": 51,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "ICE 18"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Gesundbrunnen"
+  },
+  {
+    "destination": "Bruchsal",
+    "stationName": "Bruchsal",
+    "location": {
+      "lat": 49.124622,
+      "lng": 8.589649
+    },
+    "distanceKm": 507,
+    "minDurationMinutes": 326,
+    "duration": "5h 26m",
+    "estimatedPrice": 59,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "ICE 13"
+    ],
+    "dailyDepartures": 4,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Utrecht Centraal",
+    "stationName": "Utrecht Centraal",
+    "location": {
+      "lat": 52.089397,
+      "lng": 5.109861
+    },
+    "distanceKm": 566,
+    "minDurationMinutes": 328,
+    "duration": "5h 28m",
+    "estimatedPrice": 65,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "ICE 77"
+    ],
+    "dailyDepartures": 5,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "München Ost",
+    "stationName": "München Ost",
+    "location": {
+      "lat": 48.12744,
+      "lng": 11.604971
+    },
+    "distanceKm": 505,
+    "minDurationMinutes": 329,
+    "duration": "5h 29m",
+    "estimatedPrice": 58,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "ICE 91"
+    ],
+    "dailyDepartures": 4,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Baden-Baden",
+    "stationName": "Baden-Baden",
+    "location": {
+      "lat": 48.790325,
+      "lng": 8.190831
+    },
+    "distanceKm": 554,
+    "minDurationMinutes": 333,
+    "duration": "5h 33m",
+    "estimatedPrice": 63,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "ICE 12"
+    ],
+    "dailyDepartures": 8,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Aachen Hbf",
+    "stationName": "Aachen Hbf",
+    "location": {
+      "lat": 50.7678,
+      "lng": 6.091499
+    },
+    "distanceKm": 541,
+    "minDurationMinutes": 335,
+    "duration": "5h 35m",
+    "estimatedPrice": 62,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "ICE 10"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Offenburg",
+    "stationName": "Offenburg",
+    "location": {
+      "lat": 48.476475,
+      "lng": 7.946723
+    },
+    "distanceKm": 592,
+    "minDurationMinutes": 342,
+    "duration": "5h 42m",
+    "estimatedPrice": 67,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "ICE 12"
+    ],
+    "dailyDepartures": 50,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Homburg(Saar)Hbf",
+    "stationName": "Homburg(Saar)Hbf",
+    "location": {
+      "lat": 49.327637,
+      "lng": 7.336362
+    },
+    "distanceKm": 554,
+    "minDurationMinutes": 343,
+    "duration": "5h 43m",
+    "estimatedPrice": 63,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "ICE 3"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Saarbrücken Hbf",
+    "stationName": "Saarbrücken Hbf",
+    "location": {
+      "lat": 49.24148,
+      "lng": 6.991045
+    },
+    "distanceKm": 579,
+    "minDurationMinutes": 365,
+    "duration": "6h 05m",
+    "estimatedPrice": 66,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "ICE 3"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Treuchtlingen",
+    "stationName": "Treuchtlingen",
+    "location": {
+      "lat": 48.961266,
+      "lng": 10.908159
+    },
+    "distanceKm": 433,
+    "minDurationMinutes": 369,
+    "duration": "6h 09m",
+    "estimatedPrice": 51,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "ICE 18"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Rosenheim",
+    "stationName": "Rosenheim",
+    "location": {
+      "lat": 47.850018,
+      "lng": 12.119202
+    },
+    "distanceKm": 527,
+    "minDurationMinutes": 369,
+    "duration": "6h 09m",
+    "estimatedPrice": 61,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "ICE 91"
+    ],
+    "dailyDepartures": 4,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Freiburg Hauptbahnhof",
+    "stationName": "Freiburg Hauptbahnhof",
+    "location": {
+      "lat": 47.996666,
+      "lng": 7.840092
+    },
+    "distanceKm": 640,
+    "minDurationMinutes": 374,
+    "duration": "6h 14m",
+    "estimatedPrice": 72,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "ICE 12"
+    ],
+    "dailyDepartures": 48,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Ulm Hbf",
+    "stationName": "Ulm Hbf",
+    "location": {
+      "lat": 48.3994,
+      "lng": 9.982608
+    },
+    "distanceKm": 518,
+    "minDurationMinutes": 385,
+    "duration": "6h 25m",
+    "estimatedPrice": 60,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "ICE 11"
+    ],
+    "dailyDepartures": 54,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Kufstein",
+    "stationName": "Kufstein",
+    "location": {
+      "lat": 47.58308,
+      "lng": 12.16555
+    },
+    "distanceKm": 556,
+    "minDurationMinutes": 391,
+    "duration": "6h 31m",
+    "estimatedPrice": 64,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "ICE 91"
+    ],
+    "dailyDepartures": 4,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Basel Bad Bf",
+    "stationName": "Basel Bad Bf",
+    "location": {
+      "lat": 47.567287,
+      "lng": 7.607805
+    },
+    "distanceKm": 688,
+    "minDurationMinutes": 409,
+    "duration": "6h 49m",
+    "estimatedPrice": 77,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "ICE 12"
+    ],
+    "dailyDepartures": 46,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "Basel SBB",
+    "stationName": "Basel SBB",
+    "location": {
+      "lat": 47.547413,
+      "lng": 7.589563
+    },
+    "distanceKm": 691,
+    "minDurationMinutes": 421,
+    "duration": "7h 01m",
+    "estimatedPrice": 77,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "ICE 12"
+    ],
+    "dailyDepartures": 45,
+    "originStation": "Berlin-Spandau"
+  },
+  {
+    "destination": "München-Pasing",
+    "stationName": "München-Pasing",
+    "location": {
+      "lat": 48.149853,
+      "lng": 11.461872
+    },
+    "distanceKm": 505,
+    "minDurationMinutes": 447,
+    "duration": "7h 27m",
+    "estimatedPrice": 59,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 11"
+    ],
+    "dailyDepartures": 49,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Singen(Hohentwiel)",
+    "stationName": "Singen(Hohentwiel)",
+    "location": {
+      "lat": 47.75888,
+      "lng": 8.841269
+    },
+    "distanceKm": 621,
+    "minDurationMinutes": 463,
+    "duration": "7h 43m",
+    "estimatedPrice": 70,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "ICE 12"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Schaffhausen",
+    "stationName": "Schaffhausen",
+    "location": {
+      "lat": 47.69828,
+      "lng": 8.632756
+    },
+    "distanceKm": 635,
+    "minDurationMinutes": 492,
+    "duration": "8h 12m",
+    "estimatedPrice": 71,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "ICE 12"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin Hbf"
+  },
+  {
+    "destination": "Koebenhavns Lufthavn st",
+    "stationName": "Koebenhavns Lufthavn st",
+    "location": {
+      "lat": 55.629604,
+      "lng": 12.649382
+    },
+    "distanceKm": 349,
+    "minDurationMinutes": 497,
+    "duration": "8h 17m",
+    "estimatedPrice": 43,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "EN"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Günzburg",
+    "stationName": "Günzburg",
+    "location": {
+      "lat": 48.460564,
+      "lng": 10.279262
+    },
+    "distanceKm": 503,
+    "minDurationMinutes": 526,
+    "duration": "8h 46m",
+    "estimatedPrice": 58,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "ICE 11"
+    ],
+    "dailyDepartures": 17,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Lund Central",
+    "stationName": "Lund Central",
+    "location": {
+      "lat": 55.70552,
+      "lng": 13.186582
+    },
+    "distanceKm": 354,
+    "minDurationMinutes": 569,
+    "duration": "9h 29m",
+    "estimatedPrice": 43,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "EN"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Hässleholm Central",
+    "stationName": "Hässleholm Central",
+    "location": {
+      "lat": 56.15852,
+      "lng": 13.763922
+    },
+    "distanceKm": 405,
+    "minDurationMinutes": 607,
+    "duration": "10h 07m",
+    "estimatedPrice": 49,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "EN"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Alvesta station",
+    "stationName": "Alvesta station",
+    "location": {
+      "lat": 56.89848,
+      "lng": 14.556882
+    },
+    "distanceKm": 492,
+    "minDurationMinutes": 655,
+    "duration": "10h 55m",
+    "estimatedPrice": 57,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "EN"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Nässjö Central",
+    "stationName": "Nässjö Central",
+    "location": {
+      "lat": 57.652126,
+      "lng": 14.694786
+    },
+    "distanceKm": 577,
+    "minDurationMinutes": 699,
+    "duration": "11h 39m",
+    "estimatedPrice": 66,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "EN"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Zürich HB",
+    "stationName": "Zürich HB",
+    "location": {
+      "lat": 47.378178,
+      "lng": 8.540212
+    },
+    "distanceKm": 669,
+    "minDurationMinutes": 727,
+    "duration": "12h 07m",
+    "estimatedPrice": 75,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "12N"
+    ],
+    "dailyDepartures": 1,
+    "originStation": "Berlin Südkreuz"
+  },
+  {
+    "destination": "Linköping Central",
+    "stationName": "Linköping Central",
+    "location": {
+      "lat": 58.41601,
+      "lng": 15.626675
+    },
+    "distanceKm": 670,
+    "minDurationMinutes": 762,
+    "duration": "12h 42m",
+    "estimatedPrice": 75,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "EN"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Norrköping Central",
+    "stationName": "Norrköping Central",
+    "location": {
+      "lat": 58.596558,
+      "lng": 16.18368
+    },
+    "distanceKm": 698,
+    "minDurationMinutes": 790,
+    "duration": "13h 10m",
+    "estimatedPrice": 78,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "EN"
+    ],
+    "dailyDepartures": 2,
+    "originStation": "Berlin-Lichtenberg"
+  },
+  {
+    "destination": "Stockholm Central",
+    "stationName": "Stockholm Central",
+    "location": {
+      "lat": 59.330013,
+      "lng": 18.05763
+    },
+    "distanceKm": 810,
+    "minDurationMinutes": 879,
+    "duration": "14h 39m",
+    "estimatedPrice": 89,
+    "tripType": "Grand Rail",
+    "travelRing": "extended",
+    "trainTypes": [
+      "EN"
+    ],
+    "dailyDepartures": 3,
+    "originStation": "Berlin-Lichtenberg"
+  }
+]

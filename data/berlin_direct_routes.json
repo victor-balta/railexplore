@@ -1,0 +1,6662 @@
+[
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.52496,
+    "originLon": 13.368911,
+    "destination": "Berlin Potsdamer Platz",
+    "destinationLat": 52.50938,
+    "destinationLon": 13.375988,
+    "minDurationMinutes": 2,
+    "fastestDuration": "0h 02m",
+    "trainTypes": [
+      "RE20",
+      "RE8",
+      "FEX",
+      "RE4",
+      "RE3",
+      "RE5"
+    ],
+    "tripCount": 222,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Staaken Bahnhof Berlin",
+    "destinationLat": 52.537758,
+    "destinationLon": 13.141315,
+    "minDurationMinutes": 3,
+    "fastestDuration": "0h 03m",
+    "trainTypes": [
+      "RB21",
+      "RE4"
+    ],
+    "tripCount": 53,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Alexanderplatz",
+    "originLat": 52.52151,
+    "originLon": 13.411127,
+    "destination": "Berlin Friedrichstraße",
+    "destinationLat": 52.520126,
+    "destinationLon": 13.386598,
+    "minDurationMinutes": 3,
+    "fastestDuration": "0h 03m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475433,
+    "originLon": 13.365603,
+    "destination": "Berlin-Lichterfelde Ost",
+    "destinationLat": 52.4296,
+    "destinationLon": 13.328701,
+    "minDurationMinutes": 3,
+    "fastestDuration": "0h 03m",
+    "trainTypes": [
+      "RE4",
+      "RE3"
+    ],
+    "tripCount": 62,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.534542,
+    "originLon": 13.197124,
+    "destination": "Berlin Jungfernheide",
+    "destinationLat": 52.530193,
+    "destinationLon": 13.299447,
+    "minDurationMinutes": 4,
+    "fastestDuration": "0h 04m",
+    "trainTypes": [
+      "RB10",
+      "RE2",
+      "RE8",
+      "RE4"
+    ],
+    "tripCount": 76,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Albrechtshof Bahnhof Berlin",
+    "destinationLat": 52.549377,
+    "destinationLon": 13.129182,
+    "minDurationMinutes": 4,
+    "fastestDuration": "0h 04m",
+    "trainTypes": [
+      "RE2",
+      "RB14",
+      "RE6",
+      "RE8"
+    ],
+    "tripCount": 31,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.534485,
+    "originLon": 13.1971,
+    "destination": "Berlin-Charlottenburg",
+    "destinationLat": 52.504097,
+    "destinationLon": 13.301861,
+    "minDurationMinutes": 5,
+    "fastestDuration": "0h 05m",
+    "trainTypes": [
+      "ICE 14",
+      "ICE 13",
+      "RB21",
+      "RB14",
+      "RE6"
+    ],
+    "tripCount": 94,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.534485,
+    "originLon": 13.1971,
+    "destination": "Charlottenburg Bahnhof Stuttgarter Pl. Berlin",
+    "destinationLat": 52.504173,
+    "destinationLon": 13.301819,
+    "minDurationMinutes": 5,
+    "fastestDuration": "0h 05m",
+    "trainTypes": [
+      "ICE 14",
+      "ICE 13",
+      "RB21",
+      "RB14",
+      "RE6"
+    ],
+    "tripCount": 31,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.503128,
+    "originLon": 13.469622,
+    "destination": "Berlin-Schöneweide",
+    "destinationLat": 52.45462,
+    "destinationLon": 13.509517,
+    "minDurationMinutes": 5,
+    "fastestDuration": "0h 05m",
+    "trainTypes": [
+      "IC 17",
+      "RE2",
+      "RB32",
+      "RE7",
+      "S85X",
+      "RB24"
+    ],
+    "tripCount": 112,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Seegefeld Bahnhof Nord Falkensee",
+    "destinationLat": 52.552513,
+    "destinationLon": 13.116914,
+    "minDurationMinutes": 6,
+    "fastestDuration": "0h 06m",
+    "trainTypes": [
+      "RE2",
+      "RB14",
+      "RE6",
+      "RE8"
+    ],
+    "tripCount": 31,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Falkensee",
+    "destinationLat": 52.559788,
+    "destinationLon": 13.089593,
+    "minDurationMinutes": 6,
+    "fastestDuration": "0h 06m",
+    "trainTypes": [
+      "RE2",
+      "RB14",
+      "RE6",
+      "RE8"
+    ],
+    "tripCount": 35,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.52519,
+    "originLon": 13.369752,
+    "destination": "Spandau Seegefelder Str. Berlin",
+    "destinationLat": 52.534668,
+    "destinationLon": 13.197191,
+    "minDurationMinutes": 7,
+    "fastestDuration": "0h 07m",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 12",
+      "ICE 77",
+      "ICE 28",
+      "ICE 10",
+      "RB10",
+      "RE8",
+      "RE4",
+      "27"
+    ],
+    "tripCount": 100,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510277,
+    "originLon": 13.497433,
+    "destination": "Berlin-Mahlsdorf",
+    "destinationLat": 52.511917,
+    "destinationLon": 13.610735,
+    "minDurationMinutes": 7,
+    "fastestDuration": "0h 07m",
+    "trainTypes": [
+      "RB26"
+    ],
+    "tripCount": 22,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Bahnhof Dallgow-Döberitz",
+    "destinationLat": 52.543655,
+    "destinationLon": 13.058846,
+    "minDurationMinutes": 7,
+    "fastestDuration": "0h 07m",
+    "trainTypes": [
+      "RB21",
+      "RE4"
+    ],
+    "tripCount": 53,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510277,
+    "originLon": 13.497433,
+    "destination": "Berlin-Hohenschönhausen",
+    "destinationLat": 52.566013,
+    "destinationLon": 13.512471,
+    "minDurationMinutes": 7,
+    "fastestDuration": "0h 07m",
+    "trainTypes": [
+      "RB12",
+      "RB32",
+      "RB24"
+    ],
+    "tripCount": 76,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510002,
+    "originLon": 13.49649,
+    "destination": "Ahrensfelde",
+    "destinationLat": 52.571392,
+    "destinationLon": 13.565467,
+    "minDurationMinutes": 8,
+    "fastestDuration": "0h 08m",
+    "trainTypes": [
+      "RB25"
+    ],
+    "tripCount": 45,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475887,
+    "originLon": 13.365455,
+    "destination": "Bahnhof Teltow",
+    "destinationLat": 52.38808,
+    "destinationLon": 13.299522,
+    "minDurationMinutes": 9,
+    "fastestDuration": "0h 09m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 39,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Zoologischer Garten",
+    "originLat": 52.50768,
+    "originLon": 13.332686,
+    "destination": "Wannsee Bahnhof Berlin",
+    "destinationLat": 52.421402,
+    "destinationLon": 13.180358,
+    "minDurationMinutes": 10,
+    "fastestDuration": "0h 10m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Blankenfelde(Teltow-Fläming)",
+    "destinationLat": 52.3369,
+    "destinationLon": 13.416238,
+    "minDurationMinutes": 10,
+    "fastestDuration": "0h 10m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 38,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510002,
+    "originLon": 13.49649,
+    "destination": "Ahrensfelde Friedhof",
+    "destinationLat": 52.580524,
+    "destinationLon": 13.573094,
+    "minDurationMinutes": 10,
+    "fastestDuration": "0h 10m",
+    "trainTypes": [
+      "RB25"
+    ],
+    "tripCount": 45,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Elstal Bahnhof Wustermark",
+    "destinationLat": 52.547573,
+    "destinationLon": 13.00079,
+    "minDurationMinutes": 11,
+    "fastestDuration": "0h 11m",
+    "trainTypes": [
+      "RB21",
+      "RE4"
+    ],
+    "tripCount": 53,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475433,
+    "originLon": 13.365603,
+    "destination": "Bahnhof Ludwigsfelde",
+    "destinationLat": 52.298466,
+    "destinationLon": 13.267343,
+    "minDurationMinutes": 11,
+    "fastestDuration": "0h 11m",
+    "trainTypes": [
+      "RE4",
+      "RE3"
+    ],
+    "tripCount": 28,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Flughafen BER",
+    "destinationLat": 52.364063,
+    "destinationLon": 13.509307,
+    "minDurationMinutes": 12,
+    "fastestDuration": "0h 12m",
+    "trainTypes": [
+      "RE20",
+      "FEX",
+      "27"
+    ],
+    "tripCount": 100,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Finkenkrug Bahnhof Falkensee",
+    "destinationLat": 52.569805,
+    "destinationLon": 13.050836,
+    "minDurationMinutes": 12,
+    "fastestDuration": "0h 12m",
+    "trainTypes": [
+      "RE2",
+      "RB14",
+      "RE6",
+      "RE8"
+    ],
+    "tripCount": 24,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510002,
+    "originLon": 13.49649,
+    "destination": "Ahrensfelde Nord",
+    "destinationLat": 52.590714,
+    "destinationLon": 13.581945,
+    "minDurationMinutes": 12,
+    "fastestDuration": "0h 12m",
+    "trainTypes": [
+      "RB25"
+    ],
+    "tripCount": 45,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Bernau(b Berlin)",
+    "destinationLat": 52.67533,
+    "destinationLon": 13.592016,
+    "minDurationMinutes": 12,
+    "fastestDuration": "0h 12m",
+    "trainTypes": [
+      "RE3",
+      "RB63"
+    ],
+    "tripCount": 59,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Schönerlinde",
+    "destinationLat": 52.652184,
+    "destinationLon": 13.428633,
+    "minDurationMinutes": 13,
+    "fastestDuration": "0h 13m",
+    "trainTypes": [
+      "RB27"
+    ],
+    "tripCount": 5,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Dahlewitz Bahnhof Blankenfelde-Mahlow",
+    "destinationLat": 52.32629,
+    "destinationLon": 13.419799,
+    "minDurationMinutes": 13,
+    "fastestDuration": "0h 13m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 38,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475685,
+    "originLon": 13.365454,
+    "destination": "Ludwigsfelde",
+    "destinationLat": 52.299816,
+    "destinationLon": 13.267635,
+    "minDurationMinutes": 13,
+    "fastestDuration": "0h 13m",
+    "trainTypes": [
+      "RE4",
+      "RE3"
+    ],
+    "tripCount": 34,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475887,
+    "originLon": 13.365455,
+    "destination": "Großbeeren",
+    "destinationLat": 52.350845,
+    "destinationLon": 13.28462,
+    "minDurationMinutes": 13,
+    "fastestDuration": "0h 13m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 39,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Bahnhof/A.-Bebel-Str. Brieselang",
+    "destinationLat": 52.5828,
+    "destinationLon": 13.000861,
+    "minDurationMinutes": 14,
+    "fastestDuration": "0h 14m",
+    "trainTypes": [
+      "RE2",
+      "RB14",
+      "RE8"
+    ],
+    "tripCount": 23,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510002,
+    "originLon": 13.49649,
+    "destination": "Blumberg-Rehhahn",
+    "destinationLat": 52.596794,
+    "destinationLon": 13.592281,
+    "minDurationMinutes": 14,
+    "fastestDuration": "0h 14m",
+    "trainTypes": [
+      "RB25"
+    ],
+    "tripCount": 45,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.502907,
+    "originLon": 13.468553,
+    "destination": "Erkner",
+    "destinationLat": 52.427628,
+    "destinationLon": 13.752022,
+    "minDurationMinutes": 14,
+    "fastestDuration": "0h 14m",
+    "trainTypes": [
+      "RE1"
+    ],
+    "tripCount": 128,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.503128,
+    "originLon": 13.469622,
+    "destination": "Schönefeld(bei Berlin)",
+    "destinationLat": 52.391064,
+    "destinationLon": 13.51271,
+    "minDurationMinutes": 15,
+    "fastestDuration": "0h 15m",
+    "trainTypes": [
+      "IC 17",
+      "RB32",
+      "S85X",
+      "RB24"
+    ],
+    "tripCount": 25,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Wustermark",
+    "destinationLat": 52.551952,
+    "destinationLon": 12.938612,
+    "minDurationMinutes": 15,
+    "fastestDuration": "0h 15m",
+    "trainTypes": [
+      "RB21",
+      "RE4"
+    ],
+    "tripCount": 53,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475433,
+    "originLon": 13.365603,
+    "destination": "Thyrow",
+    "destinationLat": 52.24714,
+    "destinationLon": 13.259913,
+    "minDurationMinutes": 16,
+    "fastestDuration": "0h 16m",
+    "trainTypes": [
+      "RE4",
+      "RE3"
+    ],
+    "tripCount": 31,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510002,
+    "originLon": 13.49649,
+    "destination": "Blumberg(b Berlin)",
+    "destinationLat": 52.605,
+    "destinationLon": 13.611215,
+    "minDurationMinutes": 16,
+    "fastestDuration": "0h 16m",
+    "trainTypes": [
+      "RB25"
+    ],
+    "tripCount": 45,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Rüdnitz",
+    "destinationLat": 52.71695,
+    "destinationLon": 13.635748,
+    "minDurationMinutes": 16,
+    "fastestDuration": "0h 16m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 22,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510277,
+    "originLon": 13.497433,
+    "destination": "Strausberg",
+    "destinationLat": 52.532146,
+    "destinationLon": 13.832481,
+    "minDurationMinutes": 17,
+    "fastestDuration": "0h 17m",
+    "trainTypes": [
+      "RB26"
+    ],
+    "tripCount": 37,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Schönwalde(Barnim)",
+    "destinationLat": 52.679794,
+    "destinationLon": 13.432371,
+    "minDurationMinutes": 17,
+    "fastestDuration": "0h 17m",
+    "trainTypes": [
+      "RB27"
+    ],
+    "tripCount": 4,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Rangsdorf",
+    "destinationLat": 52.29434,
+    "destinationLon": 13.430585,
+    "minDurationMinutes": 17,
+    "fastestDuration": "0h 17m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 38,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475887,
+    "originLon": 13.365455,
+    "destination": "Birkengrund",
+    "destinationLat": 52.31591,
+    "destinationLon": 13.271822,
+    "minDurationMinutes": 17,
+    "fastestDuration": "0h 17m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 39,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Zoologischer Garten",
+    "originLat": 52.50768,
+    "originLon": 13.332686,
+    "destination": "Potsdam Hbf",
+    "destinationLat": 52.391582,
+    "destinationLon": 13.06674,
+    "minDurationMinutes": 18,
+    "fastestDuration": "0h 18m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.503128,
+    "originLon": 13.469622,
+    "destination": "Bahnhof Königs Wusterhausen",
+    "destinationLat": 52.29666,
+    "destinationLon": 13.63135,
+    "minDurationMinutes": 18,
+    "fastestDuration": "0h 18m",
+    "trainTypes": [
+      "RE2",
+      "RE7"
+    ],
+    "tripCount": 96,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Oranienburg",
+    "destinationLat": 52.754093,
+    "destinationLon": 13.249336,
+    "minDurationMinutes": 19,
+    "fastestDuration": "0h 19m",
+    "trainTypes": [
+      "IC 17",
+      "ICE 17",
+      "RE5"
+    ],
+    "tripCount": 30,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.502907,
+    "originLon": 13.468553,
+    "destination": "Fangschleuse",
+    "destinationLat": 52.407963,
+    "destinationLon": 13.794153,
+    "minDurationMinutes": 19,
+    "fastestDuration": "0h 19m",
+    "trainTypes": [
+      "RE1"
+    ],
+    "tripCount": 89,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Nauen",
+    "destinationLat": 52.61252,
+    "destinationLon": 12.88593,
+    "minDurationMinutes": 20,
+    "fastestDuration": "0h 20m",
+    "trainTypes": [
+      "RE2",
+      "RB14",
+      "RE8"
+    ],
+    "tripCount": 25,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Basdorf",
+    "destinationLat": 52.71556,
+    "destinationLon": 13.433993,
+    "minDurationMinutes": 20,
+    "fastestDuration": "0h 20m",
+    "trainTypes": [
+      "RB27"
+    ],
+    "tripCount": 5,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475433,
+    "originLon": 13.365603,
+    "destination": "Trebbin",
+    "destinationLat": 52.21658,
+    "destinationLon": 13.229556,
+    "minDurationMinutes": 20,
+    "fastestDuration": "0h 20m",
+    "trainTypes": [
+      "RE4",
+      "RE3"
+    ],
+    "tripCount": 31,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Biesenthal",
+    "destinationLat": 52.755936,
+    "destinationLon": 13.675252,
+    "minDurationMinutes": 21,
+    "fastestDuration": "0h 21m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 24,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510277,
+    "originLon": 13.497433,
+    "destination": "Herrensee",
+    "destinationLat": 52.529934,
+    "destinationLon": 13.885463,
+    "minDurationMinutes": 22,
+    "fastestDuration": "0h 22m",
+    "trainTypes": [
+      "RB26"
+    ],
+    "tripCount": 37,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510002,
+    "originLon": 13.49649,
+    "destination": "Seefeld(Mark)",
+    "destinationLat": 52.618256,
+    "destinationLon": 13.675728,
+    "minDurationMinutes": 22,
+    "fastestDuration": "0h 22m",
+    "trainTypes": [
+      "RB25"
+    ],
+    "tripCount": 45,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.503128,
+    "originLon": 13.469622,
+    "destination": "Zeesen",
+    "destinationLat": 52.264862,
+    "destinationLon": 13.635143,
+    "minDurationMinutes": 23,
+    "fastestDuration": "0h 23m",
+    "trainTypes": [
+      "RE2",
+      "RE7"
+    ],
+    "tripCount": 61,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Sachsenhausen(Nordb)",
+    "destinationLat": 52.77227,
+    "destinationLon": 13.251867,
+    "minDurationMinutes": 23,
+    "fastestDuration": "0h 23m",
+    "trainTypes": [
+      "RE5"
+    ],
+    "tripCount": 1,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Dabendorf",
+    "destinationLat": 52.236935,
+    "destinationLon": 13.437361,
+    "minDurationMinutes": 23,
+    "fastestDuration": "0h 23m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 38,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Melchow",
+    "destinationLat": 52.77487,
+    "destinationLon": 13.694375,
+    "minDurationMinutes": 23,
+    "fastestDuration": "0h 23m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 22,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Wandlitz",
+    "destinationLat": 52.744823,
+    "destinationLon": 13.46615,
+    "minDurationMinutes": 24,
+    "fastestDuration": "0h 24m",
+    "trainTypes": [
+      "RB27"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.54869,
+    "originLon": 13.390501,
+    "destination": "Bahnhof Medienstadt Babelsberg Vorpl. Potsdam",
+    "destinationLat": 52.38251,
+    "destinationLon": 13.12199,
+    "minDurationMinutes": 24,
+    "fastestDuration": "0h 24m",
+    "trainTypes": [
+      "RE7"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510277,
+    "originLon": 13.497433,
+    "destination": "Rehfelde",
+    "destinationLat": 52.52842,
+    "destinationLon": 13.922803,
+    "minDurationMinutes": 25,
+    "fastestDuration": "0h 25m",
+    "trainTypes": [
+      "RB26"
+    ],
+    "tripCount": 37,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.503128,
+    "originLon": 13.469622,
+    "destination": "Bahnhof Franz-Mehring-Str. Bestensee",
+    "destinationLat": 52.24158,
+    "destinationLon": 13.63497,
+    "minDurationMinutes": 25,
+    "fastestDuration": "0h 25m",
+    "trainTypes": [
+      "RE2",
+      "RE7"
+    ],
+    "tripCount": 61,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548386,
+    "originLon": 13.390704,
+    "destination": "Eberswalde Hbf",
+    "destinationLat": 52.83376,
+    "destinationLon": 13.796866,
+    "minDurationMinutes": 26,
+    "fastestDuration": "0h 26m",
+    "trainTypes": [
+      "ICE 15",
+      "ICE 13",
+      "RE3",
+      "RB63"
+    ],
+    "tripCount": 73,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Wandlitzsee",
+    "destinationLat": 52.755966,
+    "destinationLon": 13.474025,
+    "minDurationMinutes": 26,
+    "fastestDuration": "0h 26m",
+    "trainTypes": [
+      "RB27"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Zossen",
+    "destinationLat": 52.21882,
+    "destinationLon": 13.438575,
+    "minDurationMinutes": 26,
+    "fastestDuration": "0h 26m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 37,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475433,
+    "originLon": 13.365603,
+    "destination": "Bahnhof Zossen",
+    "destinationLat": 52.21911,
+    "destinationLon": 13.438754,
+    "minDurationMinutes": 26,
+    "fastestDuration": "0h 26m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 1,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.502907,
+    "originLon": 13.468553,
+    "destination": "Hangelsberg",
+    "destinationLat": 52.40041,
+    "destinationLon": 13.920247,
+    "minDurationMinutes": 26,
+    "fastestDuration": "0h 26m",
+    "trainTypes": [
+      "RE1"
+    ],
+    "tripCount": 68,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Priort Bahnhof Wustermark",
+    "destinationLat": 52.516483,
+    "destinationLon": 12.971314,
+    "minDurationMinutes": 27,
+    "fastestDuration": "0h 27m",
+    "trainTypes": [
+      "RB21"
+    ],
+    "tripCount": 21,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.54869,
+    "originLon": 13.390501,
+    "destination": "Potsdam-Rehbrücke",
+    "destinationLat": 52.358154,
+    "destinationLon": 13.097973,
+    "minDurationMinutes": 27,
+    "fastestDuration": "0h 27m",
+    "trainTypes": [
+      "RE7"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510002,
+    "originLon": 13.49649,
+    "destination": "Werneuchen",
+    "destinationLat": 52.637302,
+    "destinationLon": 13.737549,
+    "minDurationMinutes": 27,
+    "fastestDuration": "0h 27m",
+    "trainTypes": [
+      "RB25"
+    ],
+    "tripCount": 45,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548573,
+    "originLon": 13.390519,
+    "destination": "Hauptbahnhof ZOB Eberswalde",
+    "destinationLat": 52.833755,
+    "destinationLon": 13.797157,
+    "minDurationMinutes": 28,
+    "fastestDuration": "0h 28m",
+    "trainTypes": [
+      "ICE 15",
+      "RE3"
+    ],
+    "tripCount": 4,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Buschow Bahnhof Märkisch Luch",
+    "destinationLat": 52.592278,
+    "destinationLon": 12.629501,
+    "minDurationMinutes": 28,
+    "fastestDuration": "0h 28m",
+    "trainTypes": [
+      "RE4"
+    ],
+    "tripCount": 10,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475887,
+    "originLon": 13.365455,
+    "destination": "Luckenwalde",
+    "destinationLat": 52.090496,
+    "destinationLon": 13.159456,
+    "minDurationMinutes": 28,
+    "fastestDuration": "0h 28m",
+    "trainTypes": [
+      "RE4",
+      "RE3"
+    ],
+    "tripCount": 60,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Nassenheide",
+    "destinationLat": 52.816525,
+    "destinationLon": 13.239579,
+    "minDurationMinutes": 29,
+    "fastestDuration": "0h 29m",
+    "trainTypes": [
+      "RE5"
+    ],
+    "tripCount": 1,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Löwenberg(Mark)",
+    "destinationLat": 52.89646,
+    "destinationLon": 13.190169,
+    "minDurationMinutes": 30,
+    "fastestDuration": "0h 30m",
+    "trainTypes": [
+      "RE5"
+    ],
+    "tripCount": 11,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Poststr. Bahnhof Hennigsdorf",
+    "destinationLat": 52.638535,
+    "destinationLon": 13.205695,
+    "minDurationMinutes": 30,
+    "fastestDuration": "0h 30m",
+    "trainTypes": [
+      "RE6"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.503128,
+    "originLon": 13.469622,
+    "destination": "Bahnhof Groß Köris",
+    "destinationLat": 52.159817,
+    "destinationLon": 13.650531,
+    "minDurationMinutes": 31,
+    "fastestDuration": "0h 31m",
+    "trainTypes": [
+      "RE2",
+      "RE7"
+    ],
+    "tripCount": 61,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Paulinenaue",
+    "destinationLat": 52.67589,
+    "destinationLon": 12.71327,
+    "minDurationMinutes": 31,
+    "fastestDuration": "0h 31m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475433,
+    "originLon": 13.365603,
+    "destination": "Bahnhof Westseite Berliner Pl. Luckenwalde",
+    "destinationLat": 52.09131,
+    "destinationLon": 13.16096,
+    "minDurationMinutes": 31,
+    "fastestDuration": "0h 31m",
+    "trainTypes": [
+      "RE4"
+    ],
+    "tripCount": 1,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Stendal Hbf",
+    "destinationLat": 52.59494,
+    "destinationLon": 11.85532,
+    "minDurationMinutes": 32,
+    "fastestDuration": "0h 32m",
+    "trainTypes": [
+      "ICE 12",
+      "ICE 13",
+      "ICE 10",
+      "RE4"
+    ],
+    "tripCount": 59,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Marquardt Bahnhof Potsdam",
+    "destinationLat": 52.45842,
+    "destinationLon": 12.971836,
+    "minDurationMinutes": 32,
+    "fastestDuration": "0h 32m",
+    "trainTypes": [
+      "RB21"
+    ],
+    "tripCount": 21,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Bahnhof Nennhausen",
+    "destinationLat": 52.60004,
+    "destinationLon": 12.502007,
+    "minDurationMinutes": 32,
+    "fastestDuration": "0h 32m",
+    "trainTypes": [
+      "RE4"
+    ],
+    "tripCount": 17,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.54869,
+    "originLon": 13.390501,
+    "destination": "Wilhelmshorst",
+    "destinationLat": 52.331833,
+    "destinationLon": 13.068156,
+    "minDurationMinutes": 32,
+    "fastestDuration": "0h 32m",
+    "trainTypes": [
+      "RE7"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.502907,
+    "originLon": 13.468553,
+    "destination": "Fürstenwalde(Spree)",
+    "destinationLat": 52.366898,
+    "destinationLon": 14.059075,
+    "minDurationMinutes": 32,
+    "fastestDuration": "0h 32m",
+    "trainTypes": [
+      "RE1"
+    ],
+    "tripCount": 128,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Lutherstadt Wittenberg Hbf",
+    "destinationLat": 51.86781,
+    "destinationLon": 12.662285,
+    "minDurationMinutes": 33,
+    "fastestDuration": "0h 33m",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 28",
+      "ICE 91",
+      "ICE 11",
+      "12N",
+      "RE3"
+    ],
+    "tripCount": 156,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475887,
+    "originLon": 13.365455,
+    "destination": "Woltersdorf/Nuthe-Urstromtal",
+    "destinationLat": 52.11741,
+    "destinationLon": 13.195387,
+    "minDurationMinutes": 33,
+    "fastestDuration": "0h 33m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 30,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510277,
+    "originLon": 13.497433,
+    "destination": "Müncheberg(Mark)",
+    "destinationLat": 52.524513,
+    "destinationLon": 14.099687,
+    "minDurationMinutes": 34,
+    "fastestDuration": "0h 34m",
+    "trainTypes": [
+      "RB26"
+    ],
+    "tripCount": 37,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Zoologischer Garten",
+    "originLat": 52.50768,
+    "originLon": 13.332686,
+    "destination": "Werder(Havel)",
+    "destinationLat": 52.39294,
+    "destinationLon": 12.926189,
+    "minDurationMinutes": 34,
+    "fastestDuration": "0h 34m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 1,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Grüneberg",
+    "destinationLat": 52.868244,
+    "destinationLon": 13.212719,
+    "minDurationMinutes": 34,
+    "fastestDuration": "0h 34m",
+    "trainTypes": [
+      "RE5"
+    ],
+    "tripCount": 1,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Wünsdorf-Waldstadt",
+    "destinationLat": 52.165806,
+    "destinationLon": 13.467828,
+    "minDurationMinutes": 34,
+    "fastestDuration": "0h 34m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 37,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475433,
+    "originLon": 13.365603,
+    "destination": "Wünsdorf-Waldstadt Bahnhof Zossen",
+    "destinationLat": 52.165623,
+    "destinationLon": 13.468133,
+    "minDurationMinutes": 34,
+    "fastestDuration": "0h 34m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 1,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Britz",
+    "destinationLat": 52.87269,
+    "destinationLon": 13.820199,
+    "minDurationMinutes": 34,
+    "fastestDuration": "0h 34m",
+    "trainTypes": [
+      "RE3",
+      "RB63"
+    ],
+    "tripCount": 41,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.54869,
+    "originLon": 13.390501,
+    "destination": "Michendorf",
+    "destinationLat": 52.316345,
+    "destinationLon": 13.030688,
+    "minDurationMinutes": 35,
+    "fastestDuration": "0h 35m",
+    "trainTypes": [
+      "RE7"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.503128,
+    "originLon": 13.469622,
+    "destination": "Halbe",
+    "destinationLat": 52.108006,
+    "destinationLon": 13.702074,
+    "minDurationMinutes": 36,
+    "fastestDuration": "0h 36m",
+    "trainTypes": [
+      "RE2",
+      "RE7"
+    ],
+    "tripCount": 61,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475887,
+    "originLon": 13.365455,
+    "destination": "Jüterbog",
+    "destinationLat": 51.99719,
+    "destinationLon": 13.053465,
+    "minDurationMinutes": 36,
+    "fastestDuration": "0h 36m",
+    "trainTypes": [
+      "RE4",
+      "RE3"
+    ],
+    "tripCount": 52,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.503128,
+    "originLon": 13.469622,
+    "destination": "Brand Tropical Islands Bahnhof Halbe",
+    "destinationLat": 52.029785,
+    "destinationLon": 13.721552,
+    "minDurationMinutes": 37,
+    "fastestDuration": "0h 37m",
+    "trainTypes": [
+      "RE2",
+      "RE7"
+    ],
+    "tripCount": 96,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548386,
+    "originLon": 13.390704,
+    "destination": "Gransee",
+    "destinationLat": 53.003235,
+    "destinationLon": 13.169596,
+    "minDurationMinutes": 37,
+    "fastestDuration": "0h 37m",
+    "trainTypes": [
+      "RE5"
+    ],
+    "tripCount": 26,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Golm",
+    "destinationLat": 52.409843,
+    "destinationLon": 12.971764,
+    "minDurationMinutes": 38,
+    "fastestDuration": "0h 38m",
+    "trainTypes": [
+      "RB21"
+    ],
+    "tripCount": 21,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Klosterfelde",
+    "destinationLat": 52.791374,
+    "destinationLon": 13.488131,
+    "minDurationMinutes": 38,
+    "fastestDuration": "0h 38m",
+    "trainTypes": [
+      "RB27"
+    ],
+    "tripCount": 1,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Neuhof(b Zossen)",
+    "destinationLat": 52.139675,
+    "destinationLon": 13.479582,
+    "minDurationMinutes": 38,
+    "fastestDuration": "0h 38m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 38,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.502907,
+    "originLon": 13.468553,
+    "destination": "Berkenbrück",
+    "destinationLat": 52.357075,
+    "destinationLon": 14.166475,
+    "minDurationMinutes": 38,
+    "fastestDuration": "0h 38m",
+    "trainTypes": [
+      "RE1"
+    ],
+    "tripCount": 49,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Friesack(Mark)",
+    "destinationLat": 52.76063,
+    "destinationLon": 12.587826,
+    "minDurationMinutes": 39,
+    "fastestDuration": "0h 39m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Bahnhof Rathenow",
+    "destinationLat": 52.59958,
+    "destinationLon": 12.354209,
+    "minDurationMinutes": 39,
+    "fastestDuration": "0h 39m",
+    "trainTypes": [
+      "RE4"
+    ],
+    "tripCount": 14,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475433,
+    "originLon": 13.365603,
+    "destination": "Bahnhof Ostseite Jüterbog",
+    "destinationLat": 51.997135,
+    "destinationLon": 13.053549,
+    "minDurationMinutes": 39,
+    "fastestDuration": "0h 39m",
+    "trainTypes": [
+      "RE4"
+    ],
+    "tripCount": 1,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.54869,
+    "originLon": 13.390501,
+    "destination": "Seddin",
+    "destinationLat": 52.29158,
+    "destinationLon": 12.984404,
+    "minDurationMinutes": 39,
+    "fastestDuration": "0h 39m",
+    "trainTypes": [
+      "RE7"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Chorin",
+    "destinationLat": 52.903515,
+    "destinationLon": 13.869672,
+    "minDurationMinutes": 39,
+    "fastestDuration": "0h 39m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 40,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510277,
+    "originLon": 13.497433,
+    "destination": "Obersdorf",
+    "destinationLat": 52.536964,
+    "destinationLon": 14.167862,
+    "minDurationMinutes": 40,
+    "fastestDuration": "0h 40m",
+    "trainTypes": [
+      "RB26"
+    ],
+    "tripCount": 19,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.503128,
+    "originLon": 13.469622,
+    "destination": "Oderin Hauptstr. Halbe",
+    "destinationLat": 52.074574,
+    "destinationLon": 13.726927,
+    "minDurationMinutes": 40,
+    "fastestDuration": "0h 40m",
+    "trainTypes": [
+      "RE2",
+      "RE7"
+    ],
+    "tripCount": 61,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Rathenow",
+    "destinationLat": 52.59951,
+    "destinationLon": 12.354245,
+    "minDurationMinutes": 40,
+    "fastestDuration": "0h 40m",
+    "trainTypes": [
+      "RE4"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548573,
+    "originLon": 13.390519,
+    "destination": "Brandenburg Hbf",
+    "destinationLat": 52.400276,
+    "destinationLon": 12.565075,
+    "minDurationMinutes": 41,
+    "fastestDuration": "0h 41m",
+    "trainTypes": [
+      "ICE 10",
+      "IC 57",
+      "HBX"
+    ],
+    "tripCount": 10,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Velten(Mark)",
+    "destinationLat": 52.68489,
+    "destinationLon": 13.172034,
+    "minDurationMinutes": 42,
+    "fastestDuration": "0h 42m",
+    "trainTypes": [
+      "RE6"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510277,
+    "originLon": 13.497433,
+    "destination": "Trebnitz(Mark)",
+    "destinationLat": 52.53826,
+    "destinationLon": 14.216504,
+    "minDurationMinutes": 43,
+    "fastestDuration": "0h 43m",
+    "trainTypes": [
+      "RB26"
+    ],
+    "tripCount": 19,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.54869,
+    "originLon": 13.390501,
+    "destination": "Beelitz-Heilstätten",
+    "destinationLat": 52.26231,
+    "destinationLon": 12.925821,
+    "minDurationMinutes": 43,
+    "fastestDuration": "0h 43m",
+    "trainTypes": [
+      "RE7"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548386,
+    "originLon": 13.390704,
+    "destination": "Dannenwalde(Gransee)",
+    "destinationLat": 53.08077,
+    "destinationLon": 13.180868,
+    "minDurationMinutes": 43,
+    "fastestDuration": "0h 43m",
+    "trainTypes": [
+      "RE5"
+    ],
+    "tripCount": 17,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Baruth(Mark)",
+    "destinationLat": 52.058723,
+    "destinationLon": 13.511465,
+    "minDurationMinutes": 44,
+    "fastestDuration": "0h 44m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 38,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.502907,
+    "originLon": 13.468553,
+    "destination": "Briesen(Mark)",
+    "destinationLat": 52.346424,
+    "destinationLon": 14.281397,
+    "minDurationMinutes": 44,
+    "fastestDuration": "0h 44m",
+    "trainTypes": [
+      "RE1"
+    ],
+    "tripCount": 70,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548386,
+    "originLon": 13.390704,
+    "destination": "Golzow(Eberswalde)",
+    "destinationLat": 52.914013,
+    "destinationLon": 13.826975,
+    "minDurationMinutes": 44,
+    "fastestDuration": "0h 44m",
+    "trainTypes": [
+      "RB63"
+    ],
+    "tripCount": 1,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.503128,
+    "originLon": 13.469622,
+    "destination": "Lübben(Spreewald)",
+    "destinationLat": 51.93978,
+    "destinationLon": 13.877006,
+    "minDurationMinutes": 45,
+    "fastestDuration": "0h 45m",
+    "trainTypes": [
+      "RE2",
+      "RE7"
+    ],
+    "tripCount": 96,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Potsdam Park Sanssouci",
+    "destinationLat": 52.394535,
+    "destinationLon": 13.013671,
+    "minDurationMinutes": 45,
+    "fastestDuration": "0h 45m",
+    "trainTypes": [
+      "RB21"
+    ],
+    "tripCount": 21,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475887,
+    "originLon": 13.365455,
+    "destination": "Oehna",
+    "destinationLat": 51.93305,
+    "destinationLon": 13.048201,
+    "minDurationMinutes": 45,
+    "fastestDuration": "0h 45m",
+    "trainTypes": [
+      "RE4"
+    ],
+    "tripCount": 11,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Bärenklau Bahnhof Oberkrämer",
+    "destinationLat": 52.704163,
+    "destinationLon": 13.143378,
+    "minDurationMinutes": 46,
+    "fastestDuration": "0h 46m",
+    "trainTypes": [
+      "RE6"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.52519,
+    "originLon": 13.369752,
+    "destination": "Bahnhof Wittenberge",
+    "destinationLat": 53.004498,
+    "destinationLon": 11.762504,
+    "minDurationMinutes": 47,
+    "fastestDuration": "0h 47m",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 28",
+      "ICE 91",
+      "ICE 11",
+      "RE8"
+    ],
+    "tripCount": 62,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Angermünde",
+    "destinationLat": 53.015793,
+    "destinationLon": 13.995908,
+    "minDurationMinutes": 47,
+    "fastestDuration": "0h 47m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 28,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.503128,
+    "originLon": 13.469622,
+    "destination": "Schönwalde(Spreewald)",
+    "destinationLat": 51.990795,
+    "destinationLon": 13.777723,
+    "minDurationMinutes": 47,
+    "fastestDuration": "0h 47m",
+    "trainTypes": [
+      "RE2",
+      "RE7"
+    ],
+    "tripCount": 61,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Neustadt(Dosse)",
+    "destinationLat": 52.853195,
+    "destinationLon": 12.450128,
+    "minDurationMinutes": 47,
+    "fastestDuration": "0h 47m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510277,
+    "originLon": 13.497433,
+    "destination": "Frankfurt(Oder)",
+    "destinationLat": 52.336517,
+    "destinationLon": 14.545882,
+    "minDurationMinutes": 48,
+    "fastestDuration": "0h 48m",
+    "trainTypes": [
+      "EC 95",
+      "EC 96"
+    ],
+    "tripCount": 122,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510277,
+    "originLon": 13.497433,
+    "destination": "Alt Rosenthal",
+    "destinationLat": 52.550404,
+    "destinationLon": 14.278627,
+    "minDurationMinutes": 48,
+    "fastestDuration": "0h 48m",
+    "trainTypes": [
+      "RB26"
+    ],
+    "tripCount": 19,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510277,
+    "originLon": 13.497433,
+    "destination": "Seelow-Gusow",
+    "destinationLat": 52.559544,
+    "destinationLon": 14.35283,
+    "minDurationMinutes": 48,
+    "fastestDuration": "0h 48m",
+    "trainTypes": [
+      "RB26"
+    ],
+    "tripCount": 20,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.54869,
+    "originLon": 13.390501,
+    "destination": "Groß Kreutz",
+    "destinationLat": 52.410934,
+    "destinationLon": 12.777052,
+    "minDurationMinutes": 48,
+    "fastestDuration": "0h 48m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.54869,
+    "originLon": 13.390501,
+    "destination": "Borkheide",
+    "destinationLat": 52.23069,
+    "destinationLon": 12.854165,
+    "minDurationMinutes": 48,
+    "fastestDuration": "0h 48m",
+    "trainTypes": [
+      "RE7"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.502907,
+    "originLon": 13.468553,
+    "destination": "Jacobsdorf(Mark)",
+    "destinationLat": 52.3327,
+    "destinationLon": 14.356151,
+    "minDurationMinutes": 48,
+    "fastestDuration": "0h 48m",
+    "trainTypes": [
+      "RE1"
+    ],
+    "tripCount": 70,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.54869,
+    "originLon": 13.390501,
+    "destination": "Neustrelitz Hbf",
+    "destinationLat": 53.359257,
+    "destinationLon": 13.074603,
+    "minDurationMinutes": 49,
+    "fastestDuration": "0h 49m",
+    "trainTypes": [
+      "ICE 15",
+      "IC 57",
+      "IC 17",
+      "ICE 17",
+      "RE5"
+    ],
+    "tripCount": 42,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Potsdam Charlottenhof",
+    "destinationLat": 52.392803,
+    "destinationLon": 13.037517,
+    "minDurationMinutes": 49,
+    "fastestDuration": "0h 49m",
+    "trainTypes": [
+      "RB21"
+    ],
+    "tripCount": 21,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Vehlefanz Bahnhof Oberkrämer",
+    "destinationLat": 52.72241,
+    "destinationLon": 13.114686,
+    "minDurationMinutes": 49,
+    "fastestDuration": "0h 49m",
+    "trainTypes": [
+      "RE6"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Klasdorf Glashütte",
+    "destinationLat": 52.022186,
+    "destinationLon": 13.542614,
+    "minDurationMinutes": 49,
+    "fastestDuration": "0h 49m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 12,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475887,
+    "originLon": 13.365455,
+    "destination": "Zellendorf",
+    "destinationLat": 51.89419,
+    "destinationLon": 13.066878,
+    "minDurationMinutes": 49,
+    "fastestDuration": "0h 49m",
+    "trainTypes": [
+      "RE4"
+    ],
+    "tripCount": 11,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Bahnhof Angermünde",
+    "destinationLat": 53.015854,
+    "destinationLon": 13.996267,
+    "minDurationMinutes": 49,
+    "fastestDuration": "0h 49m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 18,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Bitterfeld",
+    "destinationLat": 51.62286,
+    "destinationLon": 12.31685,
+    "minDurationMinutes": 50,
+    "fastestDuration": "0h 50m",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 28",
+      "ICE 11",
+      "12N",
+      "RE3"
+    ],
+    "tripCount": 63,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Wolfsburg Hbf",
+    "destinationLat": 52.429497,
+    "destinationLon": 10.787784,
+    "minDurationMinutes": 50,
+    "fastestDuration": "0h 50m",
+    "trainTypes": [
+      "ICE 12",
+      "ICE 13",
+      "ICE 10"
+    ],
+    "tripCount": 198,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548386,
+    "originLon": 13.390704,
+    "destination": "Alt Hüttendorf",
+    "destinationLat": 52.957436,
+    "destinationLon": 13.783584,
+    "minDurationMinutes": 50,
+    "fastestDuration": "0h 50m",
+    "trainTypes": [
+      "RB63"
+    ],
+    "tripCount": 1,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.503128,
+    "originLon": 13.469622,
+    "destination": "Lubolz",
+    "destinationLat": 51.961735,
+    "destinationLon": 13.822422,
+    "minDurationMinutes": 51,
+    "fastestDuration": "0h 51m",
+    "trainTypes": [
+      "RE2",
+      "RE7"
+    ],
+    "tripCount": 61,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Schwante",
+    "destinationLat": 52.73482,
+    "destinationLon": 13.091481,
+    "minDurationMinutes": 51,
+    "fastestDuration": "0h 51m",
+    "trainTypes": [
+      "RE6"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Golßen(Niederlausitz)",
+    "destinationLat": 51.97303,
+    "destinationLon": 13.575414,
+    "minDurationMinutes": 51,
+    "fastestDuration": "0h 51m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 17,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.502907,
+    "originLon": 13.468553,
+    "destination": "Pillgram",
+    "destinationLat": 52.336838,
+    "destinationLon": 14.397825,
+    "minDurationMinutes": 51,
+    "fastestDuration": "0h 51m",
+    "trainTypes": [
+      "RE1"
+    ],
+    "tripCount": 70,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.503128,
+    "originLon": 13.469622,
+    "destination": "Lübbenau(Spreewald)",
+    "destinationLat": 51.862026,
+    "destinationLon": 13.961095,
+    "minDurationMinutes": 52,
+    "fastestDuration": "0h 52m",
+    "trainTypes": [
+      "RE2",
+      "RE7"
+    ],
+    "tripCount": 61,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548386,
+    "originLon": 13.390704,
+    "destination": "Fürstenberg(Havel)",
+    "destinationLat": 53.186882,
+    "destinationLon": 13.139519,
+    "minDurationMinutes": 52,
+    "fastestDuration": "0h 52m",
+    "trainTypes": [
+      "RE5"
+    ],
+    "tripCount": 26,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475887,
+    "originLon": 13.365455,
+    "destination": "Linda(Elster)",
+    "destinationLat": 51.853058,
+    "destinationLon": 13.085176,
+    "minDurationMinutes": 53,
+    "fastestDuration": "0h 53m",
+    "trainTypes": [
+      "RE4"
+    ],
+    "tripCount": 11,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.54869,
+    "originLon": 13.390501,
+    "destination": "Bahnhof Brück",
+    "destinationLat": 52.186836,
+    "destinationLon": 12.758456,
+    "minDurationMinutes": 53,
+    "fastestDuration": "0h 53m",
+    "trainTypes": [
+      "RE7"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548386,
+    "originLon": 13.390704,
+    "destination": "Joachimsthal Kaiserbahnhof",
+    "destinationLat": 52.96395,
+    "destinationLon": 13.755016,
+    "minDurationMinutes": 53,
+    "fastestDuration": "0h 53m",
+    "trainTypes": [
+      "RB63"
+    ],
+    "tripCount": 1,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510277,
+    "originLon": 13.497433,
+    "destination": "Bergsdorf",
+    "destinationLat": 52.93652,
+    "destinationLon": 13.260729,
+    "minDurationMinutes": 54,
+    "fastestDuration": "0h 54m",
+    "trainTypes": [
+      "RB12"
+    ],
+    "tripCount": 26,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Breddin",
+    "destinationLat": 52.886097,
+    "destinationLon": 12.224649,
+    "minDurationMinutes": 55,
+    "fastestDuration": "0h 55m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475887,
+    "originLon": 13.365455,
+    "destination": "Bahnhof Niedergörsdorf",
+    "destinationLat": 51.967907,
+    "destinationLon": 12.978512,
+    "minDurationMinutes": 55,
+    "fastestDuration": "0h 55m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 21,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.502907,
+    "originLon": 13.468553,
+    "destination": "Frankfurt(Oder)-Rosengarten",
+    "destinationLat": 52.337944,
+    "destinationLon": 14.473098,
+    "minDurationMinutes": 55,
+    "fastestDuration": "0h 55m",
+    "trainTypes": [
+      "RE1"
+    ],
+    "tripCount": 70,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510277,
+    "originLon": 13.497433,
+    "destination": "Werbig",
+    "destinationLat": 52.564884,
+    "destinationLon": 14.405238,
+    "minDurationMinutes": 56,
+    "fastestDuration": "0h 56m",
+    "trainTypes": [
+      "RB26"
+    ],
+    "tripCount": 19,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Bahnhof Kremmen",
+    "destinationLat": 52.75333,
+    "destinationLon": 13.04007,
+    "minDurationMinutes": 56,
+    "fastestDuration": "0h 56m",
+    "trainTypes": [
+      "RE6"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.54869,
+    "originLon": 13.390501,
+    "destination": "Baitz Bahnhof Brück",
+    "destinationLat": 52.164185,
+    "destinationLon": 12.685215,
+    "minDurationMinutes": 57,
+    "fastestDuration": "0h 57m",
+    "trainTypes": [
+      "RE7"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548386,
+    "originLon": 13.390704,
+    "destination": "Joachimsthal",
+    "destinationLat": 52.980324,
+    "destinationLon": 13.749525,
+    "minDurationMinutes": 57,
+    "fastestDuration": "0h 57m",
+    "trainTypes": [
+      "RB63"
+    ],
+    "tripCount": 1,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.503128,
+    "originLon": 13.469622,
+    "destination": "Raddusch",
+    "destinationLat": 51.815403,
+    "destinationLon": 14.032956,
+    "minDurationMinutes": 58,
+    "fastestDuration": "0h 58m",
+    "trainTypes": [
+      "RE2"
+    ],
+    "tripCount": 42,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Bahnhof Lübbenau (Spreewald)",
+    "destinationLat": 51.862095,
+    "destinationLon": 13.961176,
+    "minDurationMinutes": 58,
+    "fastestDuration": "0h 58m",
+    "trainTypes": [
+      "RE20"
+    ],
+    "tripCount": 8,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Zoologischer Garten",
+    "originLat": 52.50768,
+    "originLon": 13.332686,
+    "destination": "Genthin",
+    "destinationLat": 52.40322,
+    "destinationLon": 12.157103,
+    "minDurationMinutes": 58,
+    "fastestDuration": "0h 58m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Drahnsdorf",
+    "destinationLat": 51.91587,
+    "destinationLon": 13.58149,
+    "minDurationMinutes": 58,
+    "fastestDuration": "0h 58m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 12,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475685,
+    "originLon": 13.365454,
+    "destination": "Halle(Saale)Hbf",
+    "destinationLat": 51.476925,
+    "destinationLon": 11.9872,
+    "minDurationMinutes": 59,
+    "fastestDuration": "0h 59m",
+    "trainTypes": [
+      "ICE 15",
+      "ICE 18",
+      "ICE 28",
+      "ICE 29",
+      "ICE 82",
+      "ICE 11",
+      "12N",
+      "RE3"
+    ],
+    "tripCount": 81,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Luckau-Uckro",
+    "destinationLat": 51.851368,
+    "destinationLon": 13.608051,
+    "minDurationMinutes": 60,
+    "fastestDuration": "1h 00m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 17,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475887,
+    "originLon": 13.365455,
+    "destination": "Holzdorf(Elster)",
+    "destinationLat": 51.780293,
+    "destinationLon": 13.114137,
+    "minDurationMinutes": 60,
+    "fastestDuration": "1h 00m",
+    "trainTypes": [
+      "RE4"
+    ],
+    "tripCount": 11,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475887,
+    "originLon": 13.365455,
+    "destination": "Blönsdorf",
+    "destinationLat": 51.955544,
+    "destinationLon": 12.89583,
+    "minDurationMinutes": 60,
+    "fastestDuration": "1h 00m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 22,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510277,
+    "originLon": 13.497433,
+    "destination": "Küstrin-Kietz",
+    "destinationLat": 52.568462,
+    "destinationLon": 14.607911,
+    "minDurationMinutes": 61,
+    "fastestDuration": "1h 01m",
+    "trainTypes": [
+      "RB26"
+    ],
+    "tripCount": 20,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510277,
+    "originLon": 13.497433,
+    "destination": "Zehdenick(Mark)",
+    "destinationLat": 52.979187,
+    "destinationLon": 13.317463,
+    "minDurationMinutes": 61,
+    "fastestDuration": "1h 01m",
+    "trainTypes": [
+      "RB12"
+    ],
+    "tripCount": 26,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Beetz-Sommerfeld",
+    "destinationLat": 52.804363,
+    "destinationLon": 13.021806,
+    "minDurationMinutes": 61,
+    "fastestDuration": "1h 01m",
+    "trainTypes": [
+      "RE6"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.503128,
+    "originLon": 13.469622,
+    "destination": "Bahnhof Vetschau (Spreewald)",
+    "destinationLat": 51.789303,
+    "destinationLon": 14.082303,
+    "minDurationMinutes": 62,
+    "fastestDuration": "1h 02m",
+    "trainTypes": [
+      "RE2"
+    ],
+    "tripCount": 31,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.503128,
+    "originLon": 13.469622,
+    "destination": "Vetschau",
+    "destinationLat": 51.790302,
+    "destinationLon": 14.079425,
+    "minDurationMinutes": 62,
+    "fastestDuration": "1h 02m",
+    "trainTypes": [
+      "RE2"
+    ],
+    "tripCount": 11,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Glöwen",
+    "destinationLat": 52.90368,
+    "destinationLon": 12.083599,
+    "minDurationMinutes": 62,
+    "fastestDuration": "1h 02m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.54869,
+    "originLon": 13.390501,
+    "destination": "Karl-Marx-Str. Bad Belzig",
+    "destinationLat": 52.136063,
+    "destinationLon": 12.59495,
+    "minDurationMinutes": 62,
+    "fastestDuration": "1h 02m",
+    "trainTypes": [
+      "RE7"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548386,
+    "originLon": 13.390704,
+    "destination": "Prenzlau",
+    "destinationLat": 53.32162,
+    "destinationLon": 13.86654,
+    "minDurationMinutes": 63,
+    "fastestDuration": "1h 03m",
+    "trainTypes": [
+      "ICE 15",
+      "ICE 13",
+      "RE3"
+    ],
+    "tripCount": 34,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510277,
+    "originLon": 13.497433,
+    "destination": "Golzow(Oderbruch)",
+    "destinationLat": 52.56253,
+    "destinationLon": 14.51181,
+    "minDurationMinutes": 63,
+    "fastestDuration": "1h 03m",
+    "trainTypes": [
+      "RB26"
+    ],
+    "tripCount": 9,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.52519,
+    "originLon": 13.369752,
+    "destination": "Ludwigslust",
+    "destinationLat": 53.33467,
+    "destinationLon": 11.494491,
+    "minDurationMinutes": 64,
+    "fastestDuration": "1h 04m",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 28",
+      "ICE 91",
+      "ICE 11",
+      "RE8"
+    ],
+    "tripCount": 45,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510277,
+    "originLon": 13.497433,
+    "destination": "Kostrzyn",
+    "destinationLat": 52.57974,
+    "destinationLon": 14.627094,
+    "minDurationMinutes": 64,
+    "fastestDuration": "1h 04m",
+    "trainTypes": [
+      "RB26"
+    ],
+    "tripCount": 40,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Wilmersdorf(Angerm)",
+    "destinationLat": 53.11163,
+    "destinationLon": 13.892457,
+    "minDurationMinutes": 65,
+    "fastestDuration": "1h 05m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 22,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510277,
+    "originLon": 13.497433,
+    "destination": "Gorgast",
+    "destinationLat": 52.563232,
+    "destinationLon": 14.55131,
+    "minDurationMinutes": 66,
+    "fastestDuration": "1h 06m",
+    "trainTypes": [
+      "RB26"
+    ],
+    "tripCount": 9,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Pinnow(Uckermark)",
+    "destinationLat": 53.06538,
+    "destinationLon": 14.089064,
+    "minDurationMinutes": 66,
+    "fastestDuration": "1h 06m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 16,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475887,
+    "originLon": 13.365455,
+    "destination": "Zahna",
+    "destinationLat": 51.919968,
+    "destinationLon": 12.781211,
+    "minDurationMinutes": 66,
+    "fastestDuration": "1h 06m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 22,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Leipzig Hbf",
+    "destinationLat": 51.34547,
+    "destinationLon": 12.382064,
+    "minDurationMinutes": 67,
+    "fastestDuration": "1h 07m",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 28",
+      "ICE 91",
+      "ICE 11",
+      "12N"
+    ],
+    "tripCount": 124,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.503128,
+    "originLon": 13.469622,
+    "destination": "Kunersdorf (SPN) Bahnhof Kolkwitz",
+    "destinationLat": 51.768574,
+    "destinationLon": 14.188666,
+    "minDurationMinutes": 67,
+    "fastestDuration": "1h 07m",
+    "trainTypes": [
+      "RE2"
+    ],
+    "tripCount": 22,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510277,
+    "originLon": 13.497433,
+    "destination": "Zehdenick-Neuhof",
+    "destinationLat": 53.005707,
+    "destinationLon": 13.34587,
+    "minDurationMinutes": 67,
+    "fastestDuration": "1h 07m",
+    "trainTypes": [
+      "RB12"
+    ],
+    "tripCount": 26,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Braunschweig Hbf",
+    "destinationLat": 52.252216,
+    "destinationLon": 10.540295,
+    "minDurationMinutes": 68,
+    "fastestDuration": "1h 08m",
+    "trainTypes": [
+      "ICE 12",
+      "ICE 13"
+    ],
+    "tripCount": 77,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.54869,
+    "originLon": 13.390501,
+    "destination": "Kirchmöser",
+    "destinationLat": 52.375645,
+    "destinationLon": 12.421786,
+    "minDurationMinutes": 68,
+    "fastestDuration": "1h 08m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Wustrau-Radensleben",
+    "destinationLat": 52.857418,
+    "destinationLon": 12.896831,
+    "minDurationMinutes": 68,
+    "fastestDuration": "1h 08m",
+    "trainTypes": [
+      "RE6"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510277,
+    "originLon": 13.497433,
+    "destination": "Rzepin",
+    "destinationLat": 52.350224,
+    "destinationLon": 14.815073,
+    "minDurationMinutes": 69,
+    "fastestDuration": "1h 09m",
+    "trainTypes": [
+      "EC 95",
+      "EC 96"
+    ],
+    "tripCount": 61,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475887,
+    "originLon": 13.365455,
+    "destination": "Herzberg(Elster)",
+    "destinationLat": 51.679462,
+    "destinationLon": 13.202879,
+    "minDurationMinutes": 69,
+    "fastestDuration": "1h 09m",
+    "trainTypes": [
+      "RE4"
+    ],
+    "tripCount": 11,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.503128,
+    "originLon": 13.469622,
+    "destination": "Bahnhof Kolkwitz",
+    "destinationLat": 51.757797,
+    "destinationLon": 14.249733,
+    "minDurationMinutes": 70,
+    "fastestDuration": "1h 10m",
+    "trainTypes": [
+      "RE2"
+    ],
+    "tripCount": 20,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Bad Wilsnack",
+    "destinationLat": 52.96022,
+    "destinationLon": 11.949528,
+    "minDurationMinutes": 70,
+    "fastestDuration": "1h 10m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475887,
+    "originLon": 13.365455,
+    "destination": "Bülzig",
+    "destinationLat": 51.894894,
+    "destinationLon": 12.752715,
+    "minDurationMinutes": 70,
+    "fastestDuration": "1h 10m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 20,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Walddrehna",
+    "destinationLat": 51.772648,
+    "destinationLon": 13.617211,
+    "minDurationMinutes": 71,
+    "fastestDuration": "1h 11m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 11,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548573,
+    "originLon": 13.390519,
+    "destination": "Bahnhof Wiesenburg (Mark)",
+    "destinationLat": 52.098827,
+    "destinationLon": 12.431628,
+    "minDurationMinutes": 71,
+    "fastestDuration": "1h 11m",
+    "trainTypes": [
+      "RE7"
+    ],
+    "tripCount": 1,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Warnitz(Uckermark)",
+    "destinationLat": 53.183437,
+    "destinationLon": 13.877225,
+    "minDurationMinutes": 71,
+    "fastestDuration": "1h 11m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 22,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.525143,
+    "originLon": 13.369612,
+    "destination": "Hagenow Land",
+    "destinationLat": 53.41358,
+    "destinationLon": 11.215695,
+    "minDurationMinutes": 72,
+    "fastestDuration": "1h 12m",
+    "trainTypes": [
+      "ICE 28",
+      "27"
+    ],
+    "tripCount": 2,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510277,
+    "originLon": 13.497433,
+    "destination": "Vogelsang(Kr Oberhavel)",
+    "destinationLat": 53.037712,
+    "destinationLon": 13.385778,
+    "minDurationMinutes": 72,
+    "fastestDuration": "1h 12m",
+    "trainTypes": [
+      "RB12"
+    ],
+    "tripCount": 26,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Zoologischer Garten",
+    "originLat": 52.50768,
+    "originLon": 13.332686,
+    "destination": "Burg(Magdeburg)",
+    "destinationLat": 52.274406,
+    "destinationLon": 11.840356,
+    "minDurationMinutes": 72,
+    "fastestDuration": "1h 12m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.502907,
+    "originLon": 13.468553,
+    "destination": "Kraftwerk Finkenheerd",
+    "destinationLat": 52.262543,
+    "destinationLon": 14.575121,
+    "minDurationMinutes": 72,
+    "fastestDuration": "1h 12m",
+    "trainTypes": [
+      "RE1"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Waren(Müritz)",
+    "destinationLat": 53.52151,
+    "destinationLon": 12.680678,
+    "minDurationMinutes": 73,
+    "fastestDuration": "1h 13m",
+    "trainTypes": [
+      "IC 17",
+      "ICE 17",
+      "RE5"
+    ],
+    "tripCount": 20,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Bahnhof Doberlug-Kirchhain",
+    "destinationLat": 51.62053,
+    "destinationLon": 13.564161,
+    "minDurationMinutes": 73,
+    "fastestDuration": "1h 13m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 17,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.503128,
+    "originLon": 13.469622,
+    "destination": "Calau(Nl)",
+    "destinationLat": 51.738064,
+    "destinationLon": 13.979728,
+    "minDurationMinutes": 73,
+    "fastestDuration": "1h 13m",
+    "trainTypes": [
+      "RE7"
+    ],
+    "tripCount": 17,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475887,
+    "originLon": 13.365455,
+    "destination": "Zörnigall",
+    "destinationLat": 51.882935,
+    "destinationLon": 12.731558,
+    "minDurationMinutes": 73,
+    "fastestDuration": "1h 13m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 20,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.503128,
+    "originLon": 13.469622,
+    "destination": "Elsterwerda",
+    "destinationLat": 51.459404,
+    "destinationLon": 13.516305,
+    "minDurationMinutes": 74,
+    "fastestDuration": "1h 14m",
+    "trainTypes": [
+      "IC 17"
+    ],
+    "tripCount": 27,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.502907,
+    "originLon": 13.468553,
+    "destination": "Finkenheerd",
+    "destinationLat": 52.24944,
+    "destinationLon": 14.569558,
+    "minDurationMinutes": 74,
+    "fastestDuration": "1h 14m",
+    "trainTypes": [
+      "RE1"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.503128,
+    "originLon": 13.469622,
+    "destination": "Cottbus Hbf",
+    "destinationLat": 51.750957,
+    "destinationLon": 14.324162,
+    "minDurationMinutes": 75,
+    "fastestDuration": "1h 15m",
+    "trainTypes": [
+      "RE2"
+    ],
+    "tripCount": 31,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548573,
+    "originLon": 13.390519,
+    "destination": "Medewitz (Mark) Bahnhof Wiesenburg (Mark)",
+    "destinationLat": 52.061153,
+    "destinationLon": 12.392049,
+    "minDurationMinutes": 75,
+    "fastestDuration": "1h 15m",
+    "trainTypes": [
+      "RE7"
+    ],
+    "tripCount": 1,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Neuruppin Rheinsberger Tor",
+    "destinationLat": 52.929848,
+    "destinationLon": 12.810431,
+    "minDurationMinutes": 76,
+    "fastestDuration": "1h 16m",
+    "trainTypes": [
+      "RE6"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Seehausen(Uckermark)",
+    "destinationLat": 53.220795,
+    "destinationLon": 13.884809,
+    "minDurationMinutes": 76,
+    "fastestDuration": "1h 16m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 22,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.502907,
+    "originLon": 13.468553,
+    "destination": "Eisenhüttenstadt",
+    "destinationLat": 52.148556,
+    "destinationLon": 14.658512,
+    "minDurationMinutes": 76,
+    "fastestDuration": "1h 16m",
+    "trainTypes": [
+      "RE1"
+    ],
+    "tripCount": 6,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510277,
+    "originLon": 13.497433,
+    "destination": "Hammelspring",
+    "destinationLat": 53.070377,
+    "destinationLon": 13.435954,
+    "minDurationMinutes": 77,
+    "fastestDuration": "1h 17m",
+    "trainTypes": [
+      "RB12"
+    ],
+    "tripCount": 26,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Blankensee(Meckl)",
+    "destinationLat": 53.408173,
+    "destinationLon": 13.262907,
+    "minDurationMinutes": 77,
+    "fastestDuration": "1h 17m",
+    "trainTypes": [
+      "RE5"
+    ],
+    "tripCount": 10,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.502907,
+    "originLon": 13.468553,
+    "destination": "Wiesenau",
+    "destinationLat": 52.231487,
+    "destinationLon": 14.583702,
+    "minDurationMinutes": 77,
+    "fastestDuration": "1h 17m",
+    "trainTypes": [
+      "RE1"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548386,
+    "originLon": 13.390704,
+    "destination": "Pasewalk",
+    "destinationLat": 53.515354,
+    "destinationLon": 13.988875,
+    "minDurationMinutes": 78,
+    "fastestDuration": "1h 18m",
+    "trainTypes": [
+      "ICE 15",
+      "ICE 13",
+      "RE3"
+    ],
+    "tripCount": 38,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Schwedt(Oder)Mitte",
+    "destinationLat": 53.06829,
+    "destinationLon": 14.271603,
+    "minDurationMinutes": 78,
+    "fastestDuration": "1h 18m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 16,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.503128,
+    "originLon": 13.469622,
+    "destination": "Luckaitztal",
+    "destinationLat": 51.684837,
+    "destinationLon": 14.001785,
+    "minDurationMinutes": 79,
+    "fastestDuration": "1h 19m",
+    "trainTypes": [
+      "RE7"
+    ],
+    "tripCount": 17,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548386,
+    "originLon": 13.390704,
+    "destination": "Kratzeburg",
+    "destinationLat": 53.427803,
+    "destinationLon": 12.941627,
+    "minDurationMinutes": 79,
+    "fastestDuration": "1h 19m",
+    "trainTypes": [
+      "RE5"
+    ],
+    "tripCount": 15,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475685,
+    "originLon": 13.365454,
+    "destination": "Dresden-Neustadt",
+    "destinationLat": 51.0659,
+    "destinationLon": 13.740701,
+    "minDurationMinutes": 80,
+    "fastestDuration": "1h 20m",
+    "trainTypes": [
+      "27N",
+      "27"
+    ],
+    "tripCount": 26,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548573,
+    "originLon": 13.390519,
+    "destination": "Magdeburg Hbf",
+    "destinationLat": 52.130512,
+    "destinationLon": 11.626963,
+    "minDurationMinutes": 81,
+    "fastestDuration": "1h 21m",
+    "trainTypes": [
+      "ICE 10",
+      "IC 57",
+      "HBX"
+    ],
+    "tripCount": 12,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Neuruppin West",
+    "destinationLat": 52.926327,
+    "destinationLon": 12.794005,
+    "minDurationMinutes": 81,
+    "fastestDuration": "1h 21m",
+    "trainTypes": [
+      "RE6"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Schwedt(Oder)",
+    "destinationLat": 53.0629,
+    "destinationLon": 14.290721,
+    "minDurationMinutes": 81,
+    "fastestDuration": "1h 21m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 16,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Cammin(Meckl)",
+    "destinationLat": 53.440365,
+    "destinationLon": 13.30198,
+    "minDurationMinutes": 81,
+    "fastestDuration": "1h 21m",
+    "trainTypes": [
+      "RE5"
+    ],
+    "tripCount": 10,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.502907,
+    "originLon": 13.468553,
+    "destination": "Ziltendorf",
+    "destinationLat": 52.199337,
+    "destinationLon": 14.616174,
+    "minDurationMinutes": 81,
+    "fastestDuration": "1h 21m",
+    "trainTypes": [
+      "RE1"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475887,
+    "originLon": 13.365455,
+    "destination": "Falkenberg(Elster)",
+    "destinationLat": 51.584034,
+    "destinationLon": 13.246983,
+    "minDurationMinutes": 82,
+    "fastestDuration": "1h 22m",
+    "trainTypes": [
+      "RE4"
+    ],
+    "tripCount": 11,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548573,
+    "originLon": 13.390519,
+    "destination": "Jeber-Bergfrieden",
+    "destinationLat": 51.98464,
+    "destinationLon": 12.349699,
+    "minDurationMinutes": 82,
+    "fastestDuration": "1h 22m",
+    "trainTypes": [
+      "RE7"
+    ],
+    "tripCount": 1,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Hannover Hbf",
+    "destinationLat": 52.376762,
+    "destinationLon": 9.741021,
+    "minDurationMinutes": 83,
+    "fastestDuration": "1h 23m",
+    "trainTypes": [
+      "ICE 19",
+      "ICE 12",
+      "ICE 77",
+      "ICE 10"
+    ],
+    "tripCount": 154,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510277,
+    "originLon": 13.497433,
+    "destination": "Templin",
+    "destinationLat": 53.112408,
+    "destinationLon": 13.49156,
+    "minDurationMinutes": 83,
+    "fastestDuration": "1h 23m",
+    "trainTypes": [
+      "RB12"
+    ],
+    "tripCount": 26,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.503128,
+    "originLon": 13.469622,
+    "destination": "Altdöbern",
+    "destinationLat": 51.65251,
+    "destinationLon": 14.009376,
+    "minDurationMinutes": 83,
+    "fastestDuration": "1h 23m",
+    "trainTypes": [
+      "RE7"
+    ],
+    "tripCount": 17,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510277,
+    "originLon": 13.497433,
+    "destination": "Templin Stadt",
+    "destinationLat": 53.11709,
+    "destinationLon": 13.508639,
+    "minDurationMinutes": 85,
+    "fastestDuration": "1h 25m",
+    "trainTypes": [
+      "RB12"
+    ],
+    "tripCount": 24,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Rückersdorf",
+    "destinationLat": 51.566692,
+    "destinationLon": 13.574295,
+    "minDurationMinutes": 85,
+    "fastestDuration": "1h 25m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 12,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475685,
+    "originLon": 13.365454,
+    "destination": "Dresden Hbf",
+    "destinationLat": 51.04056,
+    "destinationLon": 13.732035,
+    "minDurationMinutes": 87,
+    "fastestDuration": "1h 27m",
+    "trainTypes": [
+      "27N",
+      "27"
+    ],
+    "tripCount": 26,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.503128,
+    "originLon": 13.469622,
+    "destination": "Bahnhof Großräschen",
+    "destinationLat": 51.59148,
+    "destinationLon": 14.014854,
+    "minDurationMinutes": 88,
+    "fastestDuration": "1h 28m",
+    "trainTypes": [
+      "RE7"
+    ],
+    "tripCount": 17,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Burg Stargard(Meckl)",
+    "destinationLat": 53.49959,
+    "destinationLon": 13.303225,
+    "minDurationMinutes": 88,
+    "fastestDuration": "1h 28m",
+    "trainTypes": [
+      "RE5"
+    ],
+    "tripCount": 10,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475685,
+    "originLon": 13.365454,
+    "destination": "Hauptbahnhof",
+    "destinationLat": 50.971928,
+    "destinationLon": 11.037424,
+    "minDurationMinutes": 89,
+    "fastestDuration": "1h 29m",
+    "trainTypes": [
+      "ICE 15",
+      "ICE 18",
+      "ICE 28",
+      "ICE 29",
+      "ICE 82",
+      "ICE 91",
+      "ICE 11",
+      "12N"
+    ],
+    "tripCount": 186,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Hildesheim Hbf",
+    "destinationLat": 52.160625,
+    "destinationLon": 9.953497,
+    "minDurationMinutes": 91,
+    "fastestDuration": "1h 31m",
+    "trainTypes": [
+      "ICE 12",
+      "ICE 13"
+    ],
+    "tripCount": 77,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Hohenleipisch",
+    "destinationLat": 51.492832,
+    "destinationLon": 13.564958,
+    "minDurationMinutes": 91,
+    "fastestDuration": "1h 31m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 12,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475887,
+    "originLon": 13.365455,
+    "destination": "Roßlau(Elbe)",
+    "destinationLat": 51.884613,
+    "destinationLon": 12.237262,
+    "minDurationMinutes": 91,
+    "fastestDuration": "1h 31m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Nechlin",
+    "destinationLat": 53.44176,
+    "destinationLon": 13.903456,
+    "minDurationMinutes": 93,
+    "fastestDuration": "1h 33m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 22,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.52519,
+    "originLon": 13.369752,
+    "destination": "Büchen",
+    "destinationLat": 53.47497,
+    "destinationLon": 10.623298,
+    "minDurationMinutes": 94,
+    "fastestDuration": "1h 34m",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 91",
+      "ICE 11"
+    ],
+    "tripCount": 17,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.503128,
+    "originLon": 13.469622,
+    "destination": "Sedlitz Ost",
+    "destinationLat": 51.55416,
+    "destinationLon": 14.05599,
+    "minDurationMinutes": 94,
+    "fastestDuration": "1h 34m",
+    "trainTypes": [
+      "RE7"
+    ],
+    "tripCount": 17,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Neubrandenburg",
+    "destinationLat": 53.561832,
+    "destinationLon": 13.261465,
+    "minDurationMinutes": 95,
+    "fastestDuration": "1h 35m",
+    "trainTypes": [
+      "RE5"
+    ],
+    "tripCount": 10,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475887,
+    "originLon": 13.365455,
+    "destination": "Dessau Hbf",
+    "destinationLat": 51.839867,
+    "destinationLon": 12.234945,
+    "minDurationMinutes": 96,
+    "fastestDuration": "1h 36m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.503128,
+    "originLon": 13.469622,
+    "destination": "Senftenberg",
+    "destinationLat": 51.527348,
+    "destinationLon": 14.004216,
+    "minDurationMinutes": 99,
+    "fastestDuration": "1h 39m",
+    "trainTypes": [
+      "RE7"
+    ],
+    "tripCount": 17,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Zoologischer Garten",
+    "originLat": 52.50768,
+    "originLon": 13.332686,
+    "destination": "Magdeburg-Buckau",
+    "destinationLat": 52.109203,
+    "destinationLon": 11.63004,
+    "minDurationMinutes": 105,
+    "fastestDuration": "1h 45m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.54869,
+    "originLon": 13.390501,
+    "destination": "Biederitz",
+    "destinationLat": 52.15271,
+    "destinationLon": 11.716466,
+    "minDurationMinutes": 105,
+    "fastestDuration": "1h 45m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548386,
+    "originLon": 13.390704,
+    "destination": "Anklam",
+    "destinationLat": 53.856102,
+    "destinationLon": 13.701827,
+    "minDurationMinutes": 107,
+    "fastestDuration": "1h 47m",
+    "trainTypes": [
+      "ICE 15",
+      "ICE 13",
+      "RE3"
+    ],
+    "tripCount": 34,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.52519,
+    "originLon": 13.369752,
+    "destination": "Hamburg Hbf",
+    "destinationLat": 53.552734,
+    "destinationLon": 10.006909,
+    "minDurationMinutes": 107,
+    "fastestDuration": "1h 47m",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 28",
+      "ICE 91",
+      "ICE 27",
+      "ICE 11",
+      "27"
+    ],
+    "tripCount": 66,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548386,
+    "originLon": 13.390704,
+    "destination": "Langhagen",
+    "destinationLat": 53.680935,
+    "destinationLon": 12.425217,
+    "minDurationMinutes": 107,
+    "fastestDuration": "1h 47m",
+    "trainTypes": [
+      "RE5"
+    ],
+    "tripCount": 15,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Zoologischer Garten",
+    "originLat": 52.50768,
+    "originLon": 13.332686,
+    "destination": "Magdeburg SKET Industriepark",
+    "destinationLat": 52.097546,
+    "destinationLon": 11.638277,
+    "minDurationMinutes": 108,
+    "fastestDuration": "1h 48m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 1,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.52519,
+    "originLon": 13.369752,
+    "destination": "Karstädt",
+    "destinationLat": 53.16084,
+    "destinationLon": 11.738492,
+    "minDurationMinutes": 109,
+    "fastestDuration": "1h 49m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 19,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Altentreptow",
+    "destinationLat": 53.692234,
+    "destinationLon": 13.242713,
+    "minDurationMinutes": 110,
+    "fastestDuration": "1h 50m",
+    "trainTypes": [
+      "RE5"
+    ],
+    "tripCount": 8,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Zoologischer Garten",
+    "originLat": 52.50768,
+    "originLon": 13.332686,
+    "destination": "Beyendorf",
+    "destinationLat": 52.061146,
+    "destinationLon": 11.63105,
+    "minDurationMinutes": 112,
+    "fastestDuration": "1h 52m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 1,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Jatznick",
+    "destinationLat": 53.60306,
+    "destinationLon": 13.937671,
+    "minDurationMinutes": 112,
+    "fastestDuration": "1h 52m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 19,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548573,
+    "originLon": 13.390519,
+    "destination": "Rostock Hbf",
+    "destinationLat": 54.078247,
+    "destinationLon": 12.131079,
+    "minDurationMinutes": 113,
+    "fastestDuration": "1h 53m",
+    "trainTypes": [
+      "IC 57",
+      "IC 17",
+      "ICE 17",
+      "RE5"
+    ],
+    "tripCount": 24,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.525143,
+    "originLon": 13.369612,
+    "destination": "Hamburg Dammtor",
+    "destinationLat": 53.560753,
+    "destinationLon": 9.989566,
+    "minDurationMinutes": 114,
+    "fastestDuration": "1h 54m",
+    "trainTypes": [
+      "ICE 28",
+      "ICE 27",
+      "27"
+    ],
+    "tripCount": 27,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475685,
+    "originLon": 13.365454,
+    "destination": "Bad Schandau",
+    "destinationLat": 50.91929,
+    "destinationLon": 14.137537,
+    "minDurationMinutes": 115,
+    "fastestDuration": "1h 55m",
+    "trainTypes": [
+      "27N",
+      "27"
+    ],
+    "tripCount": 19,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Zoologischer Garten",
+    "originLat": 52.50768,
+    "originLon": 13.332686,
+    "destination": "Dodendorf",
+    "destinationLat": 52.04895,
+    "destinationLon": 11.613086,
+    "minDurationMinutes": 115,
+    "fastestDuration": "1h 55m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 1,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Minden(Westf)",
+    "destinationLat": 52.29014,
+    "destinationLon": 8.934728,
+    "minDurationMinutes": 116,
+    "fastestDuration": "1h 56m",
+    "trainTypes": [
+      "ICE 19",
+      "ICE 10"
+    ],
+    "tripCount": 9,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548573,
+    "originLon": 13.390519,
+    "destination": "Köthen",
+    "destinationLat": 51.75193,
+    "destinationLon": 11.989358,
+    "minDurationMinutes": 116,
+    "fastestDuration": "1h 56m",
+    "trainTypes": [
+      "IC 57"
+    ],
+    "tripCount": 4,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Plaaz Bahnhof",
+    "destinationLat": 53.840458,
+    "destinationLon": 12.337716,
+    "minDurationMinutes": 117,
+    "fastestDuration": "1h 57m",
+    "trainTypes": [
+      "RE5"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Zoologischer Garten",
+    "originLat": 52.50768,
+    "originLon": 13.332686,
+    "destination": "Osterweddingen",
+    "destinationLat": 52.049133,
+    "destinationLon": 11.575921,
+    "minDurationMinutes": 118,
+    "fastestDuration": "1h 58m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Ferdinandshof",
+    "destinationLat": 53.660088,
+    "destinationLon": 13.881913,
+    "minDurationMinutes": 118,
+    "fastestDuration": "1h 58m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 19,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548386,
+    "originLon": 13.390704,
+    "destination": "Züssow",
+    "destinationLat": 53.97388,
+    "destinationLon": 13.548191,
+    "minDurationMinutes": 119,
+    "fastestDuration": "1h 59m",
+    "trainTypes": [
+      "ICE 15",
+      "ICE 13",
+      "RE3"
+    ],
+    "tripCount": 38,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.52519,
+    "originLon": 13.369752,
+    "destination": "Grabow(Meckl)",
+    "destinationLat": 53.2829,
+    "destinationLon": 11.564201,
+    "minDurationMinutes": 119,
+    "fastestDuration": "1h 59m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 19,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Gnevkow",
+    "destinationLat": 53.792896,
+    "destinationLon": 13.17467,
+    "minDurationMinutes": 120,
+    "fastestDuration": "2h 00m",
+    "trainTypes": [
+      "RE5"
+    ],
+    "tripCount": 8,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Zoologischer Garten",
+    "originLat": 52.50768,
+    "originLon": 13.332686,
+    "destination": "Langenweddingen",
+    "destinationLat": 52.045555,
+    "destinationLon": 11.532404,
+    "minDurationMinutes": 121,
+    "fastestDuration": "2h 01m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 1,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.52519,
+    "originLon": 13.369752,
+    "destination": "Hamburg-Altona",
+    "destinationLat": 53.551853,
+    "destinationLon": 9.934554,
+    "minDurationMinutes": 123,
+    "fastestDuration": "2h 03m",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 28",
+      "ICE 91",
+      "ICE 27",
+      "27"
+    ],
+    "tripCount": 45,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Göttingen",
+    "destinationLat": 51.536865,
+    "destinationLon": 9.92561,
+    "minDurationMinutes": 123,
+    "fastestDuration": "2h 03m",
+    "trainTypes": [
+      "ICE 12",
+      "ICE 13"
+    ],
+    "tripCount": 96,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548386,
+    "originLon": 13.390704,
+    "destination": "Güstrow",
+    "destinationLat": 53.8006,
+    "destinationLon": 12.172836,
+    "minDurationMinutes": 124,
+    "fastestDuration": "2h 04m",
+    "trainTypes": [
+      "RE5"
+    ],
+    "tripCount": 13,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475685,
+    "originLon": 13.365454,
+    "destination": "Schöna",
+    "destinationLat": 50.860054,
+    "destinationLon": 14.222133,
+    "minDurationMinutes": 125,
+    "fastestDuration": "2h 05m",
+    "trainTypes": [
+      "27N",
+      "27"
+    ],
+    "tripCount": 19,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Sternfeld",
+    "destinationLat": 53.824776,
+    "destinationLon": 13.15042,
+    "minDurationMinutes": 125,
+    "fastestDuration": "2h 05m",
+    "trainTypes": [
+      "RE5"
+    ],
+    "tripCount": 8,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Bad Oeynhausen",
+    "destinationLat": 52.2054,
+    "destinationLon": 8.796523,
+    "minDurationMinutes": 126,
+    "fastestDuration": "2h 06m",
+    "trainTypes": [
+      "ICE 19"
+    ],
+    "tripCount": 2,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Ducherow",
+    "destinationLat": 53.766136,
+    "destinationLon": 13.796021,
+    "minDurationMinutes": 126,
+    "fastestDuration": "2h 06m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 19,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Naumburg(Saale)Hbf",
+    "destinationLat": 51.16307,
+    "destinationLon": 11.796984,
+    "minDurationMinutes": 127,
+    "fastestDuration": "2h 07m",
+    "trainTypes": [
+      "ICE 18"
+    ],
+    "tripCount": 13,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Utzedel",
+    "destinationLat": 53.860725,
+    "destinationLon": 13.116222,
+    "minDurationMinutes": 129,
+    "fastestDuration": "2h 09m",
+    "trainTypes": [
+      "RE5"
+    ],
+    "tripCount": 8,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Zoologischer Garten",
+    "originLat": 52.50768,
+    "originLon": 13.332686,
+    "destination": "Blumenberg",
+    "destinationLat": 52.033806,
+    "destinationLon": 11.457093,
+    "minDurationMinutes": 130,
+    "fastestDuration": "2h 10m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 1,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548386,
+    "originLon": 13.390704,
+    "destination": "Greifswald",
+    "destinationLat": 54.092922,
+    "destinationLon": 13.370262,
+    "minDurationMinutes": 132,
+    "fastestDuration": "2h 12m",
+    "trainTypes": [
+      "ICE 15",
+      "ICE 13",
+      "RE3"
+    ],
+    "tripCount": 38,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475685,
+    "originLon": 13.365454,
+    "destination": "Decin hl.n.",
+    "destinationLat": 50.773415,
+    "destinationLon": 14.201247,
+    "minDurationMinutes": 133,
+    "fastestDuration": "2h 13m",
+    "trainTypes": [
+      "27N",
+      "27"
+    ],
+    "tripCount": 18,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Zoologischer Garten",
+    "originLat": 52.50768,
+    "originLon": 13.332686,
+    "destination": "Hadmersleben",
+    "destinationLat": 52.00736,
+    "destinationLon": 11.324446,
+    "minDurationMinutes": 133,
+    "fastestDuration": "2h 13m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 1,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.52519,
+    "originLon": 13.369752,
+    "destination": "Lüblow(Meckl)",
+    "destinationLat": 53.418636,
+    "destinationLon": 11.460084,
+    "minDurationMinutes": 133,
+    "fastestDuration": "2h 13m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 19,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Demmin",
+    "destinationLat": 53.90114,
+    "destinationLon": 13.053954,
+    "minDurationMinutes": 135,
+    "fastestDuration": "2h 15m",
+    "trainTypes": [
+      "RE5"
+    ],
+    "tripCount": 8,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548573,
+    "originLon": 13.390519,
+    "destination": "Warnemünde",
+    "destinationLat": 54.176853,
+    "destinationLon": 12.091271,
+    "minDurationMinutes": 136,
+    "fastestDuration": "2h 16m",
+    "trainTypes": [
+      "IC 57",
+      "ICE 17"
+    ],
+    "tripCount": 3,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Herford",
+    "destinationLat": 52.11961,
+    "destinationLon": 8.663643,
+    "minDurationMinutes": 137,
+    "fastestDuration": "2h 17m",
+    "trainTypes": [
+      "ICE 19",
+      "ICE 10"
+    ],
+    "tripCount": 9,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Bielefeld Hbf",
+    "destinationLat": 52.029263,
+    "destinationLon": 8.532722,
+    "minDurationMinutes": 137,
+    "fastestDuration": "2h 17m",
+    "trainTypes": [
+      "ICE 19",
+      "ICE 10"
+    ],
+    "tripCount": 97,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.52519,
+    "originLon": 13.369752,
+    "destination": "Rastow",
+    "destinationLat": 53.458157,
+    "destinationLon": 11.430859,
+    "minDurationMinutes": 137,
+    "fastestDuration": "2h 17m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 19,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Zoologischer Garten",
+    "originLat": 52.50768,
+    "originLon": 13.332686,
+    "destination": "Oschersleben(Bode)",
+    "destinationLat": 52.030727,
+    "destinationLon": 11.22684,
+    "minDurationMinutes": 138,
+    "fastestDuration": "2h 18m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475685,
+    "originLon": 13.365454,
+    "destination": "Eisenach Hbf",
+    "destinationLat": 50.97692,
+    "destinationLon": 10.331986,
+    "minDurationMinutes": 139,
+    "fastestDuration": "2h 19m",
+    "trainTypes": [
+      "ICE 11"
+    ],
+    "tripCount": 69,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Klein Bünzow",
+    "destinationLat": 53.925068,
+    "destinationLon": 13.620311,
+    "minDurationMinutes": 141,
+    "fastestDuration": "2h 21m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 19,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.52519,
+    "originLon": 13.369752,
+    "destination": "Sülstorf",
+    "destinationLat": 53.513996,
+    "destinationLon": 11.388039,
+    "minDurationMinutes": 142,
+    "fastestDuration": "2h 22m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 19,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.525223,
+    "originLon": 13.369887,
+    "destination": "Bünde(Westf)",
+    "destinationLat": 52.202076,
+    "destinationLon": 8.573876,
+    "minDurationMinutes": 143,
+    "fastestDuration": "2h 23m",
+    "trainTypes": [
+      "ICE 77"
+    ],
+    "tripCount": 31,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Kassel-Wilhelmshöhe",
+    "destinationLat": 51.312557,
+    "destinationLon": 9.447116,
+    "minDurationMinutes": 144,
+    "fastestDuration": "2h 24m",
+    "trainTypes": [
+      "ICE 12",
+      "ICE 13"
+    ],
+    "tripCount": 81,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548386,
+    "originLon": 13.390704,
+    "destination": "Stralsund Hbf",
+    "destinationLat": 54.30829,
+    "destinationLon": 13.078022,
+    "minDurationMinutes": 146,
+    "fastestDuration": "2h 26m",
+    "trainTypes": [
+      "ICE 15",
+      "ICE 13",
+      "IC 17",
+      "ICE 17",
+      "RE3",
+      "RE5"
+    ],
+    "tripCount": 59,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Zoologischer Garten",
+    "originLat": 52.50768,
+    "originLon": 13.332686,
+    "destination": "Nienhagen(Halberst)",
+    "destinationLat": 51.951202,
+    "destinationLon": 11.170056,
+    "minDurationMinutes": 146,
+    "fastestDuration": "2h 26m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.52519,
+    "originLon": 13.369752,
+    "destination": "Holthusen",
+    "destinationLat": 53.555607,
+    "destinationLon": 11.36526,
+    "minDurationMinutes": 147,
+    "fastestDuration": "2h 27m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 19,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475685,
+    "originLon": 13.365454,
+    "destination": "Coburg",
+    "destinationLat": 50.262928,
+    "destinationLon": 10.957328,
+    "minDurationMinutes": 148,
+    "fastestDuration": "2h 28m",
+    "trainTypes": [
+      "ICE 91"
+    ],
+    "tripCount": 6,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Rakow",
+    "destinationLat": 54.048157,
+    "destinationLon": 13.045942,
+    "minDurationMinutes": 148,
+    "fastestDuration": "2h 28m",
+    "trainTypes": [
+      "RE5"
+    ],
+    "tripCount": 8,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.52519,
+    "originLon": 13.369752,
+    "destination": "Schwerin Süd",
+    "destinationLat": 53.574787,
+    "destinationLon": 11.377005,
+    "minDurationMinutes": 149,
+    "fastestDuration": "2h 29m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 19,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.503128,
+    "originLon": 13.469622,
+    "destination": "Freiberg(Sachs)",
+    "destinationLat": 50.908726,
+    "destinationLon": 13.344141,
+    "minDurationMinutes": 150,
+    "fastestDuration": "2h 30m",
+    "trainTypes": [
+      "IC 17"
+    ],
+    "tripCount": 6,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.52511,
+    "originLon": 13.369472,
+    "destination": "Hamburg-Harburg",
+    "destinationLat": 53.45696,
+    "destinationLon": 9.991454,
+    "minDurationMinutes": 152,
+    "fastestDuration": "2h 32m",
+    "trainTypes": [
+      "27"
+    ],
+    "tripCount": 1,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Ribnitz-Damgarten West",
+    "destinationLat": 54.239178,
+    "destinationLon": 12.436965,
+    "minDurationMinutes": 153,
+    "fastestDuration": "2h 33m",
+    "trainTypes": [
+      "IC 17",
+      "ICE 17"
+    ],
+    "tripCount": 3,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Zoologischer Garten",
+    "originLat": 52.50768,
+    "originLon": 13.332686,
+    "destination": "Halberstadt Hbf",
+    "destinationLat": 51.899307,
+    "destinationLon": 11.073452,
+    "minDurationMinutes": 153,
+    "fastestDuration": "2h 33m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.52519,
+    "originLon": 13.369752,
+    "destination": "Schwerin Mitte",
+    "destinationLat": 53.62691,
+    "destinationLon": 11.405334,
+    "minDurationMinutes": 154,
+    "fastestDuration": "2h 34m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 19,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Nürnberg Hbf",
+    "destinationLat": 49.445618,
+    "destinationLon": 11.082989,
+    "minDurationMinutes": 155,
+    "fastestDuration": "2h 35m",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 6",
+      "ICE 28",
+      "ICE 29",
+      "ICE 91"
+    ],
+    "tripCount": 86,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Groß Kiesow",
+    "destinationLat": 54.01372,
+    "destinationLon": 13.480617,
+    "minDurationMinutes": 155,
+    "fastestDuration": "2h 35m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 19,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Grimmen",
+    "destinationLat": 54.109737,
+    "destinationLon": 13.034025,
+    "minDurationMinutes": 155,
+    "fastestDuration": "2h 35m",
+    "trainTypes": [
+      "RE5"
+    ],
+    "tripCount": 8,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Gütersloh Hbf",
+    "destinationLat": 51.90694,
+    "destinationLon": 8.385071,
+    "minDurationMinutes": 156,
+    "fastestDuration": "2h 36m",
+    "trainTypes": [
+      "ICE 19"
+    ],
+    "tripCount": 2,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Jena Paradies",
+    "destinationLat": 50.924854,
+    "destinationLon": 11.587461,
+    "minDurationMinutes": 156,
+    "fastestDuration": "2h 36m",
+    "trainTypes": [
+      "ICE 18"
+    ],
+    "tripCount": 10,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.52496,
+    "originLon": 13.368911,
+    "destination": "Schwerin-Görries",
+    "destinationLat": 53.60937,
+    "destinationLon": 11.384935,
+    "minDurationMinutes": 156,
+    "fastestDuration": "2h 36m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 15,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.52519,
+    "originLon": 13.369752,
+    "destination": "Schwerin Hbf",
+    "destinationLat": 53.63474,
+    "destinationLon": 11.407455,
+    "minDurationMinutes": 157,
+    "fastestDuration": "2h 37m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 19,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Bamberg",
+    "destinationLat": 49.90076,
+    "destinationLon": 10.899489,
+    "minDurationMinutes": 160,
+    "fastestDuration": "2h 40m",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 28"
+    ],
+    "tripCount": 35,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Jena-Göschwitz",
+    "destinationLat": 50.88394,
+    "destinationLon": 11.593537,
+    "minDurationMinutes": 162,
+    "fastestDuration": "2h 42m",
+    "trainTypes": [
+      "ICE 18"
+    ],
+    "tripCount": 10,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Greifswald Süd",
+    "destinationLat": 54.076443,
+    "destinationLon": 13.396656,
+    "minDurationMinutes": 162,
+    "fastestDuration": "2h 42m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 19,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Wittenhagen",
+    "destinationLat": 54.184006,
+    "destinationLon": 13.05605,
+    "minDurationMinutes": 162,
+    "fastestDuration": "2h 42m",
+    "trainTypes": [
+      "RE5"
+    ],
+    "tripCount": 8,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.525143,
+    "originLon": 13.369612,
+    "destination": "Neumünster",
+    "destinationLat": 54.075752,
+    "destinationLon": 9.979816,
+    "minDurationMinutes": 163,
+    "fastestDuration": "2h 43m",
+    "trainTypes": [
+      "ICE 28",
+      "27"
+    ],
+    "tripCount": 4,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.52519,
+    "originLon": 13.369752,
+    "destination": "Lübstorf",
+    "destinationLat": 53.72888,
+    "destinationLon": 11.411316,
+    "minDurationMinutes": 165,
+    "fastestDuration": "2h 45m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 17,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Hamm(Westf)Hbf",
+    "destinationLat": 51.678078,
+    "destinationLon": 7.807821,
+    "minDurationMinutes": 166,
+    "fastestDuration": "2h 46m",
+    "trainTypes": [
+      "ICE 19",
+      "ICE 10"
+    ],
+    "tripCount": 101,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Elmenhorst",
+    "destinationLat": 54.2102,
+    "destinationLon": 13.074014,
+    "minDurationMinutes": 166,
+    "fastestDuration": "2h 46m",
+    "trainTypes": [
+      "RE5"
+    ],
+    "tripCount": 8,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.525223,
+    "originLon": 13.369887,
+    "destination": "Osnabrück Hbf",
+    "destinationLat": 52.272697,
+    "destinationLon": 8.061522,
+    "minDurationMinutes": 167,
+    "fastestDuration": "2h 47m",
+    "trainTypes": [
+      "ICE 77"
+    ],
+    "tripCount": 31,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Velgast",
+    "destinationLat": 54.277317,
+    "destinationLon": 12.803137,
+    "minDurationMinutes": 167,
+    "fastestDuration": "2h 47m",
+    "trainTypes": [
+      "IC 17",
+      "ICE 17"
+    ],
+    "tripCount": 3,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.52519,
+    "originLon": 13.369752,
+    "destination": "Bad Kleinen",
+    "destinationLat": 53.766975,
+    "destinationLon": 11.466925,
+    "minDurationMinutes": 169,
+    "fastestDuration": "2h 49m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 17,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Zarrendorf",
+    "destinationLat": 54.240746,
+    "destinationLon": 13.08003,
+    "minDurationMinutes": 169,
+    "fastestDuration": "2h 49m",
+    "trainTypes": [
+      "RE5"
+    ],
+    "tripCount": 8,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548573,
+    "originLon": 13.390519,
+    "destination": "Itzehoe",
+    "destinationLat": 53.923874,
+    "destinationLon": 9.510287,
+    "minDurationMinutes": 171,
+    "fastestDuration": "2h 51m",
+    "trainTypes": [
+      "ICE 18"
+    ],
+    "tripCount": 1,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Jeeser",
+    "destinationLat": 54.164547,
+    "destinationLon": 13.258802,
+    "minDurationMinutes": 173,
+    "fastestDuration": "2h 53m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 19,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.52496,
+    "originLon": 13.368911,
+    "destination": "Moidentin",
+    "destinationLat": 53.806072,
+    "destinationLon": 11.481918,
+    "minDurationMinutes": 175,
+    "fastestDuration": "2h 55m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 16,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Fulda",
+    "destinationLat": 50.554905,
+    "destinationLon": 9.684169,
+    "minDurationMinutes": 177,
+    "fastestDuration": "2h 57m",
+    "trainTypes": [
+      "ICE 12",
+      "ICE 13"
+    ],
+    "tripCount": 91,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Zoologischer Garten",
+    "originLat": 52.50768,
+    "originLon": 13.332686,
+    "destination": "Wegeleben",
+    "destinationLat": 51.871582,
+    "destinationLon": 11.168551,
+    "minDurationMinutes": 177,
+    "fastestDuration": "2h 57m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Miltzow",
+    "destinationLat": 54.20095,
+    "destinationLon": 13.197458,
+    "minDurationMinutes": 177,
+    "fastestDuration": "2h 57m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 19,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.503128,
+    "originLon": 13.469622,
+    "destination": "Chemnitz Hbf",
+    "destinationLat": 50.839695,
+    "destinationLon": 12.930877,
+    "minDurationMinutes": 179,
+    "fastestDuration": "2h 59m",
+    "trainTypes": [
+      "IC 17"
+    ],
+    "tripCount": 6,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.52519,
+    "originLon": 13.369752,
+    "destination": "Dorf Mecklenburg",
+    "destinationLat": 53.842934,
+    "destinationLon": 11.471343,
+    "minDurationMinutes": 179,
+    "fastestDuration": "2h 59m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 17,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548573,
+    "originLon": 13.390519,
+    "destination": "Bergen auf Rügen",
+    "destinationLat": 54.4205,
+    "destinationLon": 13.417821,
+    "minDurationMinutes": 180,
+    "fastestDuration": "3h 00m",
+    "trainTypes": [
+      "ICE 15",
+      "IC 17"
+    ],
+    "tripCount": 25,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Erlangen",
+    "destinationLat": 49.59583,
+    "destinationLon": 11.001638,
+    "minDurationMinutes": 181,
+    "fastestDuration": "3h 01m",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 28"
+    ],
+    "tripCount": 35,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Zoologischer Garten",
+    "originLat": 52.50768,
+    "originLon": 13.332686,
+    "destination": "Ditfurt",
+    "destinationLat": 51.83348,
+    "destinationLon": 11.186728,
+    "minDurationMinutes": 181,
+    "fastestDuration": "3h 01m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548485,
+    "originLon": 13.390691,
+    "destination": "Wüstenfelde",
+    "destinationLat": 54.23027,
+    "destinationLon": 13.13961,
+    "minDurationMinutes": 182,
+    "fastestDuration": "3h 02m",
+    "trainTypes": [
+      "RE3"
+    ],
+    "tripCount": 19,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.525143,
+    "originLon": 13.369612,
+    "destination": "Hauptbahnhof A1",
+    "destinationLat": 54.315235,
+    "destinationLon": 10.131234,
+    "minDurationMinutes": 183,
+    "fastestDuration": "3h 03m",
+    "trainTypes": [
+      "ICE 28",
+      "27"
+    ],
+    "tripCount": 4,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Münster(Westf)Hbf",
+    "destinationLat": 51.956566,
+    "destinationLon": 7.635715,
+    "minDurationMinutes": 184,
+    "fastestDuration": "3h 04m",
+    "trainTypes": [
+      "ICE 10"
+    ],
+    "tripCount": 1,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.52519,
+    "originLon": 13.369752,
+    "destination": "Wismar",
+    "destinationLat": 53.896835,
+    "destinationLon": 11.469433,
+    "minDurationMinutes": 185,
+    "fastestDuration": "3h 05m",
+    "trainTypes": [
+      "RE8"
+    ],
+    "tripCount": 17,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Zoologischer Garten",
+    "originLat": 52.50768,
+    "originLon": 13.332686,
+    "destination": "Quedlinburg",
+    "destinationLat": 51.785267,
+    "destinationLon": 11.153001,
+    "minDurationMinutes": 186,
+    "fastestDuration": "3h 06m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Dortmund Hbf",
+    "destinationLat": 51.517895,
+    "destinationLon": 7.45929,
+    "minDurationMinutes": 190,
+    "fastestDuration": "3h 10m",
+    "trainTypes": [
+      "ICE 19",
+      "ICE 10"
+    ],
+    "tripCount": 59,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Saalfeld(Saale)",
+    "destinationLat": 50.650272,
+    "destinationLon": 11.374583,
+    "minDurationMinutes": 190,
+    "fastestDuration": "3h 10m",
+    "trainTypes": [
+      "ICE 18"
+    ],
+    "tripCount": 10,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Hagen Hbf",
+    "destinationLat": 51.362747,
+    "destinationLon": 7.460249,
+    "minDurationMinutes": 191,
+    "fastestDuration": "3h 11m",
+    "trainTypes": [
+      "ICE 19",
+      "ICE 10"
+    ],
+    "tripCount": 68,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Zoologischer Garten",
+    "originLat": 52.50768,
+    "originLon": 13.332686,
+    "destination": "Neinstedt",
+    "destinationLat": 51.75237,
+    "destinationLon": 11.084893,
+    "minDurationMinutes": 192,
+    "fastestDuration": "3h 12m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475685,
+    "originLon": 13.365454,
+    "destination": "Ingolstadt Hbf",
+    "destinationLat": 48.74454,
+    "destinationLon": 11.437337,
+    "minDurationMinutes": 193,
+    "fastestDuration": "3h 13m",
+    "trainTypes": [
+      "ICE 29"
+    ],
+    "tripCount": 21,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Zoologischer Garten",
+    "originLat": 52.50768,
+    "originLon": 13.332686,
+    "destination": "Thale Musestieg",
+    "destinationLat": 51.751434,
+    "destinationLon": 11.04688,
+    "minDurationMinutes": 195,
+    "fastestDuration": "3h 15m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548885,
+    "originLon": 13.39039,
+    "destination": "Wernigerode Hbf",
+    "destinationLat": 51.840195,
+    "destinationLon": 10.788848,
+    "minDurationMinutes": 195,
+    "fastestDuration": "3h 15m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.525143,
+    "originLon": 13.369612,
+    "destination": "Rheine",
+    "destinationLat": 52.2763,
+    "destinationLon": 7.434255,
+    "minDurationMinutes": 197,
+    "fastestDuration": "3h 17m",
+    "trainTypes": [
+      "ICE 77"
+    ],
+    "tripCount": 35,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Zoologischer Garten",
+    "originLat": 52.50768,
+    "originLon": 13.332686,
+    "destination": "Thale Hbf",
+    "destinationLat": 51.746048,
+    "destinationLon": 11.031048,
+    "minDurationMinutes": 198,
+    "fastestDuration": "3h 18m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 2,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548885,
+    "originLon": 13.39039,
+    "destination": "Wernigerode Elmowerk",
+    "destinationLat": 51.83879,
+    "destinationLon": 10.769264,
+    "minDurationMinutes": 198,
+    "fastestDuration": "3h 18m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.525223,
+    "originLon": 13.369887,
+    "destination": "Hannover Messe/Laatzen",
+    "destinationLat": 52.3169,
+    "destinationLon": 9.792863,
+    "minDurationMinutes": 199,
+    "fastestDuration": "3h 19m",
+    "trainTypes": [
+      "ICE 12"
+    ],
+    "tripCount": 1,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548885,
+    "originLon": 13.39039,
+    "destination": "Darlingerode",
+    "destinationLat": 51.84908,
+    "destinationLon": 10.733037,
+    "minDurationMinutes": 202,
+    "fastestDuration": "3h 22m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548573,
+    "originLon": 13.390519,
+    "destination": "Ostseebad Binz",
+    "destinationLat": 54.40482,
+    "destinationLon": 13.600507,
+    "minDurationMinutes": 204,
+    "fastestDuration": "3h 24m",
+    "trainTypes": [
+      "ICE 15",
+      "IC 17"
+    ],
+    "tripCount": 25,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Bochum Hbf",
+    "destinationLat": 51.478607,
+    "destinationLon": 7.223275,
+    "minDurationMinutes": 204,
+    "fastestDuration": "3h 24m",
+    "trainTypes": [
+      "ICE 10"
+    ],
+    "tripCount": 26,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Wuppertal Hbf",
+    "destinationLat": 51.254364,
+    "destinationLon": 7.149543,
+    "minDurationMinutes": 205,
+    "fastestDuration": "3h 25m",
+    "trainTypes": [
+      "ICE 19",
+      "ICE 10"
+    ],
+    "tripCount": 69,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548885,
+    "originLon": 13.39039,
+    "destination": "Ilsenburg",
+    "destinationLat": 51.869003,
+    "destinationLon": 10.683103,
+    "minDurationMinutes": 207,
+    "fastestDuration": "3h 27m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.54869,
+    "originLon": 13.390501,
+    "destination": "Stapelburg",
+    "destinationLat": 51.90028,
+    "destinationLon": 10.671721,
+    "minDurationMinutes": 211,
+    "fastestDuration": "3h 31m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 1,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.525143,
+    "originLon": 13.369612,
+    "destination": "Bad Bentheim",
+    "destinationLat": 52.30985,
+    "destinationLon": 7.158539,
+    "minDurationMinutes": 212,
+    "fastestDuration": "3h 32m",
+    "trainTypes": [
+      "ICE 77"
+    ],
+    "tripCount": 70,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Essen Hbf",
+    "destinationLat": 51.451355,
+    "destinationLon": 7.014793,
+    "minDurationMinutes": 215,
+    "fastestDuration": "3h 35m",
+    "trainTypes": [
+      "ICE 10"
+    ],
+    "tripCount": 27,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475685,
+    "originLon": 13.365454,
+    "destination": "Frankfurt(Main)Süd",
+    "destinationLat": 50.099365,
+    "destinationLon": 8.686457,
+    "minDurationMinutes": 219,
+    "fastestDuration": "3h 39m",
+    "trainTypes": [
+      "ICE 15",
+      "ICE 12",
+      "ICE 11",
+      "12N"
+    ],
+    "tripCount": 46,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548573,
+    "originLon": 13.390519,
+    "destination": "Heide(Holst)",
+    "destinationLat": 54.19306,
+    "destinationLon": 9.101122,
+    "minDurationMinutes": 220,
+    "fastestDuration": "3h 40m",
+    "trainTypes": [
+      "ICE 18"
+    ],
+    "tripCount": 1,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Hanau Hbf",
+    "destinationLat": 50.120953,
+    "destinationLon": 8.929,
+    "minDurationMinutes": 220,
+    "fastestDuration": "3h 40m",
+    "trainTypes": [
+      "ICE 12",
+      "ICE 13"
+    ],
+    "tripCount": 73,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.54869,
+    "originLon": 13.390501,
+    "destination": "Vienenburg",
+    "destinationLat": 51.955032,
+    "destinationLon": 10.562174,
+    "minDurationMinutes": 220,
+    "fastestDuration": "3h 40m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 1,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475685,
+    "originLon": 13.365454,
+    "destination": "Frankfurt(Main)Hbf",
+    "destinationLat": 50.10668,
+    "destinationLon": 8.662828,
+    "minDurationMinutes": 223,
+    "fastestDuration": "3h 43m",
+    "trainTypes": [
+      "ICE 15",
+      "ICE 12",
+      "ICE 82",
+      "ICE 3",
+      "ICE 11"
+    ],
+    "tripCount": 87,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Herne-Wanne-Eickel Hbf",
+    "destinationLat": 51.531258,
+    "destinationLon": 7.165783,
+    "minDurationMinutes": 225,
+    "fastestDuration": "3h 45m",
+    "trainTypes": [
+      "ICE 19"
+    ],
+    "tripCount": 1,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.52519,
+    "originLon": 13.369752,
+    "destination": "Gelsenkirchen Hbf",
+    "destinationLat": 51.5049,
+    "destinationLon": 7.102455,
+    "minDurationMinutes": 225,
+    "fastestDuration": "3h 45m",
+    "trainTypes": [
+      "ICE 19",
+      "ICE 10"
+    ],
+    "tripCount": 30,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Duisburg Hbf",
+    "destinationLat": 51.429787,
+    "destinationLon": 6.775903,
+    "minDurationMinutes": 228,
+    "fastestDuration": "3h 48m",
+    "trainTypes": [
+      "ICE 19",
+      "ICE 10"
+    ],
+    "tripCount": 50,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548885,
+    "originLon": 13.39039,
+    "destination": "Recklinghausen Hbf",
+    "destinationLat": 51.61636,
+    "destinationLon": 7.20349,
+    "minDurationMinutes": 230,
+    "fastestDuration": "3h 50m",
+    "trainTypes": [
+      "ICE 14"
+    ],
+    "tripCount": 1,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.525143,
+    "originLon": 13.369612,
+    "destination": "Hengelo",
+    "destinationLat": 52.261852,
+    "destinationLon": 6.793726,
+    "minDurationMinutes": 231,
+    "fastestDuration": "3h 51m",
+    "trainTypes": [
+      "ICE 77"
+    ],
+    "tripCount": 35,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.54869,
+    "originLon": 13.390501,
+    "destination": "Goslar",
+    "destinationLat": 51.91157,
+    "destinationLon": 10.421436,
+    "minDurationMinutes": 231,
+    "fastestDuration": "3h 51m",
+    "trainTypes": [
+      "HBX"
+    ],
+    "tripCount": 1,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.525143,
+    "originLon": 13.369612,
+    "destination": "Schleswig",
+    "destinationLat": 54.49946,
+    "destinationLon": 9.53814,
+    "minDurationMinutes": 231,
+    "fastestDuration": "3h 51m",
+    "trainTypes": [
+      "27"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Augsburg Hbf",
+    "destinationLat": 48.36544,
+    "destinationLon": 10.88557,
+    "minDurationMinutes": 232,
+    "fastestDuration": "3h 52m",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 28",
+      "ICE 29",
+      "ICE 91",
+      "ICE 11"
+    ],
+    "tripCount": 81,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Ostkreuz",
+    "originLat": 52.503067,
+    "originLon": 13.469961,
+    "destination": "Prora",
+    "destinationLat": 54.444984,
+    "destinationLon": 13.564057,
+    "minDurationMinutes": 233,
+    "fastestDuration": "3h 53m",
+    "trainTypes": [
+      "IC 17"
+    ],
+    "tripCount": 1,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Köln Hbf",
+    "destinationLat": 50.94303,
+    "destinationLon": 6.958729,
+    "minDurationMinutes": 236,
+    "fastestDuration": "3h 56m",
+    "trainTypes": [
+      "ICE 19",
+      "ICE 10"
+    ],
+    "tripCount": 89,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "München Hbf",
+    "destinationLat": 48.140232,
+    "destinationLon": 11.558335,
+    "minDurationMinutes": 239,
+    "fastestDuration": "3h 59m",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 28",
+      "ICE 29",
+      "ICE 91",
+      "ICE 11"
+    ],
+    "tripCount": 130,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Düsseldorf Flughafen",
+    "destinationLat": 51.292007,
+    "destinationLon": 6.786836,
+    "minDurationMinutes": 239,
+    "fastestDuration": "3h 59m",
+    "trainTypes": [
+      "ICE 10"
+    ],
+    "tripCount": 32,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475685,
+    "originLon": 13.365454,
+    "destination": "Darmstadt Hbf",
+    "destinationLat": 49.8725,
+    "destinationLon": 8.629636,
+    "minDurationMinutes": 245,
+    "fastestDuration": "4h 05m",
+    "trainTypes": [
+      "ICE 15"
+    ],
+    "tripCount": 7,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548573,
+    "originLon": 13.390519,
+    "destination": "Husum",
+    "destinationLat": 54.472084,
+    "destinationLon": 9.055953,
+    "minDurationMinutes": 246,
+    "fastestDuration": "4h 06m",
+    "trainTypes": [
+      "ICE 18"
+    ],
+    "tripCount": 1,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Frankfurt(M) Flughafen Regionalbf",
+    "destinationLat": 50.05122,
+    "destinationLon": 8.571251,
+    "minDurationMinutes": 246,
+    "fastestDuration": "4h 06m",
+    "trainTypes": [
+      "ICE 3"
+    ],
+    "tripCount": 4,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Düsseldorf Hbf",
+    "destinationLat": 51.219963,
+    "destinationLon": 6.794319,
+    "minDurationMinutes": 248,
+    "fastestDuration": "4h 08m",
+    "trainTypes": [
+      "ICE 19",
+      "ICE 10"
+    ],
+    "tripCount": 44,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Oberhausen Hbf",
+    "destinationLat": 51.474876,
+    "destinationLon": 6.851588,
+    "minDurationMinutes": 251,
+    "fastestDuration": "4h 11m",
+    "trainTypes": [
+      "ICE 19"
+    ],
+    "tripCount": 1,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Lichtenfels",
+    "destinationLat": 50.146454,
+    "destinationLon": 11.059472,
+    "minDurationMinutes": 252,
+    "fastestDuration": "4h 12m",
+    "trainTypes": [
+      "ICE 18"
+    ],
+    "tripCount": 10,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Frankfurt(M) Flughafen Fernbf",
+    "destinationLat": 50.053165,
+    "destinationLon": 8.570185,
+    "minDurationMinutes": 253,
+    "fastestDuration": "4h 13m",
+    "trainTypes": [
+      "ICE 13"
+    ],
+    "tripCount": 8,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475685,
+    "originLon": 13.365454,
+    "destination": "Bensheim",
+    "destinationLat": 49.681328,
+    "destinationLon": 8.616717,
+    "minDurationMinutes": 257,
+    "fastestDuration": "4h 17m",
+    "trainTypes": [
+      "ICE 15"
+    ],
+    "tripCount": 2,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Donauwörth",
+    "destinationLat": 48.714027,
+    "destinationLon": 10.771443,
+    "minDurationMinutes": 257,
+    "fastestDuration": "4h 17m",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 91"
+    ],
+    "tripCount": 17,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.525143,
+    "originLon": 13.369612,
+    "destination": "Flensburg",
+    "destinationLat": 54.814842,
+    "destinationLon": 9.36324,
+    "minDurationMinutes": 258,
+    "fastestDuration": "4h 18m",
+    "trainTypes": [
+      "27"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.525143,
+    "originLon": 13.369612,
+    "destination": "Padborg st",
+    "destinationLat": 54.82425,
+    "destinationLon": 9.358803,
+    "minDurationMinutes": 259,
+    "fastestDuration": "4h 19m",
+    "trainTypes": [
+      "27"
+    ],
+    "tripCount": 3,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.525143,
+    "originLon": 13.369612,
+    "destination": "Deventer",
+    "destinationLat": 52.257435,
+    "destinationLon": 6.160506,
+    "minDurationMinutes": 265,
+    "fastestDuration": "4h 25m",
+    "trainTypes": [
+      "ICE 77"
+    ],
+    "tripCount": 6,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.52519,
+    "originLon": 13.369752,
+    "destination": "Solingen Hbf",
+    "destinationLat": 51.160767,
+    "destinationLon": 7.004187,
+    "minDurationMinutes": 267,
+    "fastestDuration": "4h 27m",
+    "trainTypes": [
+      "ICE 10"
+    ],
+    "tripCount": 1,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Neuss Hbf",
+    "destinationLat": 51.20435,
+    "destinationLon": 6.684527,
+    "minDurationMinutes": 269,
+    "fastestDuration": "4h 29m",
+    "trainTypes": [
+      "ICE 10"
+    ],
+    "tripCount": 5,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Mannheim Hbf",
+    "destinationLat": 49.479355,
+    "destinationLon": 8.468921,
+    "minDurationMinutes": 274,
+    "fastestDuration": "4h 34m",
+    "trainTypes": [
+      "ICE 12",
+      "ICE 3"
+    ],
+    "tripCount": 63,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548573,
+    "originLon": 13.390519,
+    "destination": "Niebüll",
+    "destinationLat": 54.78953,
+    "destinationLon": 8.834595,
+    "minDurationMinutes": 275,
+    "fastestDuration": "4h 35m",
+    "trainTypes": [
+      "ICE 18"
+    ],
+    "tripCount": 1,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475887,
+    "originLon": 13.365455,
+    "destination": "Stuttgart Hbf",
+    "destinationLat": 48.78478,
+    "destinationLon": 9.182757,
+    "minDurationMinutes": 277,
+    "fastestDuration": "4h 37m",
+    "trainTypes": [
+      "ICE 6",
+      "ICE 11"
+    ],
+    "tripCount": 68,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Heidelberg Hbf",
+    "destinationLat": 49.40357,
+    "destinationLon": 8.675442,
+    "minDurationMinutes": 279,
+    "fastestDuration": "4h 39m",
+    "trainTypes": [
+      "ICE 12",
+      "ICE 13"
+    ],
+    "tripCount": 16,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.525143,
+    "originLon": 13.369612,
+    "destination": "Apeldoorn",
+    "destinationLat": 52.20943,
+    "destinationLon": 5.968491,
+    "minDurationMinutes": 282,
+    "fastestDuration": "4h 42m",
+    "trainTypes": [
+      "ICE 77"
+    ],
+    "tripCount": 6,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Mönchengladbach Hbf",
+    "destinationLat": 51.196583,
+    "destinationLon": 6.446111,
+    "minDurationMinutes": 283,
+    "fastestDuration": "4h 43m",
+    "trainTypes": [
+      "ICE 10"
+    ],
+    "tripCount": 5,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Weinheim(Bergstr)Hbf",
+    "destinationLat": 49.553303,
+    "destinationLon": 8.665351,
+    "minDurationMinutes": 286,
+    "fastestDuration": "4h 46m",
+    "trainTypes": [
+      "ICE 13"
+    ],
+    "tripCount": 19,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Rheydt Hbf",
+    "destinationLat": 51.16303,
+    "destinationLon": 6.439564,
+    "minDurationMinutes": 289,
+    "fastestDuration": "4h 49m",
+    "trainTypes": [
+      "ICE 10"
+    ],
+    "tripCount": 2,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Neustadt(Weinstr)Hbf",
+    "destinationLat": 49.349552,
+    "destinationLon": 8.140757,
+    "minDurationMinutes": 295,
+    "fastestDuration": "4h 55m",
+    "trainTypes": [
+      "ICE 3"
+    ],
+    "tripCount": 2,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Neu-Edingen/Friedrichsfeld",
+    "destinationLat": 49.44867,
+    "destinationLon": 8.580125,
+    "minDurationMinutes": 297,
+    "fastestDuration": "4h 57m",
+    "trainTypes": [
+      "ICE 13"
+    ],
+    "tripCount": 5,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Erkelenz",
+    "destinationLat": 51.076595,
+    "destinationLon": 6.321634,
+    "minDurationMinutes": 298,
+    "fastestDuration": "4h 58m",
+    "trainTypes": [
+      "ICE 10"
+    ],
+    "tripCount": 2,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.525143,
+    "originLon": 13.369612,
+    "destination": "Amersfoort Centraal",
+    "destinationLat": 52.153465,
+    "destinationLon": 5.373909,
+    "minDurationMinutes": 308,
+    "fastestDuration": "5h 08m",
+    "trainTypes": [
+      "ICE 77"
+    ],
+    "tripCount": 6,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Karlsruhe Hbf",
+    "destinationLat": 48.993515,
+    "destinationLon": 8.402181,
+    "minDurationMinutes": 309,
+    "fastestDuration": "5h 09m",
+    "trainTypes": [
+      "ICE 12",
+      "ICE 13"
+    ],
+    "tripCount": 76,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Geilenkirchen",
+    "destinationLat": 50.96104,
+    "destinationLon": 6.124518,
+    "minDurationMinutes": 311,
+    "fastestDuration": "5h 11m",
+    "trainTypes": [
+      "ICE 10"
+    ],
+    "tripCount": 2,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Wiesloch-Walldorf",
+    "destinationLat": 49.29135,
+    "destinationLon": 8.664146,
+    "minDurationMinutes": 313,
+    "fastestDuration": "5h 13m",
+    "trainTypes": [
+      "ICE 13"
+    ],
+    "tripCount": 13,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Kaiserslautern Hbf",
+    "destinationLat": 49.43586,
+    "destinationLon": 7.768627,
+    "minDurationMinutes": 321,
+    "fastestDuration": "5h 21m",
+    "trainTypes": [
+      "ICE 3"
+    ],
+    "tripCount": 2,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Gesundbrunnen",
+    "originLat": 52.548573,
+    "originLon": 13.390519,
+    "destination": "Westerland(Sylt)",
+    "destinationLat": 54.906837,
+    "destinationLon": 8.310925,
+    "minDurationMinutes": 322,
+    "fastestDuration": "5h 22m",
+    "trainTypes": [
+      "ICE 18"
+    ],
+    "tripCount": 1,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Bruchsal",
+    "destinationLat": 49.124622,
+    "destinationLon": 8.589649,
+    "minDurationMinutes": 326,
+    "fastestDuration": "5h 26m",
+    "trainTypes": [
+      "ICE 13"
+    ],
+    "tripCount": 4,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.525143,
+    "originLon": 13.369612,
+    "destination": "Utrecht Centraal",
+    "destinationLat": 52.089397,
+    "destinationLon": 5.109861,
+    "minDurationMinutes": 328,
+    "fastestDuration": "5h 28m",
+    "trainTypes": [
+      "ICE 77"
+    ],
+    "tripCount": 5,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475685,
+    "originLon": 13.365454,
+    "destination": "München Ost",
+    "destinationLat": 48.12744,
+    "destinationLon": 11.604971,
+    "minDurationMinutes": 329,
+    "fastestDuration": "5h 29m",
+    "trainTypes": [
+      "ICE 91"
+    ],
+    "tripCount": 4,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Baden-Baden",
+    "destinationLat": 48.790325,
+    "destinationLon": 8.190831,
+    "minDurationMinutes": 333,
+    "fastestDuration": "5h 33m",
+    "trainTypes": [
+      "ICE 12"
+    ],
+    "tripCount": 8,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Aachen Hbf",
+    "destinationLat": 50.7678,
+    "destinationLon": 6.091499,
+    "minDurationMinutes": 335,
+    "fastestDuration": "5h 35m",
+    "trainTypes": [
+      "ICE 10"
+    ],
+    "tripCount": 2,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Offenburg",
+    "destinationLat": 48.476475,
+    "destinationLon": 7.946723,
+    "minDurationMinutes": 342,
+    "fastestDuration": "5h 42m",
+    "trainTypes": [
+      "ICE 12"
+    ],
+    "tripCount": 50,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Homburg(Saar)Hbf",
+    "destinationLat": 49.327637,
+    "destinationLon": 7.336362,
+    "minDurationMinutes": 343,
+    "fastestDuration": "5h 43m",
+    "trainTypes": [
+      "ICE 3"
+    ],
+    "tripCount": 2,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Saarbrücken Hbf",
+    "destinationLat": 49.24148,
+    "destinationLon": 6.991045,
+    "minDurationMinutes": 365,
+    "fastestDuration": "6h 05m",
+    "trainTypes": [
+      "ICE 3"
+    ],
+    "tripCount": 2,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "Treuchtlingen",
+    "destinationLat": 48.961266,
+    "destinationLon": 10.908159,
+    "minDurationMinutes": 369,
+    "fastestDuration": "6h 09m",
+    "trainTypes": [
+      "ICE 18"
+    ],
+    "tripCount": 3,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475685,
+    "originLon": 13.365454,
+    "destination": "Rosenheim",
+    "destinationLat": 47.850018,
+    "destinationLon": 12.119202,
+    "minDurationMinutes": 369,
+    "fastestDuration": "6h 09m",
+    "trainTypes": [
+      "ICE 91"
+    ],
+    "tripCount": 4,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Freiburg Hauptbahnhof",
+    "destinationLat": 47.996666,
+    "destinationLon": 7.840092,
+    "minDurationMinutes": 374,
+    "fastestDuration": "6h 14m",
+    "trainTypes": [
+      "ICE 12"
+    ],
+    "tripCount": 48,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475685,
+    "originLon": 13.365454,
+    "destination": "Ulm Hbf",
+    "destinationLat": 48.3994,
+    "destinationLon": 9.982608,
+    "minDurationMinutes": 385,
+    "fastestDuration": "6h 25m",
+    "trainTypes": [
+      "ICE 11"
+    ],
+    "tripCount": 54,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475685,
+    "originLon": 13.365454,
+    "destination": "Kufstein",
+    "destinationLat": 47.58308,
+    "destinationLon": 12.16555,
+    "minDurationMinutes": 391,
+    "fastestDuration": "6h 31m",
+    "trainTypes": [
+      "ICE 91"
+    ],
+    "tripCount": 4,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Basel Bad Bf",
+    "destinationLat": 47.567287,
+    "destinationLon": 7.607805,
+    "minDurationMinutes": 409,
+    "fastestDuration": "6h 49m",
+    "trainTypes": [
+      "ICE 12"
+    ],
+    "tripCount": 46,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Spandau",
+    "originLat": 52.5346,
+    "originLon": 13.197163,
+    "destination": "Basel SBB",
+    "destinationLat": 47.547413,
+    "destinationLon": 7.589563,
+    "minDurationMinutes": 421,
+    "fastestDuration": "7h 01m",
+    "trainTypes": [
+      "ICE 12"
+    ],
+    "tripCount": 45,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475925,
+    "originLon": 13.365291,
+    "destination": "München-Pasing",
+    "destinationLat": 48.149853,
+    "destinationLon": 11.461872,
+    "minDurationMinutes": 447,
+    "fastestDuration": "7h 27m",
+    "trainTypes": [
+      "ICE 18",
+      "ICE 11"
+    ],
+    "tripCount": 49,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.52496,
+    "originLon": 13.368911,
+    "destination": "Singen(Hohentwiel)",
+    "destinationLat": 47.75888,
+    "destinationLon": 8.841269,
+    "minDurationMinutes": 463,
+    "fastestDuration": "7h 43m",
+    "trainTypes": [
+      "ICE 12"
+    ],
+    "tripCount": 2,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Hbf",
+    "originLat": 52.52496,
+    "originLon": 13.368911,
+    "destination": "Schaffhausen",
+    "destinationLat": 47.69828,
+    "destinationLon": 8.632756,
+    "minDurationMinutes": 492,
+    "fastestDuration": "8h 12m",
+    "trainTypes": [
+      "ICE 12"
+    ],
+    "tripCount": 2,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510124,
+    "originLon": 13.496304,
+    "destination": "Koebenhavns Lufthavn st",
+    "destinationLat": 55.629604,
+    "destinationLon": 12.649382,
+    "minDurationMinutes": 497,
+    "fastestDuration": "8h 17m",
+    "trainTypes": [
+      "EN"
+    ],
+    "tripCount": 3,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475685,
+    "originLon": 13.365454,
+    "destination": "Günzburg",
+    "destinationLat": 48.460564,
+    "destinationLon": 10.279262,
+    "minDurationMinutes": 526,
+    "fastestDuration": "8h 46m",
+    "trainTypes": [
+      "ICE 11"
+    ],
+    "tripCount": 17,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510124,
+    "originLon": 13.496304,
+    "destination": "Lund Central",
+    "destinationLat": 55.70552,
+    "destinationLon": 13.186582,
+    "minDurationMinutes": 569,
+    "fastestDuration": "9h 29m",
+    "trainTypes": [
+      "EN"
+    ],
+    "tripCount": 3,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510124,
+    "originLon": 13.496304,
+    "destination": "Hässleholm Central",
+    "destinationLat": 56.15852,
+    "destinationLon": 13.763922,
+    "minDurationMinutes": 607,
+    "fastestDuration": "10h 07m",
+    "trainTypes": [
+      "EN"
+    ],
+    "tripCount": 2,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510124,
+    "originLon": 13.496304,
+    "destination": "Alvesta station",
+    "destinationLat": 56.89848,
+    "destinationLon": 14.556882,
+    "minDurationMinutes": 655,
+    "fastestDuration": "10h 55m",
+    "trainTypes": [
+      "EN"
+    ],
+    "tripCount": 2,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510124,
+    "originLon": 13.496304,
+    "destination": "Nässjö Central",
+    "destinationLat": 57.652126,
+    "destinationLon": 14.694786,
+    "minDurationMinutes": 699,
+    "fastestDuration": "11h 39m",
+    "trainTypes": [
+      "EN"
+    ],
+    "tripCount": 2,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin Südkreuz",
+    "originLat": 52.475887,
+    "originLon": 13.365455,
+    "destination": "Zürich HB",
+    "destinationLat": 47.378178,
+    "destinationLon": 8.540212,
+    "minDurationMinutes": 727,
+    "fastestDuration": "12h 07m",
+    "trainTypes": [
+      "12N"
+    ],
+    "tripCount": 1,
+    "category": "regional"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510124,
+    "originLon": 13.496304,
+    "destination": "Linköping Central",
+    "destinationLat": 58.41601,
+    "destinationLon": 15.626675,
+    "minDurationMinutes": 762,
+    "fastestDuration": "12h 42m",
+    "trainTypes": [
+      "EN"
+    ],
+    "tripCount": 2,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510124,
+    "originLon": 13.496304,
+    "destination": "Norrköping Central",
+    "destinationLat": 58.596558,
+    "destinationLon": 16.18368,
+    "minDurationMinutes": 790,
+    "fastestDuration": "13h 10m",
+    "trainTypes": [
+      "EN"
+    ],
+    "tripCount": 2,
+    "category": "long-distance"
+  },
+  {
+    "origin": "Berlin-Lichtenberg",
+    "originLat": 52.510124,
+    "originLon": 13.496304,
+    "destination": "Stockholm Central",
+    "destinationLat": 59.330013,
+    "destinationLon": 18.05763,
+    "minDurationMinutes": 879,
+    "fastestDuration": "14h 39m",
+    "trainTypes": [
+      "EN"
+    ],
+    "tripCount": 3,
+    "category": "long-distance"
+  }
+]

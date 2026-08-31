@@ -13,10 +13,16 @@ export interface TrainDeal {
   returnDate: string;
   trainOperator: string;
   transfers: number;
+  isDirect?: boolean;
+  transferStation?: string;
   co2Kg?: number;
   co2SavingsPercent?: number; // e.g. 88% less CO2 than flight
   scenicRating?: number; // 1-5
   scenicHighlight?: string; // e.g. "Rhine River valley views on left side"
+  tripType?: 'Day Trip' | 'Weekend Break' | 'Grand Rail' | string;
+  frequency?: string; // e.g. "Every 1h" or "Direct Nightjet"
+  stationName?: string; // e.g. "Praha hlavní nádraží"
+  travelRing?: 'day_trip' | 'weekend' | 'extended';
   weather: { date: string; temp: number; condition: 'sunny' | 'cloudy' | 'rainy' }[];
 }
 

@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Raw GTFS Datasets
+data/gtfs/
+*.zip
